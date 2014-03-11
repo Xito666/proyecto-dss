@@ -199,9 +199,7 @@
       <attributes xmi:type="es.ua.dlsi.ooh:Attribute" xmi:id="_t1jScaiSEeOTtI5YKWJy-A" alias="idLineaPedido" aggregation="Composite" upper="*" associationOrigin="_t1jScKiSEeOTtI5YKWJy-A" name="lineaPedido" type="Object" collectionType="List"/>
     </elements>
     <elements xmi:type="es.ua.dlsi.ooh:Class" xmi:id="_m6_38KiOEeOTtI5YKWJy-A" name="Presupuesto" alias="Presupuesto" inheritFathers="_HqlBoKiREeOTtI5YKWJy-A">
-      <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_4M9dEKiQEeOTtI5YKWJy-A" name="imprimir" type="Void">
-        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_4M9dEaiQEeOTtI5YKWJy-A" name="p_oid" type="OID" typeObject="_m6_38KiOEeOTtI5YKWJy-A"/>
-      </operations>
+      <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_4M9dEKiQEeOTtI5YKWJy-A" name="imprimir" type="Void"/>
       <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_4-njgKiQEeOTtI5YKWJy-A" name="Presupuesto" operationType="New" type="Object" typeObject="_m6_38KiOEeOTtI5YKWJy-A">
         <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_Iy4GeqiREeOTtI5YKWJy-A" name="p_id" type="Integer"/>
         <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_Iy4Ge6iREeOTtI5YKWJy-A" name="p_fecha" type="Date"/>
@@ -236,9 +234,7 @@
     </elements>
     <elements xmi:type="es.ua.dlsi.ooh:Association" xmi:id="_ZH-iEKiQEeOTtI5YKWJy-A" name="tipoFactura_pedidoCliente" alias="tipoFactura_pedidoCliente" rolOrigin="_ZH-iEaiQEeOTtI5YKWJy-A" rolTarget="_ZH-iEqiQEeOTtI5YKWJy-A" classTarget="_9noLcKiPEeOTtI5YKWJy-A" classOrigin="_fvzckKiOEeOTtI5YKWJy-A" rolOriginName="tipoFactura" rolTargetName="pedidoCliente" rolOriginMultiplicity="0..1" rolTargetMultiplicity="1..1"/>
     <elements xmi:type="es.ua.dlsi.ooh:Class" xmi:id="_kvewsKiQEeOTtI5YKWJy-A" name="Reserva" alias="Reserva" inheritFathers="_HGYIYKiREeOTtI5YKWJy-A">
-      <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_0Dvk8KiQEeOTtI5YKWJy-A" name="imprimir" type="Void">
-        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_0Dvk8aiQEeOTtI5YKWJy-A" name="p_oid" type="OID" typeObject="_kvewsKiQEeOTtI5YKWJy-A"/>
-      </operations>
+      <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_0Dvk8KiQEeOTtI5YKWJy-A" name="imprimir" type="Void"/>
       <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_0xSncKiQEeOTtI5YKWJy-A" name="Reserva" operationType="New" type="Object" typeObject="_kvewsKiQEeOTtI5YKWJy-A">
         <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_Iy4GdqiREeOTtI5YKWJy-A" name="p_id" type="Integer"/>
         <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_Iy4Gd6iREeOTtI5YKWJy-A" name="p_fecha" type="Date"/>
@@ -247,9 +243,7 @@
       </operations>
     </elements>
     <elements xmi:type="es.ua.dlsi.ooh:Class" xmi:id="_oPcQcKiQEeOTtI5YKWJy-A" name="Factura" alias="Factura" inheritFathers="_IKq28KiREeOTtI5YKWJy-A">
-      <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_6T57cKiQEeOTtI5YKWJy-A" name="imprimir" type="Void">
-        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_6T57caiQEeOTtI5YKWJy-A" name="p_oid" type="OID" typeObject="_oPcQcKiQEeOTtI5YKWJy-A"/>
-      </operations>
+      <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_6T57cKiQEeOTtI5YKWJy-A" name="imprimir" type="Void"/>
       <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_-wUcYKiQEeOTtI5YKWJy-A" name="setPagada" operationType="Modifier" type="Void" automaticSynchronize="false" customized="true">
         <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_DJe1AKiREeOTtI5YKWJy-A" name="p_Factura_OID" type="OID" typeObject="_oPcQcKiQEeOTtI5YKWJy-A"/>
         <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_DJe1AaiREeOTtI5YKWJy-A" name="p_pagada" type="Boolean"/>
@@ -264,9 +258,7 @@
       <attributes xmi:type="es.ua.dlsi.ooh:Attribute" xmi:id="_yR_TcKiQEeOTtI5YKWJy-A" alias="pagada" name="pagada" type="Boolean"/>
     </elements>
     <elements xmi:type="es.ua.dlsi.ooh:Class" xmi:id="_ogPskKiQEeOTtI5YKWJy-A" name="Proforma" alias="Proforma" inheritFathers="_Iy4GcKiREeOTtI5YKWJy-A">
-      <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_7tGjAKiQEeOTtI5YKWJy-A" name="imprimir" type="Void">
-        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_7tGjAaiQEeOTtI5YKWJy-A" name="p_oid" type="OID" typeObject="_ogPskKiQEeOTtI5YKWJy-A"/>
-      </operations>
+      <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_7tGjAKiQEeOTtI5YKWJy-A" name="imprimir" type="Void"/>
       <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_8U1RYKiQEeOTtI5YKWJy-A" name="Proforma" operationType="New" type="Object" typeObject="_ogPskKiQEeOTtI5YKWJy-A">
         <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_Iy4Gg6iREeOTtI5YKWJy-A" name="p_id" type="Integer"/>
         <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_Iy4GhKiREeOTtI5YKWJy-A" name="p_fecha" type="Date"/>
