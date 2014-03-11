@@ -335,14 +335,12 @@
     </elements>
     <elements xmi:type="es.ua.dlsi.ooh:Association" xmi:id="_t1jScKiSEeOTtI5YKWJy-A" name="lineaPedido_pedidoCliente" alias="lineaPedido_pedidoCliente" rolOrigin="_t1jScaiSEeOTtI5YKWJy-A" rolTarget="_t1jScqiSEeOTtI5YKWJy-A" classTarget="_Z3uHgKiREeOTtI5YKWJy-A" classOrigin="_fvzckKiOEeOTtI5YKWJy-A" rolOriginName="lineaPedido" rolTargetName="pedidoCliente" rolOriginMultiplicity="0..*" rolTargetMultiplicity="1..1"/>
     <elements xmi:type="es.ua.dlsi.ooh:Class" xmi:id="_3vnH0KiSEeOTtI5YKWJy-A" name="Producto" alias="Producto" asociationTarget="_YpZy4KiUEeOTtI5YKWJy-A _2UeF4KiaEeOTtI5YKWJy-A">
-      <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_kbNpgKiTEeOTtI5YKWJy-A" name="commit" type="Void">
-        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_kbNpgaiTEeOTtI5YKWJy-A" name="p_oid" type="OID" typeObject="_3vnH0KiSEeOTtI5YKWJy-A"/>
+      <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_mGv-QKiTEeOTtI5YKWJy-A" name="disminuirStock" operationType="Modifier" type="Void" automaticSynchronize="false" customized="true">
+        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_s9Tx4KlNEeOgvuBKJWFDhA" name="p_Producto_OID" type="OID" typeObject="_3vnH0KiSEeOTtI5YKWJy-A"/>
       </operations>
-      <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_mGv-QKiTEeOTtI5YKWJy-A" name="disminuirStock" type="Void">
-        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_mG2E4KiTEeOTtI5YKWJy-A" name="p_oid" type="OID" typeObject="_3vnH0KiSEeOTtI5YKWJy-A"/>
-      </operations>
-      <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_nD-bgKiTEeOTtI5YKWJy-A" name="aumentarStock" type="Void">
-        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_nD-bgaiTEeOTtI5YKWJy-A" name="p_oid" type="OID" typeObject="_3vnH0KiSEeOTtI5YKWJy-A"/>
+      <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_nD-bgKiTEeOTtI5YKWJy-A" name="aumentarStock" operationType="Modifier" type="Void" automaticSynchronize="false" customized="true">
+        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_j1Cl0KlNEeOgvuBKJWFDhA" name="p_Producto_OID" type="OID" typeObject="_3vnH0KiSEeOTtI5YKWJy-A"/>
+        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_j1Cl1alNEeOgvuBKJWFDhA" name="p_stock" type="Integer"/>
       </operations>
       <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_pSp5kKiTEeOTtI5YKWJy-A" name="setStock" operationType="Modifier" type="Void" automaticSynchronize="false" customized="true">
         <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_Jza2EKiUEeOTtI5YKWJy-A" name="p_Producto_OID" type="OID" typeObject="_3vnH0KiSEeOTtI5YKWJy-A"/>
@@ -356,14 +354,12 @@
         <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_FoMy0KiUEeOTtI5YKWJy-A" name="p_Producto_OID" type="OID" typeObject="_3vnH0KiSEeOTtI5YKWJy-A"/>
         <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_FoMy0aiUEeOTtI5YKWJy-A" name="p_nombre"/>
       </operations>
-      <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_0vFgoKiTEeOTtI5YKWJy-A" name="getStock" operationType="ReadAll" type="Object" collectionType="List" typeObject="_3vnH0KiSEeOTtI5YKWJy-A"/>
-      <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_1gE4sKiTEeOTtI5YKWJy-A" name="getFamilia" operationType="ReadAll" type="Object" collectionType="List" typeObject="_3vnH0KiSEeOTtI5YKWJy-A"/>
-      <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_2lH1MKiTEeOTtI5YKWJy-A" name="getPrecio" operationType="ReadAll" type="Object" collectionType="List" typeObject="_3vnH0KiSEeOTtI5YKWJy-A"/>
-      <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_3mWosKiTEeOTtI5YKWJy-A" name="getDescripcion" operationType="ReadAll" type="Object" collectionType="List" typeObject="_3vnH0KiSEeOTtI5YKWJy-A"/>
-      <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_4i_3IKiTEeOTtI5YKWJy-A" name="getNombre" operationType="ReadAll" type="Object" collectionType="List" typeObject="_3vnH0KiSEeOTtI5YKWJy-A"/>
-      <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_5xylgKiTEeOTtI5YKWJy-A" name="getId" operationType="ReadOID" type="Object" typeObject="_3vnH0KiSEeOTtI5YKWJy-A">
-        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_6LoksKiaEeOTtI5YKWJy-A" name="p_Producto_OID" type="OID" typeObject="_3vnH0KiSEeOTtI5YKWJy-A"/>
-      </operations>
+      <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_0vFgoKiTEeOTtI5YKWJy-A" name="getStock" type="Integer" collectionType="List"/>
+      <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_1gE4sKiTEeOTtI5YKWJy-A" name="getFamilia" collectionType="List"/>
+      <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_2lH1MKiTEeOTtI5YKWJy-A" name="getPrecio" type="Double" collectionType="List"/>
+      <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_3mWosKiTEeOTtI5YKWJy-A" name="getDescripcion"/>
+      <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_4i_3IKiTEeOTtI5YKWJy-A" name="getNombre" collectionType="List"/>
+      <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_5xylgKiTEeOTtI5YKWJy-A" name="getId" type="Integer"/>
       <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_6ZVGoKiTEeOTtI5YKWJy-A" name="Producto" operationType="New" type="Object" typeObject="_3vnH0KiSEeOTtI5YKWJy-A">
         <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_6LoksaiaEeOTtI5YKWJy-A" name="p_id" type="Integer"/>
         <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_6LoksqiaEeOTtI5YKWJy-A" name="p_nombre"/>
@@ -1514,13 +1510,6 @@
         <styles xmi:type="notation:FilteringStyle" xmi:id="_3vnH2aiSEeOTtI5YKWJy-A"/>
       </children>
       <children xmi:type="notation:BasicCompartment" xmi:id="_3vnH2qiSEeOTtI5YKWJy-A" type="7004">
-        <children xmi:type="notation:Node" xmi:id="_kbNpgqiTEeOTtI5YKWJy-A" type="3004" element="_kbNpgKiTEeOTtI5YKWJy-A">
-          <children xmi:type="notation:DecorationNode" xmi:id="_kbNph6iTEeOTtI5YKWJy-A" type="5004"/>
-          <styles xmi:type="notation:DescriptionStyle" xmi:id="_kbNpg6iTEeOTtI5YKWJy-A"/>
-          <styles xmi:type="notation:FontStyle" xmi:id="_kbNphKiTEeOTtI5YKWJy-A"/>
-          <styles xmi:type="notation:FillStyle" xmi:id="_kbNphaiTEeOTtI5YKWJy-A"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_kbNphqiTEeOTtI5YKWJy-A"/>
-        </children>
         <children xmi:type="notation:Node" xmi:id="_mG2E4aiTEeOTtI5YKWJy-A" type="3004" element="_mGv-QKiTEeOTtI5YKWJy-A">
           <children xmi:type="notation:DecorationNode" xmi:id="_mG2E5qiTEeOTtI5YKWJy-A" type="5004"/>
           <styles xmi:type="notation:DescriptionStyle" xmi:id="_mG2E4qiTEeOTtI5YKWJy-A"/>
