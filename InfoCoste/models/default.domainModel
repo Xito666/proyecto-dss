@@ -1048,7 +1048,7 @@
       <styles xmi:type="notation:DescriptionStyle" xmi:id="_fvzckqiOEeOTtI5YKWJy-A"/>
       <styles xmi:type="notation:FontStyle" xmi:id="_fvzck6iOEeOTtI5YKWJy-A"/>
       <styles xmi:type="notation:FillStyle" xmi:id="_fvzclKiOEeOTtI5YKWJy-A" fillColor="12516090"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_fvzclaiOEeOTtI5YKWJy-A" x="525" y="725"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_fvzclaiOEeOTtI5YKWJy-A" x="465" y="725"/>
     </children>
     <children xmi:type="notation:Node" xmi:id="_m6_38aiOEeOTtI5YKWJy-A" type="2003" element="_m6_38KiOEeOTtI5YKWJy-A">
       <children xmi:type="notation:DecorationNode" xmi:id="_m6_39qiOEeOTtI5YKWJy-A" type="5005"/>
