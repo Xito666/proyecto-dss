@@ -227,6 +227,13 @@
         <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_TUwJwqiREeOTtI5YKWJy-A" name="p_datosPago"/>
         <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_TUwJw6iREeOTtI5YKWJy-A" name="p_pedidoCliente" type="OID" typeObject="_fvzckKiOEeOTtI5YKWJy-A"/>
       </operations>
+      <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_v51UwKlKEeOgvuBKJWFDhA" name="leerTodos" operationType="ReadAll" type="Object" collectionType="List" typeObject="_9noLcKiPEeOTtI5YKWJy-A" filter="FROM TipoFacturaEN"/>
+      <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_zaNEMKlKEeOgvuBKJWFDhA" name="leerPorOID" operationType="ReadOID" type="Object" typeObject="_9noLcKiPEeOTtI5YKWJy-A">
+        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_1D8pMKlKEeOgvuBKJWFDhA" name="p_TipoFactura_OID" type="OID" typeObject="_9noLcKiPEeOTtI5YKWJy-A"/>
+      </operations>
+      <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_3wZoYKlKEeOgvuBKJWFDhA" name="leerPorFecha" operationType="ReadFilter" type="Object" collectionType="List" typeObject="_9noLcKiPEeOTtI5YKWJy-A" filter="FROM TipoFacturaEN t where t.fecha LIKE '%:fechaFiltro%'" automaticSynchronize="false">
+        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_7luUIKlKEeOgvuBKJWFDhA" name="fechaFiltro" type="Date"/>
+      </operations>
       <attributes xmi:type="es.ua.dlsi.ooh:Attribute" xmi:id="_A4sTkKiQEeOTtI5YKWJy-A" alias="id" name="id" type="Integer" isOID="true" unique="true"/>
       <attributes xmi:type="es.ua.dlsi.ooh:Attribute" xmi:id="_CXJOkKiQEeOTtI5YKWJy-A" alias="fecha" name="fecha" type="Date"/>
       <attributes xmi:type="es.ua.dlsi.ooh:Attribute" xmi:id="_C900EKiQEeOTtI5YKWJy-A" alias="datosPago" name="datosPago"/>
@@ -1163,6 +1170,27 @@
           <styles xmi:type="notation:FillStyle" xmi:id="_R9pz9aiREeOTtI5YKWJy-A"/>
           <layoutConstraint xmi:type="notation:Bounds" xmi:id="_R9pz9qiREeOTtI5YKWJy-A"/>
         </children>
+        <children xmi:type="notation:Node" xmi:id="_v7aCEKlKEeOgvuBKJWFDhA" type="3004" element="_v51UwKlKEeOgvuBKJWFDhA">
+          <children xmi:type="notation:DecorationNode" xmi:id="_v7apIKlKEeOgvuBKJWFDhA" type="5004"/>
+          <styles xmi:type="notation:DescriptionStyle" xmi:id="_v7aCEalKEeOgvuBKJWFDhA"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_v7aCEqlKEeOgvuBKJWFDhA" fontName="Segoe UI"/>
+          <styles xmi:type="notation:FillStyle" xmi:id="_v7aCE6lKEeOgvuBKJWFDhA"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_v7aCFKlKEeOgvuBKJWFDhA"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_zaNEMqlKEeOgvuBKJWFDhA" type="3004" element="_zaNEMKlKEeOgvuBKJWFDhA">
+          <children xmi:type="notation:DecorationNode" xmi:id="_zaNEN6lKEeOgvuBKJWFDhA" type="5004"/>
+          <styles xmi:type="notation:DescriptionStyle" xmi:id="_zaNEM6lKEeOgvuBKJWFDhA"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_zaNENKlKEeOgvuBKJWFDhA" fontName="Segoe UI"/>
+          <styles xmi:type="notation:FillStyle" xmi:id="_zaNENalKEeOgvuBKJWFDhA"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_zaNENqlKEeOgvuBKJWFDhA"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_3wZoYqlKEeOgvuBKJWFDhA" type="3004" element="_3wZoYKlKEeOgvuBKJWFDhA">
+          <children xmi:type="notation:DecorationNode" xmi:id="_3wZoZ6lKEeOgvuBKJWFDhA" type="5004"/>
+          <styles xmi:type="notation:DescriptionStyle" xmi:id="_3wZoY6lKEeOgvuBKJWFDhA"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_3wZoZKlKEeOgvuBKJWFDhA" fontName="Segoe UI"/>
+          <styles xmi:type="notation:FillStyle" xmi:id="_3wZoZalKEeOgvuBKJWFDhA"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_3wZoZqlKEeOgvuBKJWFDhA"/>
+        </children>
         <styles xmi:type="notation:SortingStyle" xmi:id="_9nuSGqiPEeOTtI5YKWJy-A"/>
         <styles xmi:type="notation:FilteringStyle" xmi:id="_9nuSG6iPEeOTtI5YKWJy-A"/>
       </children>
@@ -1931,7 +1959,7 @@
     </edges>
     <edges xmi:type="notation:Edge" xmi:id="_ZIKvUKiQEeOTtI5YKWJy-A" type="4004" element="_ZH-iEKiQEeOTtI5YKWJy-A" source="_fvzckaiOEeOTtI5YKWJy-A" target="_9nuSEKiPEeOTtI5YKWJy-A">
       <children xmi:type="notation:DecorationNode" xmi:id="_ZIKvVKiQEeOTtI5YKWJy-A" type="6005">
-        <layoutConstraint xmi:type="notation:Location" xmi:id="_ZIKvVaiQEeOTtI5YKWJy-A" x="15" y="25"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_ZIKvVaiQEeOTtI5YKWJy-A" x="67" y="28"/>
       </children>
       <children xmi:type="notation:DecorationNode" xmi:id="_ZIKvVqiQEeOTtI5YKWJy-A" type="6006">
         <layoutConstraint xmi:type="notation:Location" xmi:id="_ZIKvV6iQEeOTtI5YKWJy-A" x="37" y="24"/>
