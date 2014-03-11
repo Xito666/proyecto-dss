@@ -211,9 +211,7 @@
     </elements>
     <elements xmi:type="es.ua.dlsi.ooh:Association" xmi:id="_2VeMcKiPEeOTtI5YKWJy-A" name="pedidoCliente_cliente" alias="pedidoCliente_cliente" rolOrigin="_2VeMcaiPEeOTtI5YKWJy-A" rolTarget="_2VeMcqiPEeOTtI5YKWJy-A" classTarget="_fvzckKiOEeOTtI5YKWJy-A" classOrigin="_3wFQoKiMEeOTtI5YKWJy-A" rolOriginName="pedidoCliente" rolTargetName="cliente" rolOriginMultiplicity="0..*" rolTargetMultiplicity="1..1"/>
     <elements xmi:type="es.ua.dlsi.ooh:Class" xmi:id="_9noLcKiPEeOTtI5YKWJy-A" name="TipoFactura" alias="TipoFactura" stereotyped="Abstract" inheritSons="_HGYIYKiREeOTtI5YKWJy-A _HqlBoKiREeOTtI5YKWJy-A _IKq28KiREeOTtI5YKWJy-A _Iy4GcKiREeOTtI5YKWJy-A" asociationTarget="_ZH-iEKiQEeOTtI5YKWJy-A">
-      <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_HrzmIKiQEeOTtI5YKWJy-A" name="imprimir" type="Void">
-        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_HrzmIaiQEeOTtI5YKWJy-A" name="p_oid" type="OID" typeObject="_9noLcKiPEeOTtI5YKWJy-A"/>
-      </operations>
+      <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_HrzmIKiQEeOTtI5YKWJy-A" name="imprimir" type="Void"/>
       <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_IeC7YKiQEeOTtI5YKWJy-A" name="setDatosPago" operationType="Modifier" type="Void" automaticSynchronize="false" customized="true">
         <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_VZyZEKiQEeOTtI5YKWJy-A" name="p_TipoFactura_OID" type="OID" typeObject="_9noLcKiPEeOTtI5YKWJy-A"/>
         <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_VZyZEqiQEeOTtI5YKWJy-A" name="p_datosPago"/>
@@ -222,7 +220,7 @@
         <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_SYM3YKiQEeOTtI5YKWJy-A" name="p_TipoFactura_OID" type="OID" typeObject="_9noLcKiPEeOTtI5YKWJy-A"/>
         <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_SYM3YaiQEeOTtI5YKWJy-A" name="p_fecha" type="Date"/>
       </operations>
-      <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_K7iRgKiQEeOTtI5YKWJy-A" name="getDatosPago" operationType="ReadAll" type="Object" collectionType="List" typeObject="_9noLcKiPEeOTtI5YKWJy-A"/>
+      <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_K7iRgKiQEeOTtI5YKWJy-A" name="getDatosPago" collectionType="List"/>
       <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_LqJD8KiQEeOTtI5YKWJy-A" name="getFecha" type="Object" collectionType="List" typeObject="_9noLcKiPEeOTtI5YKWJy-A"/>
       <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_MLqcoKiQEeOTtI5YKWJy-A" name="getId" type="Integer"/>
       <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_R9pz8KiREeOTtI5YKWJy-A" name="TipoFactura" operationType="New" type="Object" typeObject="_9noLcKiPEeOTtI5YKWJy-A">
@@ -1179,7 +1177,7 @@
       <styles xmi:type="notation:DescriptionStyle" xmi:id="_9nuSEaiPEeOTtI5YKWJy-A"/>
       <styles xmi:type="notation:FontStyle" xmi:id="_9nuSEqiPEeOTtI5YKWJy-A"/>
       <styles xmi:type="notation:FillStyle" xmi:id="_9nuSE6iPEeOTtI5YKWJy-A" fillColor="12516090"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9nuSFKiPEeOTtI5YKWJy-A" x="300" y="1030"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9nuSFKiPEeOTtI5YKWJy-A" x="225" y="1035"/>
     </children>
     <children xmi:type="notation:Node" xmi:id="_kvewsaiQEeOTtI5YKWJy-A" type="2003" element="_kvewsKiQEeOTtI5YKWJy-A">
       <children xmi:type="notation:DecorationNode" xmi:id="_kvewtqiQEeOTtI5YKWJy-A" type="5005"/>
