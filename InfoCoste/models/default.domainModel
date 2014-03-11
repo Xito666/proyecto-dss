@@ -338,10 +338,6 @@
       <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_mGv-QKiTEeOTtI5YKWJy-A" name="disminuirStock" operationType="Modifier" type="Void" automaticSynchronize="false" customized="true">
         <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_s9Tx4KlNEeOgvuBKJWFDhA" name="p_Producto_OID" type="OID" typeObject="_3vnH0KiSEeOTtI5YKWJy-A"/>
       </operations>
-      <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_nD-bgKiTEeOTtI5YKWJy-A" name="aumentarStock" operationType="Modifier" type="Void" automaticSynchronize="false" customized="true">
-        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_j1Cl0KlNEeOgvuBKJWFDhA" name="p_Producto_OID" type="OID" typeObject="_3vnH0KiSEeOTtI5YKWJy-A"/>
-        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_j1Cl1alNEeOgvuBKJWFDhA" name="p_stock" type="Integer"/>
-      </operations>
       <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_pSp5kKiTEeOTtI5YKWJy-A" name="setStock" operationType="Modifier" type="Void" automaticSynchronize="false" customized="true">
         <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_Jza2EKiUEeOTtI5YKWJy-A" name="p_Producto_OID" type="OID" typeObject="_3vnH0KiSEeOTtI5YKWJy-A"/>
         <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_Jza2FaiUEeOTtI5YKWJy-A" name="p_stock" type="Integer"/>
@@ -1516,13 +1512,6 @@
           <styles xmi:type="notation:FontStyle" xmi:id="_mG2E46iTEeOTtI5YKWJy-A"/>
           <styles xmi:type="notation:FillStyle" xmi:id="_mG2E5KiTEeOTtI5YKWJy-A"/>
           <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mG2E5aiTEeOTtI5YKWJy-A"/>
-        </children>
-        <children xmi:type="notation:Node" xmi:id="_nEEiIKiTEeOTtI5YKWJy-A" type="3004" element="_nD-bgKiTEeOTtI5YKWJy-A">
-          <children xmi:type="notation:DecorationNode" xmi:id="_nEEiJaiTEeOTtI5YKWJy-A" type="5004"/>
-          <styles xmi:type="notation:DescriptionStyle" xmi:id="_nEEiIaiTEeOTtI5YKWJy-A"/>
-          <styles xmi:type="notation:FontStyle" xmi:id="_nEEiIqiTEeOTtI5YKWJy-A"/>
-          <styles xmi:type="notation:FillStyle" xmi:id="_nEEiI6iTEeOTtI5YKWJy-A"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_nEEiJKiTEeOTtI5YKWJy-A"/>
         </children>
         <children xmi:type="notation:Node" xmi:id="_pSp5kqiTEeOTtI5YKWJy-A" type="3004" element="_pSp5kKiTEeOTtI5YKWJy-A">
           <children xmi:type="notation:DecorationNode" xmi:id="_pSp5l6iTEeOTtI5YKWJy-A" type="5004"/>
