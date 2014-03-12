@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+		<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+		                   assembly="InfoCosteProgramaGenNHibernate"
+		                   namespace="InfoCosteProgramaGenNHibernate.EN.InfoCoste">
+			<class name="PedidoProveedorEN" table="[PedidoProveedor]">
+						<id name="Id" column="[id]"/>
+					<property name="Fecha" type="date"> 
+						<column name="[fecha]"  not-null="true"/>
+					</property>
+			
+			
+			
+		  			
+						<bag name="LineaPedidoProveedor" cascade="delete">
+							<key>
+								<column name="[FK_id_idPedidoProveedor]"/>
+					      	</key>
+							<one-to-many class="InfoCosteProgramaGenNHibernate.EN.InfoCoste.LineaPedidoProveedorEN"/>
+					    </bag>
+					
+			
+		  			
+						<many-to-one name="Proveedor" class="InfoCosteProgramaGenNHibernate.EN.InfoCoste.ProveedorEN" >	
+								<column name="[FK_id_idProveedor]"/>
+						</many-to-one>
+											 					
+					
+					
+					
+					
+		
+		  </class>
+		  
+		  <query name="PedidoProveedorENReadAllHQL">from PedidoProveedorEN</query>
+		  <query name="PedidoProveedorENleePorFechaHQL"><![CDATA[FROM PedidoProveedorEN p where p.fecha = :fechaFiltro]]></query>
+		</hibernate-mapping>
+	
