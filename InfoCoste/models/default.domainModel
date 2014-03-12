@@ -451,6 +451,13 @@
         <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_JAF3g6ibEeOTtI5YKWJy-A" name="p_direccion"/>
         <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_JAF3hKibEeOTtI5YKWJy-A" name="p_email"/>
       </operations>
+      <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_4R1G8Kn5EeO7Mc0QDERcnw" name="leerTodos" operationType="ReadAll" type="Object" collectionType="List" typeObject="_HNkb4KiZEeOTtI5YKWJy-A"/>
+      <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_6ree4Kn5EeO7Mc0QDERcnw" name="leerPorOID" operationType="ReadOID" type="Object" typeObject="_HNkb4KiZEeOTtI5YKWJy-A">
+        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_8cJLQKn5EeO7Mc0QDERcnw" name="p_Proveedor_OID" type="OID" typeObject="_HNkb4KiZEeOTtI5YKWJy-A"/>
+      </operations>
+      <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_9fuvMKn5EeO7Mc0QDERcnw" name="leerPorNombre" operationType="ReadFilter" type="Object" collectionType="List" typeObject="_HNkb4KiZEeOTtI5YKWJy-A" filter="FROM ProveedorEN p where p.nombre = :nombreFiltro" automaticSynchronize="false">
+        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="__b_nkKn5EeO7Mc0QDERcnw" name="nombreFiltro"/>
+      </operations>
       <attributes xmi:type="es.ua.dlsi.ooh:Attribute" xmi:id="_vVHjkKiZEeOTtI5YKWJy-A" alias="id" name="id" isOID="true" unique="true"/>
       <attributes xmi:type="es.ua.dlsi.ooh:Attribute" xmi:id="_v3HdYKiZEeOTtI5YKWJy-A" alias="nombre" name="nombre"/>
       <attributes xmi:type="es.ua.dlsi.ooh:Attribute" xmi:id="_wedxQKiZEeOTtI5YKWJy-A" alias="direccion" name="direccion"/>
@@ -1784,6 +1791,27 @@
           <styles xmi:type="notation:FontStyle" xmi:id="_P4XMVKiaEeOTtI5YKWJy-A"/>
           <styles xmi:type="notation:FillStyle" xmi:id="_P4XMVaiaEeOTtI5YKWJy-A"/>
           <layoutConstraint xmi:type="notation:Bounds" xmi:id="_P4XMVqiaEeOTtI5YKWJy-A"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_4R-Q4Kn5EeO7Mc0QDERcnw" type="3004" element="_4R1G8Kn5EeO7Mc0QDERcnw">
+          <children xmi:type="notation:DecorationNode" xmi:id="_4R-Q5an5EeO7Mc0QDERcnw" type="5004"/>
+          <styles xmi:type="notation:DescriptionStyle" xmi:id="_4R-Q4an5EeO7Mc0QDERcnw"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_4R-Q4qn5EeO7Mc0QDERcnw" fontName="Segoe UI"/>
+          <styles xmi:type="notation:FillStyle" xmi:id="_4R-Q46n5EeO7Mc0QDERcnw"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_4R-Q5Kn5EeO7Mc0QDERcnw"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_6ree4qn5EeO7Mc0QDERcnw" type="3004" element="_6ree4Kn5EeO7Mc0QDERcnw">
+          <children xmi:type="notation:DecorationNode" xmi:id="_6ree56n5EeO7Mc0QDERcnw" type="5004"/>
+          <styles xmi:type="notation:DescriptionStyle" xmi:id="_6ree46n5EeO7Mc0QDERcnw"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_6ree5Kn5EeO7Mc0QDERcnw" fontName="Segoe UI"/>
+          <styles xmi:type="notation:FillStyle" xmi:id="_6ree5an5EeO7Mc0QDERcnw"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_6ree5qn5EeO7Mc0QDERcnw"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_9fuvMqn5EeO7Mc0QDERcnw" type="3004" element="_9fuvMKn5EeO7Mc0QDERcnw">
+          <children xmi:type="notation:DecorationNode" xmi:id="_9fuvN6n5EeO7Mc0QDERcnw" type="5004"/>
+          <styles xmi:type="notation:DescriptionStyle" xmi:id="_9fuvM6n5EeO7Mc0QDERcnw"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_9fuvNKn5EeO7Mc0QDERcnw" fontName="Segoe UI"/>
+          <styles xmi:type="notation:FillStyle" xmi:id="_9fuvNan5EeO7Mc0QDERcnw"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9fuvNqn5EeO7Mc0QDERcnw"/>
         </children>
         <styles xmi:type="notation:SortingStyle" xmi:id="_HNkb66iZEeOTtI5YKWJy-A"/>
         <styles xmi:type="notation:FilteringStyle" xmi:id="_HNkb7KiZEeOTtI5YKWJy-A"/>
