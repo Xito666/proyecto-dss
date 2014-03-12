@@ -46,6 +46,8 @@
             this.comprasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.button1 = new System.Windows.Forms.Button();
             this.entrarFacturaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.verPresupuestosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.verReservasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -131,7 +133,9 @@
             // 
             this.clientesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.nuevoToolStripMenuItem1,
-            this.gestiónClientesToolStripMenuItem});
+            this.gestiónClientesToolStripMenuItem,
+            this.verPresupuestosToolStripMenuItem,
+            this.verReservasToolStripMenuItem});
             this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
             this.clientesToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
             this.clientesToolStripMenuItem.Text = "Clientes";
@@ -184,6 +188,18 @@
             this.entrarFacturaToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
             this.entrarFacturaToolStripMenuItem.Text = "Entrar Factura";
             // 
+            // verPresupuestosToolStripMenuItem
+            // 
+            this.verPresupuestosToolStripMenuItem.Name = "verPresupuestosToolStripMenuItem";
+            this.verPresupuestosToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
+            this.verPresupuestosToolStripMenuItem.Text = "Ver Presupuestos";
+            // 
+            // verReservasToolStripMenuItem
+            // 
+            this.verReservasToolStripMenuItem.Name = "verReservasToolStripMenuItem";
+            this.verReservasToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
+            this.verReservasToolStripMenuItem.Text = "Ver Reservas";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -221,6 +237,8 @@
         private System.Windows.Forms.ToolStripMenuItem comprasToolStripMenuItem;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ToolStripMenuItem entrarFacturaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem verPresupuestosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem verReservasToolStripMenuItem;
     }
 }
 
