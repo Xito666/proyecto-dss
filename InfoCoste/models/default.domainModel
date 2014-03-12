@@ -149,18 +149,18 @@
     <elements xmi:type="es.ua.dlsi.ooh:Inheritance" xmi:id="_YUxOYKiOEeOTtI5YKWJy-A" name="inheritance2" son="_-yZAUKiNEeOTtI5YKWJy-A" father="_3wFQoKiMEeOTtI5YKWJy-A"/>
     <elements xmi:type="es.ua.dlsi.ooh:Class" xmi:id="_fvzckKiOEeOTtI5YKWJy-A" name="PedidoCliente" alias="PedidoCliente" asociationTarget="_2VeMcKiPEeOTtI5YKWJy-A" associationOrigin="_ZH-iEKiQEeOTtI5YKWJy-A _t1jScKiSEeOTtI5YKWJy-A">
       <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_xMKlwKiOEeOTtI5YKWJy-A" name="facturar" operationType="Relationer" type="Void" relatedRol="_ZH-iEaiQEeOTtI5YKWJy-A">
-        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_pFK4IKlMEeOgvuBKJWFDhA" name="p_PedidoCliente_OID" type="OID" typeObject="_fvzckKiOEeOTtI5YKWJy-A"/>
-        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_pFK4IalMEeOgvuBKJWFDhA" name="p_tipoFactura_OID" type="OID" typeObject="_9noLcKiPEeOTtI5YKWJy-A"/>
+        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_xDp-IKn7EeO7Mc0QDERcnw" name="p_PedidoCliente_OID" type="OID" typeObject="_fvzckKiOEeOTtI5YKWJy-A"/>
+        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_xDp-Ian7EeO7Mc0QDERcnw" name="p_tipoFactura_OID" type="OID" typeObject="_9noLcKiPEeOTtI5YKWJy-A"/>
       </operations>
       <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_xqVvgKiOEeOTtI5YKWJy-A" name="exportar" type="Void"/>
-      <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_zy6lkKiOEeOTtI5YKWJy-A" name="calcularPrecio" type="Void"/>
+      <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_zy6lkKiOEeOTtI5YKWJy-A" name="calcularPrecio" type="Double"/>
       <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_01AUsKiOEeOTtI5YKWJy-A" name="borrarLinea" operationType="Unrelationer" type="Void" relatedRol="_t1jScaiSEeOTtI5YKWJy-A" customized="true">
-        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_pFK4IqlMEeOgvuBKJWFDhA" name="p_PedidoCliente_OID" type="OID" typeObject="_fvzckKiOEeOTtI5YKWJy-A"/>
-        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_pFK4I6lMEeOgvuBKJWFDhA" name="p_lineaPedido_OIDs" type="OID" collectionType="List" typeObject="_Z3uHgKiREeOTtI5YKWJy-A"/>
+        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_xDp-Iqn7EeO7Mc0QDERcnw" name="p_PedidoCliente_OID" type="OID" typeObject="_fvzckKiOEeOTtI5YKWJy-A"/>
+        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_xDp-I6n7EeO7Mc0QDERcnw" name="p_lineaPedido_OIDs" type="OID" collectionType="List" typeObject="_Z3uHgKiREeOTtI5YKWJy-A"/>
       </operations>
       <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_5XPw0KiOEeOTtI5YKWJy-A" name="anyadirLinea" operationType="Relationer" type="Void" relatedRol="_t1jScaiSEeOTtI5YKWJy-A" customized="true">
-        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_pFK4JKlMEeOgvuBKJWFDhA" name="p_PedidoCliente_OID" type="OID" typeObject="_fvzckKiOEeOTtI5YKWJy-A"/>
-        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_pFK4JalMEeOgvuBKJWFDhA" name="p_lineaPedido_OIDs" type="OID" collectionType="List" typeObject="_Z3uHgKiREeOTtI5YKWJy-A"/>
+        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_xDp-JKn7EeO7Mc0QDERcnw" name="p_PedidoCliente_OID" type="OID" typeObject="_fvzckKiOEeOTtI5YKWJy-A"/>
+        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_xDp-Jan7EeO7Mc0QDERcnw" name="p_lineaPedido_OIDs" type="OID" collectionType="List" typeObject="_Z3uHgKiREeOTtI5YKWJy-A"/>
       </operations>
       <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_7XH94KiOEeOTtI5YKWJy-A" name="setCliente" operationType="Relationer" type="Void" relatedRol="_2VeMcqiPEeOTtI5YKWJy-A" automaticSynchronize="false" customized="true">
         <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_BdegwKlCEeO23aV5p6NXAQ" name="p_PedidoCliente_OID" type="OID" typeObject="_fvzckKiOEeOTtI5YKWJy-A"/>
@@ -178,21 +178,19 @@
       <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_JPCI4KiPEeOTtI5YKWJy-A" name="getCliente" type="Object" collectionType="List" typeObject="_3wFQoKiMEeOTtI5YKWJy-A"/>
       <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_MixKgKiPEeOTtI5YKWJy-A" name="getId" type="Integer"/>
       <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_NIfGsKiPEeOTtI5YKWJy-A" name="PedidoCliente" operationType="New" type="Object" typeObject="_fvzckKiOEeOTtI5YKWJy-A">
-        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_pFK4JqlMEeOgvuBKJWFDhA" name="p_id" type="Integer"/>
-        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_pFK4J6lMEeOgvuBKJWFDhA" name="p_fecha" type="Date"/>
-        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_pFK4KKlMEeOgvuBKJWFDhA" name="p_precioTotal"/>
-        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_pFK4KalMEeOgvuBKJWFDhA" name="p_cliente" type="OID" typeObject="_3wFQoKiMEeOTtI5YKWJy-A"/>
+        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_xDp-Jqn7EeO7Mc0QDERcnw" name="p_id" type="Integer"/>
+        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_xDp-J6n7EeO7Mc0QDERcnw" name="p_fecha" type="Date"/>
+        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_xDp-KKn7EeO7Mc0QDERcnw" name="p_cliente" type="OID" typeObject="_3wFQoKiMEeOTtI5YKWJy-A"/>
       </operations>
       <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_laivkKlDEeO23aV5p6NXAQ" name="leerTodos" operationType="ReadAll" type="Object" collectionType="List" typeObject="_fvzckKiOEeOTtI5YKWJy-A"/>
       <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_pnDMQKlDEeO23aV5p6NXAQ" name="leerPorOID" operationType="ReadOID" type="Object" typeObject="_fvzckKiOEeOTtI5YKWJy-A">
-        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_pFK4KqlMEeOgvuBKJWFDhA" name="p_PedidoCliente_OID" type="OID" typeObject="_fvzckKiOEeOTtI5YKWJy-A"/>
+        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_xDp-Kan7EeO7Mc0QDERcnw" name="p_PedidoCliente_OID" type="OID" typeObject="_fvzckKiOEeOTtI5YKWJy-A"/>
       </operations>
       <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_sB9vgKlDEeO23aV5p6NXAQ" name="leerPorFecha" operationType="ReadFilter" type="Object" collectionType="List" typeObject="_fvzckKiOEeOTtI5YKWJy-A" filter="FROM PedidoClienteEN p where p.fecha = :fechaFilter" automaticSynchronize="false">
         <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_t9KQ4KlDEeO23aV5p6NXAQ" name="fechaFilter" type="Date"/>
       </operations>
       <attributes xmi:type="es.ua.dlsi.ooh:Attribute" xmi:id="_mgQcsKiOEeOTtI5YKWJy-A" alias="id" name="id" type="Integer" isOID="true" unique="true"/>
       <attributes xmi:type="es.ua.dlsi.ooh:Attribute" xmi:id="_oJZkwKiOEeOTtI5YKWJy-A" alias="fecha" name="fecha" type="Date"/>
-      <attributes xmi:type="es.ua.dlsi.ooh:Attribute" xmi:id="_p1_pcKiOEeOTtI5YKWJy-A" alias="precioTotal" name="precioTotal"/>
       <attributes xmi:type="es.ua.dlsi.ooh:Attribute" xmi:id="_2VeMcqiPEeOTtI5YKWJy-A" alias="idCliente" associationTarget="_2VeMcKiPEeOTtI5YKWJy-A" name="cliente" type="Object"/>
       <attributes xmi:type="es.ua.dlsi.ooh:Attribute" xmi:id="_ZH-iEaiQEeOTtI5YKWJy-A" alias="idTipoFactura" aggregation="Share" lower="0" associationOrigin="_ZH-iEKiQEeOTtI5YKWJy-A" name="tipoFactura" type="Object"/>
       <attributes xmi:type="es.ua.dlsi.ooh:Attribute" xmi:id="_t1jScaiSEeOTtI5YKWJy-A" alias="idLineaPedido" aggregation="Composite" lower="0" upper="*" associationOrigin="_t1jScKiSEeOTtI5YKWJy-A" name="lineaPedido" type="Object" collectionType="List"/>
@@ -315,9 +313,6 @@
       <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_92yW4KiREeOTtI5YKWJy-A" name="getCantidad" type="Integer" collectionType="List"/>
       <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_-uYGMKiREeOTtI5YKWJy-A" name="getNumero" type="Integer" collectionType="List"/>
       <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_bDuLIKiSEeOTtI5YKWJy-A" name="getId" type="Integer"/>
-      <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_ov4ZIKiSEeOTtI5YKWJy-A" name="calcularPrecio" type="Void">
-        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_ov4ZIaiSEeOTtI5YKWJy-A" name="p_oid" type="OID" typeObject="_Z3uHgKiREeOTtI5YKWJy-A"/>
-      </operations>
       <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_q5B28KiSEeOTtI5YKWJy-A" name="LineaPedido" operationType="New" type="Object" typeObject="_Z3uHgKiREeOTtI5YKWJy-A">
         <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_pFK4LalMEeOgvuBKJWFDhA" name="p_id" type="Integer"/>
         <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_pFK4LqlMEeOgvuBKJWFDhA" name="p_numero" type="Integer"/>
@@ -375,53 +370,38 @@
     </elements>
     <elements xmi:type="es.ua.dlsi.ooh:Association" xmi:id="_YpZy4KiUEeOTtI5YKWJy-A" name="producto_lineaPedido" alias="producto_lineaPedido" rolOrigin="_YpZy4aiUEeOTtI5YKWJy-A" rolTarget="_YpZy4qiUEeOTtI5YKWJy-A" classTarget="_3vnH0KiSEeOTtI5YKWJy-A" classOrigin="_Z3uHgKiREeOTtI5YKWJy-A" rolOriginName="producto" rolTargetName="lineaPedido" rolOriginMultiplicity="1..1" rolTargetMultiplicity="0..*"/>
     <elements xmi:type="es.ua.dlsi.ooh:Class" xmi:id="_bVh6kKiXEeOTtI5YKWJy-A" name="PedidoProveedor" alias="PedidoProveedor" asociationTarget="_8zKAkKiaEeOTtI5YKWJy-A" associationOrigin="_qB_noKiaEeOTtI5YKWJy-A">
-      <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_z3WDgKiXEeOTtI5YKWJy-A" name="facturar" type="Void">
-        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_z3WDgaiXEeOTtI5YKWJy-A" name="p_oid" type="OID" typeObject="_bVh6kKiXEeOTtI5YKWJy-A"/>
-      </operations>
-      <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_08lNQKiXEeOTtI5YKWJy-A" name="exportar" type="Void">
-        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_08rT4KiXEeOTtI5YKWJy-A" name="p_oid" type="OID" typeObject="_bVh6kKiXEeOTtI5YKWJy-A"/>
-      </operations>
-      <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_3bsUAKiXEeOTtI5YKWJy-A" name="calcularPrecio" type="Void">
-        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_3bsUAaiXEeOTtI5YKWJy-A" name="p_oid" type="OID" typeObject="_bVh6kKiXEeOTtI5YKWJy-A"/>
-      </operations>
+      <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_z3WDgKiXEeOTtI5YKWJy-A" name="facturar" type="Void"/>
+      <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_08lNQKiXEeOTtI5YKWJy-A" name="exportar" type="Void"/>
+      <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_3bsUAKiXEeOTtI5YKWJy-A" name="calcularPrecio" type="Double"/>
       <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_5kLDcKiXEeOTtI5YKWJy-A" name="borrarLinea" operationType="Unrelationer" type="Void" relatedRol="_qB_noaiaEeOTtI5YKWJy-A">
-        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_g3fjcKn5EeO7Mc0QDERcnw" name="p_PedidoProveedor_OID" type="OID" typeObject="_bVh6kKiXEeOTtI5YKWJy-A"/>
-        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_g3fjcan5EeO7Mc0QDERcnw" name="p_lineaPedidoProveedor_OIDs" type="OID" collectionType="List" typeObject="_TgoTgKiaEeOTtI5YKWJy-A"/>
+        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_yEMOEKn7EeO7Mc0QDERcnw" name="p_PedidoProveedor_OID" type="OID" typeObject="_bVh6kKiXEeOTtI5YKWJy-A"/>
+        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_yEMOEan7EeO7Mc0QDERcnw" name="p_lineaPedidoProveedor_OIDs" type="OID" collectionType="List" typeObject="_TgoTgKiaEeOTtI5YKWJy-A"/>
       </operations>
       <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_6a_WsKiXEeOTtI5YKWJy-A" name="anyadirLinea" operationType="Relationer" type="Void" relatedRol="_qB_noaiaEeOTtI5YKWJy-A">
-        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_fgFroKn5EeO7Mc0QDERcnw" name="p_PedidoProveedor_OID" type="OID" typeObject="_bVh6kKiXEeOTtI5YKWJy-A"/>
-        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_fgFroan5EeO7Mc0QDERcnw" name="p_lineaPedidoProveedor_OIDs" type="OID" collectionType="List" typeObject="_TgoTgKiaEeOTtI5YKWJy-A"/>
+        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_yEMOEqn7EeO7Mc0QDERcnw" name="p_PedidoProveedor_OID" type="OID" typeObject="_bVh6kKiXEeOTtI5YKWJy-A"/>
+        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_yEMOE6n7EeO7Mc0QDERcnw" name="p_lineaPedidoProveedor_OIDs" type="OID" collectionType="List" typeObject="_TgoTgKiaEeOTtI5YKWJy-A"/>
       </operations>
       <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_9EzRkKiXEeOTtI5YKWJy-A" name="setProveedor" operationType="Relationer" type="Void" relatedRol="_8zKAkqiaEeOTtI5YKWJy-A">
-        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_b7rJsKn5EeO7Mc0QDERcnw" name="p_PedidoProveedor_OID" type="OID" typeObject="_bVh6kKiXEeOTtI5YKWJy-A"/>
-        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_b7rJsan5EeO7Mc0QDERcnw" name="p_proveedor_OID" type="OID" typeObject="_HNkb4KiZEeOTtI5YKWJy-A"/>
+        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_yEMOFKn7EeO7Mc0QDERcnw" name="p_PedidoProveedor_OID" type="OID" typeObject="_bVh6kKiXEeOTtI5YKWJy-A"/>
+        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_yEMOFan7EeO7Mc0QDERcnw" name="p_proveedor_OID" type="OID" typeObject="_HNkb4KiZEeOTtI5YKWJy-A"/>
       </operations>
-      <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_AL1T8KiYEeOTtI5YKWJy-A" name="getLinea" type="Void">
-        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_AL1T8aiYEeOTtI5YKWJy-A" name="p_oid" type="OID" typeObject="_bVh6kKiXEeOTtI5YKWJy-A"/>
-      </operations>
-      <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_A4PG8KiYEeOTtI5YKWJy-A" name="getLineas" type="Void">
-        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_A4PG8aiYEeOTtI5YKWJy-A" name="p_oid" type="OID" typeObject="_bVh6kKiXEeOTtI5YKWJy-A"/>
-      </operations>
-      <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_CRWO8KiYEeOTtI5YKWJy-A" name="getFecha" type="Void">
-        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_CRWO8aiYEeOTtI5YKWJy-A" name="p_oid" type="OID" typeObject="_bVh6kKiXEeOTtI5YKWJy-A"/>
-      </operations>
-      <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_C92IkKiYEeOTtI5YKWJy-A" name="getCliente" type="Void">
-        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_C98PMKiYEeOTtI5YKWJy-A" name="p_oid" type="OID" typeObject="_bVh6kKiXEeOTtI5YKWJy-A"/>
-      </operations>
-      <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_EquhIKiYEeOTtI5YKWJy-A" name="getProveedor" type="Void">
-        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_Eq0nwKiYEeOTtI5YKWJy-A" name="p_oid" type="OID" typeObject="_bVh6kKiXEeOTtI5YKWJy-A"/>
-      </operations>
-      <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_FVy3YKiYEeOTtI5YKWJy-A" name="getId" operationType="ReadOID" type="Object" typeObject="_bVh6kKiXEeOTtI5YKWJy-A">
-        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_AU7eMKibEeOTtI5YKWJy-A" name="p_PedidoProveedor_OID" type="OID" typeObject="_bVh6kKiXEeOTtI5YKWJy-A"/>
-      </operations>
+      <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_A4PG8KiYEeOTtI5YKWJy-A" name="getLineas" type="Object" collectionType="List" typeObject="_TgoTgKiaEeOTtI5YKWJy-A"/>
+      <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_CRWO8KiYEeOTtI5YKWJy-A" name="getFecha" type="Void"/>
+      <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_EquhIKiYEeOTtI5YKWJy-A" name="getProveedor" type="Void"/>
+      <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_FVy3YKiYEeOTtI5YKWJy-A" name="getId" type="Integer"/>
       <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_FvGvQKiYEeOTtI5YKWJy-A" name="PedidoProveedor" operationType="New" type="Object" typeObject="_bVh6kKiXEeOTtI5YKWJy-A">
-        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_AU7eMaibEeOTtI5YKWJy-A" name="p_id" type="Integer"/>
-        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_AU7eMqibEeOTtI5YKWJy-A" name="p_precio" type="Double"/>
-        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_AU7eM6ibEeOTtI5YKWJy-A" name="p_fecha" type="Date"/>
-        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_AU7eNKibEeOTtI5YKWJy-A" name="p_proveedor" type="OID" typeObject="_HNkb4KiZEeOTtI5YKWJy-A"/>
+        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_yEMOFqn7EeO7Mc0QDERcnw" name="p_id" type="Integer"/>
+        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_yEMOF6n7EeO7Mc0QDERcnw" name="p_fecha" type="Date"/>
+        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_yEMOGKn7EeO7Mc0QDERcnw" name="p_proveedor" type="OID" typeObject="_HNkb4KiZEeOTtI5YKWJy-A"/>
+      </operations>
+      <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_YSGBoKn-EeO7Mc0QDERcnw" name="leerTodos" operationType="ReadAll" type="Object" collectionType="List" typeObject="_bVh6kKiXEeOTtI5YKWJy-A"/>
+      <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_aTLIkKn-EeO7Mc0QDERcnw" name="leePorOID" operationType="ReadOID" type="Object" typeObject="_bVh6kKiXEeOTtI5YKWJy-A">
+        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_bNvTYKn-EeO7Mc0QDERcnw" name="p_PedidoProveedor_OID" type="OID" typeObject="_bVh6kKiXEeOTtI5YKWJy-A"/>
+      </operations>
+      <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_cU3TgKn-EeO7Mc0QDERcnw" name="leePorFecha" operationType="ReadFilter" type="Object" collectionType="List" typeObject="_bVh6kKiXEeOTtI5YKWJy-A" filter="FROM PedidoProveedorEN p where p.fecha = :fechaFiltro" automaticSynchronize="false">
+        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_dwrKMKn-EeO7Mc0QDERcnw" name="fechaFiltro" type="Date"/>
       </operations>
       <attributes xmi:type="es.ua.dlsi.ooh:Attribute" xmi:id="_euCugKiXEeOTtI5YKWJy-A" alias="id" name="id" type="Integer" isOID="true" unique="true"/>
-      <attributes xmi:type="es.ua.dlsi.ooh:Attribute" xmi:id="_fXTG4KiXEeOTtI5YKWJy-A" alias="precio" name="precio" type="Double"/>
       <attributes xmi:type="es.ua.dlsi.ooh:Attribute" xmi:id="_gmSCgKiXEeOTtI5YKWJy-A" alias="fecha" name="fecha" type="Date"/>
       <attributes xmi:type="es.ua.dlsi.ooh:Attribute" xmi:id="_qB_noaiaEeOTtI5YKWJy-A" alias="idLineaPedidoProveedor" aggregation="Composite" lower="0" upper="*" associationOrigin="_qB_noKiaEeOTtI5YKWJy-A" name="lineaPedidoProveedor" type="Object"/>
       <attributes xmi:type="es.ua.dlsi.ooh:Attribute" xmi:id="_8zKAkqiaEeOTtI5YKWJy-A" alias="idProveedor" associationTarget="_8zKAkKiaEeOTtI5YKWJy-A" name="proveedor" type="Object"/>
@@ -439,9 +419,7 @@
         <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_q6zbcKn5EeO7Mc0QDERcnw" name="p_Proveedor_OID" type="OID" typeObject="_HNkb4KiZEeOTtI5YKWJy-A"/>
         <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_q6zbcan5EeO7Mc0QDERcnw" name="p_nombre"/>
       </operations>
-      <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_NKQnUKiaEeOTtI5YKWJy-A" name="getEmail" type="Void">
-        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_NKQnUaiaEeOTtI5YKWJy-A" name="p_oid" type="OID" typeObject="_HNkb4KiZEeOTtI5YKWJy-A"/>
-      </operations>
+      <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_NKQnUKiaEeOTtI5YKWJy-A" name="getEmail" type="Void"/>
       <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_OQ77gKiaEeOTtI5YKWJy-A" name="getDireccion"/>
       <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_O5z5YKiaEeOTtI5YKWJy-A" name="getNombre"/>
       <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_PbVSEKiaEeOTtI5YKWJy-A" name="getId"/>
@@ -491,9 +469,6 @@
       </operations>
       <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_lgUzQKiaEeOTtI5YKWJy-A" name="getNumero" type="Void">
         <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_lgUzQaiaEeOTtI5YKWJy-A" name="p_oid" type="OID" typeObject="_TgoTgKiaEeOTtI5YKWJy-A"/>
-      </operations>
-      <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_l9vIAKiaEeOTtI5YKWJy-A" name="calcularPrecio" type="Void">
-        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_l9vIAaiaEeOTtI5YKWJy-A" name="p_oid" type="OID" typeObject="_TgoTgKiaEeOTtI5YKWJy-A"/>
       </operations>
       <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_mrMq8KiaEeOTtI5YKWJy-A" name="LineaPedido" operationType="New" type="Object" typeObject="_TgoTgKiaEeOTtI5YKWJy-A">
         <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_Ju43MKibEeOTtI5YKWJy-A" name="p_id"/>
@@ -958,10 +933,6 @@
         <children xmi:type="notation:Shape" xmi:id="_oJZkwaiOEeOTtI5YKWJy-A" type="3003" element="_oJZkwKiOEeOTtI5YKWJy-A">
           <children xmi:type="notation:DecorationNode" xmi:id="_oJZkw6iOEeOTtI5YKWJy-A" type="5007"/>
           <layoutConstraint xmi:type="notation:Bounds" xmi:id="_oJZkwqiOEeOTtI5YKWJy-A"/>
-        </children>
-        <children xmi:type="notation:Shape" xmi:id="_p1_pcaiOEeOTtI5YKWJy-A" type="3003" element="_p1_pcKiOEeOTtI5YKWJy-A">
-          <children xmi:type="notation:DecorationNode" xmi:id="_p2FwEKiOEeOTtI5YKWJy-A" type="5007"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_p1_pcqiOEeOTtI5YKWJy-A"/>
         </children>
         <styles xmi:type="notation:SortingStyle" xmi:id="_fv5jMqiOEeOTtI5YKWJy-A"/>
         <styles xmi:type="notation:FilteringStyle" xmi:id="_fv5jM6iOEeOTtI5YKWJy-A"/>
@@ -1453,13 +1424,6 @@
           <styles xmi:type="notation:FillStyle" xmi:id="_bD0RxKiSEeOTtI5YKWJy-A"/>
           <layoutConstraint xmi:type="notation:Bounds" xmi:id="_bD0RxaiSEeOTtI5YKWJy-A"/>
         </children>
-        <children xmi:type="notation:Node" xmi:id="_ov4ZIqiSEeOTtI5YKWJy-A" type="3004" element="_ov4ZIKiSEeOTtI5YKWJy-A">
-          <children xmi:type="notation:DecorationNode" xmi:id="_ov4ZI6iSEeOTtI5YKWJy-A" type="5004"/>
-          <styles xmi:type="notation:DescriptionStyle" xmi:id="_ov4ZJKiSEeOTtI5YKWJy-A"/>
-          <styles xmi:type="notation:FontStyle" xmi:id="_ov4ZJaiSEeOTtI5YKWJy-A"/>
-          <styles xmi:type="notation:FillStyle" xmi:id="_ov4ZJqiSEeOTtI5YKWJy-A"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ov4ZJ6iSEeOTtI5YKWJy-A" x="10" y="10"/>
-        </children>
         <children xmi:type="notation:Node" xmi:id="_q5B29qiSEeOTtI5YKWJy-A" type="3004" element="_q5B28KiSEeOTtI5YKWJy-A">
           <children xmi:type="notation:DecorationNode" xmi:id="_q5B296iSEeOTtI5YKWJy-A" type="5004"/>
           <styles xmi:type="notation:DescriptionStyle" xmi:id="_q5B2-KiSEeOTtI5YKWJy-A"/>
@@ -1602,10 +1566,6 @@
           <children xmi:type="notation:DecorationNode" xmi:id="_euI1IKiXEeOTtI5YKWJy-A" type="5007"/>
           <layoutConstraint xmi:type="notation:Bounds" xmi:id="_euCugqiXEeOTtI5YKWJy-A"/>
         </children>
-        <children xmi:type="notation:Shape" xmi:id="_fXTG4aiXEeOTtI5YKWJy-A" type="3003" element="_fXTG4KiXEeOTtI5YKWJy-A">
-          <children xmi:type="notation:DecorationNode" xmi:id="_fXTG46iXEeOTtI5YKWJy-A" type="5007"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_fXTG4qiXEeOTtI5YKWJy-A"/>
-        </children>
         <children xmi:type="notation:Shape" xmi:id="_gmSCgaiXEeOTtI5YKWJy-A" type="3003" element="_gmSCgKiXEeOTtI5YKWJy-A">
           <children xmi:type="notation:DecorationNode" xmi:id="_gmSCg6iXEeOTtI5YKWJy-A" type="5007"/>
           <layoutConstraint xmi:type="notation:Bounds" xmi:id="_gmSCgqiXEeOTtI5YKWJy-A"/>
@@ -1656,13 +1616,6 @@
           <styles xmi:type="notation:FillStyle" xmi:id="_9E5YNKiXEeOTtI5YKWJy-A"/>
           <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9E5YNaiXEeOTtI5YKWJy-A"/>
         </children>
-        <children xmi:type="notation:Node" xmi:id="_AL7akKiYEeOTtI5YKWJy-A" type="3004" element="_AL1T8KiYEeOTtI5YKWJy-A">
-          <children xmi:type="notation:DecorationNode" xmi:id="_AL7alaiYEeOTtI5YKWJy-A" type="5004"/>
-          <styles xmi:type="notation:DescriptionStyle" xmi:id="_AL7akaiYEeOTtI5YKWJy-A"/>
-          <styles xmi:type="notation:FontStyle" xmi:id="_AL7akqiYEeOTtI5YKWJy-A"/>
-          <styles xmi:type="notation:FillStyle" xmi:id="_AL7ak6iYEeOTtI5YKWJy-A"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_AL7alKiYEeOTtI5YKWJy-A"/>
-        </children>
         <children xmi:type="notation:Node" xmi:id="_A4VNkKiYEeOTtI5YKWJy-A" type="3004" element="_A4PG8KiYEeOTtI5YKWJy-A">
           <children xmi:type="notation:DecorationNode" xmi:id="_A4VNlaiYEeOTtI5YKWJy-A" type="5004"/>
           <styles xmi:type="notation:DescriptionStyle" xmi:id="_A4VNkaiYEeOTtI5YKWJy-A"/>
@@ -1676,13 +1629,6 @@
           <styles xmi:type="notation:FontStyle" xmi:id="_CRcVkqiYEeOTtI5YKWJy-A"/>
           <styles xmi:type="notation:FillStyle" xmi:id="_CRcVk6iYEeOTtI5YKWJy-A"/>
           <layoutConstraint xmi:type="notation:Bounds" xmi:id="_CRcVlKiYEeOTtI5YKWJy-A"/>
-        </children>
-        <children xmi:type="notation:Node" xmi:id="_C98PMaiYEeOTtI5YKWJy-A" type="3004" element="_C92IkKiYEeOTtI5YKWJy-A">
-          <children xmi:type="notation:DecorationNode" xmi:id="_C98PNqiYEeOTtI5YKWJy-A" type="5004"/>
-          <styles xmi:type="notation:DescriptionStyle" xmi:id="_C98PMqiYEeOTtI5YKWJy-A"/>
-          <styles xmi:type="notation:FontStyle" xmi:id="_C98PM6iYEeOTtI5YKWJy-A"/>
-          <styles xmi:type="notation:FillStyle" xmi:id="_C98PNKiYEeOTtI5YKWJy-A"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_C98PNaiYEeOTtI5YKWJy-A"/>
         </children>
         <children xmi:type="notation:Node" xmi:id="_Eq6uYKiYEeOTtI5YKWJy-A" type="3004" element="_EquhIKiYEeOTtI5YKWJy-A">
           <children xmi:type="notation:DecorationNode" xmi:id="_Eq6uZaiYEeOTtI5YKWJy-A" type="5004"/>
@@ -1704,6 +1650,27 @@
           <styles xmi:type="notation:FontStyle" xmi:id="_FvS8gqiYEeOTtI5YKWJy-A"/>
           <styles xmi:type="notation:FillStyle" xmi:id="_FvS8g6iYEeOTtI5YKWJy-A"/>
           <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FvS8hKiYEeOTtI5YKWJy-A"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_YSGBoqn-EeO7Mc0QDERcnw" type="3004" element="_YSGBoKn-EeO7Mc0QDERcnw">
+          <children xmi:type="notation:DecorationNode" xmi:id="_YSGBp6n-EeO7Mc0QDERcnw" type="5004"/>
+          <styles xmi:type="notation:DescriptionStyle" xmi:id="_YSGBo6n-EeO7Mc0QDERcnw"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_YSGBpKn-EeO7Mc0QDERcnw" fontName="Segoe UI"/>
+          <styles xmi:type="notation:FillStyle" xmi:id="_YSGBpan-EeO7Mc0QDERcnw"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_YSGBpqn-EeO7Mc0QDERcnw"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_aTLIkqn-EeO7Mc0QDERcnw" type="3004" element="_aTLIkKn-EeO7Mc0QDERcnw">
+          <children xmi:type="notation:DecorationNode" xmi:id="_aTLIl6n-EeO7Mc0QDERcnw" type="5004"/>
+          <styles xmi:type="notation:DescriptionStyle" xmi:id="_aTLIk6n-EeO7Mc0QDERcnw"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_aTLIlKn-EeO7Mc0QDERcnw" fontName="Segoe UI"/>
+          <styles xmi:type="notation:FillStyle" xmi:id="_aTLIlan-EeO7Mc0QDERcnw"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_aTLIlqn-EeO7Mc0QDERcnw"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_cU3Tgqn-EeO7Mc0QDERcnw" type="3004" element="_cU3TgKn-EeO7Mc0QDERcnw">
+          <children xmi:type="notation:DecorationNode" xmi:id="_cU3Th6n-EeO7Mc0QDERcnw" type="5004"/>
+          <styles xmi:type="notation:DescriptionStyle" xmi:id="_cU3Tg6n-EeO7Mc0QDERcnw"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_cU3ThKn-EeO7Mc0QDERcnw" fontName="Segoe UI"/>
+          <styles xmi:type="notation:FillStyle" xmi:id="_cU3Than-EeO7Mc0QDERcnw"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_cU3Thqn-EeO7Mc0QDERcnw"/>
         </children>
         <styles xmi:type="notation:SortingStyle" xmi:id="_bVoBOqiXEeOTtI5YKWJy-A"/>
         <styles xmi:type="notation:FilteringStyle" xmi:id="_bVoBO6iXEeOTtI5YKWJy-A"/>
@@ -1914,13 +1881,6 @@
           <styles xmi:type="notation:FontStyle" xmi:id="_lgUzRKiaEeOTtI5YKWJy-A"/>
           <styles xmi:type="notation:FillStyle" xmi:id="_lgUzRaiaEeOTtI5YKWJy-A"/>
           <layoutConstraint xmi:type="notation:Bounds" xmi:id="_lgUzRqiaEeOTtI5YKWJy-A"/>
-        </children>
-        <children xmi:type="notation:Node" xmi:id="_l91OoKiaEeOTtI5YKWJy-A" type="3004" element="_l9vIAKiaEeOTtI5YKWJy-A">
-          <children xmi:type="notation:DecorationNode" xmi:id="_l91OpaiaEeOTtI5YKWJy-A" type="5004"/>
-          <styles xmi:type="notation:DescriptionStyle" xmi:id="_l91OoaiaEeOTtI5YKWJy-A"/>
-          <styles xmi:type="notation:FontStyle" xmi:id="_l91OoqiaEeOTtI5YKWJy-A"/>
-          <styles xmi:type="notation:FillStyle" xmi:id="_l91Oo6iaEeOTtI5YKWJy-A"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_l91OpKiaEeOTtI5YKWJy-A"/>
         </children>
         <children xmi:type="notation:Node" xmi:id="_mrSxkKiaEeOTtI5YKWJy-A" type="3004" element="_mrMq8KiaEeOTtI5YKWJy-A">
           <children xmi:type="notation:DecorationNode" xmi:id="_mrSxlaiaEeOTtI5YKWJy-A" type="5004"/>
