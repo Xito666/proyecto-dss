@@ -1,318 +1,307 @@
-<?xml version="1.0" encoding="utf-8"?>
-		<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-		  <PropertyGroup>
-		    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-		    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-		    <ProductVersion>8.0.30703</ProductVersion>
-		    <SchemaVersion>2.0</SchemaVersion>
-		    <ProjectGuid>{66C66636-FD6A-4A3F-A7C5-FE88BBA117AF}</ProjectGuid>
-		    <OutputType>Library</OutputType>
-		    <AppDesignerFolder>Properties</AppDesignerFolder>
-		    <RootNamespace>InfoCosteProgramaGenNHibernate</RootNamespace>
-		    <AssemblyName>InfoCosteProgramaGenNHibernate</AssemblyName>
-		    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
-		    <FileAlignment>512</FileAlignment>
-		    <PublishUrl>publish\</PublishUrl>
-		    <Install>true</Install>
-		    <InstallFrom>Disk</InstallFrom>
-		    <UpdateEnabled>false</UpdateEnabled>
-		    <UpdateMode>Foreground</UpdateMode>
-		    <UpdateInterval>7</UpdateInterval>
-		    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
-		    <UpdatePeriodically>false</UpdatePeriodically>
-		    <UpdateRequired>false</UpdateRequired>
-		    <MapFileExtensions>true</MapFileExtensions>
-		    <ApplicationRevision>0</ApplicationRevision>
-		    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-		    <IsWebBootstrapper>false</IsWebBootstrapper>
-		    <UseApplicationTrust>false</UseApplicationTrust>
-		    <BootstrapperEnabled>true</BootstrapperEnabled>
-		  </PropertyGroup>
-		  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-		    <DebugSymbols>true</DebugSymbols>
-		    <DebugType>full</DebugType>
-		    <Optimize>false</Optimize>
-		    <OutputPath>bin\Debug\</OutputPath>
-		    <DefineConstants>DEBUG;TRACE</DefineConstants>
-		    <ErrorReport>prompt</ErrorReport>
-		    <WarningLevel>4</WarningLevel>
-		  </PropertyGroup>
-		  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-		    <DebugType>pdbonly</DebugType>
-		    <Optimize>true</Optimize>
-		    <OutputPath>bin\Release\</OutputPath>
-		    <DefineConstants>TRACE</DefineConstants>
-		    <ErrorReport>prompt</ErrorReport>
-		    <WarningLevel>4</WarningLevel>
-		  </PropertyGroup>
-		<ItemGroup>
-		    <Reference Include="Castle.DynamicProxy2, Version=2.1.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
-		      <SpecificVersion>False</SpecificVersion>
-		      <HintPath>AppLib\Castle.DynamicProxy2.dll</HintPath>
-		    </Reference>
-		    <Reference Include="LinFu.DynamicProxy, Version=1.0.3.14911, Culture=neutral, PublicKeyToken=62a6874124340d6e, processorArchitecture=MSIL">
-		      <SpecificVersion>False</SpecificVersion>
-		      <HintPath>AppLib\LinFu.DynamicProxy.dll</HintPath>
-		    </Reference>
-		    <Reference Include="NHibernate, Version=2.1.2.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
-		      <SpecificVersion>False</SpecificVersion>
-		      <HintPath>AppLib\NHibernate.dll</HintPath>
-		    </Reference>
-		    <Reference Include="NHibernate.ByteCode.Castle, Version=2.1.2.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
-		      <SpecificVersion>False</SpecificVersion>
-		      <HintPath>AppLib\NHibernate.ByteCode.Castle.dll</HintPath>
-		    </Reference>
-		    <Reference Include="NHibernate.ByteCode.LinFu, Version=2.1.2.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
-		      <SpecificVersion>False</SpecificVersion>
-		      <HintPath>AppLib\NHibernate.ByteCode.LinFu.dll</HintPath>
-		    </Reference>
-		    <Reference Include="System" />
-		    <Reference Include="System.Core">
-		      <RequiredTargetFramework>4.0</RequiredTargetFramework>
-		    </Reference>
-		    <Reference Include="System.Data.SqlServerCe, Version=3.5.1.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
-		    <Reference Include="System.Transactions" />
-		    <Reference Include="System.Xml.Linq">
-		      <RequiredTargetFramework>4.0</RequiredTargetFramework>
-		    </Reference>
-		    <Reference Include="System.Data.DataSetExtensions">
-		      <RequiredTargetFramework>4.0</RequiredTargetFramework>
-		    </Reference>
-		    <Reference Include="System.Data" />
-		    <Reference Include="System.Xml" />
-		</ItemGroup>
-		<ItemGroup>
-		    <Content Include="AppLib\Antlr3.Runtime.dll" />
-		    <Content Include="AppLib\Castle.DynamicProxy2.dll" />
-		    <Content Include="AppLib\Iesi.Collections.dll" />
-		    <Content Include="AppLib\LinFu.DynamicProxy.dll" />
-		    <Content Include="AppLib\log4net.dll" />
-		    <Content Include="AppLib\NHibernate.ByteCode.Castle.dll" />
-		    <Content Include="AppLib\NHibernate.ByteCode.LinFu.dll" />
-		    <Content Include="AppLib\NHibernate.dll" />
-		    <Content Include="AppLib\nunit.core.dll" />
-		    <Content Include="AppLib\nunit.framework.dll" />
-  		</ItemGroup>
-		<ItemGroup>
-			<Compile Include="Utils\Util.cs" />
-		    <Compile Include="NHibernateHelper.cs" />
-		    <Compile Include="Exceptions\ModelException.cs"/>
-		    <Compile Include="Exceptions\DataLayerException.cs"/>
-		    
-	
-	<Compile Include="CAD\BasicCAD.cs"/>
-	
-	<Compile Include="EN\InfoCoste\TrabajadorEN.cs" />
-	<Compile Include="CEN\InfoCoste\TrabajadorCEN.cs" />
-	<Compile Include="CAD\InfoCoste\ITrabajadorCAD.cs" />
-	<Compile Include="CAD\InfoCoste\TrabajadorCAD.cs" />
-			<Compile Include="CEN\InfoCoste\TrabajadorCEN_IniciarSesion.cs" />
-			<Compile Include="CEN\InfoCoste\TrabajadorCEN_SetPassword.cs" />
-			<Compile Include="CEN\InfoCoste\TrabajadorCEN_SetNombre.cs" />
-			<Compile Include="CEN\InfoCoste\TrabajadorCEN_GetNombre.cs" />
-			<Compile Include="CEN\InfoCoste\TrabajadorCEN_GetId.cs" />
-	<Compile Include="EN\InfoCoste\ParteIntervencionEN.cs" />
-	<Compile Include="CEN\InfoCoste\ParteIntervencionCEN.cs" />
-	<Compile Include="CAD\InfoCoste\IParteIntervencionCAD.cs" />
-	<Compile Include="CAD\InfoCoste\ParteIntervencionCAD.cs" />
-			<Compile Include="CEN\InfoCoste\ParteIntervencionCEN_SetAccionesRealizadas.cs" />
-			<Compile Include="CEN\InfoCoste\ParteIntervencionCEN_SetDatosPc.cs" />
-			<Compile Include="CEN\InfoCoste\ParteIntervencionCEN_GetAccionesRealizadas.cs" />
-			<Compile Include="CEN\InfoCoste\ParteIntervencionCEN_GetTrabajador.cs" />
-			<Compile Include="CEN\InfoCoste\ParteIntervencionCEN_GetDatosPc.cs" />
-			<Compile Include="CEN\InfoCoste\ParteIntervencionCEN_GetFecha.cs" />
-			<Compile Include="CEN\InfoCoste\ParteIntervencionCEN_GetCliente.cs" />
-			<Compile Include="CEN\InfoCoste\ParteIntervencionCEN_GetId.cs" />
-			<Compile Include="CEN\InfoCoste\ParteIntervencionCEN_SetTrabajador.cs" />
-	<Compile Include="EN\InfoCoste\ClienteEN.cs" />
-	<Compile Include="CEN\InfoCoste\ClienteCEN.cs" />
-	<Compile Include="CAD\InfoCoste\IClienteCAD.cs" />
-	<Compile Include="CAD\InfoCoste\ClienteCAD.cs" />
-			<Compile Include="CEN\InfoCoste\ClienteCEN_SetEmail.cs" />
-			<Compile Include="CEN\InfoCoste\ClienteCEN_SetTelefono.cs" />
-			<Compile Include="CEN\InfoCoste\ClienteCEN_SetDireccion.cs" />
-			<Compile Include="CEN\InfoCoste\ClienteCEN_GetEmail.cs" />
-			<Compile Include="CEN\InfoCoste\ClienteCEN_GetTelefono.cs" />
-			<Compile Include="CEN\InfoCoste\ClienteCEN_GetDireccion.cs" />
-			<Compile Include="CEN\InfoCoste\ClienteCEN_GetId.cs" />
-			<Compile Include="CEN\InfoCoste\ClienteCEN_GetNombre.cs" />
-			<Compile Include="CEN\InfoCoste\ClienteCEN_SetNombre.cs" />
-	<Compile Include="EN\InfoCoste\ClienteParticularEN.cs" />
-	<Compile Include="CEN\InfoCoste\ClienteParticularCEN.cs" />
-	<Compile Include="CAD\InfoCoste\IClienteParticularCAD.cs" />
-	<Compile Include="CAD\InfoCoste\ClienteParticularCAD.cs" />
-	<Compile Include="EN\InfoCoste\ClienteEmpresaEN.cs" />
-	<Compile Include="CEN\InfoCoste\ClienteEmpresaCEN.cs" />
-	<Compile Include="CAD\InfoCoste\IClienteEmpresaCAD.cs" />
-	<Compile Include="CAD\InfoCoste\ClienteEmpresaCAD.cs" />
-			<Compile Include="CEN\InfoCoste\ClienteEmpresaCEN_SetNumeroCuenta.cs" />
-			<Compile Include="CEN\InfoCoste\ClienteEmpresaCEN_GetNumeroCuenta.cs" />
-	<Compile Include="EN\InfoCoste\PedidoClienteEN.cs" />
-	<Compile Include="CEN\InfoCoste\PedidoClienteCEN.cs" />
-	<Compile Include="CAD\InfoCoste\IPedidoClienteCAD.cs" />
-	<Compile Include="CAD\InfoCoste\PedidoClienteCAD.cs" />
-			<Compile Include="CEN\InfoCoste\PedidoClienteCEN_Exportar.cs" />
-			<Compile Include="CEN\InfoCoste\PedidoClienteCEN_CalcularPrecio.cs" />
-			<Compile Include="CEN\InfoCoste\PedidoClienteCEN_BorrarLinea.cs" />
-			<Compile Include="CEN\InfoCoste\PedidoClienteCEN_AnyadirLinea.cs" />
-			<Compile Include="CEN\InfoCoste\PedidoClienteCEN_SetCliente.cs" />
-			<Compile Include="CEN\InfoCoste\PedidoClienteCEN_SetId.cs" />
-			<Compile Include="CEN\InfoCoste\PedidoClienteCEN_GetLineas.cs" />
-			<Compile Include="CEN\InfoCoste\PedidoClienteCEN_GetFecha.cs" />
-			<Compile Include="CEN\InfoCoste\PedidoClienteCEN_GetCliente.cs" />
-			<Compile Include="CEN\InfoCoste\PedidoClienteCEN_GetId.cs" />
-	<Compile Include="EN\InfoCoste\PresupuestoEN.cs" />
-	<Compile Include="CEN\InfoCoste\PresupuestoCEN.cs" />
-	<Compile Include="CAD\InfoCoste\IPresupuestoCAD.cs" />
-	<Compile Include="CAD\InfoCoste\PresupuestoCAD.cs" />
-			<Compile Include="CEN\InfoCoste\PresupuestoCEN_Imprimir.cs" />
-	<Compile Include="EN\InfoCoste\TipoFacturaEN.cs" />
-	<Compile Include="CEN\InfoCoste\TipoFacturaCEN.cs" />
-	<Compile Include="CAD\InfoCoste\ITipoFacturaCAD.cs" />
-	<Compile Include="CAD\InfoCoste\TipoFacturaCAD.cs" />
-			<Compile Include="CEN\InfoCoste\TipoFacturaCEN_Imprimir.cs" />
-			<Compile Include="CEN\InfoCoste\TipoFacturaCEN_SetDatosPago.cs" />
-			<Compile Include="CEN\InfoCoste\TipoFacturaCEN_SetFecha.cs" />
-			<Compile Include="CEN\InfoCoste\TipoFacturaCEN_GetDatosPago.cs" />
-			<Compile Include="CEN\InfoCoste\TipoFacturaCEN_GetFecha.cs" />
-			<Compile Include="CEN\InfoCoste\TipoFacturaCEN_GetId.cs" />
-	<Compile Include="EN\InfoCoste\ReservaEN.cs" />
-	<Compile Include="CEN\InfoCoste\ReservaCEN.cs" />
-	<Compile Include="CAD\InfoCoste\IReservaCAD.cs" />
-	<Compile Include="CAD\InfoCoste\ReservaCAD.cs" />
-			<Compile Include="CEN\InfoCoste\ReservaCEN_Imprimir.cs" />
-	<Compile Include="EN\InfoCoste\FacturaEN.cs" />
-	<Compile Include="CEN\InfoCoste\FacturaCEN.cs" />
-	<Compile Include="CAD\InfoCoste\IFacturaCAD.cs" />
-	<Compile Include="CAD\InfoCoste\FacturaCAD.cs" />
-			<Compile Include="CEN\InfoCoste\FacturaCEN_Imprimir.cs" />
-			<Compile Include="CEN\InfoCoste\FacturaCEN_SetPagada.cs" />
-			<Compile Include="CEN\InfoCoste\FacturaCEN_GetPagada.cs" />
-	<Compile Include="EN\InfoCoste\ProformaEN.cs" />
-	<Compile Include="CEN\InfoCoste\ProformaCEN.cs" />
-	<Compile Include="CAD\InfoCoste\IProformaCAD.cs" />
-	<Compile Include="CAD\InfoCoste\ProformaCAD.cs" />
-			<Compile Include="CEN\InfoCoste\ProformaCEN_Imprimir.cs" />
-	<Compile Include="EN\InfoCoste\LineaPedidoEN.cs" />
-	<Compile Include="CEN\InfoCoste\LineaPedidoCEN.cs" />
-	<Compile Include="CAD\InfoCoste\ILineaPedidoCAD.cs" />
-	<Compile Include="CAD\InfoCoste\LineaPedidoCAD.cs" />
-			<Compile Include="CEN\InfoCoste\LineaPedidoCEN_SetProducto.cs" />
-			<Compile Include="CEN\InfoCoste\LineaPedidoCEN_SetDescuento.cs" />
-			<Compile Include="CEN\InfoCoste\LineaPedidoCEN_SetCantidad.cs" />
-			<Compile Include="CEN\InfoCoste\LineaPedidoCEN_SetNumero.cs" />
-			<Compile Include="CEN\InfoCoste\LineaPedidoCEN_GetProducto.cs" />
-			<Compile Include="CEN\InfoCoste\LineaPedidoCEN_GetDescuento.cs" />
-			<Compile Include="CEN\InfoCoste\LineaPedidoCEN_GetCantidad.cs" />
-			<Compile Include="CEN\InfoCoste\LineaPedidoCEN_GetNumero.cs" />
-			<Compile Include="CEN\InfoCoste\LineaPedidoCEN_GetId.cs" />
-	<Compile Include="EN\InfoCoste\ProductoEN.cs" />
-	<Compile Include="CEN\InfoCoste\ProductoCEN.cs" />
-	<Compile Include="CAD\InfoCoste\IProductoCAD.cs" />
-	<Compile Include="CAD\InfoCoste\ProductoCAD.cs" />
-			<Compile Include="CEN\InfoCoste\ProductoCEN_DisminuirStock.cs" />
-			<Compile Include="CEN\InfoCoste\ProductoCEN_SetStock.cs" />
-			<Compile Include="CEN\InfoCoste\ProductoCEN_SetPrecio.cs" />
-			<Compile Include="CEN\InfoCoste\ProductoCEN_SetNombre.cs" />
-			<Compile Include="CEN\InfoCoste\ProductoCEN_GetStock.cs" />
-			<Compile Include="CEN\InfoCoste\ProductoCEN_GetFamilia.cs" />
-			<Compile Include="CEN\InfoCoste\ProductoCEN_GetPrecio.cs" />
-			<Compile Include="CEN\InfoCoste\ProductoCEN_GetDescripcion.cs" />
-			<Compile Include="CEN\InfoCoste\ProductoCEN_GetNombre.cs" />
-			<Compile Include="CEN\InfoCoste\ProductoCEN_GetId.cs" />
-	<Compile Include="EN\InfoCoste\PedidoProveedorEN.cs" />
-	<Compile Include="CEN\InfoCoste\PedidoProveedorCEN.cs" />
-	<Compile Include="CAD\InfoCoste\IPedidoProveedorCAD.cs" />
-	<Compile Include="CAD\InfoCoste\PedidoProveedorCAD.cs" />
-			<Compile Include="CEN\InfoCoste\PedidoProveedorCEN_Exportar.cs" />
-			<Compile Include="CEN\InfoCoste\PedidoProveedorCEN_CalcularPrecio.cs" />
-			<Compile Include="CEN\InfoCoste\PedidoProveedorCEN_GetLineas.cs" />
-			<Compile Include="CEN\InfoCoste\PedidoProveedorCEN_GetFecha.cs" />
-			<Compile Include="CEN\InfoCoste\PedidoProveedorCEN_GetProveedor.cs" />
-			<Compile Include="CEN\InfoCoste\PedidoProveedorCEN_GetId.cs" />
-	<Compile Include="EN\InfoCoste\ProveedorEN.cs" />
-	<Compile Include="CEN\InfoCoste\ProveedorCEN.cs" />
-	<Compile Include="CAD\InfoCoste\IProveedorCAD.cs" />
-	<Compile Include="CAD\InfoCoste\ProveedorCAD.cs" />
-			<Compile Include="CEN\InfoCoste\ProveedorCEN_SetEmail.cs" />
-			<Compile Include="CEN\InfoCoste\ProveedorCEN_SetDireccion.cs" />
-			<Compile Include="CEN\InfoCoste\ProveedorCEN_SetNombre.cs" />
-			<Compile Include="CEN\InfoCoste\ProveedorCEN_GetEmail.cs" />
-			<Compile Include="CEN\InfoCoste\ProveedorCEN_GetDireccion.cs" />
-			<Compile Include="CEN\InfoCoste\ProveedorCEN_GetNombre.cs" />
-			<Compile Include="CEN\InfoCoste\ProveedorCEN_GetId.cs" />
-	<Compile Include="EN\InfoCoste\LineaPedidoProveedorEN.cs" />
-	<Compile Include="CEN\InfoCoste\LineaPedidoProveedorCEN.cs" />
-	<Compile Include="CAD\InfoCoste\ILineaPedidoProveedorCAD.cs" />
-	<Compile Include="CAD\InfoCoste\LineaPedidoProveedorCAD.cs" />
-			<Compile Include="CEN\InfoCoste\LineaPedidoProveedorCEN_SetProducto.cs" />
-			<Compile Include="CEN\InfoCoste\LineaPedidoProveedorCEN_SetDescuento.cs" />
-			<Compile Include="CEN\InfoCoste\LineaPedidoProveedorCEN_SetCantidad.cs" />
-			<Compile Include="CEN\InfoCoste\LineaPedidoProveedorCEN_SetNumero.cs" />
-			<Compile Include="CEN\InfoCoste\LineaPedidoProveedorCEN_GetPrecio.cs" />
-			<Compile Include="CEN\InfoCoste\LineaPedidoProveedorCEN_GetProducto.cs" />
-			<Compile Include="CEN\InfoCoste\LineaPedidoProveedorCEN_GetDescuento.cs" />
-			<Compile Include="CEN\InfoCoste\LineaPedidoProveedorCEN_GetCantidad.cs" />
-			<Compile Include="CEN\InfoCoste\LineaPedidoProveedorCEN_GetNumero.cs" />
-	
-	
-
-		    
-	
-
-		    <Compile Include="Properties\AssemblyInfo.cs" />
-		    <Compile Include="Properties\Settings.Designer.cs">
-		      <AutoGen>True</AutoGen>
-		      <DesignTimeSharedInput>True</DesignTimeSharedInput>
-		      <DependentUpon>Settings.settings</DependentUpon>
-		    </Compile>
-		  </ItemGroup>
-		  <ItemGroup>
-		  
-	<EmbeddedResource Include="Mappings\InfoCoste\trabajador.hbm.xml" />
-	<EmbeddedResource Include="Mappings\InfoCoste\parteintervencion.hbm.xml" />
-	<EmbeddedResource Include="Mappings\InfoCoste\cliente.hbm.xml" />
-	<EmbeddedResource Include="Mappings\InfoCoste\clienteparticular.hbm.xml" />
-	<EmbeddedResource Include="Mappings\InfoCoste\clienteempresa.hbm.xml" />
-	<EmbeddedResource Include="Mappings\InfoCoste\pedidocliente.hbm.xml" />
-	<EmbeddedResource Include="Mappings\InfoCoste\presupuesto.hbm.xml" />
-	<EmbeddedResource Include="Mappings\InfoCoste\tipofactura.hbm.xml" />
-	<EmbeddedResource Include="Mappings\InfoCoste\reserva.hbm.xml" />
-	<EmbeddedResource Include="Mappings\InfoCoste\factura.hbm.xml" />
-	<EmbeddedResource Include="Mappings\InfoCoste\proforma.hbm.xml" />
-	<EmbeddedResource Include="Mappings\InfoCoste\lineapedido.hbm.xml" />
-	<EmbeddedResource Include="Mappings\InfoCoste\producto.hbm.xml" />
-	<EmbeddedResource Include="Mappings\InfoCoste\pedidoproveedor.hbm.xml" />
-	<EmbeddedResource Include="Mappings\InfoCoste\proveedor.hbm.xml" />
-	<EmbeddedResource Include="Mappings\InfoCoste\lineapedidoproveedor.hbm.xml" />
-	
-	
-
-		  </ItemGroup>
-		  <ItemGroup>
-		    <Content Include="hibernate.cfg.xml">
-		      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-		    </Content>
-		  </ItemGroup>
-		  <ItemGroup>
-		    <None Include="app.config" />
-		    <None Include="Properties\Settings.settings">
-		      <Generator>SettingsSingleFileGenerator</Generator>
-		      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
-		    </None>
-		        <None Include="Resources\xsd\nhibernate-configuration.xsd">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{66C66636-FD6A-4A3F-A7C5-FE88BBA117AF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>InfoCosteProgramaGenNHibernate</RootNamespace>
+    <AssemblyName>InfoCosteProgramaGenNHibernate</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Castle.DynamicProxy2, Version=2.1.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>AppLib\Castle.DynamicProxy2.dll</HintPath>
+    </Reference>
+    <Reference Include="LinFu.DynamicProxy, Version=1.0.3.14911, Culture=neutral, PublicKeyToken=62a6874124340d6e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>AppLib\LinFu.DynamicProxy.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate, Version=2.1.2.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>AppLib\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate.ByteCode.Castle, Version=2.1.2.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>AppLib\NHibernate.ByteCode.Castle.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate.ByteCode.LinFu, Version=2.1.2.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>AppLib\NHibernate.ByteCode.LinFu.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.SqlServerCe, Version=3.5.1.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AppLib\Antlr3.Runtime.dll" />
+    <Content Include="AppLib\Castle.DynamicProxy2.dll" />
+    <Content Include="AppLib\Iesi.Collections.dll" />
+    <Content Include="AppLib\LinFu.DynamicProxy.dll" />
+    <Content Include="AppLib\log4net.dll" />
+    <Content Include="AppLib\NHibernate.ByteCode.Castle.dll" />
+    <Content Include="AppLib\NHibernate.ByteCode.LinFu.dll" />
+    <Content Include="AppLib\NHibernate.dll" />
+    <Content Include="AppLib\nunit.core.dll" />
+    <Content Include="AppLib\nunit.framework.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Utils\Util.cs" />
+    <Compile Include="NHibernateHelper.cs" />
+    <Compile Include="Exceptions\ModelException.cs" />
+    <Compile Include="Exceptions\DataLayerException.cs" />
+    <Compile Include="CAD\BasicCAD.cs" />
+    <Compile Include="EN\InfoCoste\TrabajadorEN.cs" />
+    <Compile Include="CEN\InfoCoste\TrabajadorCEN.cs" />
+    <Compile Include="CAD\InfoCoste\ITrabajadorCAD.cs" />
+    <Compile Include="CAD\InfoCoste\TrabajadorCAD.cs" />
+    <Compile Include="CEN\InfoCoste\TrabajadorCEN_IniciarSesion.cs" />
+    <Compile Include="CEN\InfoCoste\TrabajadorCEN_SetPassword.cs" />
+    <Compile Include="CEN\InfoCoste\TrabajadorCEN_SetNombre.cs" />
+    <Compile Include="CEN\InfoCoste\TrabajadorCEN_GetNombre.cs" />
+    <Compile Include="CEN\InfoCoste\TrabajadorCEN_GetId.cs" />
+    <Compile Include="EN\InfoCoste\ParteIntervencionEN.cs" />
+    <Compile Include="CEN\InfoCoste\ParteIntervencionCEN.cs" />
+    <Compile Include="CAD\InfoCoste\IParteIntervencionCAD.cs" />
+    <Compile Include="CAD\InfoCoste\ParteIntervencionCAD.cs" />
+    <Compile Include="CEN\InfoCoste\ParteIntervencionCEN_SetAccionesRealizadas.cs" />
+    <Compile Include="CEN\InfoCoste\ParteIntervencionCEN_SetDatosPc.cs" />
+    <Compile Include="CEN\InfoCoste\ParteIntervencionCEN_GetAccionesRealizadas.cs" />
+    <Compile Include="CEN\InfoCoste\ParteIntervencionCEN_GetTrabajador.cs" />
+    <Compile Include="CEN\InfoCoste\ParteIntervencionCEN_GetDatosPc.cs" />
+    <Compile Include="CEN\InfoCoste\ParteIntervencionCEN_GetFecha.cs" />
+    <Compile Include="CEN\InfoCoste\ParteIntervencionCEN_GetCliente.cs" />
+    <Compile Include="CEN\InfoCoste\ParteIntervencionCEN_GetId.cs" />
+    <Compile Include="CEN\InfoCoste\ParteIntervencionCEN_SetTrabajador.cs" />
+    <Compile Include="EN\InfoCoste\ClienteEN.cs" />
+    <Compile Include="CEN\InfoCoste\ClienteCEN.cs" />
+    <Compile Include="CAD\InfoCoste\IClienteCAD.cs" />
+    <Compile Include="CAD\InfoCoste\ClienteCAD.cs" />
+    <Compile Include="CEN\InfoCoste\ClienteCEN_SetEmail.cs" />
+    <Compile Include="CEN\InfoCoste\ClienteCEN_SetTelefono.cs" />
+    <Compile Include="CEN\InfoCoste\ClienteCEN_SetDireccion.cs" />
+    <Compile Include="CEN\InfoCoste\ClienteCEN_GetEmail.cs" />
+    <Compile Include="CEN\InfoCoste\ClienteCEN_GetTelefono.cs" />
+    <Compile Include="CEN\InfoCoste\ClienteCEN_GetDireccion.cs" />
+    <Compile Include="CEN\InfoCoste\ClienteCEN_GetId.cs" />
+    <Compile Include="CEN\InfoCoste\ClienteCEN_GetNombre.cs" />
+    <Compile Include="CEN\InfoCoste\ClienteCEN_SetNombre.cs" />
+    <Compile Include="EN\InfoCoste\ClienteParticularEN.cs" />
+    <Compile Include="CEN\InfoCoste\ClienteParticularCEN.cs" />
+    <Compile Include="CAD\InfoCoste\IClienteParticularCAD.cs" />
+    <Compile Include="CAD\InfoCoste\ClienteParticularCAD.cs" />
+    <Compile Include="EN\InfoCoste\ClienteEmpresaEN.cs" />
+    <Compile Include="CEN\InfoCoste\ClienteEmpresaCEN.cs" />
+    <Compile Include="CAD\InfoCoste\IClienteEmpresaCAD.cs" />
+    <Compile Include="CAD\InfoCoste\ClienteEmpresaCAD.cs" />
+    <Compile Include="CEN\InfoCoste\ClienteEmpresaCEN_SetNumeroCuenta.cs" />
+    <Compile Include="CEN\InfoCoste\ClienteEmpresaCEN_GetNumeroCuenta.cs" />
+    <Compile Include="EN\InfoCoste\PedidoClienteEN.cs" />
+    <Compile Include="CEN\InfoCoste\PedidoClienteCEN.cs" />
+    <Compile Include="CAD\InfoCoste\IPedidoClienteCAD.cs" />
+    <Compile Include="CAD\InfoCoste\PedidoClienteCAD.cs" />
+    <Compile Include="CEN\InfoCoste\PedidoClienteCEN_Exportar.cs" />
+    <Compile Include="CEN\InfoCoste\PedidoClienteCEN_CalcularPrecio.cs" />
+    <Compile Include="CEN\InfoCoste\PedidoClienteCEN_BorrarLinea.cs" />
+    <Compile Include="CEN\InfoCoste\PedidoClienteCEN_AnyadirLinea.cs" />
+    <Compile Include="CEN\InfoCoste\PedidoClienteCEN_SetCliente.cs" />
+    <Compile Include="CEN\InfoCoste\PedidoClienteCEN_SetId.cs" />
+    <Compile Include="CEN\InfoCoste\PedidoClienteCEN_GetLineas.cs" />
+    <Compile Include="CEN\InfoCoste\PedidoClienteCEN_GetFecha.cs" />
+    <Compile Include="CEN\InfoCoste\PedidoClienteCEN_GetCliente.cs" />
+    <Compile Include="CEN\InfoCoste\PedidoClienteCEN_GetId.cs" />
+    <Compile Include="EN\InfoCoste\PresupuestoEN.cs" />
+    <Compile Include="CEN\InfoCoste\PresupuestoCEN.cs" />
+    <Compile Include="CAD\InfoCoste\IPresupuestoCAD.cs" />
+    <Compile Include="CAD\InfoCoste\PresupuestoCAD.cs" />
+    <Compile Include="CEN\InfoCoste\PresupuestoCEN_Imprimir.cs" />
+    <Compile Include="EN\InfoCoste\TipoFacturaEN.cs" />
+    <Compile Include="CEN\InfoCoste\TipoFacturaCEN.cs" />
+    <Compile Include="CAD\InfoCoste\ITipoFacturaCAD.cs" />
+    <Compile Include="CAD\InfoCoste\TipoFacturaCAD.cs" />
+    <Compile Include="CEN\InfoCoste\TipoFacturaCEN_Imprimir.cs" />
+    <Compile Include="CEN\InfoCoste\TipoFacturaCEN_SetDatosPago.cs" />
+    <Compile Include="CEN\InfoCoste\TipoFacturaCEN_SetFecha.cs" />
+    <Compile Include="CEN\InfoCoste\TipoFacturaCEN_GetDatosPago.cs" />
+    <Compile Include="CEN\InfoCoste\TipoFacturaCEN_GetFecha.cs" />
+    <Compile Include="CEN\InfoCoste\TipoFacturaCEN_GetId.cs" />
+    <Compile Include="EN\InfoCoste\ReservaEN.cs" />
+    <Compile Include="CEN\InfoCoste\ReservaCEN.cs" />
+    <Compile Include="CAD\InfoCoste\IReservaCAD.cs" />
+    <Compile Include="CAD\InfoCoste\ReservaCAD.cs" />
+    <Compile Include="CEN\InfoCoste\ReservaCEN_Imprimir.cs" />
+    <Compile Include="EN\InfoCoste\FacturaEN.cs" />
+    <Compile Include="CEN\InfoCoste\FacturaCEN.cs" />
+    <Compile Include="CAD\InfoCoste\IFacturaCAD.cs" />
+    <Compile Include="CAD\InfoCoste\FacturaCAD.cs" />
+    <Compile Include="CEN\InfoCoste\FacturaCEN_Imprimir.cs" />
+    <Compile Include="CEN\InfoCoste\FacturaCEN_SetPagada.cs" />
+    <Compile Include="CEN\InfoCoste\FacturaCEN_GetPagada.cs" />
+    <Compile Include="EN\InfoCoste\ProformaEN.cs" />
+    <Compile Include="CEN\InfoCoste\ProformaCEN.cs" />
+    <Compile Include="CAD\InfoCoste\IProformaCAD.cs" />
+    <Compile Include="CAD\InfoCoste\ProformaCAD.cs" />
+    <Compile Include="CEN\InfoCoste\ProformaCEN_Imprimir.cs" />
+    <Compile Include="EN\InfoCoste\LineaPedidoEN.cs" />
+    <Compile Include="CEN\InfoCoste\LineaPedidoCEN.cs" />
+    <Compile Include="CAD\InfoCoste\ILineaPedidoCAD.cs" />
+    <Compile Include="CAD\InfoCoste\LineaPedidoCAD.cs" />
+    <Compile Include="CEN\InfoCoste\LineaPedidoCEN_SetProducto.cs" />
+    <Compile Include="CEN\InfoCoste\LineaPedidoCEN_SetDescuento.cs" />
+    <Compile Include="CEN\InfoCoste\LineaPedidoCEN_SetCantidad.cs" />
+    <Compile Include="CEN\InfoCoste\LineaPedidoCEN_SetNumero.cs" />
+    <Compile Include="CEN\InfoCoste\LineaPedidoCEN_GetProducto.cs" />
+    <Compile Include="CEN\InfoCoste\LineaPedidoCEN_GetDescuento.cs" />
+    <Compile Include="CEN\InfoCoste\LineaPedidoCEN_GetCantidad.cs" />
+    <Compile Include="CEN\InfoCoste\LineaPedidoCEN_GetNumero.cs" />
+    <Compile Include="CEN\InfoCoste\LineaPedidoCEN_GetId.cs" />
+    <Compile Include="EN\InfoCoste\ProductoEN.cs" />
+    <Compile Include="CEN\InfoCoste\ProductoCEN.cs" />
+    <Compile Include="CAD\InfoCoste\IProductoCAD.cs" />
+    <Compile Include="CAD\InfoCoste\ProductoCAD.cs" />
+    <Compile Include="CEN\InfoCoste\ProductoCEN_DisminuirStock.cs" />
+    <Compile Include="CEN\InfoCoste\ProductoCEN_SetStock.cs" />
+    <Compile Include="CEN\InfoCoste\ProductoCEN_SetPrecio.cs" />
+    <Compile Include="CEN\InfoCoste\ProductoCEN_SetNombre.cs" />
+    <Compile Include="CEN\InfoCoste\ProductoCEN_GetStock.cs" />
+    <Compile Include="CEN\InfoCoste\ProductoCEN_GetFamilia.cs" />
+    <Compile Include="CEN\InfoCoste\ProductoCEN_GetPrecio.cs" />
+    <Compile Include="CEN\InfoCoste\ProductoCEN_GetDescripcion.cs" />
+    <Compile Include="CEN\InfoCoste\ProductoCEN_GetNombre.cs" />
+    <Compile Include="CEN\InfoCoste\ProductoCEN_GetId.cs" />
+    <Compile Include="EN\InfoCoste\PedidoProveedorEN.cs" />
+    <Compile Include="CEN\InfoCoste\PedidoProveedorCEN.cs" />
+    <Compile Include="CAD\InfoCoste\IPedidoProveedorCAD.cs" />
+    <Compile Include="CAD\InfoCoste\PedidoProveedorCAD.cs" />
+    <Compile Include="CEN\InfoCoste\PedidoProveedorCEN_Exportar.cs" />
+    <Compile Include="CEN\InfoCoste\PedidoProveedorCEN_CalcularPrecio.cs" />
+    <Compile Include="CEN\InfoCoste\PedidoProveedorCEN_GetLineas.cs" />
+    <Compile Include="CEN\InfoCoste\PedidoProveedorCEN_GetFecha.cs" />
+    <Compile Include="CEN\InfoCoste\PedidoProveedorCEN_GetProveedor.cs" />
+    <Compile Include="CEN\InfoCoste\PedidoProveedorCEN_GetId.cs" />
+    <Compile Include="EN\InfoCoste\ProveedorEN.cs" />
+    <Compile Include="CEN\InfoCoste\ProveedorCEN.cs" />
+    <Compile Include="CAD\InfoCoste\IProveedorCAD.cs" />
+    <Compile Include="CAD\InfoCoste\ProveedorCAD.cs" />
+    <Compile Include="CEN\InfoCoste\ProveedorCEN_SetEmail.cs" />
+    <Compile Include="CEN\InfoCoste\ProveedorCEN_SetDireccion.cs" />
+    <Compile Include="CEN\InfoCoste\ProveedorCEN_SetNombre.cs" />
+    <Compile Include="CEN\InfoCoste\ProveedorCEN_GetEmail.cs" />
+    <Compile Include="CEN\InfoCoste\ProveedorCEN_GetDireccion.cs" />
+    <Compile Include="CEN\InfoCoste\ProveedorCEN_GetNombre.cs" />
+    <Compile Include="CEN\InfoCoste\ProveedorCEN_GetId.cs" />
+    <Compile Include="EN\InfoCoste\LineaPedidoProveedorEN.cs" />
+    <Compile Include="CEN\InfoCoste\LineaPedidoProveedorCEN.cs" />
+    <Compile Include="CAD\InfoCoste\ILineaPedidoProveedorCAD.cs" />
+    <Compile Include="CAD\InfoCoste\LineaPedidoProveedorCAD.cs" />
+    <Compile Include="CEN\InfoCoste\LineaPedidoProveedorCEN_SetProducto.cs" />
+    <Compile Include="CEN\InfoCoste\LineaPedidoProveedorCEN_SetDescuento.cs" />
+    <Compile Include="CEN\InfoCoste\LineaPedidoProveedorCEN_SetCantidad.cs" />
+    <Compile Include="CEN\InfoCoste\LineaPedidoProveedorCEN_SetNumero.cs" />
+    <Compile Include="CEN\InfoCoste\LineaPedidoProveedorCEN_GetPrecio.cs" />
+    <Compile Include="CEN\InfoCoste\LineaPedidoProveedorCEN_GetProducto.cs" />
+    <Compile Include="CEN\InfoCoste\LineaPedidoProveedorCEN_GetDescuento.cs" />
+    <Compile Include="CEN\InfoCoste\LineaPedidoProveedorCEN_GetCantidad.cs" />
+    <Compile Include="CEN\InfoCoste\LineaPedidoProveedorCEN_GetNumero.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mappings\InfoCoste\trabajador.hbm.xml" />
+    <EmbeddedResource Include="Mappings\InfoCoste\parteintervencion.hbm.xml" />
+    <EmbeddedResource Include="Mappings\InfoCoste\cliente.hbm.xml" />
+    <EmbeddedResource Include="Mappings\InfoCoste\clienteparticular.hbm.xml" />
+    <EmbeddedResource Include="Mappings\InfoCoste\clienteempresa.hbm.xml" />
+    <EmbeddedResource Include="Mappings\InfoCoste\pedidocliente.hbm.xml" />
+    <EmbeddedResource Include="Mappings\InfoCoste\presupuesto.hbm.xml" />
+    <EmbeddedResource Include="Mappings\InfoCoste\tipofactura.hbm.xml" />
+    <EmbeddedResource Include="Mappings\InfoCoste\reserva.hbm.xml" />
+    <EmbeddedResource Include="Mappings\InfoCoste\factura.hbm.xml" />
+    <EmbeddedResource Include="Mappings\InfoCoste\proforma.hbm.xml" />
+    <EmbeddedResource Include="Mappings\InfoCoste\lineapedido.hbm.xml" />
+    <EmbeddedResource Include="Mappings\InfoCoste\producto.hbm.xml" />
+    <EmbeddedResource Include="Mappings\InfoCoste\pedidoproveedor.hbm.xml" />
+    <EmbeddedResource Include="Mappings\InfoCoste\proveedor.hbm.xml" />
+    <EmbeddedResource Include="Mappings\InfoCoste\lineapedidoproveedor.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="hibernate.cfg.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Resources\xsd\nhibernate-configuration.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Resources\xsd\nhibernate-mapping.xsd">
       <SubType>Designer</SubType>
     </None>
-		  </ItemGroup>
-		  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-		  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
 		       Other similar extension points exist, see Microsoft.Common.targets.
 		  <Target Name="BeforeBuild">
 		  </Target>
 		  <Target Name="AfterBuild">
 		  </Target>
 		  -->
-		</Project>
+</Project>

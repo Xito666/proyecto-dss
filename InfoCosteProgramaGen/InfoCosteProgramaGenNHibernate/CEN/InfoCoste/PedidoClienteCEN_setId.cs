@@ -23,7 +23,7 @@ public void SetId (int p_PedidoCliente_OID, int idNuevo)
         //Initialized PedidoClienteEN
         pedidoClienteEN = new PedidoClienteEN ();
         pedidoClienteEN.Id = p_PedidoCliente_OID;
-        pedidoClienteEN.IdNuevo = idNuevo;
+        pedidoClienteEN.Id = idNuevo;
         //Call to PedidoClienteCAD
 
         _IPedidoClienteCAD.SetId (pedidoClienteEN);

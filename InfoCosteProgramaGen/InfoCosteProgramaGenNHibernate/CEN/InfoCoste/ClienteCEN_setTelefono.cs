@@ -14,7 +14,7 @@ namespace InfoCosteProgramaGenNHibernate.CEN.InfoCoste
 {
 public partial class ClienteCEN
 {
-public void SetTelefono (string p_Cliente_OID, string p_telefono)
+public void SetTelefono (string p_Cliente_OID, int p_telefono)
 {
         /*PROTECTED REGION ID(InfoCosteProgramaGenNHibernate.CEN.InfoCoste_Cliente_setTelefono_customized) START*/
 
