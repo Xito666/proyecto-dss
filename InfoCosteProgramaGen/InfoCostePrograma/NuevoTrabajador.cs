@@ -6,17 +6,14 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using InfoCosteProgramaGenNHibernate;
 
 namespace InfoCostePrograma
 {
-    public partial class Form1 : Form
+    public partial class NuevoTrabajador : Form
     {
-        public Form1()
+        public NuevoTrabajador()
         {
             InitializeComponent();
         }
-
-
     }
 }

@@ -5,7 +5,6 @@ C:\Users\Xito\workspaceOoharia\proyecto-dss\InfoCosteProgramaGen\InfoCosteProgra
 C:\Users\Xito\workspaceOoharia\proyecto-dss\InfoCosteProgramaGen\InfoCostePrograma\obj\x86\Debug\InfoCostePrograma.exe
 C:\Users\Xito\workspaceOoharia\proyecto-dss\InfoCosteProgramaGen\InfoCostePrograma\obj\x86\Debug\InfoCostePrograma.pdb
 C:\Users\Xito\workspaceOoharia\proyecto-dss\InfoCosteProgramaGen\InfoCostePrograma\obj\x86\Debug\InfoCostePrograma.csprojResolveAssemblyReference.cache
-C:\Users\Xito\workspaceOoharia\proyecto-dss\InfoCosteProgramaGen\InfoCostePrograma\obj\x86\Debug\InfoCostePrograma.Form1.resources
 C:\Users\Xito\workspaceOoharia\proyecto-dss\InfoCosteProgramaGen\InfoCostePrograma\bin\Debug\InfoCostePrograma.exe.config
 C:\Users\Xito\workspaceOoharia\proyecto-dss\InfoCosteProgramaGen\InfoCostePrograma\bin\Debug\hibernate.cfg.xml
 C:\Users\Xito\workspaceOoharia\proyecto-dss\InfoCosteProgramaGen\InfoCostePrograma\bin\Debug\InfoCosteProgramaGenNHibernate.dll
@@ -14,3 +13,6 @@ C:\Users\Xito\workspaceOoharia\proyecto-dss\InfoCosteProgramaGen\InfoCosteProgra
 C:\Users\Xito\workspaceOoharia\proyecto-dss\InfoCosteProgramaGen\InfoCostePrograma\bin\Debug\Antlr3.Runtime.dll
 C:\Users\Xito\workspaceOoharia\proyecto-dss\InfoCosteProgramaGen\InfoCostePrograma\bin\Debug\log4net.dll
 C:\Users\Xito\workspaceOoharia\proyecto-dss\InfoCosteProgramaGen\InfoCostePrograma\bin\Debug\InfoCosteProgramaGenNHibernate.pdb
+C:\Users\Xito\workspaceOoharia\proyecto-dss\InfoCosteProgramaGen\InfoCostePrograma\obj\x86\Debug\InfoCostePrograma.Principal.resources
+C:\Users\Xito\workspaceOoharia\proyecto-dss\InfoCosteProgramaGen\InfoCostePrograma\obj\x86\Debug\InfoCostePrograma.NuevoTrabajador.resources
+C:\Users\Xito\workspaceOoharia\proyecto-dss\InfoCosteProgramaGen\InfoCostePrograma\obj\x86\Debug\InfoCostePrograma.GestionarTrabajadores.resources
