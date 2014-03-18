@@ -47,11 +47,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GestionarClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestionarClientes.Designer.cs">
+      <DependentUpon>GestionarClientes.cs</DependentUpon>
+    </Compile>
     <Compile Include="GestionarTrabajadores.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GestionarTrabajadores.Designer.cs">
       <DependentUpon>GestionarTrabajadores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NuevoCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NuevoCliente.Designer.cs">
+      <DependentUpon>NuevoCliente.cs</DependentUpon>
     </Compile>
     <Compile Include="NuevoTrabajador.cs">
       <SubType>Form</SubType>
@@ -67,8 +79,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GestionarClientes.resx">
+      <DependentUpon>GestionarClientes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GestionarTrabajadores.resx">
       <DependentUpon>GestionarTrabajadores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NuevoCliente.resx">
+      <DependentUpon>NuevoCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NuevoTrabajador.resx">
       <DependentUpon>NuevoTrabajador.cs</DependentUpon>
@@ -87,7 +105,6 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="app.config" />
-    <None Include="Properties\DataSources\InfoCosteProgramaGenNHibernate.EN.InfoCoste.TrabajadorEN.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -103,6 +120,9 @@
       <Project>{66C66636-FD6A-4A3F-A7C5-FE88BBA117AF}</Project>
       <Name>InfoCosteProgramaGenNHibernate</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\DataSources\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

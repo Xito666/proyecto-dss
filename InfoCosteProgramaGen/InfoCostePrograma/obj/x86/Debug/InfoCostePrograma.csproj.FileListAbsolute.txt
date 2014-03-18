@@ -16,3 +16,5 @@ C:\Users\Xito\workspaceOoharia\proyecto-dss\InfoCosteProgramaGen\InfoCosteProgra
 C:\Users\Xito\workspaceOoharia\proyecto-dss\InfoCosteProgramaGen\InfoCostePrograma\obj\x86\Debug\InfoCostePrograma.Principal.resources
 C:\Users\Xito\workspaceOoharia\proyecto-dss\InfoCosteProgramaGen\InfoCostePrograma\obj\x86\Debug\InfoCostePrograma.NuevoTrabajador.resources
 C:\Users\Xito\workspaceOoharia\proyecto-dss\InfoCosteProgramaGen\InfoCostePrograma\obj\x86\Debug\InfoCostePrograma.GestionarTrabajadores.resources
+C:\Users\Xito\workspaceOoharia\proyecto-dss\InfoCosteProgramaGen\InfoCostePrograma\obj\x86\Debug\InfoCostePrograma.NuevoCliente.resources
+C:\Users\Xito\workspaceOoharia\proyecto-dss\InfoCosteProgramaGen\InfoCostePrograma\obj\x86\Debug\InfoCostePrograma.GestionarClientes.resources

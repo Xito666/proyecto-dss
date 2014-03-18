@@ -103,6 +103,7 @@
             this.button_CrearUsuario.TabIndex = 7;
             this.button_CrearUsuario.Text = "Crear";
             this.button_CrearUsuario.UseVisualStyleBackColor = true;
+            this.button_CrearUsuario.Click += new System.EventHandler(this.button_CrearUsuario_Click);
             // 
             // NuevoTrabajador
             // 

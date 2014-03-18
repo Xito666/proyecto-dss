@@ -155,12 +155,14 @@
             this.nuevoToolStripMenuItem1.Name = "nuevoToolStripMenuItem1";
             this.nuevoToolStripMenuItem1.Size = new System.Drawing.Size(169, 22);
             this.nuevoToolStripMenuItem1.Text = "Nuevo";
+            this.nuevoToolStripMenuItem1.Click += new System.EventHandler(this.nuevoToolStripMenuItem1_Click);
             // 
             // gestiónClientesToolStripMenuItem
             // 
             this.gestiónClientesToolStripMenuItem.Name = "gestiónClientesToolStripMenuItem";
             this.gestiónClientesToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
             this.gestiónClientesToolStripMenuItem.Text = "Gestionar Clientes";
+            this.gestiónClientesToolStripMenuItem.Click += new System.EventHandler(this.gestiónClientesToolStripMenuItem_Click);
             // 
             // verPresupuestosToolStripMenuItem
             // 

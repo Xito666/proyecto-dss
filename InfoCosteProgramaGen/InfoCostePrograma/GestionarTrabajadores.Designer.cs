@@ -28,31 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
-            this.trabajadorENBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridView_GestionarTrabajadores = new System.Windows.Forms.DataGridView();
             this.Identificador = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Contrasenya = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Eliminar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Editar = new System.Windows.Forms.DataGridViewButtonColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.trabajadorENBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_GestionarTrabajadores)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 13);
+            this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(117, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Gestionar Trabajadores";
-            // 
-            // trabajadorENBindingSource
-            // 
-            this.trabajadorENBindingSource.DataSource = typeof(InfoCosteProgramaGenNHibernate.EN.InfoCoste.TrabajadorEN);
             // 
             // dataGridView_GestionarTrabajadores
             // 
@@ -113,7 +106,6 @@
             this.Name = "GestionarTrabajadores";
             this.Text = "GestionarTrabajadores";
             this.Load += new System.EventHandler(this.GestionarTrabajadores_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.trabajadorENBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_GestionarTrabajadores)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -123,7 +115,6 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.BindingSource trabajadorENBindingSource;
         private System.Windows.Forms.DataGridView dataGridView_GestionarTrabajadores;
         private System.Windows.Forms.DataGridViewTextBoxColumn Identificador;
         private System.Windows.Forms.DataGridViewTextBoxColumn Contrasenya;

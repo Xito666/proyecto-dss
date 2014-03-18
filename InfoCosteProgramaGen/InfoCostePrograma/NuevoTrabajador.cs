@@ -15,5 +15,11 @@ namespace InfoCostePrograma
         {
             InitializeComponent();
         }
+
+        private void button_CrearUsuario_Click(object sender, EventArgs e)
+        {
+            MessageBoxButtons mbb = new MessageBoxButtons();
+            MessageBox.Show(this, "Se creará/modificará el usuario", "Continuar?", mbb);
+        }
     }
 }

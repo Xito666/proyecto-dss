@@ -29,6 +29,18 @@ namespace InfoCostePrograma
             gt.Show();
         }
 
+        private void nuevoToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            NuevoCliente nc = new NuevoCliente();
+            nc.Show();
+        }
+
+        private void gestiónClientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            GestionarClientes gc = new GestionarClientes();
+            gc.Show();
+        }
+
 
     }
 }
