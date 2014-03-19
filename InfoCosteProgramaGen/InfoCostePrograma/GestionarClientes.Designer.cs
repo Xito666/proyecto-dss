@@ -29,20 +29,22 @@
         private void InitializeComponent()
         {
             this.dataGridView_GestionarClientes = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.eMail = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Empresa = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.Eliminar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Editar = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_GestionarClientes)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView_GestionarClientes
             // 
+            this.dataGridView_GestionarClientes.AllowUserToAddRows = false;
             this.dataGridView_GestionarClientes.AllowUserToDeleteRows = false;
             this.dataGridView_GestionarClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_GestionarClientes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -50,6 +52,7 @@
             this.Nombre,
             this.Direccion,
             this.Telefono,
+            this.eMail,
             this.Empresa,
             this.Eliminar,
             this.Editar});
@@ -57,9 +60,27 @@
             this.dataGridView_GestionarClientes.Name = "dataGridView_GestionarClientes";
             this.dataGridView_GestionarClientes.ReadOnly = true;
             this.dataGridView_GestionarClientes.RowHeadersWidth = 20;
-            this.dataGridView_GestionarClientes.Size = new System.Drawing.Size(723, 185);
+            this.dataGridView_GestionarClientes.Size = new System.Drawing.Size(823, 185);
             this.dataGridView_GestionarClientes.TabIndex = 3;
             this.dataGridView_GestionarClientes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_GestionarClientes_CellContentClick);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(-118, 22);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(117, 13);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Gestionar Trabajadores";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(12, 9);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(117, 13);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Gestionar Trabajadores";
             // 
             // ID
             // 
@@ -85,6 +106,12 @@
             this.Telefono.Name = "Telefono";
             this.Telefono.ReadOnly = true;
             // 
+            // eMail
+            // 
+            this.eMail.HeaderText = "eMail";
+            this.eMail.Name = "eMail";
+            this.eMail.ReadOnly = true;
+            // 
             // Empresa
             // 
             this.Empresa.HeaderText = "¿Empresa?";
@@ -103,29 +130,11 @@
             this.Editar.Name = "Editar";
             this.Editar.ReadOnly = true;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(-118, 22);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(117, 13);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Gestionar Trabajadores";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 9);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(117, 13);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Gestionar Trabajadores";
-            // 
             // GestionarClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(747, 242);
+            this.ClientSize = new System.Drawing.Size(847, 242);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dataGridView_GestionarClientes);
             this.Controls.Add(this.label1);
@@ -147,6 +156,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn Direccion;
         private System.Windows.Forms.DataGridViewTextBoxColumn Telefono;
+        private System.Windows.Forms.DataGridViewTextBoxColumn eMail;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Empresa;
         private System.Windows.Forms.DataGridViewButtonColumn Eliminar;
         private System.Windows.Forms.DataGridViewButtonColumn Editar;

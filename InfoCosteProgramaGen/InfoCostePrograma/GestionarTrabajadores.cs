@@ -24,8 +24,12 @@ namespace InfoCostePrograma
             }
             else if (e.ColumnIndex == 4)
             {
-                // pasarle el trabajador para rellenar los datos en los recuadros correspondientes
-                NuevoTrabajador nt = new NuevoTrabajador();
+                InfoCosteProgramaGenNHibernate.EN.InfoCoste.TrabajadorEN t = new InfoCosteProgramaGenNHibernate.EN.InfoCoste.TrabajadorEN();
+                t.Id =Convert.ToInt32( dataGridView_GestionarTrabajadores.Rows[e.RowIndex].Cells[0].Value.ToString());
+                t.Password = dataGridView_GestionarTrabajadores.Rows[e.RowIndex].Cells[1].Value.ToString();
+                t.Nombre = dataGridView_GestionarTrabajadores.Rows[e.RowIndex].Cells[2].Value.ToString();
+
+                NuevoTrabajador nt = new NuevoTrabajador(t);
                 nt.Show();
             }
         }
