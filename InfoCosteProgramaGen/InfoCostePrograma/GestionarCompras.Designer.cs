@@ -1,6 +1,6 @@
 ﻿namespace InfoCostePrograma
 {
-    partial class GestionarProveedores
+    partial class GestionarCompras
     {
         /// <summary>
         /// Required designer variable.
@@ -28,25 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView_GestionarProveedores = new System.Windows.Forms.DataGridView();
+            this.dataGridView_GestionarCompras = new System.Windows.Forms.DataGridView();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_GestionarProveedores)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_GestionarCompras)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView_GestionarProveedores
+            // dataGridView_GestionarCompras
             // 
-            this.dataGridView_GestionarProveedores.AllowUserToAddRows = false;
-            this.dataGridView_GestionarProveedores.AllowUserToDeleteRows = false;
-            this.dataGridView_GestionarProveedores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_GestionarProveedores.Location = new System.Drawing.Point(12, 12);
-            this.dataGridView_GestionarProveedores.Name = "dataGridView_GestionarProveedores";
-            this.dataGridView_GestionarProveedores.ReadOnly = true;
-            this.dataGridView_GestionarProveedores.RowHeadersWidth = 20;
-            this.dataGridView_GestionarProveedores.Size = new System.Drawing.Size(768, 240);
-            this.dataGridView_GestionarProveedores.TabIndex = 2;
+            this.dataGridView_GestionarCompras.AllowUserToAddRows = false;
+            this.dataGridView_GestionarCompras.AllowUserToDeleteRows = false;
+            this.dataGridView_GestionarCompras.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_GestionarCompras.Location = new System.Drawing.Point(12, 12);
+            this.dataGridView_GestionarCompras.Name = "dataGridView_GestionarCompras";
+            this.dataGridView_GestionarCompras.ReadOnly = true;
+            this.dataGridView_GestionarCompras.RowHeadersWidth = 20;
+            this.dataGridView_GestionarCompras.Size = new System.Drawing.Size(768, 240);
+            this.dataGridView_GestionarCompras.TabIndex = 4;
             // 
             // button4
             // 
@@ -92,7 +92,7 @@
             this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // GestionarProveedores
+            // GestionarCompras
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -101,18 +101,17 @@
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.dataGridView_GestionarProveedores);
-            this.Name = "GestionarProveedores";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "GestionarProveedores";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_GestionarProveedores)).EndInit();
+            this.Controls.Add(this.dataGridView_GestionarCompras);
+            this.Name = "GestionarCompras";
+            this.Text = "GestionarCompras";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_GestionarCompras)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView_GestionarProveedores;
+        private System.Windows.Forms.DataGridView dataGridView_GestionarCompras;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;

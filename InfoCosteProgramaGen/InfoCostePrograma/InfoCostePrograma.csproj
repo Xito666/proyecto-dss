@@ -53,6 +53,18 @@
     <Compile Include="GestionarClientes.Designer.cs">
       <DependentUpon>GestionarClientes.cs</DependentUpon>
     </Compile>
+    <Compile Include="GestionarCompras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestionarCompras.Designer.cs">
+      <DependentUpon>GestionarCompras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionarProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestionarProductos.Designer.cs">
+      <DependentUpon>GestionarProductos.cs</DependentUpon>
+    </Compile>
     <Compile Include="GestionarProveedores.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -64,6 +76,18 @@
     </Compile>
     <Compile Include="GestionarTrabajadores.Designer.cs">
       <DependentUpon>GestionarTrabajadores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionarVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestionarVentas.Designer.cs">
+      <DependentUpon>GestionarVentas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Herramientas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Herramientas.Designer.cs">
+      <DependentUpon>Herramientas.cs</DependentUpon>
     </Compile>
     <Compile Include="NuevoCliente.cs">
       <SubType>Form</SubType>
@@ -88,11 +112,23 @@
     <EmbeddedResource Include="GestionarClientes.resx">
       <DependentUpon>GestionarClientes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GestionarCompras.resx">
+      <DependentUpon>GestionarCompras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionarProductos.resx">
+      <DependentUpon>GestionarProductos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GestionarProveedores.resx">
       <DependentUpon>GestionarProveedores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GestionarTrabajadores.resx">
       <DependentUpon>GestionarTrabajadores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionarVentas.resx">
+      <DependentUpon>GestionarVentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Herramientas.resx">
+      <DependentUpon>Herramientas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NuevoCliente.resx">
       <DependentUpon>NuevoCliente.cs</DependentUpon>

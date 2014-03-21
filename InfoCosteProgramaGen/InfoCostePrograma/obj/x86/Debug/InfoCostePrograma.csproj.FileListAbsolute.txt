@@ -40,3 +40,7 @@ C:\Documents and Settings\ooh4riaUser\My Documents\GitHub\proyecto-dss\InfoCoste
 C:\Documents and Settings\ooh4riaUser\My Documents\GitHub\proyecto-dss\InfoCosteProgramaGen\InfoCostePrograma\obj\x86\Debug\GenerateResource.read.1.tlog
 C:\Documents and Settings\ooh4riaUser\My Documents\GitHub\proyecto-dss\InfoCosteProgramaGen\InfoCostePrograma\obj\x86\Debug\GenerateResource.write.1.tlog
 C:\Documents and Settings\ooh4riaUser\My Documents\GitHub\proyecto-dss\InfoCosteProgramaGen\InfoCostePrograma\obj\x86\Debug\InfoCostePrograma.GestionarProveedores.resources
+C:\Documents and Settings\ooh4riaUser\My Documents\GitHub\proyecto-dss\InfoCosteProgramaGen\InfoCostePrograma\obj\x86\Debug\InfoCostePrograma.GestionarCompras.resources
+C:\Documents and Settings\ooh4riaUser\My Documents\GitHub\proyecto-dss\InfoCosteProgramaGen\InfoCostePrograma\obj\x86\Debug\InfoCostePrograma.GestionarProductos.resources
+C:\Documents and Settings\ooh4riaUser\My Documents\GitHub\proyecto-dss\InfoCosteProgramaGen\InfoCostePrograma\obj\x86\Debug\InfoCostePrograma.GestionarVentas.resources
+C:\Documents and Settings\ooh4riaUser\My Documents\GitHub\proyecto-dss\InfoCosteProgramaGen\InfoCostePrograma\obj\x86\Debug\InfoCostePrograma.Herramientas.resources

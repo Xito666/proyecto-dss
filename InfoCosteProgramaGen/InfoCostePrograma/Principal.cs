@@ -22,22 +22,53 @@ namespace InfoCostePrograma
 
         }
 
+        private void AddFormInPanel(Object formHijo)
+        {
+            if (this.panel2.Controls.Count > 0)
+                this.panel2.Controls.RemoveAt(0);
+
+            Form fh = formHijo as Form;
+            fh.TopLevel = false;
+            fh.FormBorderStyle = FormBorderStyle.None;
+            fh.Dock = DockStyle.Fill;
+            this.panel2.Controls.Add(fh);
+            this.panel2.Tag = fh;
+            fh.Show();
+        }
+
         private void button6_Click(object sender, EventArgs e)
         {
-            GestionarTrabajadores gt = new GestionarTrabajadores();
-            gt.Show();
+            AddFormInPanel(new GestionarTrabajadores());
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
-            GestionarClientes gc = new GestionarClientes();
-            gc.Show();
+            AddFormInPanel(new GestionarClientes());
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            GestionarProveedores gp = new GestionarProveedores();
-            gp.Show();
+            AddFormInPanel(new GestionarProveedores());
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            AddFormInPanel(new GestionarProductos());
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            AddFormInPanel(new GestionarVentas());
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            AddFormInPanel(new GestionarCompras());
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            AddFormInPanel(new Herramientas());
         }
     }
 }
