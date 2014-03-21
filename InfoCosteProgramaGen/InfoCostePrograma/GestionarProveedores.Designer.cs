@@ -1,6 +1,6 @@
 ﻿namespace InfoCostePrograma
 {
-    partial class GestionarTrabajadores
+    partial class GestionarProveedores
     {
         /// <summary>
         /// Required designer variable.
@@ -34,10 +34,10 @@
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Eliminar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Editar = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_GestionarTrabajadores)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,8 +57,7 @@
             this.dataGridView_GestionarTrabajadores.ReadOnly = true;
             this.dataGridView_GestionarTrabajadores.RowHeadersWidth = 20;
             this.dataGridView_GestionarTrabajadores.Size = new System.Drawing.Size(523, 185);
-            this.dataGridView_GestionarTrabajadores.TabIndex = 1;
-            this.dataGridView_GestionarTrabajadores.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_GestionarTrabajadores_CellContentClick);
+            this.dataGridView_GestionarTrabajadores.TabIndex = 2;
             // 
             // Identificador
             // 
@@ -90,27 +89,16 @@
             this.Editar.Name = "Editar";
             this.Editar.ReadOnly = true;
             // 
-            // button4
+            // button1
             // 
-            this.button4.Image = global::InfoCostePrograma.Properties.Resources.Buscar;
-            this.button4.Location = new System.Drawing.Point(240, 203);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(70, 70);
-            this.button4.TabIndex = 5;
-            this.button4.Text = "Buscar";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Image = global::InfoCostePrograma.Properties.Resources.Eliminar;
-            this.button3.Location = new System.Drawing.Point(164, 203);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(70, 70);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "Eliminar";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button3.UseVisualStyleBackColor = true;
+            this.button1.Image = global::InfoCostePrograma.Properties.Resources.nuevo;
+            this.button1.Location = new System.Drawing.Point(12, 203);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(70, 70);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "Nuevo";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
@@ -118,24 +106,34 @@
             this.button2.Location = new System.Drawing.Point(88, 203);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(70, 70);
-            this.button2.TabIndex = 3;
+            this.button2.TabIndex = 4;
             this.button2.Text = "Guardar";
             this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // button3
             // 
-            this.button1.Image = global::InfoCostePrograma.Properties.Resources.nuevo;
-            this.button1.Location = new System.Drawing.Point(12, 203);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(70, 70);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Nuevo";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button3.Image = global::InfoCostePrograma.Properties.Resources.Eliminar;
+            this.button3.Location = new System.Drawing.Point(164, 203);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(70, 70);
+            this.button3.TabIndex = 5;
+            this.button3.Text = "Eliminar";
+            this.button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button3.UseVisualStyleBackColor = true;
             // 
-            // GestionarTrabajadores
+            // button4
+            // 
+            this.button4.Image = global::InfoCostePrograma.Properties.Resources.Buscar;
+            this.button4.Location = new System.Drawing.Point(240, 203);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(70, 70);
+            this.button4.TabIndex = 6;
+            this.button4.Text = "Buscar";
+            this.button4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // GestionarProveedores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -145,10 +143,9 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView_GestionarTrabajadores);
-            this.Name = "GestionarTrabajadores";
+            this.Name = "GestionarProveedores";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "GestionarTrabajadores";
-            this.Load += new System.EventHandler(this.GestionarTrabajadores_Load);
+            this.Text = "GestionarProveedores";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_GestionarTrabajadores)).EndInit();
             this.ResumeLayout(false);
 

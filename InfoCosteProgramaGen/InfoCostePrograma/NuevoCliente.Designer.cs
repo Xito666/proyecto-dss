@@ -168,6 +168,7 @@
             this.Controls.Add(this.label_Nombre);
             this.Controls.Add(this.label1);
             this.Name = "NuevoCliente";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "NuevoCliente";
             this.Load += new System.EventHandler(this.NuevoCliente_Load);
             this.ResumeLayout(false);

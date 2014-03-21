@@ -17,30 +17,27 @@ namespace InfoCostePrograma
             InitializeComponent();
         }
 
-        private void crearToolStripMenuItem_Click(object sender, EventArgs e)
+        private void Principal_Load(object sender, EventArgs e)
         {
-            NuevoTrabajador nt = new NuevoTrabajador();
-            nt.Show();
+
         }
 
-        private void gestionarToolStripMenuItem_Click(object sender, EventArgs e)
+        private void button6_Click(object sender, EventArgs e)
         {
             GestionarTrabajadores gt = new GestionarTrabajadores();
             gt.Show();
         }
 
-        private void nuevoToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            NuevoCliente nc = new NuevoCliente();
-            nc.Show();
-        }
-
-        private void gestiónClientesToolStripMenuItem_Click(object sender, EventArgs e)
+        private void button7_Click(object sender, EventArgs e)
         {
             GestionarClientes gc = new GestionarClientes();
             gc.Show();
         }
 
-
+        private void button4_Click(object sender, EventArgs e)
+        {
+            GestionarProveedores gp = new GestionarProveedores();
+            gp.Show();
+        }
     }
 }

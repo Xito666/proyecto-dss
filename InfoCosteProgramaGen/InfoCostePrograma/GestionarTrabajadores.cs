@@ -38,5 +38,11 @@ namespace InfoCostePrograma
         {
             dataGridView_GestionarTrabajadores.Rows.Add(53244622,"pass1","Ragnar Lodbrok","Eliminar","Editar");
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            NuevoTrabajador nt = new NuevoTrabajador();
+            nt.Show();
+        }
     }
 }
