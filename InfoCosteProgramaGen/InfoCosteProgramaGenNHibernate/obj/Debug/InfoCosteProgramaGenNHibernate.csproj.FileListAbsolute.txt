@@ -27,3 +27,4 @@ C:\Documents and Settings\ooh4riaUser\My Documents\GitHub\proyecto-dss\InfoCoste
 C:\Documents and Settings\ooh4riaUser\My Documents\GitHub\proyecto-dss\InfoCosteProgramaGen\InfoCosteProgramaGenNHibernate\obj\Debug\ResolveAssemblyReference.cache
 C:\Documents and Settings\ooh4riaUser\My Documents\GitHub\proyecto-dss\InfoCosteProgramaGen\InfoCosteProgramaGenNHibernate\obj\Debug\InfoCosteProgramaGenNHibernate.dll
 C:\Documents and Settings\ooh4riaUser\My Documents\GitHub\proyecto-dss\InfoCosteProgramaGen\InfoCosteProgramaGenNHibernate\obj\Debug\InfoCosteProgramaGenNHibernate.pdb
+C:\Users\Xito\workspaceOoharia\proyecto-dss\InfoCosteProgramaGen\InfoCosteProgramaGenNHibernate\obj\Debug\InfoCosteProgramaGenNHibernate.csprojResolveAssemblyReference.cache

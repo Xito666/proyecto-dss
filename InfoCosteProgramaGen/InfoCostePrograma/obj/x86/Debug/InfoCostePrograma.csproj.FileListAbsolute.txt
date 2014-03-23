@@ -44,3 +44,8 @@ C:\Documents and Settings\ooh4riaUser\My Documents\GitHub\proyecto-dss\InfoCoste
 C:\Documents and Settings\ooh4riaUser\My Documents\GitHub\proyecto-dss\InfoCosteProgramaGen\InfoCostePrograma\obj\x86\Debug\InfoCostePrograma.GestionarProductos.resources
 C:\Documents and Settings\ooh4riaUser\My Documents\GitHub\proyecto-dss\InfoCosteProgramaGen\InfoCostePrograma\obj\x86\Debug\InfoCostePrograma.GestionarVentas.resources
 C:\Documents and Settings\ooh4riaUser\My Documents\GitHub\proyecto-dss\InfoCosteProgramaGen\InfoCostePrograma\obj\x86\Debug\InfoCostePrograma.Herramientas.resources
+C:\Users\Xito\workspaceOoharia\proyecto-dss\InfoCosteProgramaGen\InfoCostePrograma\obj\x86\Debug\InfoCostePrograma.GestionarCompras.resources
+C:\Users\Xito\workspaceOoharia\proyecto-dss\InfoCosteProgramaGen\InfoCostePrograma\obj\x86\Debug\InfoCostePrograma.GestionarProductos.resources
+C:\Users\Xito\workspaceOoharia\proyecto-dss\InfoCosteProgramaGen\InfoCostePrograma\obj\x86\Debug\InfoCostePrograma.GestionarProveedores.resources
+C:\Users\Xito\workspaceOoharia\proyecto-dss\InfoCosteProgramaGen\InfoCostePrograma\obj\x86\Debug\InfoCostePrograma.GestionarVentas.resources
+C:\Users\Xito\workspaceOoharia\proyecto-dss\InfoCosteProgramaGen\InfoCostePrograma\obj\x86\Debug\InfoCostePrograma.Herramientas.resources

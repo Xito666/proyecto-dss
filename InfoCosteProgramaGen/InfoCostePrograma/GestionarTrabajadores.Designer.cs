@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.dataGridView_GestionarTrabajadores = new System.Windows.Forms.DataGridView();
+            this.Identificador = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Contrasenya = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.Identificador = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Contrasenya = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_GestionarTrabajadores)).BeginInit();
             this.SuspendLayout();
             // 
@@ -55,6 +55,24 @@
             this.dataGridView_GestionarTrabajadores.Size = new System.Drawing.Size(768, 240);
             this.dataGridView_GestionarTrabajadores.TabIndex = 1;
             this.dataGridView_GestionarTrabajadores.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_GestionarTrabajadores_CellContentClick);
+            // 
+            // Identificador
+            // 
+            this.Identificador.HeaderText = "Identificador";
+            this.Identificador.Name = "Identificador";
+            this.Identificador.ReadOnly = true;
+            // 
+            // Contrasenya
+            // 
+            this.Contrasenya.HeaderText = "Contraseña";
+            this.Contrasenya.Name = "Contrasenya";
+            this.Contrasenya.ReadOnly = true;
+            // 
+            // Nombre
+            // 
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
             // 
             // button4
             // 
@@ -99,24 +117,7 @@
             this.button1.Text = "Nuevo";
             this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button1.UseVisualStyleBackColor = true;
-            // 
-            // Identificador
-            // 
-            this.Identificador.HeaderText = "Identificador";
-            this.Identificador.Name = "Identificador";
-            this.Identificador.ReadOnly = true;
-            // 
-            // Contrasenya
-            // 
-            this.Contrasenya.HeaderText = "Contraseña";
-            this.Contrasenya.Name = "Contrasenya";
-            this.Contrasenya.ReadOnly = true;
-            // 
-            // Nombre
-            // 
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.Name = "Nombre";
-            this.Nombre.ReadOnly = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // GestionarTrabajadores
             // 
