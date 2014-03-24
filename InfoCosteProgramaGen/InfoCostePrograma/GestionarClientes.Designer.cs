@@ -29,17 +29,19 @@
         private void InitializeComponent()
         {
             this.dataGridView_GestionarClientes = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.eMail = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Empresa = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.label1 = new System.Windows.Forms.Label();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_GestionarClientes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -62,6 +64,42 @@
             this.dataGridView_GestionarClientes.Size = new System.Drawing.Size(768, 240);
             this.dataGridView_GestionarClientes.TabIndex = 3;
             this.dataGridView_GestionarClientes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_GestionarClientes_CellContentClick);
+            // 
+            // ID
+            // 
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            // 
+            // Nombre
+            // 
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
+            // 
+            // Direccion
+            // 
+            this.Direccion.HeaderText = "Direccion";
+            this.Direccion.Name = "Direccion";
+            this.Direccion.ReadOnly = true;
+            // 
+            // Telefono
+            // 
+            this.Telefono.HeaderText = "Telefono";
+            this.Telefono.Name = "Telefono";
+            this.Telefono.ReadOnly = true;
+            // 
+            // eMail
+            // 
+            this.eMail.HeaderText = "eMail";
+            this.eMail.Name = "eMail";
+            this.eMail.ReadOnly = true;
+            // 
+            // Empresa
+            // 
+            this.Empresa.HeaderText = "¿Empresa?";
+            this.Empresa.Name = "Empresa";
+            this.Empresa.ReadOnly = true;
             // 
             // label1
             // 
@@ -117,47 +155,37 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // ID
+            // button5
             // 
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
+            this.button5.Image = global::InfoCostePrograma.Properties.Resources.Buscar;
+            this.button5.Location = new System.Drawing.Point(606, 269);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(70, 70);
+            this.button5.TabIndex = 9;
+            this.button5.Text = "Reservas";
+            this.button5.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
-            // Nombre
+            // button6
             // 
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.Name = "Nombre";
-            this.Nombre.ReadOnly = true;
-            // 
-            // Direccion
-            // 
-            this.Direccion.HeaderText = "Direccion";
-            this.Direccion.Name = "Direccion";
-            this.Direccion.ReadOnly = true;
-            // 
-            // Telefono
-            // 
-            this.Telefono.HeaderText = "Telefono";
-            this.Telefono.Name = "Telefono";
-            this.Telefono.ReadOnly = true;
-            // 
-            // eMail
-            // 
-            this.eMail.HeaderText = "eMail";
-            this.eMail.Name = "eMail";
-            this.eMail.ReadOnly = true;
-            // 
-            // Empresa
-            // 
-            this.Empresa.HeaderText = "¿Empresa?";
-            this.Empresa.Name = "Empresa";
-            this.Empresa.ReadOnly = true;
+            this.button6.Image = global::InfoCostePrograma.Properties.Resources.Buscar;
+            this.button6.Location = new System.Drawing.Point(693, 269);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(80, 70);
+            this.button6.TabIndex = 10;
+            this.button6.Text = "Presupuesto";
+            this.button6.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // GestionarClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(792, 351);
+            this.Controls.Add(this.button6);
+            this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -188,5 +216,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Telefono;
         private System.Windows.Forms.DataGridViewTextBoxColumn eMail;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Empresa;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button6;
     }
 }
