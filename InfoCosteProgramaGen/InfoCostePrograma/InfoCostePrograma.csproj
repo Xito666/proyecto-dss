@@ -47,6 +47,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="NuevaVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NuevaVenta.Designer.cs">
+      <DependentUpon>NuevaVenta.cs</DependentUpon>
+    </Compile>
     <Compile Include="ListarVentas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -127,6 +133,9 @@
     <Compile Include="Verreservas.Designer.cs">
       <DependentUpon>Verreservas.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="NuevaVenta.resx">
+      <DependentUpon>NuevaVenta.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GestionarClientes.resx">
       <DependentUpon>GestionarClientes.cs</DependentUpon>
     </EmbeddedResource>
@@ -231,6 +240,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="icons\Buscar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\Imprimir.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\print-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\ico_buscar.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\circle_tick.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
