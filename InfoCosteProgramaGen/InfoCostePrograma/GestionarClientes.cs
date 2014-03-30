@@ -71,5 +71,17 @@ namespace InfoCostePrograma
             NuevoCliente nc = new NuevoCliente();
             nc.Show();
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            Ver_presupuestos vp = new Ver_presupuestos();
+            vp.Show();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            ver_reservas vr = new ver_reservas();
+            vr.Show();
+        }
     }
 }
