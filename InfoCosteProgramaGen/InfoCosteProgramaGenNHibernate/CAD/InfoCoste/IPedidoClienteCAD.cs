@@ -18,9 +18,6 @@ void AnyadirLinea (int p_PedidoCliente_OID, System.Collections.Generic.IList<int
 
 void SetCliente (int p_PedidoCliente_OID, InfoCosteProgramaGenNHibernate.EN.InfoCoste.ClienteEN nuevoCliente);
 
-void SetId (PedidoClienteEN pedidoCliente);
-
-
 
 
 

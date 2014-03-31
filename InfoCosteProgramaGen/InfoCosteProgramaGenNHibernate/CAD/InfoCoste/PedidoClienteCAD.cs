@@ -13,10 +13,6 @@ namespace InfoCosteProgramaGenNHibernate.CAD.InfoCoste
 {
 public partial class PedidoClienteCAD : BasicCAD, IPedidoClienteCAD
 {
-
-    public void SetId(PedidoClienteEN p)
-    {
-    }
 public PedidoClienteCAD() : base ()
 {
 }
@@ -195,32 +191,6 @@ public void SetCliente (int p_PedidoCliente_OID, InfoCosteProgramaGenNHibernate.
         }
 }
 
-public void SetId (PedidoClienteEN pedidoCliente, int idNuevo)
-{
-        try
-        {
-                SessionInitializeTransaction ();
-                PedidoClienteEN pedidoClienteEN = (PedidoClienteEN)session.Load (typeof(PedidoClienteEN), pedidoCliente.Id);
-
-                pedidoClienteEN.Id = idNuevo;
-
-                session.Update (pedidoClienteEN);
-                SessionCommit ();
-        }
-
-        catch (Exception ex) {
-                SessionRollBack ();
-                if (ex is InfoCosteProgramaGenNHibernate.Exceptions.ModelException)
-                        throw ex;
-                throw new InfoCosteProgramaGenNHibernate.Exceptions.DataLayerException ("Error in PedidoClienteCAD.", ex);
-        }
-
-
-        finally
-        {
-                SessionClose ();
-        }
-}
 public int PedidoCliente (PedidoClienteEN pedidoCliente)
 {
         try

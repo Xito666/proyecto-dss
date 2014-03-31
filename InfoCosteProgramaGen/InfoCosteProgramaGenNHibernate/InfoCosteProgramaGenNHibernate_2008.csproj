@@ -143,7 +143,6 @@
 			<Compile Include="CEN\InfoCoste\PedidoClienteCEN_BorrarLinea.cs" />
 			<Compile Include="CEN\InfoCoste\PedidoClienteCEN_AnyadirLinea.cs" />
 			<Compile Include="CEN\InfoCoste\PedidoClienteCEN_SetCliente.cs" />
-			<Compile Include="CEN\InfoCoste\PedidoClienteCEN_SetId.cs" />
 			<Compile Include="CEN\InfoCoste\PedidoClienteCEN_GetLineas.cs" />
 			<Compile Include="CEN\InfoCoste\PedidoClienteCEN_GetFecha.cs" />
 			<Compile Include="CEN\InfoCoste\PedidoClienteCEN_GetCliente.cs" />
