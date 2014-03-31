@@ -76,7 +76,7 @@
       </operations>
       <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_NGqMoKiNEeOTtI5YKWJy-A" name="setTelefono" operationType="Modifier" type="Void" automaticSynchronize="false" customized="true">
         <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_dOrZEKiNEeOTtI5YKWJy-A" name="p_Cliente_OID" type="OID" typeObject="_3wFQoKiMEeOTtI5YKWJy-A"/>
-        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_dOrZEqiNEeOTtI5YKWJy-A" name="p_telefono"/>
+        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_dOrZEqiNEeOTtI5YKWJy-A" name="p_telefono" type="Integer"/>
       </operations>
       <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_OczgMKiNEeOTtI5YKWJy-A" name="setDireccion" operationType="Modifier" type="Void" automaticSynchronize="false" customized="true">
         <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_cl5h0KiNEeOTtI5YKWJy-A" name="p_Cliente_OID" type="OID" typeObject="_3wFQoKiMEeOTtI5YKWJy-A"/>
@@ -169,10 +169,6 @@
       <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_7XH94KiOEeOTtI5YKWJy-A" name="setCliente" operationType="Relationer" type="Void" relatedRol="_2VeMcqiPEeOTtI5YKWJy-A" automaticSynchronize="false" customized="true">
         <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_BdegwKlCEeO23aV5p6NXAQ" name="p_PedidoCliente_OID" type="OID" typeObject="_fvzckKiOEeOTtI5YKWJy-A"/>
         <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_uMC24KlCEeO23aV5p6NXAQ" name="nuevoCliente" type="Object" typeObject="_3wFQoKiMEeOTtI5YKWJy-A"/>
-      </operations>
-      <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_-ecUIKiOEeOTtI5YKWJy-A" name="setId" operationType="Modifier" type="Void" automaticSynchronize="false" customized="true">
-        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_BdegxqlCEeO23aV5p6NXAQ" name="p_PedidoCliente_OID" type="OID" typeObject="_fvzckKiOEeOTtI5YKWJy-A"/>
-        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_oGFlQKlCEeO23aV5p6NXAQ" name="idNuevo" type="Integer"/>
       </operations>
       <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_GkXSYKiPEeOTtI5YKWJy-A" name="getLineas" type="Object" collectionType="List" typeObject="_Z3uHgKiREeOTtI5YKWJy-A" relatedRol="_t1jScaiSEeOTtI5YKWJy-A">
         <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_YqKCwKlCEeO23aV5p6NXAQ" name="p_PedidoCliente_OID" type="OID" typeObject="_fvzckKiOEeOTtI5YKWJy-A"/>
@@ -972,13 +968,6 @@
           <styles xmi:type="notation:FontStyle" xmi:id="_7XOEg6iOEeOTtI5YKWJy-A"/>
           <styles xmi:type="notation:FillStyle" xmi:id="_7XOEhKiOEeOTtI5YKWJy-A"/>
           <layoutConstraint xmi:type="notation:Bounds" xmi:id="_7XOEhaiOEeOTtI5YKWJy-A"/>
-        </children>
-        <children xmi:type="notation:Node" xmi:id="_-eiawaiOEeOTtI5YKWJy-A" type="3004" element="_-ecUIKiOEeOTtI5YKWJy-A">
-          <children xmi:type="notation:DecorationNode" xmi:id="_-eiaxqiOEeOTtI5YKWJy-A" type="5004"/>
-          <styles xmi:type="notation:DescriptionStyle" xmi:id="_-eiawqiOEeOTtI5YKWJy-A"/>
-          <styles xmi:type="notation:FontStyle" xmi:id="_-eiaw6iOEeOTtI5YKWJy-A"/>
-          <styles xmi:type="notation:FillStyle" xmi:id="_-eiaxKiOEeOTtI5YKWJy-A"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-eiaxaiOEeOTtI5YKWJy-A"/>
         </children>
         <children xmi:type="notation:Node" xmi:id="_GkXSYqiPEeOTtI5YKWJy-A" type="3004" element="_GkXSYKiPEeOTtI5YKWJy-A">
           <children xmi:type="notation:DecorationNode" xmi:id="_GkdZAKiPEeOTtI5YKWJy-A" type="5004"/>
