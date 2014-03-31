@@ -89,6 +89,12 @@
     <Compile Include="Herramientas.Designer.cs">
       <DependentUpon>Herramientas.cs</DependentUpon>
     </Compile>
+    <Compile Include="NuevaVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NuevaVenta.Designer.cs">
+      <DependentUpon>NuevaVenta.cs</DependentUpon>
+    </Compile>
     <Compile Include="NuevoCliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -141,6 +147,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Herramientas.resx">
       <DependentUpon>Herramientas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NuevaVenta.resx">
+      <DependentUpon>NuevaVenta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NuevoCliente.resx">
       <DependentUpon>NuevoCliente.cs</DependentUpon>
@@ -222,6 +231,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="icons\Buscar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\circle_tick.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\ico_buscar.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
