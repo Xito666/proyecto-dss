@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+		<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+		                   assembly="InfoCosteProgramaGenNHibernate"
+		                   namespace="InfoCosteProgramaGenNHibernate.EN.InfoCoste">
+				
+<joined-subclass name="ProformaEN" extends="InfoCosteProgramaGenNHibernate.EN.InfoCoste.TipoFacturaEN" table="[Proforma]">
+	<key>
+    		<column name="[id]"/>
+   	</key>
+
+		
+		  </joined-subclass>	
+		  
+		  <query name="ProformaENReadAllHQL">from ProformaEN</query>
+		</hibernate-mapping>
+	
