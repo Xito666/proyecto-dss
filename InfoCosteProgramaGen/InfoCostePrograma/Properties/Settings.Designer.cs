@@ -22,5 +22,16 @@ namespace InfoCostePrograma.Properties {
                 return defaultInstance;
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(local)\\sqlexpress;Initial Catalog=InfoCosteProgramaGenNHibernate;Per" +
+            "sist Security Info=True;User ID=nhibernateUser;Password=nhibernatePass")]
+        public string Trabajadores {
+            get {
+                return ((string)(this["Trabajadores"]));
+            }
+        }
     }
 }

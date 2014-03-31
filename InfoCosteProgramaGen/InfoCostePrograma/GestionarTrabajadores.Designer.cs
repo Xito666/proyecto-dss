@@ -28,26 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.dataGridView_GestionarTrabajadores = new System.Windows.Forms.DataGridView();
-            this.Identificador = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Contrasenya = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.trabajadorBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.infoCosteProgramaGenNHibernateDataSet = new InfoCostePrograma.InfoCosteProgramaGenNHibernateDataSet();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.trabajadorTableAdapter = new InfoCostePrograma.InfoCosteProgramaGenNHibernateDataSetTableAdapters.TrabajadorTableAdapter();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.passwordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_GestionarTrabajadores)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trabajadorBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.infoCosteProgramaGenNHibernateDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView_GestionarTrabajadores
             // 
             this.dataGridView_GestionarTrabajadores.AllowUserToAddRows = false;
             this.dataGridView_GestionarTrabajadores.AllowUserToDeleteRows = false;
+            this.dataGridView_GestionarTrabajadores.AutoGenerateColumns = false;
             this.dataGridView_GestionarTrabajadores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_GestionarTrabajadores.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Identificador,
-            this.Contrasenya,
-            this.Nombre});
+            this.idDataGridViewTextBoxColumn,
+            this.nombreDataGridViewTextBoxColumn,
+            this.passwordDataGridViewTextBoxColumn});
+            this.dataGridView_GestionarTrabajadores.DataSource = this.trabajadorBindingSource;
             this.dataGridView_GestionarTrabajadores.Location = new System.Drawing.Point(12, 12);
             this.dataGridView_GestionarTrabajadores.Name = "dataGridView_GestionarTrabajadores";
             this.dataGridView_GestionarTrabajadores.ReadOnly = true;
@@ -56,23 +64,15 @@
             this.dataGridView_GestionarTrabajadores.TabIndex = 1;
             this.dataGridView_GestionarTrabajadores.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_GestionarTrabajadores_CellContentClick);
             // 
-            // Identificador
+            // trabajadorBindingSource
             // 
-            this.Identificador.HeaderText = "Identificador";
-            this.Identificador.Name = "Identificador";
-            this.Identificador.ReadOnly = true;
+            this.trabajadorBindingSource.DataMember = "Trabajador";
+            this.trabajadorBindingSource.DataSource = this.infoCosteProgramaGenNHibernateDataSet;
             // 
-            // Contrasenya
+            // infoCosteProgramaGenNHibernateDataSet
             // 
-            this.Contrasenya.HeaderText = "Contraseña";
-            this.Contrasenya.Name = "Contrasenya";
-            this.Contrasenya.ReadOnly = true;
-            // 
-            // Nombre
-            // 
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.Name = "Nombre";
-            this.Nombre.ReadOnly = true;
+            this.infoCosteProgramaGenNHibernateDataSet.DataSetName = "InfoCosteProgramaGenNHibernateDataSet";
+            this.infoCosteProgramaGenNHibernateDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // button4
             // 
@@ -119,6 +119,31 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
+            // trabajadorTableAdapter
+            // 
+            this.trabajadorTableAdapter.ClearBeforeFill = true;
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "Identificador";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nombreDataGridViewTextBoxColumn
+            // 
+            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "nombre";
+            this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre";
+            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
+            this.nombreDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // passwordDataGridViewTextBoxColumn
+            // 
+            this.passwordDataGridViewTextBoxColumn.DataPropertyName = "password";
+            this.passwordDataGridViewTextBoxColumn.HeaderText = "Contraseña";
+            this.passwordDataGridViewTextBoxColumn.Name = "passwordDataGridViewTextBoxColumn";
+            this.passwordDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
             // GestionarTrabajadores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -134,6 +159,8 @@
             this.Text = "GestionarTrabajadores";
             this.Load += new System.EventHandler(this.GestionarTrabajadores_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_GestionarTrabajadores)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trabajadorBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.infoCosteProgramaGenNHibernateDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -145,8 +172,11 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Identificador;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Contrasenya;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
+        private InfoCosteProgramaGenNHibernateDataSet infoCosteProgramaGenNHibernateDataSet;
+        private System.Windows.Forms.BindingSource trabajadorBindingSource;
+        private InfoCosteProgramaGenNHibernateDataSetTableAdapters.TrabajadorTableAdapter trabajadorTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn passwordDataGridViewTextBoxColumn;
     }
 }
