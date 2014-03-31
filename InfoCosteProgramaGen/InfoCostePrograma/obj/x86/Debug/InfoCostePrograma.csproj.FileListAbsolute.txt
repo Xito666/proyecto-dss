@@ -77,3 +77,31 @@ C:\Documents and Settings\ooh4riaUser\My Documents\GitHub\ProyectoDSS\InfoCosteP
 C:\Documents and Settings\ooh4riaUser\My Documents\GitHub\ProyectoDSS\InfoCosteProgramaGen\InfoCostePrograma\obj\x86\Debug\GenerateResource.write.1.tlog
 C:\Documents and Settings\ooh4riaUser\My Documents\GitHub\ProyectoDSS\InfoCosteProgramaGen\InfoCostePrograma\obj\x86\Debug\InfoCostePrograma.Ver_presupuestos.resources
 C:\Documents and Settings\ooh4riaUser\My Documents\GitHub\ProyectoDSS\InfoCosteProgramaGen\InfoCostePrograma\obj\x86\Debug\InfoCostePrograma.ver_reservas.resources
+C:\Documents and Settings\ooh4riaUser\Desktop\ProyectoDSS\InfoCosteProgramaGen\InfoCostePrograma\bin\Debug\InfoCostePrograma.exe.config
+C:\Documents and Settings\ooh4riaUser\Desktop\ProyectoDSS\InfoCosteProgramaGen\InfoCostePrograma\obj\x86\Debug\InfoCostePrograma.exe
+C:\Documents and Settings\ooh4riaUser\Desktop\ProyectoDSS\InfoCosteProgramaGen\InfoCostePrograma\obj\x86\Debug\InfoCostePrograma.pdb
+C:\Documents and Settings\ooh4riaUser\Desktop\ProyectoDSS\InfoCosteProgramaGen\InfoCostePrograma\bin\Debug\hibernate.cfg.xml
+C:\Documents and Settings\ooh4riaUser\Desktop\ProyectoDSS\InfoCosteProgramaGen\InfoCostePrograma\bin\Debug\InfoCostePrograma.exe
+C:\Documents and Settings\ooh4riaUser\Desktop\ProyectoDSS\InfoCosteProgramaGen\InfoCostePrograma\bin\Debug\InfoCostePrograma.pdb
+C:\Documents and Settings\ooh4riaUser\Desktop\ProyectoDSS\InfoCosteProgramaGen\InfoCostePrograma\bin\Debug\InfoCosteProgramaGenNHibernate.dll
+C:\Documents and Settings\ooh4riaUser\Desktop\ProyectoDSS\InfoCosteProgramaGen\InfoCostePrograma\bin\Debug\NHibernate.dll
+C:\Documents and Settings\ooh4riaUser\Desktop\ProyectoDSS\InfoCosteProgramaGen\InfoCostePrograma\bin\Debug\Iesi.Collections.dll
+C:\Documents and Settings\ooh4riaUser\Desktop\ProyectoDSS\InfoCosteProgramaGen\InfoCostePrograma\bin\Debug\Antlr3.Runtime.dll
+C:\Documents and Settings\ooh4riaUser\Desktop\ProyectoDSS\InfoCosteProgramaGen\InfoCostePrograma\bin\Debug\log4net.dll
+C:\Documents and Settings\ooh4riaUser\Desktop\ProyectoDSS\InfoCosteProgramaGen\InfoCostePrograma\bin\Debug\InfoCosteProgramaGenNHibernate.pdb
+C:\Documents and Settings\ooh4riaUser\Desktop\ProyectoDSS\InfoCosteProgramaGen\InfoCostePrograma\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\ooh4riaUser\Desktop\ProyectoDSS\InfoCosteProgramaGen\InfoCostePrograma\obj\x86\Debug\InfoCostePrograma.GestionarClientes.resources
+C:\Documents and Settings\ooh4riaUser\Desktop\ProyectoDSS\InfoCosteProgramaGen\InfoCostePrograma\obj\x86\Debug\InfoCostePrograma.GestionarCompras.resources
+C:\Documents and Settings\ooh4riaUser\Desktop\ProyectoDSS\InfoCosteProgramaGen\InfoCostePrograma\obj\x86\Debug\InfoCostePrograma.GestionarProductos.resources
+C:\Documents and Settings\ooh4riaUser\Desktop\ProyectoDSS\InfoCosteProgramaGen\InfoCostePrograma\obj\x86\Debug\InfoCostePrograma.GestionarProveedores.resources
+C:\Documents and Settings\ooh4riaUser\Desktop\ProyectoDSS\InfoCosteProgramaGen\InfoCostePrograma\obj\x86\Debug\InfoCostePrograma.GestionarTrabajadores.resources
+C:\Documents and Settings\ooh4riaUser\Desktop\ProyectoDSS\InfoCosteProgramaGen\InfoCostePrograma\obj\x86\Debug\InfoCostePrograma.GestionarVentas.resources
+C:\Documents and Settings\ooh4riaUser\Desktop\ProyectoDSS\InfoCosteProgramaGen\InfoCostePrograma\obj\x86\Debug\InfoCostePrograma.Herramientas.resources
+C:\Documents and Settings\ooh4riaUser\Desktop\ProyectoDSS\InfoCosteProgramaGen\InfoCostePrograma\obj\x86\Debug\InfoCostePrograma.NuevoCliente.resources
+C:\Documents and Settings\ooh4riaUser\Desktop\ProyectoDSS\InfoCosteProgramaGen\InfoCostePrograma\obj\x86\Debug\InfoCostePrograma.NuevoTrabajador.resources
+C:\Documents and Settings\ooh4riaUser\Desktop\ProyectoDSS\InfoCosteProgramaGen\InfoCostePrograma\obj\x86\Debug\InfoCostePrograma.Principal.resources
+C:\Documents and Settings\ooh4riaUser\Desktop\ProyectoDSS\InfoCosteProgramaGen\InfoCostePrograma\obj\x86\Debug\InfoCostePrograma.Properties.Resources.resources
+C:\Documents and Settings\ooh4riaUser\Desktop\ProyectoDSS\InfoCosteProgramaGen\InfoCostePrograma\obj\x86\Debug\InfoCostePrograma.Ver_presupuestos.resources
+C:\Documents and Settings\ooh4riaUser\Desktop\ProyectoDSS\InfoCosteProgramaGen\InfoCostePrograma\obj\x86\Debug\InfoCostePrograma.ver_reservas.resources
+C:\Documents and Settings\ooh4riaUser\Desktop\ProyectoDSS\InfoCosteProgramaGen\InfoCostePrograma\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Documents and Settings\ooh4riaUser\Desktop\ProyectoDSS\InfoCosteProgramaGen\InfoCostePrograma\obj\x86\Debug\GenerateResource.write.1.tlog
