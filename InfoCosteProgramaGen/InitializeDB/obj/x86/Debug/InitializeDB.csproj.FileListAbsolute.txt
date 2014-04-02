@@ -18,3 +18,6 @@ C:\Users\Xito\workspaceOoharia\proyecto-dss\InfoCosteProgramaGen\InitializeDB\bi
 C:\Users\Xito\workspaceOoharia\proyecto-dss\InfoCosteProgramaGen\InitializeDB\obj\x86\Debug\InitializeDB.csprojResolveAssemblyReference.cache
 C:\Users\Xito\workspaceOoharia\proyecto-dss\InfoCosteProgramaGen\InitializeDB\obj\x86\Debug\InitializeDB.exe
 C:\Users\Xito\workspaceOoharia\proyecto-dss\InfoCosteProgramaGen\InitializeDB\obj\x86\Debug\InitializeDB.pdb
+C:\Documents and Settings\ooh4riaUser\My Documents\GitHub\proyecto-dss\InfoCosteProgramaGen\InitializeDB\bin\Debug\InitializeDB.exe.config
+C:\Documents and Settings\ooh4riaUser\My Documents\GitHub\proyecto-dss\InfoCosteProgramaGen\InitializeDB\obj\x86\Debug\InitializeDB.exe
+C:\Documents and Settings\ooh4riaUser\My Documents\GitHub\proyecto-dss\InfoCosteProgramaGen\InitializeDB\obj\x86\Debug\InitializeDB.pdb
