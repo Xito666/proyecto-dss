@@ -18,9 +18,24 @@ namespace InfoCostePrograma
 
         private void GestionarClientes_Load(object sender, EventArgs e)
         {
-            dataGridView_GestionarClientes.Rows.Add(1, "Azul-Tierra", "C\\ de Ejemplo 123","", 966454545, true, "Eliminar", "Editar");
-            dataGridView_GestionarClientes.Rows.Add(2, "El Gato Fotografía", "Av. Larga 7", "info@elgatofotos.com", 966124578, true, "Eliminar", "Editar");
-            dataGridView_GestionarClientes.Rows.Add(3, "Pepito Perez Garcia", "C\\ Jon","pperez@hotmail.com", 966218701, false, "Eliminar", "Editar");
+            dataGridView_GestionarClientes.Rows.Add(1, "Azul-Tierra", "C\\ de Ejemplo 123", 966454545, "", true);
+            dataGridView_GestionarClientes.Rows.Add(2, "El Gato Fotografía", "Av. Larga 7", 966124578, "info@elgatofotos.com", true);
+            dataGridView_GestionarClientes.Rows.Add(3, "Pepito Perez Garcia", "C\\ Jon", 966218701, "pperez@hotmail.com", false);
+            dataGridView_GestionarClientes.Rows.Add(4, "Azul-Tierra", "C\\ de Ejemplo 123", 966454545, "", true);
+            dataGridView_GestionarClientes.Rows.Add(5, "El Gato Fotografía", "Av. Larga 7", 966124578, "info@elgatofotos.com", true);
+            dataGridView_GestionarClientes.Rows.Add(6, "Pepito Perez Garcia", "C\\ Jon", 966218701, "pperez@hotmail.com", false);
+            dataGridView_GestionarClientes.Rows.Add(7, "Azul-Tierra", "C\\ de Ejemplo 123", 966454545, "", true);
+            dataGridView_GestionarClientes.Rows.Add(8, "El Gato Fotografía", "Av. Larga 7", 966124578, "info@elgatofotos.com", true);
+            dataGridView_GestionarClientes.Rows.Add(9, "Pepito Perez Garcia", "C\\ Jon", 966218701, "pperez@hotmail.com", false);
+            dataGridView_GestionarClientes.Rows.Add(10, "Azul-Tierra", "C\\ de Ejemplo 123", 966454545, "", true);
+            dataGridView_GestionarClientes.Rows.Add(11, "El Gato Fotografía", "Av. Larga 7", 966124578, "info@elgatofotos.com", true);
+            dataGridView_GestionarClientes.Rows.Add(12, "Pepito Perez Garcia", "C\\ Jon", 966218701, "pperez@hotmail.com", false);
+            dataGridView_GestionarClientes.Rows.Add(13, "Azul-Tierra", "C\\ de Ejemplo 123", 966454545, "", true);
+            dataGridView_GestionarClientes.Rows.Add(14, "El Gato Fotografía", "Av. Larga 7", 966124578, "info@elgatofotos.com", true);
+            dataGridView_GestionarClientes.Rows.Add(15, "Pepito Perez Garcia", "C\\ Jon", 966218701, "pperez@hotmail.com", false);
+            dataGridView_GestionarClientes.Rows.Add(16, "Azul-Tierra", "C\\ de Ejemplo 123", 966454545, "", true);
+            dataGridView_GestionarClientes.Rows.Add(17, "El Gato Fotografía", "Av. Larga 7", 966124578, "info@elgatofotos.com", true);
+            dataGridView_GestionarClientes.Rows.Add(18, "Pepito Perez Garcia", "C\\ Jon", 966218701, "pperez@hotmail.com", false);
         }
 
         private void dataGridView_GestionarClientes_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -82,6 +97,22 @@ namespace InfoCostePrograma
         {
             ver_reservas vr = new ver_reservas();
             vr.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Cliente c = new Cliente();
+
+            DataGridViewRow row = dataGridView_GestionarClientes.SelectedRows[0];
+
+            c.rellenar(row);
+
+            c.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Seguro desea eliminar este cliente?", "Clientes", MessageBoxButtons.OKCancel);
         }
     }
 }

@@ -151,6 +151,27 @@ namespace InfoCostePrograma.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap ModificarLapiz {
+            get {
+                object obj = ResourceManager.GetObject("ModificarLapiz", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap ModificarLapiz1 {
+            get {
+                object obj = ResourceManager.GetObject("ModificarLapiz1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap ModificarLapiz2 {
+            get {
+                object obj = ResourceManager.GetObject("ModificarLapiz2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap nuevo {
             get {
                 object obj = ResourceManager.GetObject("nuevo", resourceCulture);

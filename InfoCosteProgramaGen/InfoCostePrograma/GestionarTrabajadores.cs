@@ -23,9 +23,15 @@ namespace InfoCostePrograma
 
         private void GestionarTrabajadores_Load(object sender, EventArgs e)
         {
-          this.trabajadorTableAdapter.Fill(this.infoCosteProgramaGenNHibernateDataSet.Trabajador);
-  
+            /*
+            dataGridView_GestionarTrabajadores.Rows.Add(1, "Fran", "passfran");
+            dataGridView_GestionarTrabajadores.Rows.Add(2, "Jaro", "passjaro");
+            dataGridView_GestionarTrabajadores.Rows.Add(3, "Leo", "passleo");
+            dataGridView_GestionarTrabajadores.Rows.Add(3, "Dani", "passdani");
+            dataGridView_GestionarTrabajadores.Rows.Add(3, "Joaquin", "passjoaquin");
+            */
 
+            this.trabajadorTableAdapter.Fill(this.infoCosteProgramaGenNHibernateDataSet.Trabajador);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -37,6 +43,11 @@ namespace InfoCostePrograma
         {
             NuevoTrabajador nt = new NuevoTrabajador();
             nt.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Seguro desea eliminar este trabajador?", "Trabajadores", MessageBoxButtons.OKCancel);
         }
 
     }

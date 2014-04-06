@@ -77,8 +77,7 @@ namespace InfoCostePrograma
 
         private void button_CrearUsuario_Click(object sender, EventArgs e)
         {
-            MessageBoxButtons mbb = new MessageBoxButtons();
-            MessageBox.Show(this, "Se creará/modificará el cliente","Continuar?",mbb);
+            
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
@@ -89,6 +88,11 @@ namespace InfoCostePrograma
         private void NuevoCliente_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

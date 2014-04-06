@@ -16,11 +16,33 @@ namespace InfoCostePrograma
             InitializeComponent();
         }
 
+        private void GestionarProveedores_Load(object sender, EventArgs e)
+        {
+            dataGridView_GestionarProveedores.Rows.Add(1, "Azul-Tierra", "C\\ de Ejemplo 123", "");
+            dataGridView_GestionarProveedores.Rows.Add(2, "El Gato Fotografía", "Av. Larga 7", "info@elgatofotos.com");
+            dataGridView_GestionarProveedores.Rows.Add(3, "Pepito Perez Garcia", "C\\ Jon", "pperez@hotmail.com");
+        }
+
         private void dataGridView_GestionarProveedores_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            dataGridView_GestionarProveedores.Rows.Add(1, "Azul-Tierra", "C\\ de Ejemplo 123", "", 966454545, true, "Eliminar", "Editar");
-            dataGridView_GestionarProveedores.Rows.Add(2, "El Gato Fotografía", "Av. Larga 7", "info@elgatofotos.com", 966124578, true, "Eliminar", "Editar");
-            dataGridView_GestionarProveedores.Rows.Add(3, "Pepito Perez Garcia", "C\\ Jon", "pperez@hotmail.com", 966218701, false, "Eliminar", "Editar");
+            
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            NuevoProveedor np = new NuevoProveedor();
+            np.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Proveedor p = new Proveedor();
+            p.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Seguro desea eliminar este proveedor?", "Proveedor", MessageBoxButtons.OKCancel);
         }
     }
 }

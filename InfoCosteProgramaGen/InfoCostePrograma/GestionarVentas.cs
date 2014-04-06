@@ -15,5 +15,10 @@ namespace InfoCostePrograma
         {
             InitializeComponent();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Seguro desea eliminar esta venta?", "Ventas", MessageBoxButtons.OKCancel);
+        }
     }
 }

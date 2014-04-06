@@ -9,16 +9,16 @@ using System.Windows.Forms;
 
 namespace InfoCostePrograma
 {
-    public partial class GestionarCompras : Form
+    public partial class Proveedor : Form
     {
-        public GestionarCompras()
+        public Proveedor()
         {
             InitializeComponent();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Seguro desea eliminar esta compra?", "Compras", MessageBoxButtons.OKCancel);
+            this.Close();
         }
     }
 }
