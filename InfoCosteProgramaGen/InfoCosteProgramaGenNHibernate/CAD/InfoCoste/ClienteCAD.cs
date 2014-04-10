@@ -244,7 +244,7 @@ public System.Collections.Generic.IList<InfoCosteProgramaGenNHibernate.EN.InfoCo
         try
         {
                 SessionInitializeTransaction ();
-                //String sql = @"FROM ClienteEN self where FROM ClienteEN c where c.nombreCompleto LIKE '%:nombreFiltro%'";
+                //String sql = @"FROM ClienteEN self where FROM ClienteEN c where c.NombreCompleto =:nombreFiltro";
                 //IQuery query = session.CreateQuery(sql);
                 IQuery query = (IQuery)session.GetNamedQuery ("ClienteENleerPorNombreHQL");
                 query.SetParameter ("nombreFiltro", nombreFiltro);
@@ -267,6 +267,29 @@ public System.Collections.Generic.IList<InfoCosteProgramaGenNHibernate.EN.InfoCo
         }
 
         return result;
+}
+public void Borrar (string id)
+{
+        try
+        {
+                SessionInitializeTransaction ();
+                ClienteEN clienteEN = (ClienteEN)session.Load (typeof(ClienteEN), id);
+                session.Delete (clienteEN);
+                SessionCommit ();
+        }
+
+        catch (Exception ex) {
+                SessionRollBack ();
+                if (ex is InfoCosteProgramaGenNHibernate.Exceptions.ModelException)
+                        throw ex;
+                throw new InfoCosteProgramaGenNHibernate.Exceptions.DataLayerException ("Error in ClienteCAD.", ex);
+        }
+
+
+        finally
+        {
+                SessionClose ();
+        }
 }
 }
 }

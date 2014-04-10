@@ -11,23 +11,71 @@ namespace InfoCostePrograma
 {
     public partial class NuevoTrabajador : Form
     {
+        bool editando = false;
+        int id;
+
         public NuevoTrabajador()
         {
             InitializeComponent();
+
+            textBox_ID.Enabled = false;
+
+            InfoCosteProgramaGenNHibernate.CEN.InfoCoste.TrabajadorCEN tcen = new InfoCosteProgramaGenNHibernate.CEN.InfoCoste.TrabajadorCEN();
+            IList<InfoCosteProgramaGenNHibernate.EN.InfoCoste.TrabajadorEN> listaTrabajadores = tcen.LeerTodos(0, 100);
+            textBox_ID.Text = (Convert.ToInt32(listaTrabajadores.ElementAt(listaTrabajadores.Count-1).Id.ToString())+1).ToString();
         }
 
-        public NuevoTrabajador(InfoCosteProgramaGenNHibernate.EN.InfoCoste.TrabajadorEN trabajador)
+        public NuevoTrabajador(int ID)
         {
             InitializeComponent();
-            textBox_ID.Text = trabajador.Id.ToString();
-            textBox_Password.Text = trabajador.Password;
-            textBox_Nombre.Text = trabajador.Nombre;
+
+            InfoCosteProgramaGenNHibernate.CEN.InfoCoste.TrabajadorCEN tcen = new InfoCosteProgramaGenNHibernate.CEN.InfoCoste.TrabajadorCEN();
+            InfoCosteProgramaGenNHibernate.EN.InfoCoste.TrabajadorEN ten = tcen.LeerPorOID(ID);
+
+            id = ID;
+            editando = true;
+
+            textBox_ID.Enabled = false;
+            textBox_ID.Text = ten.Id.ToString();
+            textBox_Password.Text = ten.Password;
+            textBox_Nombre.Text = ten.Nombre;
         }
 
         private void button_CrearUsuario_Click(object sender, EventArgs e)
         {
-            MessageBoxButtons mbb = new MessageBoxButtons();
-            MessageBox.Show(this, "Se creará/modificará el usuario", "Continuar?", mbb);
+            if(textBox_Nombre.Text == "" || textBox_Password.Text == "")
+            {
+                MessageBox.Show(this, "Todos los campos son obligatorios");
+            }
+            else
+            {
+                MessageBoxButtons mbb = new MessageBoxButtons();
+                MessageBox.Show(this, "Se creará/modificará el usuario", "Continuar?", mbb);
+                InfoCosteProgramaGenNHibernate.CEN.InfoCoste.TrabajadorCEN tcen = new InfoCosteProgramaGenNHibernate.CEN.InfoCoste.TrabajadorCEN();
+             
+                if (!editando)
+                {
+                    tcen.Trabajador(Convert.ToInt32(textBox_ID.Text), textBox_Password.Text, textBox_Nombre.Text);
+                }
+                else
+                {
+                    tcen.SetNombre(id, textBox_Nombre.Text);
+                    tcen.SetPassword(id, textBox_Password.Text);
+               
+                }
+
+                this.Close();
+            }
+        }
+
+        private void NuevoTrabajador_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox_Nombre_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

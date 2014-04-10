@@ -30,12 +30,12 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.textBox_ID = new System.Windows.Forms.TextBox();
-            this.textBox_Password = new System.Windows.Forms.TextBox();
             this.textBox_Nombre = new System.Windows.Forms.TextBox();
             this.button_CrearUsuario = new System.Windows.Forms.Button();
+            this.textBox_Password = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -56,19 +56,10 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Identificador:";
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(16, 90);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(64, 13);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Contraseña:";
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(16, 117);
+            this.label4.Location = new System.Drawing.Point(16, 89);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(93, 13);
             this.label4.TabIndex = 3;
@@ -81,19 +72,13 @@
             this.textBox_ID.Size = new System.Drawing.Size(100, 20);
             this.textBox_ID.TabIndex = 4;
             // 
-            // textBox_Password
-            // 
-            this.textBox_Password.Location = new System.Drawing.Point(120, 87);
-            this.textBox_Password.Name = "textBox_Password";
-            this.textBox_Password.Size = new System.Drawing.Size(100, 20);
-            this.textBox_Password.TabIndex = 5;
-            // 
             // textBox_Nombre
             // 
-            this.textBox_Nombre.Location = new System.Drawing.Point(120, 114);
+            this.textBox_Nombre.Location = new System.Drawing.Point(120, 86);
             this.textBox_Nombre.Name = "textBox_Nombre";
             this.textBox_Nombre.Size = new System.Drawing.Size(100, 20);
             this.textBox_Nombre.TabIndex = 6;
+            this.textBox_Nombre.TextChanged += new System.EventHandler(this.textBox_Nombre_TextChanged);
             // 
             // button_CrearUsuario
             // 
@@ -105,23 +90,40 @@
             this.button_CrearUsuario.UseVisualStyleBackColor = true;
             this.button_CrearUsuario.Click += new System.EventHandler(this.button_CrearUsuario_Click);
             // 
+            // textBox_Password
+            // 
+            this.textBox_Password.Location = new System.Drawing.Point(120, 112);
+            this.textBox_Password.Name = "textBox_Password";
+            this.textBox_Password.Size = new System.Drawing.Size(100, 20);
+            this.textBox_Password.TabIndex = 9;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(16, 115);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(64, 13);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "Contraseña:";
+            // 
             // NuevoTrabajador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Controls.Add(this.textBox_Password);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.button_CrearUsuario);
             this.Controls.Add(this.textBox_Nombre);
-            this.Controls.Add(this.textBox_Password);
             this.Controls.Add(this.textBox_ID);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "NuevoTrabajador";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "NuevoTrabajador";
             this.TopMost = true;
+            this.Load += new System.EventHandler(this.NuevoTrabajador_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -131,11 +133,11 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox_ID;
-        private System.Windows.Forms.TextBox textBox_Password;
         private System.Windows.Forms.TextBox textBox_Nombre;
         private System.Windows.Forms.Button button_CrearUsuario;
+        private System.Windows.Forms.TextBox textBox_Password;
+        private System.Windows.Forms.Label label3;
     }
 }

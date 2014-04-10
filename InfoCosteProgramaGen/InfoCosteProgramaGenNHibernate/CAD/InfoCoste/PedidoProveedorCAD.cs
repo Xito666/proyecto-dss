@@ -253,7 +253,7 @@ public System.Collections.Generic.IList<InfoCosteProgramaGenNHibernate.EN.InfoCo
         try
         {
                 SessionInitializeTransaction ();
-                //String sql = @"FROM PedidoProveedorEN self where FROM PedidoProveedorEN p where p.fecha = :fechaFiltro";
+                //String sql = @"FROM PedidoProveedorEN self where FROM PedidoProveedorEN p where p.Fecha = :fechaFiltro";
                 //IQuery query = session.CreateQuery(sql);
                 IQuery query = (IQuery)session.GetNamedQuery ("PedidoProveedorENleePorFechaHQL");
                 query.SetParameter ("fechaFiltro", fechaFiltro);

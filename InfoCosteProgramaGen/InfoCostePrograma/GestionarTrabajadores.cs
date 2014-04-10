@@ -23,15 +23,15 @@ namespace InfoCostePrograma
 
         private void GestionarTrabajadores_Load(object sender, EventArgs e)
         {
-            /*
-            dataGridView_GestionarTrabajadores.Rows.Add(1, "Fran", "passfran");
-            dataGridView_GestionarTrabajadores.Rows.Add(2, "Jaro", "passjaro");
-            dataGridView_GestionarTrabajadores.Rows.Add(3, "Leo", "passleo");
-            dataGridView_GestionarTrabajadores.Rows.Add(3, "Dani", "passdani");
-            dataGridView_GestionarTrabajadores.Rows.Add(3, "Joaquin", "passjoaquin");
-            */
+            InfoCosteProgramaGenNHibernate.CEN.InfoCoste.TrabajadorCEN tcen = new InfoCosteProgramaGenNHibernate.CEN.InfoCoste.TrabajadorCEN();
+            IList<InfoCosteProgramaGenNHibernate.EN.InfoCoste.TrabajadorEN> listaTrabajadores =  tcen.LeerTodos(0,100);
 
-            this.trabajadorTableAdapter.Fill(this.infoCosteProgramaGenNHibernateDataSet.Trabajador);
+            dataGridView_GestionarTrabajadores.Rows.Clear();
+            foreach(InfoCosteProgramaGenNHibernate.EN.InfoCoste.TrabajadorEN t in listaTrabajadores)
+            {
+                dataGridView_GestionarTrabajadores.Rows.Add(t.Id, t.Nombre, t.Password);
+            }
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -48,6 +48,35 @@ namespace InfoCostePrograma
         private void button3_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Seguro desea eliminar este trabajador?", "Trabajadores", MessageBoxButtons.OKCancel);
+            DataGridViewRow current = dataGridView_GestionarTrabajadores.CurrentRow;
+
+            InfoCosteProgramaGenNHibernate.CEN.InfoCoste.TrabajadorCEN tcen = new InfoCosteProgramaGenNHibernate.CEN.InfoCoste.TrabajadorCEN();
+            tcen.Borrar(Convert.ToInt32(current.Cells[0].Value));
+
+            GestionarTrabajadores_Load(null, null);
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            DataGridViewRow current = dataGridView_GestionarTrabajadores.CurrentRow;
+
+            NuevoTrabajador nt = new NuevoTrabajador(Convert.ToInt32(current.Cells[0].Value));
+            nt.Show();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            string input = Microsoft.VisualBasic.Interaction.InputBox("Nombre del trabajador?");
+            InfoCosteProgramaGenNHibernate.CEN.InfoCoste.TrabajadorCEN tcen = new InfoCosteProgramaGenNHibernate.CEN.InfoCoste.TrabajadorCEN();
+            IList<InfoCosteProgramaGenNHibernate.EN.InfoCoste.TrabajadorEN> lt = tcen.LeerPorNombre(input);
+
+            dataGridView_GestionarTrabajadores.Rows.Clear();
+            foreach (InfoCosteProgramaGenNHibernate.EN.InfoCoste.TrabajadorEN t in lt)
+            {
+                dataGridView_GestionarTrabajadores.Rows.Add(t.Id, t.Nombre, t.Password);
+            }
+
         }
 
     }

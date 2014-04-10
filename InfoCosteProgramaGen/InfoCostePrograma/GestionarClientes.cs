@@ -18,67 +18,29 @@ namespace InfoCostePrograma
 
         private void GestionarClientes_Load(object sender, EventArgs e)
         {
-            dataGridView_GestionarClientes.Rows.Add(1, "Azul-Tierra", "C\\ de Ejemplo 123", 966454545, "", true);
-            dataGridView_GestionarClientes.Rows.Add(2, "El Gato Fotografía", "Av. Larga 7", 966124578, "info@elgatofotos.com", true);
-            dataGridView_GestionarClientes.Rows.Add(3, "Pepito Perez Garcia", "C\\ Jon", 966218701, "pperez@hotmail.com", false);
-            dataGridView_GestionarClientes.Rows.Add(4, "Azul-Tierra", "C\\ de Ejemplo 123", 966454545, "", true);
-            dataGridView_GestionarClientes.Rows.Add(5, "El Gato Fotografía", "Av. Larga 7", 966124578, "info@elgatofotos.com", true);
-            dataGridView_GestionarClientes.Rows.Add(6, "Pepito Perez Garcia", "C\\ Jon", 966218701, "pperez@hotmail.com", false);
-            dataGridView_GestionarClientes.Rows.Add(7, "Azul-Tierra", "C\\ de Ejemplo 123", 966454545, "", true);
-            dataGridView_GestionarClientes.Rows.Add(8, "El Gato Fotografía", "Av. Larga 7", 966124578, "info@elgatofotos.com", true);
-            dataGridView_GestionarClientes.Rows.Add(9, "Pepito Perez Garcia", "C\\ Jon", 966218701, "pperez@hotmail.com", false);
-            dataGridView_GestionarClientes.Rows.Add(10, "Azul-Tierra", "C\\ de Ejemplo 123", 966454545, "", true);
-            dataGridView_GestionarClientes.Rows.Add(11, "El Gato Fotografía", "Av. Larga 7", 966124578, "info@elgatofotos.com", true);
-            dataGridView_GestionarClientes.Rows.Add(12, "Pepito Perez Garcia", "C\\ Jon", 966218701, "pperez@hotmail.com", false);
-            dataGridView_GestionarClientes.Rows.Add(13, "Azul-Tierra", "C\\ de Ejemplo 123", 966454545, "", true);
-            dataGridView_GestionarClientes.Rows.Add(14, "El Gato Fotografía", "Av. Larga 7", 966124578, "info@elgatofotos.com", true);
-            dataGridView_GestionarClientes.Rows.Add(15, "Pepito Perez Garcia", "C\\ Jon", 966218701, "pperez@hotmail.com", false);
-            dataGridView_GestionarClientes.Rows.Add(16, "Azul-Tierra", "C\\ de Ejemplo 123", 966454545, "", true);
-            dataGridView_GestionarClientes.Rows.Add(17, "El Gato Fotografía", "Av. Larga 7", 966124578, "info@elgatofotos.com", true);
-            dataGridView_GestionarClientes.Rows.Add(18, "Pepito Perez Garcia", "C\\ Jon", 966218701, "pperez@hotmail.com", false);
+            InfoCosteProgramaGenNHibernate.CEN.InfoCoste.ClienteCEN ccen = new InfoCosteProgramaGenNHibernate.CEN.InfoCoste.ClienteCEN();
+            IList<InfoCosteProgramaGenNHibernate.EN.InfoCoste.ClienteEN> listaClientes = ccen.LeerTodos(0, 100);
+
+            dataGridView_GestionarClientes.Rows.Clear();
+            foreach (InfoCosteProgramaGenNHibernate.EN.InfoCoste.ClienteEN c in listaClientes)
+            {
+                bool empresa = false;
+                InfoCosteProgramaGenNHibernate.CEN.InfoCoste.ClienteEmpresaCEN ceCEN = new InfoCosteProgramaGenNHibernate.CEN.InfoCoste.ClienteEmpresaCEN();
+                try {
+                    InfoCosteProgramaGenNHibernate.EN.InfoCoste.ClienteEmpresaEN ceEN = ceCEN.LeerPorOID(c.Id);
+                    if(ceEN != null)
+                        empresa = true; 
+                }
+                catch (Exception ex) { }
+                dataGridView_GestionarClientes.Rows.Add(c.Id, c.NombreCompleto, c.Direccion, c.Telefono, c.Email, empresa);
+            }
+
+           
         }
 
         private void dataGridView_GestionarClientes_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex == 6)
-            {
-
-            }
-            else if (e.ColumnIndex == 7)
-            {
-                // pasarle el trabajador para rellenar los datos en los recuadros correspondientes
-                bool esEmpresa =Convert.ToBoolean( dataGridView_GestionarClientes.Rows[e.RowIndex].Cells[5].Value.ToString());
-                if (esEmpresa)
-                {
-                    InfoCosteProgramaGenNHibernate.EN.InfoCoste.ClienteEmpresaEN cliente = new InfoCosteProgramaGenNHibernate.EN.InfoCoste.ClienteEmpresaEN();
-
-                    cliente.Id = dataGridView_GestionarClientes.Rows[e.RowIndex].Cells[0].Value.ToString();
-                    cliente.NombreCompleto = dataGridView_GestionarClientes.Rows[e.RowIndex].Cells[1].Value.ToString();
-                    cliente.Direccion = dataGridView_GestionarClientes.Rows[e.RowIndex].Cells[2].Value.ToString();
-                    cliente.Telefono = 0;//Convert.ToInt32(dataGridView_GestionarClientes.Rows[e.RowIndex].Cells[3].Value.ToString());
-                    cliente.Email =  dataGridView_GestionarClientes.Rows[e.RowIndex].Cells[4].Value.ToString();
-                    cliente.NumeroCuenta = 000000;
-
-                    NuevoCliente nc = new NuevoCliente(cliente);
-                    nc.Show();
-                }
-                else
-                {
-                    InfoCosteProgramaGenNHibernate.EN.InfoCoste.ClienteParticularEN cliente = new InfoCosteProgramaGenNHibernate.EN.InfoCoste.ClienteParticularEN();
-
-                    cliente.Id = dataGridView_GestionarClientes.Rows[e.RowIndex].Cells[0].Value.ToString();
-                    cliente.NombreCompleto = dataGridView_GestionarClientes.Rows[e.RowIndex].Cells[1].Value.ToString();
-                    cliente.Direccion = dataGridView_GestionarClientes.Rows[e.RowIndex].Cells[2].Value.ToString();
-                    cliente.Telefono = 0;//Convert.ToInt32(dataGridView_GestionarClientes.Rows[e.RowIndex].Cells[3].Value.ToString());
-                    cliente.Email = dataGridView_GestionarClientes.Rows[e.RowIndex].Cells[4].Value.ToString();
-
-                    NuevoCliente nc = new NuevoCliente(cliente);
-                    nc.Show();
-                }
-
-
-                
-            }
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -101,18 +63,45 @@ namespace InfoCostePrograma
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Cliente c = new Cliente();
+            DataGridViewRow current = dataGridView_GestionarClientes.CurrentRow;
 
-            DataGridViewRow row = dataGridView_GestionarClientes.SelectedRows[0];
-
-            c.rellenar(row);
-
+            NuevoCliente c = new NuevoCliente(current.Cells[0].Value.ToString());
             c.Show();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Seguro desea eliminar este cliente?", "Clientes", MessageBoxButtons.OKCancel);
+
+            DataGridViewRow current = dataGridView_GestionarClientes.CurrentRow;
+
+            InfoCosteProgramaGenNHibernate.CEN.InfoCoste.ClienteCEN ccen = new InfoCosteProgramaGenNHibernate.CEN.InfoCoste.ClienteCEN();
+            ccen.Borrar(current.Cells[0].Value.ToString());
+
+
+            GestionarClientes_Load(null, null);
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            string input = Microsoft.VisualBasic.Interaction.InputBox("Nombre del trabajador?");
+            InfoCosteProgramaGenNHibernate.CEN.InfoCoste.ClienteCEN ccen = new InfoCosteProgramaGenNHibernate.CEN.InfoCoste.ClienteCEN();
+            IList<InfoCosteProgramaGenNHibernate.EN.InfoCoste.ClienteEN> lc =  ccen.LeerPorNombre(input);
+
+            dataGridView_GestionarClientes.Rows.Clear();
+            foreach (InfoCosteProgramaGenNHibernate.EN.InfoCoste.ClienteEN c in lc)
+            {
+                bool empresa = false;
+                InfoCosteProgramaGenNHibernate.CEN.InfoCoste.ClienteEmpresaCEN ceCEN = new InfoCosteProgramaGenNHibernate.CEN.InfoCoste.ClienteEmpresaCEN();
+                try
+                {
+                    InfoCosteProgramaGenNHibernate.EN.InfoCoste.ClienteEmpresaEN ceEN = ceCEN.LeerPorOID(c.Id);
+                    if (ceEN != null)
+                        empresa = true;
+                }
+                catch (Exception ex) { }
+                dataGridView_GestionarClientes.Rows.Add(c.Id, c.NombreCompleto, c.Direccion, c.Telefono, c.Email, empresa);
+            }
         }
     }
 }

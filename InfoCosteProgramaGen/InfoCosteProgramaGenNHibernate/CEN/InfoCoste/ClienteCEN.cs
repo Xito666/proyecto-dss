@@ -74,5 +74,9 @@ public System.Collections.Generic.IList<InfoCosteProgramaGenNHibernate.EN.InfoCo
 {
         return _IClienteCAD.LeerPorNombre (nombreFiltro);
 }
+public void Borrar (string id)
+{
+        _IClienteCAD.Borrar (id);
+}
 }
 }

@@ -65,5 +65,15 @@ public int Trabajador (int p_id, string p_nombre, string p_password)
         oid = _ITrabajadorCAD.Trabajador (trabajadorEN);
         return oid;
 }
+
+public void Borrar (int id)
+{
+        _ITrabajadorCAD.Borrar (id);
+}
+
+public System.Collections.Generic.IList<InfoCosteProgramaGenNHibernate.EN.InfoCoste.TrabajadorEN> LeerPorNombre (string nombreFiltro)
+{
+        return _ITrabajadorCAD.LeerPorNombre (nombreFiltro);
+}
 }
 }

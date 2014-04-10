@@ -22,6 +22,12 @@
         <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_Me1SN6k-EeO23aV5p6NXAQ" name="p_nombre"/>
         <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_Me1SOKk-EeO23aV5p6NXAQ" name="p_password"/>
       </operations>
+      <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_PWHIYMCXEeOca-nCFotPqw" name="borrar" operationType="Destroy" type="Void">
+        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_RBCZIMCXEeOca-nCFotPqw" name="p_Trabajador_OID" type="OID" typeObject="_oXU6wKiIEeOTtI5YKWJy-A"/>
+      </operations>
+      <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_zVWE8MCZEeOca-nCFotPqw" name="leerPorNombre" operationType="ReadFilter" type="Object" collectionType="List" typeObject="_oXU6wKiIEeOTtI5YKWJy-A" filter="FROM TrabajadorEN t where t.Nombre = :nombreFiltro" automaticSynchronize="false">
+        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_3oRSsMCZEeOca-nCFotPqw" name="nombreFiltro"/>
+      </operations>
       <attributes xmi:type="es.ua.dlsi.ooh:Attribute" xmi:id="_lJ9xcKiJEeOTtI5YKWJy-A" alias="id" name="id" type="Integer" isOID="true" unique="true"/>
       <attributes xmi:type="es.ua.dlsi.ooh:Attribute" xmi:id="_oaaOgKiJEeOTtI5YKWJy-A" alias="nombre" name="nombre"/>
       <attributes xmi:type="es.ua.dlsi.ooh:Attribute" xmi:id="_pwM8wKiJEeOTtI5YKWJy-A" alias="password" name="password"/>
@@ -54,7 +60,7 @@
       <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_gOmocKk-EeO23aV5p6NXAQ" name="leerPorOID" operationType="ReadOID" type="Object" typeObject="_neBewKiJEeOTtI5YKWJy-A">
         <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_hP4fQKk-EeO23aV5p6NXAQ" name="p_ParteIntervencion_OID" type="OID" typeObject="_neBewKiJEeOTtI5YKWJy-A"/>
       </operations>
-      <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_0IgLEKk-EeO23aV5p6NXAQ" name="leerPorFecha" operationType="ReadFilter" type="Object" collectionType="List" typeObject="_neBewKiJEeOTtI5YKWJy-A" filter="FROM ParteIntervencionEN parte where parte.fecha = :fechaFiltro" automaticSynchronize="false">
+      <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_0IgLEKk-EeO23aV5p6NXAQ" name="leerPorFecha" operationType="ReadFilter" type="Object" collectionType="List" typeObject="_neBewKiJEeOTtI5YKWJy-A" filter="FROM ParteIntervencionEN parte where parte.Fecha = :fechaFiltro" automaticSynchronize="false">
         <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="__VvfkKk-EeO23aV5p6NXAQ" name="fechaFiltro" type="Date"/>
       </operations>
       <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_T9fxMKoEEeOdSOPV4hmnnQ" name="setTrabajador" type="Void">
@@ -104,8 +110,11 @@
         <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_PyVYYKlAEeO23aV5p6NXAQ" name="p_Cliente_OID" type="OID" typeObject="_3wFQoKiMEeOTtI5YKWJy-A"/>
         <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_PyVYZKlAEeO23aV5p6NXAQ" name="p_nombreCompleto"/>
       </operations>
-      <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_YKAN8KlAEeO23aV5p6NXAQ" name="leerPorNombre" operationType="ReadFilter" type="Object" collectionType="List" typeObject="_3wFQoKiMEeOTtI5YKWJy-A" filter="FROM ClienteEN c where c.nombreCompleto LIKE '%:nombreFiltro%'" automaticSynchronize="false">
+      <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_YKAN8KlAEeO23aV5p6NXAQ" name="leerPorNombre" operationType="ReadFilter" type="Object" collectionType="List" typeObject="_3wFQoKiMEeOTtI5YKWJy-A" filter="FROM ClienteEN c where c.NombreCompleto =:nombreFiltro" automaticSynchronize="false">
         <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_a0e3MKlAEeO23aV5p6NXAQ" name="nombreFiltro"/>
+      </operations>
+      <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_xPh44MCiEeOca-nCFotPqw" name="borrar" operationType="Destroy" type="Void">
+        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_x9hnUMCiEeOca-nCFotPqw" name="p_Cliente_OID" type="OID" typeObject="_3wFQoKiMEeOTtI5YKWJy-A"/>
       </operations>
       <attributes xmi:type="es.ua.dlsi.ooh:Attribute" xmi:id="_AQ1wwKiNEeOTtI5YKWJy-A" alias="id" name="id" isOID="true" unique="true"/>
       <attributes xmi:type="es.ua.dlsi.ooh:Attribute" xmi:id="_AsiOQKiNEeOTtI5YKWJy-A" alias="direccion" name="direccion"/>
@@ -186,7 +195,7 @@
       <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_pnDMQKlDEeO23aV5p6NXAQ" name="leerPorOID" operationType="ReadOID" type="Object" typeObject="_fvzckKiOEeOTtI5YKWJy-A">
         <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_wmqG0KoAEeO7Mc0QDERcnw" name="p_PedidoCliente_OID" type="OID" typeObject="_fvzckKiOEeOTtI5YKWJy-A"/>
       </operations>
-      <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_sB9vgKlDEeO23aV5p6NXAQ" name="leerPorFecha" operationType="ReadFilter" type="Object" collectionType="List" typeObject="_fvzckKiOEeOTtI5YKWJy-A" filter="FROM PedidoClienteEN p where p.fecha = :fechaFilter" automaticSynchronize="false">
+      <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_sB9vgKlDEeO23aV5p6NXAQ" name="leerPorFecha" operationType="ReadFilter" type="Object" collectionType="List" typeObject="_fvzckKiOEeOTtI5YKWJy-A" filter="FROM PedidoClienteEN p where p.Fecha = :fechaFilter" automaticSynchronize="false">
         <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_t9KQ4KlDEeO23aV5p6NXAQ" name="fechaFilter" type="Date"/>
       </operations>
       <attributes xmi:type="es.ua.dlsi.ooh:Attribute" xmi:id="_mgQcsKiOEeOTtI5YKWJy-A" alias="id" name="id" type="Integer" isOID="true" unique="true"/>
@@ -232,7 +241,7 @@
       <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_zaNEMKlKEeOgvuBKJWFDhA" name="leerPorOID" operationType="ReadOID" type="Object" typeObject="_9noLcKiPEeOTtI5YKWJy-A">
         <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_1D8pMKlKEeOgvuBKJWFDhA" name="p_TipoFactura_OID" type="OID" typeObject="_9noLcKiPEeOTtI5YKWJy-A"/>
       </operations>
-      <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_3wZoYKlKEeOgvuBKJWFDhA" name="leerPorFecha" operationType="ReadFilter" type="Object" collectionType="List" typeObject="_9noLcKiPEeOTtI5YKWJy-A" filter="FROM TipoFacturaEN t where t.fecha LIKE '%:fechaFiltro%'" automaticSynchronize="false">
+      <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_3wZoYKlKEeOgvuBKJWFDhA" name="leerPorFecha" operationType="ReadFilter" type="Object" collectionType="List" typeObject="_9noLcKiPEeOTtI5YKWJy-A" filter="FROM TipoFacturaEN t where t.Fecha LIKE '%:fechaFiltro%'" automaticSynchronize="false">
         <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_7luUIKlKEeOgvuBKJWFDhA" name="fechaFiltro" type="Date"/>
       </operations>
       <attributes xmi:type="es.ua.dlsi.ooh:Attribute" xmi:id="_A4sTkKiQEeOTtI5YKWJy-A" alias="id" name="id" type="Integer" isOID="true" unique="true"/>
@@ -396,7 +405,7 @@
       <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_aTLIkKn-EeO7Mc0QDERcnw" name="leePorOID" operationType="ReadOID" type="Object" typeObject="_bVh6kKiXEeOTtI5YKWJy-A">
         <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_vonxRaoAEeO7Mc0QDERcnw" name="p_PedidoProveedor_OID" type="OID" typeObject="_bVh6kKiXEeOTtI5YKWJy-A"/>
       </operations>
-      <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_cU3TgKn-EeO7Mc0QDERcnw" name="leePorFecha" operationType="ReadFilter" type="Object" collectionType="List" typeObject="_bVh6kKiXEeOTtI5YKWJy-A" filter="FROM PedidoProveedorEN p where p.fecha = :fechaFiltro" automaticSynchronize="false">
+      <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_cU3TgKn-EeO7Mc0QDERcnw" name="leePorFecha" operationType="ReadFilter" type="Object" collectionType="List" typeObject="_bVh6kKiXEeOTtI5YKWJy-A" filter="FROM PedidoProveedorEN p where p.Fecha = :fechaFiltro" automaticSynchronize="false">
         <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_dwrKMKn-EeO7Mc0QDERcnw" name="fechaFiltro" type="Date"/>
       </operations>
       <attributes xmi:type="es.ua.dlsi.ooh:Attribute" xmi:id="_euCugKiXEeOTtI5YKWJy-A" alias="id" name="id" type="Integer" isOID="true" unique="true"/>
@@ -431,7 +440,7 @@
       <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_6ree4Kn5EeO7Mc0QDERcnw" name="leerPorOID" operationType="ReadOID" type="Object" typeObject="_HNkb4KiZEeOTtI5YKWJy-A">
         <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_8cJLQKn5EeO7Mc0QDERcnw" name="p_Proveedor_OID" type="OID" typeObject="_HNkb4KiZEeOTtI5YKWJy-A"/>
       </operations>
-      <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_9fuvMKn5EeO7Mc0QDERcnw" name="leerPorNombre" operationType="ReadFilter" type="Object" collectionType="List" typeObject="_HNkb4KiZEeOTtI5YKWJy-A" filter="FROM ProveedorEN p where p.nombre = :nombreFiltro" automaticSynchronize="false">
+      <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_9fuvMKn5EeO7Mc0QDERcnw" name="leerPorNombre" operationType="ReadFilter" type="Object" collectionType="List" typeObject="_HNkb4KiZEeOTtI5YKWJy-A" filter="FROM ProveedorEN p where p.Nombre = :nombreFiltro" automaticSynchronize="false">
         <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="__b_nkKn5EeO7Mc0QDERcnw" name="nombreFiltro"/>
       </operations>
       <attributes xmi:type="es.ua.dlsi.ooh:Attribute" xmi:id="_vVHjkKiZEeOTtI5YKWJy-A" alias="id" name="id" isOID="true" unique="true"/>
@@ -557,6 +566,20 @@
           <styles xmi:type="notation:FontStyle" xmi:id="_5ABwJKk9EeO23aV5p6NXAQ" fontName="Segoe UI"/>
           <styles xmi:type="notation:FillStyle" xmi:id="_5ABwJak9EeO23aV5p6NXAQ"/>
           <layoutConstraint xmi:type="notation:Bounds" xmi:id="_5ABwJqk9EeO23aV5p6NXAQ"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_PWhYEMCXEeOca-nCFotPqw" type="3004" element="_PWHIYMCXEeOca-nCFotPqw">
+          <children xmi:type="notation:DecorationNode" xmi:id="_PWh_IMCXEeOca-nCFotPqw" type="5004"/>
+          <styles xmi:type="notation:DescriptionStyle" xmi:id="_PWhYEcCXEeOca-nCFotPqw"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_PWhYEsCXEeOca-nCFotPqw" fontName="Segoe UI"/>
+          <styles xmi:type="notation:FillStyle" xmi:id="_PWhYE8CXEeOca-nCFotPqw"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_PWhYFMCXEeOca-nCFotPqw"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_zVaWYMCZEeOca-nCFotPqw" type="3004" element="_zVWE8MCZEeOca-nCFotPqw">
+          <children xmi:type="notation:DecorationNode" xmi:id="_zVa9cMCZEeOca-nCFotPqw" type="5004"/>
+          <styles xmi:type="notation:DescriptionStyle" xmi:id="_zVaWYcCZEeOca-nCFotPqw"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_zVaWYsCZEeOca-nCFotPqw" fontName="Segoe UI"/>
+          <styles xmi:type="notation:FillStyle" xmi:id="_zVaWY8CZEeOca-nCFotPqw"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_zVaWZMCZEeOca-nCFotPqw"/>
         </children>
         <styles xmi:type="notation:SortingStyle" xmi:id="_oXhICqiIEeOTtI5YKWJy-A"/>
         <styles xmi:type="notation:FilteringStyle" xmi:id="_oXhIC6iIEeOTtI5YKWJy-A"/>
@@ -813,6 +836,13 @@
           <styles xmi:type="notation:FontStyle" xmi:id="_YKJX46lAEeO23aV5p6NXAQ" fontName="Segoe UI"/>
           <styles xmi:type="notation:FillStyle" xmi:id="_YKJX5KlAEeO23aV5p6NXAQ"/>
           <layoutConstraint xmi:type="notation:Bounds" xmi:id="_YKJX5alAEeO23aV5p6NXAQ"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_xPmKUMCiEeOca-nCFotPqw" type="3004" element="_xPh44MCiEeOca-nCFotPqw">
+          <children xmi:type="notation:DecorationNode" xmi:id="_xPmxYMCiEeOca-nCFotPqw" type="5004"/>
+          <styles xmi:type="notation:DescriptionStyle" xmi:id="_xPmKUcCiEeOca-nCFotPqw"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_xPmKUsCiEeOca-nCFotPqw" fontName="Segoe UI"/>
+          <styles xmi:type="notation:FillStyle" xmi:id="_xPmKU8CiEeOca-nCFotPqw"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_xPmKVMCiEeOca-nCFotPqw"/>
         </children>
         <styles xmi:type="notation:SortingStyle" xmi:id="_3wFQq6iMEeOTtI5YKWJy-A"/>
         <styles xmi:type="notation:FilteringStyle" xmi:id="_3wFQrKiMEeOTtI5YKWJy-A"/>

@@ -41,6 +41,6 @@
 		  </class>
 		  
 		  <query name="PedidoClienteENReadAllHQL">from PedidoClienteEN</query>
-		  <query name="PedidoClienteENleerPorFechaHQL"><![CDATA[FROM PedidoClienteEN p where p.fecha = :fechaFilter]]></query>
+		  <query name="PedidoClienteENleerPorFechaHQL"><![CDATA[FROM PedidoClienteEN p where p.Fecha = :fechaFilter]]></query>
 		</hibernate-mapping>
 	

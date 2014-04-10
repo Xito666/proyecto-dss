@@ -218,7 +218,7 @@ public System.Collections.Generic.IList<InfoCosteProgramaGenNHibernate.EN.InfoCo
         try
         {
                 SessionInitializeTransaction ();
-                //String sql = @"FROM ProveedorEN self where FROM ProveedorEN p where p.nombre = :nombreFiltro";
+                //String sql = @"FROM ProveedorEN self where FROM ProveedorEN p where p.Nombre = :nombreFiltro";
                 //IQuery query = session.CreateQuery(sql);
                 IQuery query = (IQuery)session.GetNamedQuery ("ProveedorENleerPorNombreHQL");
                 query.SetParameter ("nombreFiltro", nombreFiltro);

@@ -39,6 +39,6 @@
 		  </class>
 		  
 		  <query name="ParteIntervencionENReadAllHQL">from ParteIntervencionEN</query>
-		  <query name="ParteIntervencionENleerPorFechaHQL"><![CDATA[FROM ParteIntervencionEN parte where parte.fecha = :fechaFiltro]]></query>
+		  <query name="ParteIntervencionENleerPorFechaHQL"><![CDATA[FROM ParteIntervencionEN parte where parte.Fecha = :fechaFiltro]]></query>
 		</hibernate-mapping>
 	
