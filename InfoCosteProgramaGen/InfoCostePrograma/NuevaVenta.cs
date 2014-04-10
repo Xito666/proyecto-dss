@@ -95,12 +95,33 @@ namespace InfoCostePrograma
             {
                 MessageBox.Show(this, "Selecciona un cliente", "Error");
             }
-            else if(0==0)
+            else if(dataGridView1.Rows.Count == 0)
             {
                 MessageBox.Show(this, "Agregue productos a la venta", "Error");
             }
             else
             {
+                PedidoClienteCEN pcCEN = new PedidoClienteCEN();
+                IList<PedidoClienteEN> listaPed = pcCEN.LeerTodos(0,100);
+                int nID = listaPed.Count();
+                pcCEN.PedidoCliente(nID, DateTime.Now, c.Id);
+
+                PedidoClienteEN pcEN = pcCEN.LeerPorOID(nID);
+
+                LineaPedidoCEN lpCEN = new LineaPedidoCEN();
+
+                int i = 0;
+                List<int> listaID = new List<int>();
+                foreach (DataGridViewRow fila in dataGridView1.Rows)
+                {
+                    lpCEN.LineaPedido(i, i,Convert.ToInt32(fila.Cells[1].Value.ToString()), Double.Parse(fila.Cells[3].Value.ToString()),Convert.ToInt32(fila.Cells[0].Value.ToString()));
+                    listaID.Add(i);
+                }
+                pcCEN.AnyadirLinea(pcEN.Id, listaID);
+
+                // hasta aki va pedido, seguir con tipofactura
+
+                MessageBox.Show(this, pcEN.Id+"", "agregado en");
             }
         }
 

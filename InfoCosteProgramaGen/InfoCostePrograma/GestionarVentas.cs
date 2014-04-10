@@ -41,7 +41,7 @@ namespace InfoCostePrograma
 
             foreach(PedidoClienteEN pedido in listaPedidos)
             {
-                dataGridView_GestionarVentas.Rows.Add(pedido.Id, pedido.Cliente.NombreCompleto, pedido.Fecha, 1000);
+                dataGridView_GestionarVentas.Rows.Add(pedido.Id, ""/*pedido.Cliente.NombreCompleto*/, pedido.Fecha, "");
             }
 
         }
