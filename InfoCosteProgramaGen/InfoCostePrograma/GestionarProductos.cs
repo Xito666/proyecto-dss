@@ -6,6 +6,9 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using InfoCosteProgramaGenNHibernate.CEN.InfoCoste;
+using InfoCosteProgramaGenNHibernate.EN.InfoCoste;
+
 
 namespace InfoCostePrograma
 {
@@ -23,17 +26,108 @@ namespace InfoCostePrograma
 
         private void GestionarProductos_Load(object sender, EventArgs e)
         {
-            dataGridView_GestionarProductos.Rows.Add(1, "Monitor", "Pantallas", "29.99", "4", "Buena calidad");
-            dataGridView_GestionarProductos.Rows.Add(2, "Teclado", "Ordenadores", "2.99", "2", "Bueno, bonito, barato");
-            dataGridView_GestionarProductos.Rows.Add(3, "Teclado", "Ordenadores", "15", "3", "Tremendo!");
-            dataGridView_GestionarProductos.Rows.Add(4, "Raton", "Ordenadores", "18", "1", "OP");
-            dataGridView_GestionarProductos.Rows.Add(5, "Antena Wifi", "Accesorios", "8.25", "2", "Largo alcance");
-            dataGridView_GestionarProductos.Rows.Add(6, "Router", "Accesorios", "15.80", "2", "Gran calidad");
-            dataGridView_GestionarProductos.Rows.Add(7, "Alargador", "Accesorios", "5", "5", "15 Metros");
-            dataGridView_GestionarProductos.Rows.Add(8, "Cable HDMI", "Accesorios", "10.20", "1", "");
-            dataGridView_GestionarProductos.Rows.Add(9, "Cable USB", "Accesorios", "10", "15", "");
-            dataGridView_GestionarProductos.Rows.Add(10, "Procesador Intel", "Ordenadores", "", "", "");
+            ProductoCEN pCEN = new ProductoCEN();
+            IList<ProductoEN> listaProductos = pCEN.LeerTodos(0,1000);
 
+            dataGridView_GestionarProductos.Rows.Clear();
+            int i = 0;
+            foreach (ProductoEN p in listaProductos)
+            {
+                dataGridView_GestionarProductos.Rows.Add(p.Id, p.Nombre, p.Familia, p.Precio, p.Stock, p.Descripcion);
+
+                dataGridView_GestionarProductos.Rows[i].Cells[2].ReadOnly = true;
+                dataGridView_GestionarProductos.Rows[i].Cells[0].ReadOnly = true;
+                i++;
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ProductoCEN pCEN = new ProductoCEN();
+
+            
+
+            int ins = 0;
+
+            for (int i = 0; i < dataGridView_GestionarProductos.Rows.Count-1; i++)
+            {
+                try
+                {
+                    DataGridViewRow fila = dataGridView_GestionarProductos.Rows[i];
+                    ProductoEN pEN = pCEN.LeerPorOID(Convert.ToInt32(fila.Cells[0].Value));
+                    if (pEN != null)
+                    {
+                        pCEN.SetNombre(Convert.ToInt32(fila.Cells[0].Value.ToString()), fila.Cells[1].Value.ToString());
+                        pCEN.SetPrecio(Convert.ToInt32(fila.Cells[0].Value.ToString()), Double.Parse(fila.Cells[3].Value.ToString()));
+                        pCEN.SetStock(Convert.ToInt32(fila.Cells[0].Value.ToString()), Convert.ToInt32(fila.Cells[4].Value.ToString()));
+                        pCEN.SetDescription(Convert.ToInt32(fila.Cells[0].Value.ToString()), fila.Cells[5].Value.ToString());
+                    }
+                    else
+                    {
+                        pCEN.Producto(Convert.ToInt32(fila.Cells[0].Value.ToString()),
+                                        fila.Cells[1].Value.ToString(),
+                                        fila.Cells[5].Value.ToString(),
+                                        Double.Parse(fila.Cells[3].Value.ToString()),
+                                        fila.Cells[2].Value.ToString(),
+                                        Convert.ToInt32(fila.Cells[4].Value.ToString()));
+                        ins++;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error en la fila " + i + "\nNo pueden haber campos vacíos", "Error", MessageBoxButtons.OKCancel);
+           
+                }
+            }
+            MessageBox.Show("Se han confirmado las modificaciones.\nSe han insertado " + ins + " registros.", "Save Log", MessageBoxButtons.OKCancel);
+            
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Se va a eliminar el producto", "Productos", MessageBoxButtons.OK);
+            DataGridViewRow current = dataGridView_GestionarProductos.CurrentRow;
+
+            ProductoCEN pCEN = new ProductoCEN();
+            pCEN.Borrar(Convert.ToInt32(current.Cells[0].Value));
+
+            GestionarProductos_Load(null, null);
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            string input = Microsoft.VisualBasic.Interaction.InputBox("Nombre del Producto?");
+            ProductoCEN pcen = new ProductoCEN();
+            IList<ProductoEN> lp = pcen.LeerPorNombre(input);
+
+            dataGridView_GestionarProductos.Rows.Clear();
+            int i = 0;
+            foreach (ProductoEN p in lp)
+            {
+                dataGridView_GestionarProductos.Rows.Add(p.Id, p.Nombre, p.Familia, p.Precio, p.Stock, p.Descripcion);
+
+                dataGridView_GestionarProductos.Rows[i].Cells[2].ReadOnly = true;
+                dataGridView_GestionarProductos.Rows[i].Cells[0].ReadOnly = true;
+                i++;
+            }
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            string input = Microsoft.VisualBasic.Interaction.InputBox("Nombre del Producto?");
+            ProductoCEN pcen = new ProductoCEN();
+            IList<ProductoEN> lp = pcen.LeerPorFamilia(input);
+
+            dataGridView_GestionarProductos.Rows.Clear();
+            int i = 0;
+            foreach (ProductoEN p in lp)
+            {
+                dataGridView_GestionarProductos.Rows.Add(p.Id, p.Nombre, p.Familia, p.Precio, p.Stock, p.Descripcion);
+
+                dataGridView_GestionarProductos.Rows[i].Cells[2].ReadOnly = true;
+                dataGridView_GestionarProductos.Rows[i].Cells[0].ReadOnly = true;
+                i++;
+            }
         }
     }
 }

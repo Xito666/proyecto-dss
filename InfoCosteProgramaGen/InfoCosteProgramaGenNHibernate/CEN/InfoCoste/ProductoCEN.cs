@@ -56,5 +56,33 @@ public int Producto (int p_id, string p_nombre, string p_descripcion, double p_p
         oid = _IProductoCAD.Producto (productoEN);
         return oid;
 }
+
+public System.Collections.Generic.IList<ProductoEN> LeerTodos (int first, int size)
+{
+        System.Collections.Generic.IList<ProductoEN> list = null;
+
+        list = _IProductoCAD.LeerTodos (first, size);
+        return list;
+}
+public ProductoEN LeerPorOID (int id)
+{
+        ProductoEN productoEN = null;
+
+        productoEN = _IProductoCAD.LeerPorOID (id);
+        return productoEN;
+}
+
+public System.Collections.Generic.IList<InfoCosteProgramaGenNHibernate.EN.InfoCoste.ProductoEN> LeerPorNombre (string nombreFiltro)
+{
+        return _IProductoCAD.LeerPorNombre (nombreFiltro);
+}
+public System.Collections.Generic.IList<InfoCosteProgramaGenNHibernate.EN.InfoCoste.ProductoEN> LeerPorFamilia (string familiaFiltro)
+{
+        return _IProductoCAD.LeerPorFamilia (familiaFiltro);
+}
+public void Borrar (int id)
+{
+        _IProductoCAD.Borrar (id);
+}
 }
 }

@@ -21,6 +21,7 @@ C:\Users\Xito\workspaceOoharia\proyecto-dss\InfoCosteProgramaGen\InitializeDB\ob
 C:\Documents and Settings\ooh4riaUser\My Documents\GitHub\proyecto-dss\InfoCosteProgramaGen\InitializeDB\bin\Debug\InitializeDB.exe.config
 C:\Documents and Settings\ooh4riaUser\My Documents\GitHub\proyecto-dss\InfoCosteProgramaGen\InitializeDB\obj\x86\Debug\InitializeDB.exe
 C:\Documents and Settings\ooh4riaUser\My Documents\GitHub\proyecto-dss\InfoCosteProgramaGen\InitializeDB\obj\x86\Debug\InitializeDB.pdb
+C:\Users\Xito\Desktop\proyecto-dss\InfoCosteProgramaGen\InitializeDB\obj\x86\Debug\InitializeDB.csprojResolveAssemblyReference.cache
 C:\Users\Xito\Desktop\proyecto-dss\InfoCosteProgramaGen\InitializeDB\bin\Debug\hibernate.cfg.xml
 C:\Users\Xito\Desktop\proyecto-dss\InfoCosteProgramaGen\InitializeDB\bin\Debug\InitializeDB.exe.config
 C:\Users\Xito\Desktop\proyecto-dss\InfoCosteProgramaGen\InitializeDB\bin\Debug\InitializeDB.exe
@@ -37,6 +38,5 @@ C:\Users\Xito\Desktop\proyecto-dss\InfoCosteProgramaGen\InitializeDB\bin\Debug\N
 C:\Users\Xito\Desktop\proyecto-dss\InfoCosteProgramaGen\InitializeDB\bin\Debug\nunit.core.dll
 C:\Users\Xito\Desktop\proyecto-dss\InfoCosteProgramaGen\InitializeDB\bin\Debug\nunit.framework.dll
 C:\Users\Xito\Desktop\proyecto-dss\InfoCosteProgramaGen\InitializeDB\bin\Debug\InfoCosteProgramaGenNHibernate.pdb
-C:\Users\Xito\Desktop\proyecto-dss\InfoCosteProgramaGen\InitializeDB\obj\x86\Debug\InitializeDB.csprojResolveAssemblyReference.cache
 C:\Users\Xito\Desktop\proyecto-dss\InfoCosteProgramaGen\InitializeDB\obj\x86\Debug\InitializeDB.exe
 C:\Users\Xito\Desktop\proyecto-dss\InfoCosteProgramaGen\InitializeDB\obj\x86\Debug\InitializeDB.pdb

@@ -47,7 +47,7 @@ namespace InfoCostePrograma
 
         private void button3_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Seguro desea eliminar este trabajador?", "Trabajadores", MessageBoxButtons.OKCancel);
+            MessageBox.Show("Se va a eliminar el trabajador", "Trabajadores", MessageBoxButtons.OK);
             DataGridViewRow current = dataGridView_GestionarTrabajadores.CurrentRow;
 
             InfoCosteProgramaGenNHibernate.CEN.InfoCoste.TrabajadorCEN tcen = new InfoCosteProgramaGenNHibernate.CEN.InfoCoste.TrabajadorCEN();

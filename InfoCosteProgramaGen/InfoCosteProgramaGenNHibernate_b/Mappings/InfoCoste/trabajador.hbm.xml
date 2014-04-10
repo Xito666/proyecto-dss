@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+		<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+		                   assembly="InfoCosteProgramaGenNHibernate"
+		                   namespace="InfoCosteProgramaGenNHibernate.EN.InfoCoste">
+			<class name="TrabajadorEN" table="[Trabajador]">
+						<id name="Id" column="[id]"/>
+					<property name="Nombre" type="string"> 
+						<column name="[nombre]"  not-null="true"/>
+					</property>
+					<property name="Password" type="string"> 
+						<column name="[password]"  not-null="true"/>
+					</property>
+			
+			
+			
+			
+		  			
+						<bag name="ParteIntervencion" >
+							<key>
+								<column name="[FK_id_idTrabajador]"/>
+					      	</key>
+							<one-to-many class="InfoCosteProgramaGenNHibernate.EN.InfoCoste.ParteIntervencionEN"/>
+					    </bag>
+					
+					
+					
+					
+					
+		
+		  </class>
+		  
+		  <query name="TrabajadorENReadAllHQL">from TrabajadorEN</query>
+		  <query name="TrabajadorENleerPorNombreHQL"><![CDATA[FROM TrabajadorEN t where t.Nombre = :nombreFiltro]]></query>
+		</hibernate-mapping>
+	
