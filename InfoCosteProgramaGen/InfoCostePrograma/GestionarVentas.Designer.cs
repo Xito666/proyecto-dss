@@ -33,6 +33,10 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_GestionarVentas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -41,12 +45,18 @@
             this.dataGridView_GestionarVentas.AllowUserToAddRows = false;
             this.dataGridView_GestionarVentas.AllowUserToDeleteRows = false;
             this.dataGridView_GestionarVentas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_GestionarVentas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Id,
+            this.Cliente,
+            this.Fecha,
+            this.Total});
             this.dataGridView_GestionarVentas.Location = new System.Drawing.Point(12, 12);
             this.dataGridView_GestionarVentas.Name = "dataGridView_GestionarVentas";
             this.dataGridView_GestionarVentas.ReadOnly = true;
             this.dataGridView_GestionarVentas.RowHeadersWidth = 20;
             this.dataGridView_GestionarVentas.Size = new System.Drawing.Size(768, 240);
             this.dataGridView_GestionarVentas.TabIndex = 5;
+            this.dataGridView_GestionarVentas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_GestionarVentas_CellContentClick);
             // 
             // button4
             // 
@@ -92,6 +102,35 @@
             this.button1.Text = "Nuevo";
             this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // Id
+            // 
+            this.Id.HeaderText = "ID";
+            this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
+            // 
+            // Cliente
+            // 
+            this.Cliente.FillWeight = 200F;
+            this.Cliente.HeaderText = "Cliente";
+            this.Cliente.Name = "Cliente";
+            this.Cliente.ReadOnly = true;
+            this.Cliente.Width = 200;
+            // 
+            // Fecha
+            // 
+            this.Fecha.FillWeight = 200F;
+            this.Fecha.HeaderText = "Fecha";
+            this.Fecha.Name = "Fecha";
+            this.Fecha.ReadOnly = true;
+            this.Fecha.Width = 200;
+            // 
+            // Total
+            // 
+            this.Total.HeaderText = "Total";
+            this.Total.Name = "Total";
+            this.Total.ReadOnly = true;
             // 
             // GestionarVentas
             // 
@@ -105,6 +144,7 @@
             this.Controls.Add(this.dataGridView_GestionarVentas);
             this.Name = "GestionarVentas";
             this.Text = "GestionarVentas";
+            this.Load += new System.EventHandler(this.GestionarVentas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_GestionarVentas)).EndInit();
             this.ResumeLayout(false);
 
@@ -117,5 +157,9 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cliente;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Total;
     }
 }

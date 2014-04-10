@@ -180,3 +180,5 @@ C:\Users\Xito\Desktop\proyecto-dss\InfoCosteProgramaGen\InfoCostePrograma\bin\De
 C:\Users\Xito\Desktop\proyecto-dss\InfoCosteProgramaGen\InfoCostePrograma\bin\Debug\InfoCosteProgramaGenNHibernate.pdb
 C:\Users\Xito\Desktop\proyecto-dss\InfoCosteProgramaGen\InfoCostePrograma\obj\x86\Debug\InfoCostePrograma.exe
 C:\Users\Xito\Desktop\proyecto-dss\InfoCosteProgramaGen\InfoCostePrograma\obj\x86\Debug\InfoCostePrograma.pdb
+C:\Users\Xito\Desktop\proyecto-dss\InfoCosteProgramaGen\InfoCostePrograma\obj\x86\Debug\InfoCostePrograma.SeleccionaProducto.resources
+C:\Users\Xito\Desktop\proyecto-dss\InfoCosteProgramaGen\InfoCostePrograma\obj\x86\Debug\InfoCostePrograma.SeleccionaCliente.resources

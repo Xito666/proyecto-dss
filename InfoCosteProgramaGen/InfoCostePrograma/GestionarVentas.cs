@@ -6,6 +6,8 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using InfoCosteProgramaGenNHibernate.CEN.InfoCoste;
+using InfoCosteProgramaGenNHibernate.EN.InfoCoste;
 
 namespace InfoCostePrograma
 {
@@ -19,6 +21,29 @@ namespace InfoCostePrograma
         private void button3_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Seguro desea eliminar esta venta?", "Ventas", MessageBoxButtons.OKCancel);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            NuevaVenta nv = new NuevaVenta();
+            nv.Show();
+        }
+
+        private void dataGridView_GestionarVentas_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void GestionarVentas_Load(object sender, EventArgs e)
+        {
+            PedidoClienteCEN pcCEN = new PedidoClienteCEN();
+            IList<PedidoClienteEN> listaPedidos = pcCEN.LeerTodos(0,100);
+
+            foreach(PedidoClienteEN pedido in listaPedidos)
+            {
+                dataGridView_GestionarVentas.Rows.Add(pedido.Id, pedido.Cliente.NombreCompleto, pedido.Fecha, 1000);
+            }
+
         }
     }
 }
