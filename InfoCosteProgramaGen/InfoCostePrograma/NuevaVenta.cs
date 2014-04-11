@@ -108,20 +108,29 @@ namespace InfoCostePrograma
 
                 PedidoClienteEN pcEN = pcCEN.LeerPorOID(nID);
 
+                MessageBox.Show(this, pcEN.Id + "", "agregado en");
+
                 LineaPedidoCEN lpCEN = new LineaPedidoCEN();
 
+                int id = lpCEN.LeerTodos(0, 10000).Count();
                 int i = 0;
                 List<int> listaID = new List<int>();
                 foreach (DataGridViewRow fila in dataGridView1.Rows)
                 {
-                    lpCEN.LineaPedido(i, i,Convert.ToInt32(fila.Cells[1].Value.ToString()), Double.Parse(fila.Cells[3].Value.ToString()),Convert.ToInt32(fila.Cells[0].Value.ToString()));
-                    listaID.Add(i);
+                    lpCEN.LineaPedido(id, i,Convert.ToInt32(fila.Cells[1].Value.ToString()), Double.Parse(fila.Cells[3].Value.ToString()),Convert.ToInt32(fila.Cells[0].Value.ToString()));
+                    listaID.Add(id);
+
+                    i++;
+                    id++;
                 }
                 pcCEN.AnyadirLinea(pcEN.Id, listaID);
 
                 // hasta aki va pedido, seguir con tipofactura
 
                 MessageBox.Show(this, pcEN.Id+"", "agregado en");
+
+                DialogResult = DialogResult.OK;
+                this.Close();
             }
         }
 

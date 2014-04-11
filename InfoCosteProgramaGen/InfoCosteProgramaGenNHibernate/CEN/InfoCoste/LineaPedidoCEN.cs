@@ -58,5 +58,13 @@ public int LineaPedido (int p_id, int p_numero, int p_cantidad, double p_descuen
         oid = _ILineaPedidoCAD.LineaPedido (lineaPedidoEN);
         return oid;
 }
+
+public System.Collections.Generic.IList<LineaPedidoEN> LeerTodos (int first, int size)
+{
+        System.Collections.Generic.IList<LineaPedidoEN> list = null;
+
+        list = _ILineaPedidoCAD.LeerTodos (first, size);
+        return list;
+}
 }
 }

@@ -190,5 +190,35 @@ public int LineaPedido (LineaPedidoEN lineaPedido)
 
         return lineaPedido.Id;
 }
+
+public System.Collections.Generic.IList<LineaPedidoEN> LeerTodos (int first, int size)
+{
+        System.Collections.Generic.IList<LineaPedidoEN> result = null;
+        try
+        {
+                SessionInitializeTransaction ();
+                if (size > 0)
+                        result = session.CreateCriteria (typeof(LineaPedidoEN)).
+                                 SetFirstResult (first).SetMaxResults (size).List<LineaPedidoEN>();
+                else
+                        result = session.CreateCriteria (typeof(LineaPedidoEN)).List<LineaPedidoEN>();
+                SessionCommit ();
+        }
+
+        catch (Exception ex) {
+                SessionRollBack ();
+                if (ex is InfoCosteProgramaGenNHibernate.Exceptions.ModelException)
+                        throw ex;
+                throw new InfoCosteProgramaGenNHibernate.Exceptions.DataLayerException ("Error in LineaPedidoCAD.", ex);
+        }
+
+
+        finally
+        {
+                SessionClose ();
+        }
+
+        return result;
+}
 }
 }

@@ -26,7 +26,8 @@ namespace InfoCostePrograma
         private void button1_Click(object sender, EventArgs e)
         {
             NuevaVenta nv = new NuevaVenta();
-            nv.Show();
+            if (nv.ShowDialog() == DialogResult.OK)
+                GestionarVentas_Load(null, null);
         }
 
         private void dataGridView_GestionarVentas_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -39,6 +40,7 @@ namespace InfoCostePrograma
             PedidoClienteCEN pcCEN = new PedidoClienteCEN();
             IList<PedidoClienteEN> listaPedidos = pcCEN.LeerTodos(0,100);
 
+            dataGridView_GestionarVentas.Rows.Clear();
             foreach(PedidoClienteEN pedido in listaPedidos)
             {
                 dataGridView_GestionarVentas.Rows.Add(pedido.Id, ""/*pedido.Cliente.NombreCompleto*/, pedido.Fecha, "");
