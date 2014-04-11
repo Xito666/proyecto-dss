@@ -7,21 +7,55 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using InfoCosteProgramaGenNHibernate;
+using System.Runtime.InteropServices;
 
 namespace InfoCostePrograma
 {
     public partial class Principal : Form
     {
+        private static Principal instance;
+
         public Principal()
         {
             InitializeComponent();
+
+            Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
+        }
+
+        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
+        private static extern IntPtr CreateRoundRectRgn
+        (
+            int nLeftRect, // x-coordinate of upper-left corner
+            int nTopRect, // y-coordinate of upper-left corner
+            int nRightRect, // x-coordinate of lower-right corner
+            int nBottomRect, // y-coordinate of lower-right corner
+            int nWidthEllipse, // height of ellipse
+            int nHeightEllipse // width of ellipse
+        );
+
+        public static Principal DefInstance
+        {
+            get
+            {
+                if (instance == null || instance.IsDisposed)
+                    instance = new Principal();
+
+                return instance;
+            }
+
+            set
+            {
+                instance = value;
+            }
         }
 
         private void Principal_Load(object sender, EventArgs e)
         {
-            
+            flecha.Location = new Point(62, 112);
+            flecha.Visible = false;
         }
 
+        // Método para añadir form al panel central
         private void AddFormInPanel(Object formHijo)
         {
             if (this.panel2.Controls.Count > 0)
@@ -36,39 +70,108 @@ namespace InfoCostePrograma
             fh.Show();
         }
 
+        // Boton TRABAJADORES
         private void button6_Click(object sender, EventArgs e)
         {
+            // Mover flecha
+            flecha.Location = new Point(62, 112);
+            flecha.Visible = true;
+
+            // Añadir panel
             AddFormInPanel(new GestionarTrabajadores());
         }
 
+        // Boton CLIENTES
         private void button7_Click(object sender, EventArgs e)
         {
+            // Mover flecha
+            flecha.Location = new Point(171, 112);
+            flecha.Visible = true;
+
+            // Añadir panel
             AddFormInPanel(new GestionarClientes());
         }
 
+        // Boton PROVEEDORES
         private void button4_Click(object sender, EventArgs e)
         {
+            // Mover flecha
+            flecha.Location = new Point(279, 112);
+            flecha.Visible = true;
+
+            // Añadir panel
             AddFormInPanel(new GestionarProveedores());
         }
 
+        // Boton PRODUCTOS
         private void button8_Click(object sender, EventArgs e)
         {
+            // Mover flecha
+            flecha.Location = new Point(390, 112);
+            flecha.Visible = true;
+
+            // Añadir panel
             AddFormInPanel(new GestionarProductos());
         }
 
+        // Boton VENTAS
         private void button5_Click(object sender, EventArgs e)
         {
+            // Mover flecha
+            flecha.Location = new Point(500, 112);
+            flecha.Visible = true;
+
+            // Añadir panel
             AddFormInPanel(new GestionarVentas());
         }
 
+        // Boton COMPRAS
         private void button2_Click(object sender, EventArgs e)
         {
+            // Mover flecha
+            flecha.Location = new Point(610, 112);
+            flecha.Visible = true;
+
+            // Añadir panel
             AddFormInPanel(new GestionarCompras());
         }
 
+        // Boton HERRAMIENTAS
         private void button3_Click(object sender, EventArgs e)
         {
+            // Mover flecha
+            flecha.Location = new Point(715, 112);
+            flecha.Visible = true;
+
+            // Añadir panel
             AddFormInPanel(new Herramientas());
+        }
+
+        // Método para poder mover el form
+        protected override void WndProc(ref Message m)
+        {
+            switch (m.Msg)
+            {
+                case 0x84:
+                    base.WndProc(ref m);
+                    if ((int)m.Result == 0x1)
+                        m.Result = (IntPtr)0x2;
+                    return;
+            }
+
+            base.WndProc(ref m);
+        }
+
+        // Boton para minimizar la ventana
+        private void button9_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        // Boton para cerrar la ventana
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

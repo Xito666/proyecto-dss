@@ -109,6 +109,13 @@ namespace InfoCostePrograma.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap Flecha {
+            get {
+                object obj = ResourceManager.GetObject("Flecha", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap Guardar {
             get {
                 object obj = ResourceManager.GetObject("Guardar", resourceCulture);

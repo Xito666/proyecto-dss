@@ -33,10 +33,10 @@
             this.Cliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TipoDocumento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.TipoDocumento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_GestionarVentas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -55,7 +55,7 @@
             this.dataGridView_GestionarVentas.Name = "dataGridView_GestionarVentas";
             this.dataGridView_GestionarVentas.ReadOnly = true;
             this.dataGridView_GestionarVentas.RowHeadersWidth = 20;
-            this.dataGridView_GestionarVentas.Size = new System.Drawing.Size(768, 240);
+            this.dataGridView_GestionarVentas.Size = new System.Drawing.Size(768, 275);
             this.dataGridView_GestionarVentas.TabIndex = 5;
             this.dataGridView_GestionarVentas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_GestionarVentas_CellContentClick);
             // 
@@ -87,10 +87,16 @@
             this.Total.Name = "Total";
             this.Total.ReadOnly = true;
             // 
+            // TipoDocumento
+            // 
+            this.TipoDocumento.HeaderText = "TipoDocumento";
+            this.TipoDocumento.Name = "TipoDocumento";
+            this.TipoDocumento.ReadOnly = true;
+            // 
             // button4
             // 
             this.button4.Image = global::InfoCostePrograma.Properties.Resources.Buscar;
-            this.button4.Location = new System.Drawing.Point(187, 269);
+            this.button4.Location = new System.Drawing.Point(182, 299);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(70, 70);
             this.button4.TabIndex = 16;
@@ -101,7 +107,7 @@
             // button3
             // 
             this.button3.Image = global::InfoCostePrograma.Properties.Resources.Eliminar;
-            this.button3.Location = new System.Drawing.Point(100, 269);
+            this.button3.Location = new System.Drawing.Point(97, 299);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(70, 70);
             this.button3.TabIndex = 15;
@@ -113,7 +119,7 @@
             // button1
             // 
             this.button1.Image = global::InfoCostePrograma.Properties.Resources.nuevo;
-            this.button1.Location = new System.Drawing.Point(12, 269);
+            this.button1.Location = new System.Drawing.Point(12, 299);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(70, 70);
             this.button1.TabIndex = 13;
@@ -122,17 +128,11 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // TipoDocumento
-            // 
-            this.TipoDocumento.HeaderText = "TipoDocumento";
-            this.TipoDocumento.Name = "TipoDocumento";
-            this.TipoDocumento.ReadOnly = true;
-            // 
             // GestionarVentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(792, 351);
+            this.ClientSize = new System.Drawing.Size(792, 381);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button1);

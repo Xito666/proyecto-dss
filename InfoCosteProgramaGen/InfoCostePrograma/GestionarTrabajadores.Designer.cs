@@ -52,7 +52,7 @@
             this.dataGridView_GestionarTrabajadores.Name = "dataGridView_GestionarTrabajadores";
             this.dataGridView_GestionarTrabajadores.ReadOnly = true;
             this.dataGridView_GestionarTrabajadores.RowHeadersWidth = 20;
-            this.dataGridView_GestionarTrabajadores.Size = new System.Drawing.Size(768, 240);
+            this.dataGridView_GestionarTrabajadores.Size = new System.Drawing.Size(768, 275);
             this.dataGridView_GestionarTrabajadores.TabIndex = 1;
             this.dataGridView_GestionarTrabajadores.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_GestionarTrabajadores_CellContentClick);
             // 
@@ -77,7 +77,7 @@
             // button4
             // 
             this.button4.Image = global::InfoCostePrograma.Properties.Resources.Buscar;
-            this.button4.Location = new System.Drawing.Point(274, 269);
+            this.button4.Location = new System.Drawing.Point(267, 299);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(70, 70);
             this.button4.TabIndex = 12;
@@ -89,7 +89,7 @@
             // button3
             // 
             this.button3.Image = global::InfoCostePrograma.Properties.Resources.Eliminar;
-            this.button3.Location = new System.Drawing.Point(187, 269);
+            this.button3.Location = new System.Drawing.Point(182, 299);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(70, 70);
             this.button3.TabIndex = 11;
@@ -101,7 +101,7 @@
             // button1
             // 
             this.button1.Image = global::InfoCostePrograma.Properties.Resources.nuevo;
-            this.button1.Location = new System.Drawing.Point(12, 269);
+            this.button1.Location = new System.Drawing.Point(12, 299);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(70, 70);
             this.button1.TabIndex = 9;
@@ -114,7 +114,7 @@
             // 
             this.button5.Image = global::InfoCostePrograma.Properties.Resources.ModificarLapiz;
             this.button5.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button5.Location = new System.Drawing.Point(98, 269);
+            this.button5.Location = new System.Drawing.Point(97, 299);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(70, 70);
             this.button5.TabIndex = 13;
@@ -127,7 +127,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(792, 351);
+            this.ClientSize = new System.Drawing.Size(792, 381);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);

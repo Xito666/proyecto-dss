@@ -58,7 +58,7 @@
             this.dataGridView_GestionarProductos.Location = new System.Drawing.Point(12, 12);
             this.dataGridView_GestionarProductos.Name = "dataGridView_GestionarProductos";
             this.dataGridView_GestionarProductos.RowHeadersWidth = 20;
-            this.dataGridView_GestionarProductos.Size = new System.Drawing.Size(768, 240);
+            this.dataGridView_GestionarProductos.Size = new System.Drawing.Size(768, 275);
             this.dataGridView_GestionarProductos.TabIndex = 17;
             // 
             // Identificador
@@ -102,7 +102,7 @@
             // button4
             // 
             this.button4.Image = global::InfoCostePrograma.Properties.Resources.Buscar;
-            this.button4.Location = new System.Drawing.Point(710, 269);
+            this.button4.Location = new System.Drawing.Point(710, 299);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(70, 70);
             this.button4.TabIndex = 16;
@@ -114,7 +114,7 @@
             // button1
             // 
             this.button1.Image = global::InfoCostePrograma.Properties.Resources.Guardar;
-            this.button1.Location = new System.Drawing.Point(12, 269);
+            this.button1.Location = new System.Drawing.Point(12, 299);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(70, 70);
             this.button1.TabIndex = 13;
@@ -126,7 +126,7 @@
             // button2
             // 
             this.button2.Image = global::InfoCostePrograma.Properties.Resources.Eliminar;
-            this.button2.Location = new System.Drawing.Point(98, 269);
+            this.button2.Location = new System.Drawing.Point(97, 299);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(70, 70);
             this.button2.TabIndex = 18;
@@ -138,7 +138,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(174, 322);
+            this.label1.Location = new System.Drawing.Point(174, 352);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(287, 13);
             this.label1.TabIndex = 19;
@@ -147,7 +147,7 @@
             // button3
             // 
             this.button3.Image = global::InfoCostePrograma.Properties.Resources.Buscar;
-            this.button3.Location = new System.Drawing.Point(625, 269);
+            this.button3.Location = new System.Drawing.Point(625, 299);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(70, 70);
             this.button3.TabIndex = 20;
@@ -160,7 +160,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(792, 351);
+            this.ClientSize = new System.Drawing.Size(792, 381);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button2);
