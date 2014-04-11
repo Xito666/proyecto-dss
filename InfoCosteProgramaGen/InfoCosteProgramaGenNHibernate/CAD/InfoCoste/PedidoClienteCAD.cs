@@ -309,5 +309,28 @@ public System.Collections.Generic.IList<InfoCosteProgramaGenNHibernate.EN.InfoCo
 
         return result;
 }
+public void Borrar (int id)
+{
+        try
+        {
+                SessionInitializeTransaction ();
+                PedidoClienteEN pedidoClienteEN = (PedidoClienteEN)session.Load (typeof(PedidoClienteEN), id);
+                session.Delete (pedidoClienteEN);
+                SessionCommit ();
+        }
+
+        catch (Exception ex) {
+                SessionRollBack ();
+                if (ex is InfoCosteProgramaGenNHibernate.Exceptions.ModelException)
+                        throw ex;
+                throw new InfoCosteProgramaGenNHibernate.Exceptions.DataLayerException ("Error in PedidoClienteCAD.", ex);
+        }
+
+
+        finally
+        {
+                SessionClose ();
+        }
+}
 }
 }

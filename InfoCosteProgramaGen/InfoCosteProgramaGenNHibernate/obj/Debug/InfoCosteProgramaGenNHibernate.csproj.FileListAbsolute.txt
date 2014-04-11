@@ -10,6 +10,6 @@ C:\Users\Xito\Desktop\proyecto-dss\InfoCosteProgramaGen\InfoCosteProgramaGenNHib
 C:\Users\Xito\Desktop\proyecto-dss\InfoCosteProgramaGen\InfoCosteProgramaGenNHibernate\bin\Debug\Iesi.Collections.dll
 C:\Users\Xito\Desktop\proyecto-dss\InfoCosteProgramaGen\InfoCosteProgramaGenNHibernate\bin\Debug\Antlr3.Runtime.dll
 C:\Users\Xito\Desktop\proyecto-dss\InfoCosteProgramaGen\InfoCosteProgramaGenNHibernate\bin\Debug\log4net.dll
-C:\Users\Xito\Desktop\proyecto-dss\InfoCosteProgramaGen\InfoCosteProgramaGenNHibernate\obj\Debug\InfoCosteProgramaGenNHibernate.csprojResolveAssemblyReference.cache
 C:\Users\Xito\Desktop\proyecto-dss\InfoCosteProgramaGen\InfoCosteProgramaGenNHibernate\obj\Debug\InfoCosteProgramaGenNHibernate.dll
 C:\Users\Xito\Desktop\proyecto-dss\InfoCosteProgramaGen\InfoCosteProgramaGenNHibernate\obj\Debug\InfoCosteProgramaGenNHibernate.pdb
+C:\Users\Xito\Desktop\proyecto-dss\InfoCosteProgramaGen\InfoCosteProgramaGenNHibernate\obj\Debug\InfoCosteProgramaGenNHibernate.csprojResolveAssemblyReference.cache

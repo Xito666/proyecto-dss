@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using InfoCosteProgramaGenNHibernate.CEN.InfoCoste;
 using InfoCosteProgramaGenNHibernate.EN.InfoCoste;
+using InfoCosteProgramaGenNHibernate.CP;
 
 namespace InfoCostePrograma
 {
@@ -15,6 +16,35 @@ namespace InfoCostePrograma
     {
 
         ClienteEN c;
+
+        public NuevaVenta(int id) //id de Pedido
+        {
+            InitializeComponent();
+
+            dataGridView1.Enabled = false;
+            cliente.Enabled = false;
+            button1.Enabled = false;
+            button2.Enabled = false;
+            button3.Enabled = false;
+            buscarcliente.Enabled = false;
+
+
+            LineaPedidoCP lpCP = new LineaPedidoCP();
+            List<List<String>> filas = lpCP.getLineasPedidoPorId(id);
+
+            double total = 0;
+
+            foreach (List<String> fila in filas)
+            {
+                dataGridView1.Rows.Add(fila[0], fila[1], fila[2], fila[3], fila[4], fila[5]);
+                total += Double.Parse(fila[5]);
+            }
+
+            LineaPedidoCP lpCP2 = new LineaPedidoCP();
+            ClienteEN clie = lpCP2.getClienteDePedido(id);
+            cliente.Text = clie.NombreCompleto;
+            label_Precio.Text = total.ToString();
+        }
 
         public NuevaVenta()
         {
@@ -76,7 +106,6 @@ namespace InfoCostePrograma
                 dataGridView1.Rows[fila].Cells[5].Value = precioL.ToString();
                 recalcularTotal();
             }
-            
         }
 
         private void recalcularTotal()
@@ -108,11 +137,15 @@ namespace InfoCostePrograma
 
                 PedidoClienteEN pcEN = pcCEN.LeerPorOID(nID);
 
-                MessageBox.Show(this, pcEN.Id + "", "agregado en");
-
                 LineaPedidoCEN lpCEN = new LineaPedidoCEN();
 
-                int id = lpCEN.LeerTodos(0, 10000).Count();
+                int id = 0;
+                try
+                {
+                    id = lpCEN.LeerTodos(0, 10000).Last().Id + 1;
+                }
+                catch (Exception ex) { }
+
                 int i = 0;
                 List<int> listaID = new List<int>();
                 foreach (DataGridViewRow fila in dataGridView1.Rows)
@@ -127,11 +160,27 @@ namespace InfoCostePrograma
 
                 // hasta aki va pedido, seguir con tipofactura
 
-                MessageBox.Show(this, pcEN.Id+"", "agregado en");
+                MessageBox.Show(this, "Creado como pedido numero " + pcEN.Id+"\nCreada Factura", "Guardar documento");
 
                 DialogResult = DialogResult.OK;
                 this.Close();
             }
+        }
+
+        private void crearFactura(PedidoClienteEN pedidoEN)
+        {
+        }
+
+        private void crearPresupuesto(PedidoClienteEN pedidoEN)
+        {
+        }
+
+        private void crearReserva(PedidoClienteEN pedidoEN)
+        {
+        }
+
+        private void crearProforma(PedidoClienteEN pedidoEN)
+        {
         }
 
        

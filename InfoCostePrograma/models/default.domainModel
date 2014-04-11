@@ -198,6 +198,9 @@
       <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_sB9vgKlDEeO23aV5p6NXAQ" name="leerPorFecha" operationType="ReadFilter" type="Object" collectionType="List" typeObject="_fvzckKiOEeOTtI5YKWJy-A" filter="FROM PedidoClienteEN p where p.Fecha = :fechaFilter" automaticSynchronize="false">
         <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_t9KQ4KlDEeO23aV5p6NXAQ" name="fechaFilter" type="Date"/>
       </operations>
+      <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_9j4jMMFiEeO614k8bhZI0A" name="Borrar" operationType="Destroy" type="Void">
+        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_-eE6kMFiEeO614k8bhZI0A" name="p_PedidoCliente_OID" type="OID" typeObject="_fvzckKiOEeOTtI5YKWJy-A"/>
+      </operations>
       <attributes xmi:type="es.ua.dlsi.ooh:Attribute" xmi:id="_mgQcsKiOEeOTtI5YKWJy-A" alias="id" name="id" type="Integer" isOID="true" unique="true"/>
       <attributes xmi:type="es.ua.dlsi.ooh:Attribute" xmi:id="_oJZkwKiOEeOTtI5YKWJy-A" alias="fecha" name="fecha" type="Date"/>
       <attributes xmi:type="es.ua.dlsi.ooh:Attribute" xmi:id="_2VeMcqiPEeOTtI5YKWJy-A" alias="idCliente" associationTarget="_2VeMcKiPEeOTtI5YKWJy-A" name="cliente" type="Object"/>
@@ -1072,6 +1075,13 @@
           <styles xmi:type="notation:FontStyle" xmi:id="_sB9vhKlDEeO23aV5p6NXAQ" fontName="Segoe UI"/>
           <styles xmi:type="notation:FillStyle" xmi:id="_sB9vhalDEeO23aV5p6NXAQ"/>
           <layoutConstraint xmi:type="notation:Bounds" xmi:id="_sB9vhqlDEeO23aV5p6NXAQ"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_9j9bsMFiEeO614k8bhZI0A" type="3004" element="_9j4jMMFiEeO614k8bhZI0A">
+          <children xmi:type="notation:DecorationNode" xmi:id="_9j-CwMFiEeO614k8bhZI0A" type="5004"/>
+          <styles xmi:type="notation:DescriptionStyle" xmi:id="_9j9bscFiEeO614k8bhZI0A"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_9j9bssFiEeO614k8bhZI0A" fontName="Segoe UI"/>
+          <styles xmi:type="notation:FillStyle" xmi:id="_9j9bs8FiEeO614k8bhZI0A"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9j9btMFiEeO614k8bhZI0A"/>
         </children>
         <styles xmi:type="notation:SortingStyle" xmi:id="_fv5jNaiOEeOTtI5YKWJy-A"/>
         <styles xmi:type="notation:FilteringStyle" xmi:id="_fv5jNqiOEeOTtI5YKWJy-A"/>

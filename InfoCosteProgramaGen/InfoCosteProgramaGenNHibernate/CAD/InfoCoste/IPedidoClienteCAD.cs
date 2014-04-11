@@ -31,5 +31,8 @@ PedidoClienteEN LeerPorOID (int id);
 
 
 System.Collections.Generic.IList<InfoCosteProgramaGenNHibernate.EN.InfoCoste.PedidoClienteEN> LeerPorFecha (Nullable<DateTime> fechaFilter);
+
+
+void Borrar (int id);
 }
 }
