@@ -36,6 +36,7 @@
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.TipoDocumento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_GestionarVentas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -48,7 +49,8 @@
             this.Id,
             this.Cliente,
             this.Fecha,
-            this.Total});
+            this.Total,
+            this.TipoDocumento});
             this.dataGridView_GestionarVentas.Location = new System.Drawing.Point(12, 12);
             this.dataGridView_GestionarVentas.Name = "dataGridView_GestionarVentas";
             this.dataGridView_GestionarVentas.ReadOnly = true;
@@ -120,6 +122,12 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // TipoDocumento
+            // 
+            this.TipoDocumento.HeaderText = "TipoDocumento";
+            this.TipoDocumento.Name = "TipoDocumento";
+            this.TipoDocumento.ReadOnly = true;
+            // 
             // GestionarVentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -147,5 +155,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Cliente;
         private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
         private System.Windows.Forms.DataGridViewTextBoxColumn Total;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TipoDocumento;
     }
 }

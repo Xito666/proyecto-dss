@@ -54,7 +54,7 @@
             // 
             this.cliente.Location = new System.Drawing.Point(98, 26);
             this.cliente.Name = "cliente";
-            this.cliente.Size = new System.Drawing.Size(100, 20);
+            this.cliente.Size = new System.Drawing.Size(196, 20);
             this.cliente.TabIndex = 0;
             // 
             // dataGridView1
@@ -216,7 +216,7 @@
             // buscarcliente
             // 
             this.buscarcliente.Image = global::InfoCostePrograma.Properties.Resources.ico_buscar;
-            this.buscarcliente.Location = new System.Drawing.Point(204, 26);
+            this.buscarcliente.Location = new System.Drawing.Point(300, 25);
             this.buscarcliente.Name = "buscarcliente";
             this.buscarcliente.Size = new System.Drawing.Size(28, 20);
             this.buscarcliente.TabIndex = 1;

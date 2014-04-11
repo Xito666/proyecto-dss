@@ -28,6 +28,11 @@ namespace InfoCostePrograma
             button3.Enabled = false;
             buscarcliente.Enabled = false;
 
+            radioButton1.Enabled = false;
+            radioButton2.Enabled = false;
+            radioButton3.Enabled = false;
+            radioButton4.Enabled = false;
+
 
             LineaPedidoCP lpCP = new LineaPedidoCP();
             List<List<String>> filas = lpCP.getLineasPedidoPorId(id);
