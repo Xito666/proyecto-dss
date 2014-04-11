@@ -132,7 +132,15 @@ namespace InfoCostePrograma
             {
                 PedidoClienteCEN pcCEN = new PedidoClienteCEN();
                 IList<PedidoClienteEN> listaPed = pcCEN.LeerTodos(0,100);
-                int nID = listaPed.Count();
+
+
+                int nID = 0;
+                try
+                {
+                    nID = listaPed.Last().Id + 1;
+                }
+                catch (Exception ex) { }
+
                 pcCEN.PedidoCliente(nID, DateTime.Now, c.Id);
 
                 PedidoClienteEN pcEN = pcCEN.LeerPorOID(nID);
