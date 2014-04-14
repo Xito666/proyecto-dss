@@ -31,6 +31,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.flecha = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.linkLabel_CerrarSesion = new System.Windows.Forms.LinkLabel();
             this.label1 = new System.Windows.Forms.Label();
             this.label_IdentificadoComo = new System.Windows.Forms.Label();
             this.label_Identificado = new System.Windows.Forms.Label();
@@ -45,6 +46,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
+            this.boton_Herramientas = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.flecha)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -71,6 +73,7 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.Transparent;
             this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel3.Controls.Add(this.linkLabel_CerrarSesion);
             this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.label_IdentificadoComo);
             this.panel3.Controls.Add(this.label_Identificado);
@@ -78,6 +81,21 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(800, 55);
             this.panel3.TabIndex = 2;
+            // 
+            // linkLabel_CerrarSesion
+            // 
+            this.linkLabel_CerrarSesion.AutoSize = true;
+            this.linkLabel_CerrarSesion.ForeColor = System.Drawing.Color.White;
+            this.linkLabel_CerrarSesion.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
+            this.linkLabel_CerrarSesion.LinkColor = System.Drawing.Color.White;
+            this.linkLabel_CerrarSesion.Location = new System.Drawing.Point(25, 30);
+            this.linkLabel_CerrarSesion.Name = "linkLabel_CerrarSesion";
+            this.linkLabel_CerrarSesion.Size = new System.Drawing.Size(68, 13);
+            this.linkLabel_CerrarSesion.TabIndex = 5;
+            this.linkLabel_CerrarSesion.TabStop = true;
+            this.linkLabel_CerrarSesion.Text = "Cerrar sesión";
+            this.linkLabel_CerrarSesion.VisitedLinkColor = System.Drawing.Color.White;
+            this.linkLabel_CerrarSesion.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel_CerrarSesion_LinkClicked);
             // 
             // label1
             // 
@@ -94,10 +112,11 @@
             // 
             this.label_IdentificadoComo.AutoSize = true;
             this.label_IdentificadoComo.BackColor = System.Drawing.Color.Transparent;
+            this.label_IdentificadoComo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_IdentificadoComo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label_IdentificadoComo.Location = new System.Drawing.Point(25, 22);
+            this.label_IdentificadoComo.Location = new System.Drawing.Point(25, 11);
             this.label_IdentificadoComo.Name = "label_IdentificadoComo";
-            this.label_IdentificadoComo.Size = new System.Drawing.Size(49, 13);
+            this.label_IdentificadoComo.Size = new System.Drawing.Size(58, 13);
             this.label_IdentificadoComo.TabIndex = 2;
             this.label_IdentificadoComo.Text = "Usuario: ";
             // 
@@ -106,7 +125,7 @@
             this.label_Identificado.AutoSize = true;
             this.label_Identificado.BackColor = System.Drawing.Color.Transparent;
             this.label_Identificado.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label_Identificado.Location = new System.Drawing.Point(80, 22);
+            this.label_Identificado.Location = new System.Drawing.Point(80, 11);
             this.label_Identificado.Name = "label_Identificado";
             this.label_Identificado.Size = new System.Drawing.Size(84, 13);
             this.label_Identificado.TabIndex = 3;
@@ -251,12 +270,25 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "InfoCoste DashBoard";
             // 
+            // boton_Herramientas
+            // 
+            this.boton_Herramientas.BackColor = System.Drawing.Color.Transparent;
+            this.boton_Herramientas.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.boton_Herramientas.Image = global::InfoCostePrograma.Properties.Resources.tuerca;
+            this.boton_Herramientas.Location = new System.Drawing.Point(725, 7);
+            this.boton_Herramientas.Name = "boton_Herramientas";
+            this.boton_Herramientas.Size = new System.Drawing.Size(20, 20);
+            this.boton_Herramientas.TabIndex = 15;
+            this.boton_Herramientas.UseVisualStyleBackColor = false;
+            this.boton_Herramientas.Click += new System.EventHandler(this.boton_Herramientas_Click);
+            // 
             // Principal
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackgroundImage = global::InfoCostePrograma.Properties.Resources.principal;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 600);
+            this.Controls.Add(this.boton_Herramientas);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button9);
             this.Controls.Add(this.button1);
@@ -300,6 +332,8 @@
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox flecha;
+        private System.Windows.Forms.LinkLabel linkLabel_CerrarSesion;
+        private System.Windows.Forms.Button boton_Herramientas;
     }
 }
 

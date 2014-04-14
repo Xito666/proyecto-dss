@@ -13,13 +13,13 @@ namespace InfoCostePrograma
 {
     public partial class Principal : Form
     {
-        private static Principal instance;
-
-        public Principal()
+        public Principal(String usuario)
         {
             InitializeComponent();
 
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
+
+            label_Identificado.Text = usuario;
         }
 
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
@@ -32,22 +32,6 @@ namespace InfoCostePrograma
             int nWidthEllipse, // height of ellipse
             int nHeightEllipse // width of ellipse
         );
-
-        public static Principal DefInstance
-        {
-            get
-            {
-                if (instance == null || instance.IsDisposed)
-                    instance = new Principal();
-
-                return instance;
-            }
-
-            set
-            {
-                instance = value;
-            }
-        }
 
         private void Principal_Load(object sender, EventArgs e)
         {
@@ -147,6 +131,35 @@ namespace InfoCostePrograma
             AddFormInPanel(new GestionarPartes());
         }
 
+        // Boton para acceder a HERRAMIENTAS
+        private void boton_Herramientas_Click(object sender, EventArgs e)
+        {
+            flecha.Visible = false;
+
+            // Añadir panel
+            AddFormInPanel(new Herramientas());
+        }
+
+        // Boton para minimizar la ventana
+        private void button9_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        // Boton para cerrar la ventana
+        private void button1_Click(object sender, EventArgs e)
+        {
+            DialogResult = DialogResult.OK;
+            this.Close();
+        }
+
+        // Label para cerrar sesion
+        private void linkLabel_CerrarSesion_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            DialogResult = DialogResult.Cancel;
+            this.Close();
+        }
+
         // Método para poder mover el form
         protected override void WndProc(ref Message m)
         {
@@ -160,18 +173,6 @@ namespace InfoCostePrograma
             }
 
             base.WndProc(ref m);
-        }
-
-        // Boton para minimizar la ventana
-        private void button9_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
-        }
-
-        // Boton para cerrar la ventana
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }

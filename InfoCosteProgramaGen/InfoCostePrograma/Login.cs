@@ -14,50 +14,96 @@ namespace InfoCostePrograma
         public Login()
         {
             InitializeComponent();
+
+            label_Errores.ForeColor = Color.Red;
+            label_Errores.Visible = false;
+
+            textBox_Pass.PasswordChar = '·';
         }
 
         // Carga del form
         private void Login_Load(object sender, EventArgs e)
         {
-            label3.ForeColor = Color.Red;
-            label3.Visible = false;
+            
         }
 
         // Boton para comprobar credenciales
-        private void button1_Click(object sender, EventArgs e)
+        private void boton_Login_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text == "")
+            bool registrado = false, acceder = false;
+            String usuario = "";
+            int i;
+
+            i = 0;
+
+            if (textBox_Nombre.Text == "")
             {
-                label3.Text = "El usuario no puede estar vacío";
-                label3.Visible = true;
+                label_Errores.Text = "El usuario no puede estar vacío";
+                label_Errores.Visible = true;
             }
-            else if (textBox2.Text == "")
+            else if (textBox_Pass.Text == "")
             {
-                label3.Text = "La contraseña no puede estar vacía";
-                label3.Visible = true;
+                label_Errores.Text = "La contraseña no puede estar vacía";
+                label_Errores.Visible = true;
             }
             else
             {
-                // Comprobar autenticacion
-                if (textBox1.Text == "admin" && textBox2.Text == "admin")
+                InfoCosteProgramaGenNHibernate.CEN.InfoCoste.TrabajadorCEN tcen = new InfoCosteProgramaGenNHibernate.CEN.InfoCoste.TrabajadorCEN();
+                IList<InfoCosteProgramaGenNHibernate.EN.InfoCoste.TrabajadorEN> listaTrabajadores = tcen.LeerTodos(0, 10);
+                
+                while(!registrado && i < listaTrabajadores.Count())
                 {
-                    Principal p = new Principal();
+                    InfoCosteProgramaGenNHibernate.EN.InfoCoste.TrabajadorEN trabajador = listaTrabajadores[i];
+
+                    if (trabajador.Nombre.Equals(textBox_Nombre.Text))
+                        registrado = true;
+
+                    if(registrado)
+                    {
+                        if (trabajador.Password.Equals(textBox_Pass.Text))
+                        {
+                            usuario = trabajador.Nombre;
+                            acceder = true;
+                        }
+                    }
+
+                    i++;
+                }
+                    
+                
+                // Comprobar autenticacion
+                if (acceder)
+                {
+                    DialogResult dr = new DialogResult();
+                    Principal p = new Principal(usuario);
                     this.Hide();
-                    p.ShowDialog();
-                    this.Close();
+                    dr = p.ShowDialog();
+                    
+                    if (dr == DialogResult.OK)
+                        this.Close();
+                    else if (dr == DialogResult.Cancel)
+                    {
+                        this.Visible = true;
+
+                        // Restaurar campos
+                        textBox_Pass.Text = "";
+                        label_Errores.Visible = false;
+                    }
                 }
                 else
                 {
-                    label3.Text = "No se ha podido autenticar";
-                    label3.Visible = true;
+                    if (registrado)
+                    {
+                        label_Errores.Text = "La contraseña no es correcta";
+                        label_Errores.Visible = true;
+                    }
+                    else
+                    {
+                        label_Errores.Text = "El usuario no esta registrado";
+                        label_Errores.Visible = true;
+                    }
                 }
             }
-        }
-
-        // Boton para cerrar el form
-        private void button2_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
 
         // Método para poder mover el form
@@ -73,6 +119,12 @@ namespace InfoCostePrograma
             }
 
             base.WndProc(ref m);
+        }
+
+        // Boton para cerrar el form
+        private void boton_Cerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
