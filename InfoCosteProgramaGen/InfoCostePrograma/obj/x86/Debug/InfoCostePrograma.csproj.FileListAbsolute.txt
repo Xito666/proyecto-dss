@@ -189,3 +189,44 @@ C:\Documents and Settings\ooh4riaUser\My Documents\GitHub\proyecto-dss\InfoCoste
 C:\Documents and Settings\ooh4riaUser\My Documents\GitHub\proyecto-dss\InfoCosteProgramaGen\InfoCostePrograma\bin\Debug\nunit.framework.dll
 C:\Documents and Settings\ooh4riaUser\My Documents\GitHub\proyecto-dss\InfoCosteProgramaGen\InfoCostePrograma\obj\x86\Debug\InfoCostePrograma.SeleccionaCliente.resources
 C:\Documents and Settings\ooh4riaUser\My Documents\GitHub\proyecto-dss\InfoCosteProgramaGen\InfoCostePrograma\obj\x86\Debug\InfoCostePrograma.SeleccionaProducto.resources
+C:\Users\JoseAntonio\Documents\GitHub\proyecto-dss\InfoCosteProgramaGen\InfoCostePrograma\bin\Debug\InfoCostePrograma.exe.config
+C:\Users\JoseAntonio\Documents\GitHub\proyecto-dss\InfoCosteProgramaGen\InfoCostePrograma\obj\x86\Debug\InfoCostePrograma.exe
+C:\Users\JoseAntonio\Documents\GitHub\proyecto-dss\InfoCosteProgramaGen\InfoCostePrograma\obj\x86\Debug\InfoCostePrograma.pdb
+C:\Users\JoseAntonio\Documents\GitHub\proyecto-dss\InfoCosteProgramaGen\InfoCostePrograma\bin\Debug\hibernate.cfg.xml
+C:\Users\JoseAntonio\Documents\GitHub\proyecto-dss\InfoCosteProgramaGen\InfoCostePrograma\bin\Debug\InfoCostePrograma.exe
+C:\Users\JoseAntonio\Documents\GitHub\proyecto-dss\InfoCosteProgramaGen\InfoCostePrograma\bin\Debug\InfoCostePrograma.pdb
+C:\Users\JoseAntonio\Documents\GitHub\proyecto-dss\InfoCosteProgramaGen\InfoCostePrograma\bin\Debug\Antlr3.Runtime.dll
+C:\Users\JoseAntonio\Documents\GitHub\proyecto-dss\InfoCosteProgramaGen\InfoCostePrograma\bin\Debug\Castle.DynamicProxy2.dll
+C:\Users\JoseAntonio\Documents\GitHub\proyecto-dss\InfoCosteProgramaGen\InfoCostePrograma\bin\Debug\Iesi.Collections.dll
+C:\Users\JoseAntonio\Documents\GitHub\proyecto-dss\InfoCosteProgramaGen\InfoCostePrograma\bin\Debug\InfoCosteProgramaGenNHibernate.dll
+C:\Users\JoseAntonio\Documents\GitHub\proyecto-dss\InfoCosteProgramaGen\InfoCostePrograma\bin\Debug\LinFu.DynamicProxy.dll
+C:\Users\JoseAntonio\Documents\GitHub\proyecto-dss\InfoCosteProgramaGen\InfoCostePrograma\bin\Debug\log4net.dll
+C:\Users\JoseAntonio\Documents\GitHub\proyecto-dss\InfoCosteProgramaGen\InfoCostePrograma\bin\Debug\NHibernate.ByteCode.Castle.dll
+C:\Users\JoseAntonio\Documents\GitHub\proyecto-dss\InfoCosteProgramaGen\InfoCostePrograma\bin\Debug\NHibernate.ByteCode.LinFu.dll
+C:\Users\JoseAntonio\Documents\GitHub\proyecto-dss\InfoCosteProgramaGen\InfoCostePrograma\bin\Debug\NHibernate.dll
+C:\Users\JoseAntonio\Documents\GitHub\proyecto-dss\InfoCosteProgramaGen\InfoCostePrograma\bin\Debug\nunit.core.dll
+C:\Users\JoseAntonio\Documents\GitHub\proyecto-dss\InfoCosteProgramaGen\InfoCostePrograma\bin\Debug\nunit.framework.dll
+C:\Users\JoseAntonio\Documents\GitHub\proyecto-dss\InfoCosteProgramaGen\InfoCostePrograma\bin\Debug\InfoCosteProgramaGenNHibernate.pdb
+C:\Users\JoseAntonio\Documents\GitHub\proyecto-dss\InfoCosteProgramaGen\InfoCostePrograma\obj\x86\Debug\InfoCostePrograma.csprojResolveAssemblyReference.cache
+C:\Users\JoseAntonio\Documents\GitHub\proyecto-dss\InfoCosteProgramaGen\InfoCostePrograma\obj\x86\Debug\InfoCostePrograma.CredencialesAdministrador.resources
+C:\Users\JoseAntonio\Documents\GitHub\proyecto-dss\InfoCosteProgramaGen\InfoCostePrograma\obj\x86\Debug\InfoCostePrograma.GestionarClientes.resources
+C:\Users\JoseAntonio\Documents\GitHub\proyecto-dss\InfoCosteProgramaGen\InfoCostePrograma\obj\x86\Debug\InfoCostePrograma.GestionarCompras.resources
+C:\Users\JoseAntonio\Documents\GitHub\proyecto-dss\InfoCosteProgramaGen\InfoCostePrograma\obj\x86\Debug\InfoCostePrograma.GestionarProductos.resources
+C:\Users\JoseAntonio\Documents\GitHub\proyecto-dss\InfoCosteProgramaGen\InfoCostePrograma\obj\x86\Debug\InfoCostePrograma.GestionarProveedores.resources
+C:\Users\JoseAntonio\Documents\GitHub\proyecto-dss\InfoCosteProgramaGen\InfoCostePrograma\obj\x86\Debug\InfoCostePrograma.GestionarTrabajadores.resources
+C:\Users\JoseAntonio\Documents\GitHub\proyecto-dss\InfoCosteProgramaGen\InfoCostePrograma\obj\x86\Debug\InfoCostePrograma.GestionarVentas.resources
+C:\Users\JoseAntonio\Documents\GitHub\proyecto-dss\InfoCosteProgramaGen\InfoCostePrograma\obj\x86\Debug\InfoCostePrograma.Herramientas.resources
+C:\Users\JoseAntonio\Documents\GitHub\proyecto-dss\InfoCosteProgramaGen\InfoCostePrograma\obj\x86\Debug\InfoCostePrograma.Login.resources
+C:\Users\JoseAntonio\Documents\GitHub\proyecto-dss\InfoCosteProgramaGen\InfoCostePrograma\obj\x86\Debug\InfoCostePrograma.NuevaVenta.resources
+C:\Users\JoseAntonio\Documents\GitHub\proyecto-dss\InfoCosteProgramaGen\InfoCostePrograma\obj\x86\Debug\InfoCostePrograma.NuevoCliente.resources
+C:\Users\JoseAntonio\Documents\GitHub\proyecto-dss\InfoCosteProgramaGen\InfoCostePrograma\obj\x86\Debug\InfoCostePrograma.NuevoProveedor.resources
+C:\Users\JoseAntonio\Documents\GitHub\proyecto-dss\InfoCosteProgramaGen\InfoCostePrograma\obj\x86\Debug\InfoCostePrograma.NuevoTrabajador.resources
+C:\Users\JoseAntonio\Documents\GitHub\proyecto-dss\InfoCosteProgramaGen\InfoCostePrograma\obj\x86\Debug\InfoCostePrograma.Principal.resources
+C:\Users\JoseAntonio\Documents\GitHub\proyecto-dss\InfoCosteProgramaGen\InfoCostePrograma\obj\x86\Debug\InfoCostePrograma.Properties.Resources.resources
+C:\Users\JoseAntonio\Documents\GitHub\proyecto-dss\InfoCosteProgramaGen\InfoCostePrograma\obj\x86\Debug\InfoCostePrograma.Proveedor.resources
+C:\Users\JoseAntonio\Documents\GitHub\proyecto-dss\InfoCosteProgramaGen\InfoCostePrograma\obj\x86\Debug\InfoCostePrograma.SeleccionaCliente.resources
+C:\Users\JoseAntonio\Documents\GitHub\proyecto-dss\InfoCosteProgramaGen\InfoCostePrograma\obj\x86\Debug\InfoCostePrograma.SeleccionaProducto.resources
+C:\Users\JoseAntonio\Documents\GitHub\proyecto-dss\InfoCosteProgramaGen\InfoCostePrograma\obj\x86\Debug\InfoCostePrograma.Ver_presupuestos.resources
+C:\Users\JoseAntonio\Documents\GitHub\proyecto-dss\InfoCosteProgramaGen\InfoCostePrograma\obj\x86\Debug\InfoCostePrograma.ver_reservas.resources
+C:\Users\JoseAntonio\Documents\GitHub\proyecto-dss\InfoCosteProgramaGen\InfoCostePrograma\obj\x86\Debug\InfoCostePrograma.csproj.GenerateResource.Cache
+C:\Users\JoseAntonio\Documents\GitHub\proyecto-dss\InfoCosteProgramaGen\InfoCostePrograma\obj\x86\Debug\InfoCostePrograma.GestionarPartes.resources

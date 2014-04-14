@@ -28,3 +28,18 @@ C:\Documents and Settings\ooh4riaUser\My Documents\GitHub\proyecto-dss\InfoCoste
 C:\Documents and Settings\ooh4riaUser\My Documents\GitHub\proyecto-dss\InfoCosteProgramaGen\InfoCosteProgramaGenNHibernate\obj\Debug\ResolveAssemblyReference.cache
 C:\Documents and Settings\ooh4riaUser\My Documents\GitHub\proyecto-dss\InfoCosteProgramaGen\InfoCosteProgramaGenNHibernate\obj\Debug\InfoCosteProgramaGenNHibernate.dll
 C:\Documents and Settings\ooh4riaUser\My Documents\GitHub\proyecto-dss\InfoCosteProgramaGen\InfoCosteProgramaGenNHibernate\obj\Debug\InfoCosteProgramaGenNHibernate.pdb
+C:\Users\JoseAntonio\Documents\GitHub\proyecto-dss\InfoCosteProgramaGen\InfoCosteProgramaGenNHibernate\bin\Debug\hibernate.cfg.xml
+C:\Users\JoseAntonio\Documents\GitHub\proyecto-dss\InfoCosteProgramaGen\InfoCosteProgramaGenNHibernate\bin\Debug\InfoCosteProgramaGenNHibernate.dll.config
+C:\Users\JoseAntonio\Documents\GitHub\proyecto-dss\InfoCosteProgramaGen\InfoCosteProgramaGenNHibernate\bin\Debug\InfoCosteProgramaGenNHibernate.dll
+C:\Users\JoseAntonio\Documents\GitHub\proyecto-dss\InfoCosteProgramaGen\InfoCosteProgramaGenNHibernate\bin\Debug\InfoCosteProgramaGenNHibernate.pdb
+C:\Users\JoseAntonio\Documents\GitHub\proyecto-dss\InfoCosteProgramaGen\InfoCosteProgramaGenNHibernate\bin\Debug\Castle.DynamicProxy2.dll
+C:\Users\JoseAntonio\Documents\GitHub\proyecto-dss\InfoCosteProgramaGen\InfoCosteProgramaGenNHibernate\bin\Debug\LinFu.DynamicProxy.dll
+C:\Users\JoseAntonio\Documents\GitHub\proyecto-dss\InfoCosteProgramaGen\InfoCosteProgramaGenNHibernate\bin\Debug\NHibernate.ByteCode.Castle.dll
+C:\Users\JoseAntonio\Documents\GitHub\proyecto-dss\InfoCosteProgramaGen\InfoCosteProgramaGenNHibernate\bin\Debug\NHibernate.ByteCode.LinFu.dll
+C:\Users\JoseAntonio\Documents\GitHub\proyecto-dss\InfoCosteProgramaGen\InfoCosteProgramaGenNHibernate\bin\Debug\NHibernate.dll
+C:\Users\JoseAntonio\Documents\GitHub\proyecto-dss\InfoCosteProgramaGen\InfoCosteProgramaGenNHibernate\bin\Debug\Iesi.Collections.dll
+C:\Users\JoseAntonio\Documents\GitHub\proyecto-dss\InfoCosteProgramaGen\InfoCosteProgramaGenNHibernate\bin\Debug\Antlr3.Runtime.dll
+C:\Users\JoseAntonio\Documents\GitHub\proyecto-dss\InfoCosteProgramaGen\InfoCosteProgramaGenNHibernate\bin\Debug\log4net.dll
+C:\Users\JoseAntonio\Documents\GitHub\proyecto-dss\InfoCosteProgramaGen\InfoCosteProgramaGenNHibernate\obj\Debug\InfoCosteProgramaGenNHibernate.csprojResolveAssemblyReference.cache
+C:\Users\JoseAntonio\Documents\GitHub\proyecto-dss\InfoCosteProgramaGen\InfoCosteProgramaGenNHibernate\obj\Debug\InfoCosteProgramaGenNHibernate.dll
+C:\Users\JoseAntonio\Documents\GitHub\proyecto-dss\InfoCosteProgramaGen\InfoCosteProgramaGenNHibernate\obj\Debug\InfoCosteProgramaGenNHibernate.pdb

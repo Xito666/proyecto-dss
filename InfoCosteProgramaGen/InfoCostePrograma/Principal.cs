@@ -144,7 +144,7 @@ namespace InfoCostePrograma
             flecha.Visible = true;
 
             // Añadir panel
-            AddFormInPanel(new Herramientas());
+            AddFormInPanel(new GestionarPartes());
         }
 
         // Método para poder mover el form

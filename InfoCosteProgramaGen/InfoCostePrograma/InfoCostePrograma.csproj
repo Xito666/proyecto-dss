@@ -89,6 +89,12 @@
     <Compile Include="CredencialesAdministrador.Designer.cs">
       <DependentUpon>CredencialesAdministrador.cs</DependentUpon>
     </Compile>
+    <Compile Include="GestionarPartes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestionarPartes.Designer.cs">
+      <DependentUpon>GestionarPartes.cs</DependentUpon>
+    </Compile>
     <Compile Include="GestionarClientes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -212,6 +218,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GestionarCompras.resx">
       <DependentUpon>GestionarCompras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionarPartes.resx">
+      <DependentUpon>GestionarPartes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GestionarProductos.resx">
       <DependentUpon>GestionarProductos.cs</DependentUpon>
@@ -352,6 +361,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="icons\Flecha.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\Icono-Reparacion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\icoparteintervencion.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
