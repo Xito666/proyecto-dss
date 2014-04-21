@@ -49,6 +49,20 @@ namespace InfoCostePrograma
             ClienteEN clie = lpCP2.getClienteDePedido(id);
             cliente.Text = clie.NombreCompleto;
             label_Precio.Text = total.ToString();
+
+            TipoFacturaEN tf = obtenerFacturaTipada(id);
+
+            Type g = tf.GetType();
+            if (g == typeof(FacturaEN))
+                radioButton1.Checked = true;
+            else if(g == typeof(ReservaEN))
+                radioButton3.Checked = true;
+            else if(g == typeof(PresupuestoEN))
+                radioButton2.Checked = true;
+            else if (g == typeof(ProformaEN))
+                radioButton4.Checked = true;
+           
+
         }
 
         public NuevaVenta()
@@ -63,6 +77,8 @@ namespace InfoCostePrograma
         private void NuevaVenta_Load(object sender, EventArgs e)
         {
             dataGridView1.CellValueChanged += new DataGridViewCellEventHandler(DataGridView1_CellValueChanged);
+
+
         }
 
         private void buscarcliente_Click(object sender, EventArgs e)
@@ -171,7 +187,24 @@ namespace InfoCostePrograma
                 }
                 pcCEN.AnyadirLinea(pcEN.Id, listaID);
 
-                // hasta aki va pedido, seguir con tipofactura
+                if (radioButton1.Checked) // factura
+                {
+                    new FacturaCEN().Factura(pcEN.Id, DateTime.Now, "contado", pcEN.Id, true);
+                }
+                else if (radioButton2.Checked) // presup
+                {
+                    new PresupuestoCEN().Presupuesto(pcEN.Id, DateTime.Now, "contado", pcEN.Id);
+                }
+                else if (radioButton3.Checked) // reserva
+                {
+                    new ReservaCEN().Reserva(pcEN.Id, DateTime.Now, "contado", pcEN.Id);
+                }
+                else if (radioButton4.Checked)// proforma
+                {
+                    new ProformaCEN().Proforma(pcEN.Id, DateTime.Now, "contado", pcEN.Id);
+                }
+                else
+                    throw new Exception();
 
                 MessageBox.Show(this, "Creado como pedido numero " + pcEN.Id+"\nCreada Factura", "Guardar documento");
 
@@ -196,6 +229,40 @@ namespace InfoCostePrograma
         {
         }
 
+       public static TipoFacturaEN obtenerFacturaTipada(int id)
+        {
+            TipoFacturaEN tf;
+            try
+            {
+                tf = new FacturaCEN().LeerPorOID(id);
+                if(tf != null)
+                return tf;
+            }
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
+            try
+            {
+                tf = new PresupuestoCEN().LeerPorOID(id);
+                if (tf != null)
+                return tf;
+            }
+            catch (Exception ex) { }
+            try
+            {
+                tf = new ReservaCEN().LeerPorOID(id);
+                if (tf != null)
+                return tf;
+            }
+            catch (Exception ex) { }
+            try
+            {
+                tf = new ProformaCEN().LeerPorOID(id);
+                if (tf != null)
+                return tf;
+            }
+            catch (Exception ex) { }
+
+            return new TipoFacturaEN();
+        }
        
     }
 }

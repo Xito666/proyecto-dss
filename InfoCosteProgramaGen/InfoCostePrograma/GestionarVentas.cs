@@ -51,6 +51,7 @@ namespace InfoCostePrograma
             PedidoClienteCEN pcCEN = new PedidoClienteCEN();
             IList<PedidoClienteEN> listaPedidos = pcCEN.LeerTodos(0,100);
 
+
             dataGridView_GestionarVentas.Rows.Clear();
             foreach(PedidoClienteEN pedido in listaPedidos)
             {
@@ -66,7 +67,24 @@ namespace InfoCostePrograma
 
                 LineaPedidoCP lpCP2 = new LineaPedidoCP();
 
-                dataGridView_GestionarVentas.Rows.Add(pedido.Id, lpCP2.getClienteDePedido(pedido.Id).NombreCompleto, pedido.Fecha, total.ToString());
+                TipoFacturaEN tf = NuevaVenta.obtenerFacturaTipada(pedido.Id);
+
+                String s ="";
+                try {
+
+                    Type g = tf.GetType();
+                    if (g == typeof(FacturaEN))
+                        s = "Factura";
+                    else if (g == typeof(ReservaEN))
+                        s = "Reserva";
+                    else if (g == typeof(PresupuestoEN))
+                        s = "Presupuesto";
+                    else if (g == typeof(ProformaEN))
+                        s = "Proforma";
+                }
+                catch (Exception ex) { }
+
+                dataGridView_GestionarVentas.Rows.Add(pedido.Id, lpCP2.getClienteDePedido(pedido.Id).NombreCompleto, pedido.Fecha, total.ToString(), s);
             }
 
             
