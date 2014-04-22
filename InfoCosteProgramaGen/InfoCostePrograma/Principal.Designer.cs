@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel2 = new System.Windows.Forms.Panel();
             this.flecha = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -47,13 +48,18 @@
             this.button9 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.boton_Herramientas = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.toolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.flecha)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Location = new System.Drawing.Point(4, 158);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(790, 385);
@@ -242,6 +248,7 @@
             this.button1.Size = new System.Drawing.Size(20, 20);
             this.button1.TabIndex = 13;
             this.button1.Text = "X";
+            this.toolTip.SetToolTip(this.button1, "Cerrar");
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -254,7 +261,8 @@
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(20, 20);
             this.button9.TabIndex = 14;
-            this.button9.Text = "m";
+            this.button9.Text = "-";
+            this.toolTip.SetToolTip(this.button9, "Minimizar");
             this.button9.UseVisualStyleBackColor = false;
             this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
@@ -272,6 +280,7 @@
             // 
             // boton_Herramientas
             // 
+            this.boton_Herramientas.AccessibleName = "Herramientas";
             this.boton_Herramientas.BackColor = System.Drawing.Color.Transparent;
             this.boton_Herramientas.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.boton_Herramientas.Image = global::InfoCostePrograma.Properties.Resources.tuerca;
@@ -279,8 +288,20 @@
             this.boton_Herramientas.Name = "boton_Herramientas";
             this.boton_Herramientas.Size = new System.Drawing.Size(20, 20);
             this.boton_Herramientas.TabIndex = 15;
+            this.boton_Herramientas.Tag = "";
+            this.toolTip.SetToolTip(this.boton_Herramientas, "Herramientas");
             this.boton_Herramientas.UseVisualStyleBackColor = false;
             this.boton_Herramientas.Click += new System.EventHandler(this.boton_Herramientas_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::InfoCostePrograma.Properties.Resources.logo;
+            this.pictureBox1.Location = new System.Drawing.Point(161, 54);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(450, 252);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // Principal
             // 
@@ -304,10 +325,12 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "InfoCoste Dashboard";
             this.Load += new System.EventHandler(this.Principal_Load);
+            this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.flecha)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -334,6 +357,8 @@
         private System.Windows.Forms.PictureBox flecha;
         private System.Windows.Forms.LinkLabel linkLabel_CerrarSesion;
         private System.Windows.Forms.Button boton_Herramientas;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ToolTip toolTip;
     }
 }
 

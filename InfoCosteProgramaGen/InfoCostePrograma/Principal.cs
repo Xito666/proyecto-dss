@@ -13,13 +13,19 @@ namespace InfoCostePrograma
 {
     public partial class Principal : Form
     {
-        public Principal(String usuario)
+        int usuario;
+
+        public Principal(int user)
         {
             InitializeComponent();
 
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
 
-            label_Identificado.Text = usuario;
+            usuario = user;
+
+            InfoCosteProgramaGenNHibernate.CEN.InfoCoste.TrabajadorCEN tcen = new InfoCosteProgramaGenNHibernate.CEN.InfoCoste.TrabajadorCEN();
+            InfoCosteProgramaGenNHibernate.EN.InfoCoste.TrabajadorEN trabajador = tcen.LeerPorOID(usuario);
+            label_Identificado.Text = trabajador.Nombre;
         }
 
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
@@ -120,7 +126,7 @@ namespace InfoCostePrograma
             AddFormInPanel(new GestionarCompras());
         }
 
-        // Boton HERRAMIENTAS
+        // Boton PARTES
         private void button3_Click(object sender, EventArgs e)
         {
             // Mover flecha
@@ -131,13 +137,13 @@ namespace InfoCostePrograma
             AddFormInPanel(new GestionarPartes());
         }
 
-        // Boton para acceder a HERRAMIENTAS
+        // Boton HERRAMIENTAS
         private void boton_Herramientas_Click(object sender, EventArgs e)
         {
             flecha.Visible = false;
 
             // Añadir panel
-            AddFormInPanel(new Herramientas());
+            AddFormInPanel(new Herramientas(usuario));
         }
 
         // Boton para minimizar la ventana

@@ -31,10 +31,10 @@ namespace InfoCostePrograma
         private void boton_Login_Click(object sender, EventArgs e)
         {
             bool registrado = false, acceder = false;
-            String usuario = "";
+            int usuario;
             int i;
 
-            i = 0;
+            i = usuario = 0;
 
             if (textBox_Nombre.Text == "")
             {
@@ -62,7 +62,7 @@ namespace InfoCostePrograma
                     {
                         if (trabajador.Password.Equals(textBox_Pass.Text))
                         {
-                            usuario = trabajador.Nombre;
+                            usuario = trabajador.Id;
                             acceder = true;
                         }
                     }

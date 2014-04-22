@@ -11,18 +11,19 @@ namespace InfoCostePrograma
 {
     public partial class Herramientas : Form
     {
-        public Herramientas()
+        int usuario;
+
+        public Herramientas(int user)
         {
             InitializeComponent();
+
+            usuario = user;
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            CredencialesAdministrador ca = new CredencialesAdministrador();
+            Credenciales ca = new Credenciales(usuario);
             ca.Show();
-
-            //CredencialesAdministrador.DefInstance.MdiParent = this;
-            //CredencialesAdministrador.DefInstance.Show();
         }
     }
 }
