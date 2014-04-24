@@ -27,6 +27,6 @@
 		  </class>
 		  
 		  <query name="TipoFacturaENReadAllHQL">from TipoFacturaEN</query>
-		  <query name="TipoFacturaENleerPorFechaHQL"><![CDATA[FROM TipoFacturaEN t where t.fecha LIKE '%:fechaFiltro%']]></query>
+		  <query name="TipoFacturaENleerPorFechaHQL"><![CDATA[FROM TipoFacturaEN t where t.Fecha LIKE '%:fechaFiltro%']]></query>
 		</hibernate-mapping>
 	

@@ -55,5 +55,7 @@
 		  </class>
 		  
 		  <query name="ProductoENReadAllHQL">from ProductoEN</query>
+		  <query name="ProductoENleerPorNombreHQL"><![CDATA[FROM ProductoEN p where p.Nombre = :nombreFiltro]]></query>
+		  <query name="ProductoENleerPorFamiliaHQL"><![CDATA[FROM ProductoEN p where p.Familia = :familiaFiltro]]></query>
 		</hibernate-mapping>
 	

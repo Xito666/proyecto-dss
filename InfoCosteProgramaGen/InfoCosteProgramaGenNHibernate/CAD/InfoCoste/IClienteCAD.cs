@@ -34,5 +34,8 @@ void SetNombre (ClienteEN cliente);
 
 
 System.Collections.Generic.IList<InfoCosteProgramaGenNHibernate.EN.InfoCoste.ClienteEN> LeerPorNombre (string nombreFiltro);
+
+
+void Borrar (string id);
 }
 }

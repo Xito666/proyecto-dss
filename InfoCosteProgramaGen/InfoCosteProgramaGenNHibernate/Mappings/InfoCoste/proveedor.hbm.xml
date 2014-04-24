@@ -35,6 +35,6 @@
 		  </class>
 		  
 		  <query name="ProveedorENReadAllHQL">from ProveedorEN</query>
-		  <query name="ProveedorENleerPorNombreHQL"><![CDATA[FROM ProveedorEN p where p.nombre = :nombreFiltro]]></query>
+		  <query name="ProveedorENleerPorNombreHQL"><![CDATA[FROM ProveedorEN p where p.Nombre = :nombreFiltro]]></query>
 		</hibernate-mapping>
 	

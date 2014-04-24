@@ -80,5 +80,9 @@ public System.Collections.Generic.IList<InfoCosteProgramaGenNHibernate.EN.InfoCo
 {
         return _IPedidoClienteCAD.LeerPorFecha (fechaFilter);
 }
+public void Borrar (int id)
+{
+        _IPedidoClienteCAD.Borrar (id);
+}
 }
 }

@@ -206,6 +206,7 @@
 			<Compile Include="CEN\InfoCoste\ProductoCEN_GetDescripcion.cs" />
 			<Compile Include="CEN\InfoCoste\ProductoCEN_GetNombre.cs" />
 			<Compile Include="CEN\InfoCoste\ProductoCEN_GetId.cs" />
+			<Compile Include="CEN\InfoCoste\ProductoCEN_SetDescription.cs" />
 	<Compile Include="EN\InfoCoste\PedidoProveedorEN.cs" />
 	<Compile Include="CEN\InfoCoste\PedidoProveedorCEN.cs" />
 	<Compile Include="CAD\InfoCoste\IPedidoProveedorCAD.cs" />

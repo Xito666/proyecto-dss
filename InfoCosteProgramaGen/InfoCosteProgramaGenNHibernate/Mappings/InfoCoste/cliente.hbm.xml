@@ -50,6 +50,6 @@
 		  </class>
 		  
 		  <query name="ClienteENReadAllHQL">from ClienteEN</query>
-		  <query name="ClienteENleerPorNombreHQL"><![CDATA[FROM ClienteEN c where c.nombreCompleto LIKE '%:nombreFiltro%']]></query>
+		  <query name="ClienteENleerPorNombreHQL"><![CDATA[FROM ClienteEN c where c.NombreCompleto =:nombreFiltro]]></query>
 		</hibernate-mapping>
 	

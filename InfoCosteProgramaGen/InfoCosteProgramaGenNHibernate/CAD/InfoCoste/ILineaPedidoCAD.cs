@@ -25,5 +25,7 @@ void SetNumero (LineaPedidoEN lineaPedido);
 
 
 int LineaPedido (LineaPedidoEN lineaPedido);
+
+System.Collections.Generic.IList<LineaPedidoEN> LeerTodos (int first, int size);
 }
 }

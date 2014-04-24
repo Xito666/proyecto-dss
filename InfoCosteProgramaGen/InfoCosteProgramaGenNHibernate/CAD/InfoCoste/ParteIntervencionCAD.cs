@@ -202,7 +202,7 @@ public System.Collections.Generic.IList<InfoCosteProgramaGenNHibernate.EN.InfoCo
         try
         {
                 SessionInitializeTransaction ();
-                //String sql = @"FROM ParteIntervencionEN self where FROM ParteIntervencionEN parte where parte.fecha = :fechaFiltro";
+                //String sql = @"FROM ParteIntervencionEN self where FROM ParteIntervencionEN parte where parte.Fecha = :fechaFiltro";
                 //IQuery query = session.CreateQuery(sql);
                 IQuery query = (IQuery)session.GetNamedQuery ("ParteIntervencionENleerPorFechaHQL");
                 query.SetParameter ("fechaFiltro", fechaFiltro);

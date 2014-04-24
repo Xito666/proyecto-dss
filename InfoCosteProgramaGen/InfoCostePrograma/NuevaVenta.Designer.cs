@@ -38,13 +38,15 @@
             this.PrecioLinea = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.label_Precio = new System.Windows.Forms.Label();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.radioButton4 = new System.Windows.Forms.RadioButton();
-            this.buscarcliente = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.buscarcliente = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -52,11 +54,13 @@
             // 
             this.cliente.Location = new System.Drawing.Point(98, 26);
             this.cliente.Name = "cliente";
-            this.cliente.Size = new System.Drawing.Size(100, 20);
+            this.cliente.Size = new System.Drawing.Size(196, 20);
             this.cliente.TabIndex = 0;
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idarticulo,
@@ -120,20 +124,21 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "Precio total:";
             // 
-            // label3
+            // label_Precio
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label3.Location = new System.Drawing.Point(629, 446);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(65, 24);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "81,90€";
+            this.label_Precio.AutoSize = true;
+            this.label_Precio.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Precio.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.label_Precio.Location = new System.Drawing.Point(629, 446);
+            this.label_Precio.Name = "label_Precio";
+            this.label_Precio.Size = new System.Drawing.Size(20, 24);
+            this.label_Precio.TabIndex = 5;
+            this.label_Precio.Text = "0";
             // 
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
+            this.radioButton1.Checked = true;
             this.radioButton1.Location = new System.Drawing.Point(114, 429);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(93, 17);
@@ -175,14 +180,27 @@
             this.radioButton4.Text = "Proforma";
             this.radioButton4.UseVisualStyleBackColor = true;
             // 
-            // buscarcliente
+            // button3
             // 
-            this.buscarcliente.Image = global::InfoCostePrograma.Properties.Resources.ico_buscar;
-            this.buscarcliente.Location = new System.Drawing.Point(205, 26);
-            this.buscarcliente.Name = "buscarcliente";
-            this.buscarcliente.Size = new System.Drawing.Size(28, 23);
-            this.buscarcliente.TabIndex = 1;
-            this.buscarcliente.UseVisualStyleBackColor = true;
+            this.button3.Image = global::InfoCostePrograma.Properties.Resources.nuevo;
+            this.button3.Location = new System.Drawing.Point(583, 12);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(66, 45);
+            this.button3.TabIndex = 13;
+            this.button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button2
+            // 
+            this.button2.Image = global::InfoCostePrograma.Properties.Resources.Eliminar;
+            this.button2.Location = new System.Drawing.Point(655, 12);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(66, 45);
+            this.button2.TabIndex = 12;
+            this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -193,18 +211,31 @@
             this.button1.TabIndex = 11;
             this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // buscarcliente
+            // 
+            this.buscarcliente.Image = global::InfoCostePrograma.Properties.Resources.ico_buscar;
+            this.buscarcliente.Location = new System.Drawing.Point(300, 25);
+            this.buscarcliente.Name = "buscarcliente";
+            this.buscarcliente.Size = new System.Drawing.Size(28, 20);
+            this.buscarcliente.TabIndex = 1;
+            this.buscarcliente.UseVisualStyleBackColor = true;
+            this.buscarcliente.Click += new System.EventHandler(this.buscarcliente_Click);
             // 
             // NuevaVenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(733, 523);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.radioButton4);
             this.Controls.Add(this.radioButton3);
             this.Controls.Add(this.radioButton2);
             this.Controls.Add(this.radioButton1);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label_Precio);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
@@ -212,6 +243,7 @@
             this.Controls.Add(this.cliente);
             this.Name = "NuevaVenta";
             this.Text = "Nueva Venta";
+            this.Load += new System.EventHandler(this.NuevaVenta_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -231,12 +263,14 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn PrecioLinea;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label_Precio;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton3;
         private System.Windows.Forms.RadioButton radioButton4;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
 
     }
 }

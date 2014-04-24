@@ -17,7 +17,7 @@ void SetDireccion (ProveedorEN proveedor);
 void SetNombre (ProveedorEN proveedor);
 
 
-
+void Borrar(string id);
 
 
 

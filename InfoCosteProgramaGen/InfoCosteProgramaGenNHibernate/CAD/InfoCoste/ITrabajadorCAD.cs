@@ -24,5 +24,10 @@ void SetNombre (TrabajadorEN trabajador);
 
 
 int Trabajador (TrabajadorEN trabajador);
+
+void Borrar (int id);
+
+
+System.Collections.Generic.IList<InfoCosteProgramaGenNHibernate.EN.InfoCoste.TrabajadorEN> LeerPorNombre (string nombreFiltro);
 }
 }

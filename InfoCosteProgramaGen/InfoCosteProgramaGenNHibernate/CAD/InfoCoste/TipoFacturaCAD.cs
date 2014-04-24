@@ -197,7 +197,7 @@ public System.Collections.Generic.IList<InfoCosteProgramaGenNHibernate.EN.InfoCo
         try
         {
                 SessionInitializeTransaction ();
-                //String sql = @"FROM TipoFacturaEN self where FROM TipoFacturaEN t where t.fecha LIKE '%:fechaFiltro%'";
+                //String sql = @"FROM TipoFacturaEN self where FROM TipoFacturaEN t where t.Fecha LIKE '%:fechaFiltro%'";
                 //IQuery query = session.CreateQuery(sql);
                 IQuery query = (IQuery)session.GetNamedQuery ("TipoFacturaENleerPorFechaHQL");
                 query.SetParameter ("fechaFiltro", fechaFiltro);

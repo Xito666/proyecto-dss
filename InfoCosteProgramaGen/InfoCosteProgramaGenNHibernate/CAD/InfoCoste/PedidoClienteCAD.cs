@@ -285,7 +285,7 @@ public System.Collections.Generic.IList<InfoCosteProgramaGenNHibernate.EN.InfoCo
         try
         {
                 SessionInitializeTransaction ();
-                //String sql = @"FROM PedidoClienteEN self where FROM PedidoClienteEN p where p.fecha = :fechaFilter";
+                //String sql = @"FROM PedidoClienteEN self where FROM PedidoClienteEN p where p.Fecha = :fechaFilter";
                 //IQuery query = session.CreateQuery(sql);
                 IQuery query = (IQuery)session.GetNamedQuery ("PedidoClienteENleerPorFechaHQL");
                 query.SetParameter ("fechaFilter", fechaFilter);
@@ -308,6 +308,29 @@ public System.Collections.Generic.IList<InfoCosteProgramaGenNHibernate.EN.InfoCo
         }
 
         return result;
+}
+public void Borrar (int id)
+{
+        try
+        {
+                SessionInitializeTransaction ();
+                PedidoClienteEN pedidoClienteEN = (PedidoClienteEN)session.Load (typeof(PedidoClienteEN), id);
+                session.Delete (pedidoClienteEN);
+                SessionCommit ();
+        }
+
+        catch (Exception ex) {
+                SessionRollBack ();
+                if (ex is InfoCosteProgramaGenNHibernate.Exceptions.ModelException)
+                        throw ex;
+                throw new InfoCosteProgramaGenNHibernate.Exceptions.DataLayerException ("Error in PedidoClienteCAD.", ex);
+        }
+
+
+        finally
+        {
+                SessionClose ();
+        }
 }
 }
 }

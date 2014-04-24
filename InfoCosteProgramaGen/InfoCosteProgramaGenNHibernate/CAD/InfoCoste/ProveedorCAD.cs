@@ -218,7 +218,7 @@ public System.Collections.Generic.IList<InfoCosteProgramaGenNHibernate.EN.InfoCo
         try
         {
                 SessionInitializeTransaction ();
-                //String sql = @"FROM ProveedorEN self where FROM ProveedorEN p where p.nombre = :nombreFiltro";
+                //String sql = @"FROM ProveedorEN self where FROM ProveedorEN p where p.Nombre = :nombreFiltro";
                 //IQuery query = session.CreateQuery(sql);
                 IQuery query = (IQuery)session.GetNamedQuery ("ProveedorENleerPorNombreHQL");
                 query.SetParameter ("nombreFiltro", nombreFiltro);
@@ -242,5 +242,31 @@ public System.Collections.Generic.IList<InfoCosteProgramaGenNHibernate.EN.InfoCo
 
         return result;
 }
+
+public void Borrar(string id)
+{
+    try
+    {
+        SessionInitializeTransaction();
+        ProveedorEN provEN = (ProveedorEN)session.Load(typeof(ProveedorEN), id);
+        session.Delete(provEN);
+        SessionCommit();
+    }
+
+    catch (Exception ex)
+    {
+        SessionRollBack();
+        if (ex is InfoCosteProgramaGenNHibernate.Exceptions.ModelException)
+            throw ex;
+        throw new InfoCosteProgramaGenNHibernate.Exceptions.DataLayerException("Error in ProveedorCAD.", ex);
+    }
+
+
+    finally
+    {
+        SessionClose();
+    }
+}
+
 }
 }

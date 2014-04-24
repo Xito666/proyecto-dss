@@ -185,5 +185,60 @@ public int Trabajador (TrabajadorEN trabajador)
 
         return trabajador.Id;
 }
+
+public void Borrar (int id)
+{
+        try
+        {
+                SessionInitializeTransaction ();
+                TrabajadorEN trabajadorEN = (TrabajadorEN)session.Load (typeof(TrabajadorEN), id);
+                session.Delete (trabajadorEN);
+                SessionCommit ();
+        }
+
+        catch (Exception ex) {
+                SessionRollBack ();
+                if (ex is InfoCosteProgramaGenNHibernate.Exceptions.ModelException)
+                        throw ex;
+                throw new InfoCosteProgramaGenNHibernate.Exceptions.DataLayerException ("Error in TrabajadorCAD.", ex);
+        }
+
+
+        finally
+        {
+                SessionClose ();
+        }
+}
+
+public System.Collections.Generic.IList<InfoCosteProgramaGenNHibernate.EN.InfoCoste.TrabajadorEN> LeerPorNombre (string nombreFiltro)
+{
+        System.Collections.Generic.IList<InfoCosteProgramaGenNHibernate.EN.InfoCoste.TrabajadorEN> result;
+        try
+        {
+                SessionInitializeTransaction ();
+                //String sql = @"FROM TrabajadorEN self where FROM TrabajadorEN t where t.Nombre = :nombreFiltro";
+                //IQuery query = session.CreateQuery(sql);
+                IQuery query = (IQuery)session.GetNamedQuery ("TrabajadorENleerPorNombreHQL");
+                query.SetParameter ("nombreFiltro", nombreFiltro);
+
+                result = query.List<InfoCosteProgramaGenNHibernate.EN.InfoCoste.TrabajadorEN>();
+                SessionCommit ();
+        }
+
+        catch (Exception ex) {
+                SessionRollBack ();
+                if (ex is InfoCosteProgramaGenNHibernate.Exceptions.ModelException)
+                        throw ex;
+                throw new InfoCosteProgramaGenNHibernate.Exceptions.DataLayerException ("Error in TrabajadorCAD.", ex);
+        }
+
+
+        finally
+        {
+                SessionClose ();
+        }
+
+        return result;
+}
 }
 }

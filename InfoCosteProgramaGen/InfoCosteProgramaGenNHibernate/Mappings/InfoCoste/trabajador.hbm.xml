@@ -30,5 +30,6 @@
 		  </class>
 		  
 		  <query name="TrabajadorENReadAllHQL">from TrabajadorEN</query>
+		  <query name="TrabajadorENleerPorNombreHQL"><![CDATA[FROM TrabajadorEN t where t.Nombre = :nombreFiltro]]></query>
 		</hibernate-mapping>
 	

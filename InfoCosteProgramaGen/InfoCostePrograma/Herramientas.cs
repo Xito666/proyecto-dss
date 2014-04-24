@@ -15,5 +15,14 @@ namespace InfoCostePrograma
         {
             InitializeComponent();
         }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            CredencialesAdministrador ca = new CredencialesAdministrador();
+            ca.Show();
+
+            //CredencialesAdministrador.DefInstance.MdiParent = this;
+            //CredencialesAdministrador.DefInstance.Show();
+        }
     }
 }

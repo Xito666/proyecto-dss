@@ -32,6 +32,6 @@
 		  </class>
 		  
 		  <query name="PedidoProveedorENReadAllHQL">from PedidoProveedorEN</query>
-		  <query name="PedidoProveedorENleePorFechaHQL"><![CDATA[FROM PedidoProveedorEN p where p.fecha = :fechaFiltro]]></query>
+		  <query name="PedidoProveedorENleePorFechaHQL"><![CDATA[FROM PedidoProveedorEN p where p.Fecha = :fechaFiltro]]></query>
 		</hibernate-mapping>
 	
