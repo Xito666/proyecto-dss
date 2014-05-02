@@ -138,5 +138,29 @@ public ProformaEN LeerPorOID (int id)
 
         return proformaEN;
 }
+
+public void Borrar (int id)
+{
+        try
+        {
+                SessionInitializeTransaction ();
+                ProformaEN proformaEN = (ProformaEN)session.Load (typeof(ProformaEN), id);
+                session.Delete (proformaEN);
+                SessionCommit ();
+        }
+
+        catch (Exception ex) {
+                SessionRollBack ();
+                if (ex is InfoCosteProgramaGenNHibernate.Exceptions.ModelException)
+                        throw ex;
+                throw new InfoCosteProgramaGenNHibernate.Exceptions.DataLayerException ("Error in ProformaCAD.", ex);
+        }
+
+
+        finally
+        {
+                SessionClose ();
+        }
+}
 }
 }

@@ -18,5 +18,9 @@ System.Collections.Generic.IList<FacturaEN> LeerTodos (int first, int size);
 
 
 FacturaEN LeerPorOID (int id);
+
+
+
+void Borrar (int id);
 }
 }

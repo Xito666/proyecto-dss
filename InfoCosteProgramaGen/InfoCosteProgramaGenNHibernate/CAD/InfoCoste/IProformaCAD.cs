@@ -15,5 +15,8 @@ System.Collections.Generic.IList<ProformaEN> LeerTodos (int first, int size);
 
 
 ProformaEN LeerPorOID (int id);
+
+
+void Borrar (int id);
 }
 }

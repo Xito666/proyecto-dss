@@ -182,10 +182,16 @@ namespace InfoCostePrograma
                     lpCEN.LineaPedido(id, i,Convert.ToInt32(fila.Cells[1].Value.ToString()), Double.Parse(fila.Cells[3].Value.ToString()),Convert.ToInt32(fila.Cells[0].Value.ToString()));
                     listaID.Add(id);
 
+                    ProductoCEN pCEN = new ProductoCEN();
+                    ProductoEN pEN = pCEN.LeerPorOID(Convert.ToInt32(fila.Cells[0].Value.ToString()));
+                    pCEN.SetStock(Convert.ToInt32(fila.Cells[0].Value.ToString()), pEN.Stock-1);
+
                     i++;
                     id++;
                 }
                 pcCEN.AnyadirLinea(pcEN.Id, listaID);
+
+                MessageBox.Show(pcEN.Id.ToString());
 
                 if (radioButton1.Checked) // factura
                 {

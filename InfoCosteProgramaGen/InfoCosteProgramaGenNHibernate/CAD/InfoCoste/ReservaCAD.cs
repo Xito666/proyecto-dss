@@ -138,5 +138,29 @@ public ReservaEN LeerPorOID (int id)
 
         return reservaEN;
 }
+
+public void Borrar (int id)
+{
+        try
+        {
+                SessionInitializeTransaction ();
+                ReservaEN reservaEN = (ReservaEN)session.Load (typeof(ReservaEN), id);
+                session.Delete (reservaEN);
+                SessionCommit ();
+        }
+
+        catch (Exception ex) {
+                SessionRollBack ();
+                if (ex is InfoCosteProgramaGenNHibernate.Exceptions.ModelException)
+                        throw ex;
+                throw new InfoCosteProgramaGenNHibernate.Exceptions.DataLayerException ("Error in ReservaCAD.", ex);
+        }
+
+
+        finally
+        {
+                SessionClose ();
+        }
+}
 }
 }

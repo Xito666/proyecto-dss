@@ -28,6 +28,30 @@ namespace InfoCostePrograma
             InfoCosteProgramaGenNHibernate.CEN.InfoCoste.PedidoClienteCEN ccen = new InfoCosteProgramaGenNHibernate.CEN.InfoCoste.PedidoClienteCEN();
             ccen.Borrar(Convert.ToInt32(current.Cells[0].Value));
 
+            try {
+                new TipoFacturaCEN().Borrar(Convert.ToInt32(current.Cells[0].Value));
+            }
+            catch (Exception ex) { }
+            try {
+                new FacturaCEN().Borrar(Convert.ToInt32(current.Cells[0].Value));
+            }
+            catch (Exception ex) { }
+            try
+            {
+                new PresupuestoCEN().Borrar(Convert.ToInt32(current.Cells[0].Value));
+            }
+            catch (Exception ex) { }
+            try
+            {
+                new ProductoCEN().Borrar(Convert.ToInt32(current.Cells[0].Value));
+            }
+            catch (Exception ex) { }
+            try
+            {
+                new ReservaCEN().Borrar(Convert.ToInt32(current.Cells[0].Value));
+            }
+            catch (Exception ex) { }
+
 
             GestionarVentas_Load(null, null);
         }

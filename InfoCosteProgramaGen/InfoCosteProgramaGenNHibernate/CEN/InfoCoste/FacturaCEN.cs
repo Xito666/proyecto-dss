@@ -73,5 +73,10 @@ public FacturaEN LeerPorOID (int id)
         facturaEN = _IFacturaCAD.LeerPorOID (id);
         return facturaEN;
 }
+
+public void Borrar (int id)
+{
+        _IFacturaCAD.Borrar (id);
+}
 }
 }

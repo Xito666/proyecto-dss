@@ -164,5 +164,29 @@ public FacturaEN LeerPorOID (int id)
 
         return facturaEN;
 }
+
+public void Borrar (int id)
+{
+        try
+        {
+                SessionInitializeTransaction ();
+                FacturaEN facturaEN = (FacturaEN)session.Load (typeof(FacturaEN), id);
+                session.Delete (facturaEN);
+                SessionCommit ();
+        }
+
+        catch (Exception ex) {
+                SessionRollBack ();
+                if (ex is InfoCosteProgramaGenNHibernate.Exceptions.ModelException)
+                        throw ex;
+                throw new InfoCosteProgramaGenNHibernate.Exceptions.DataLayerException ("Error in FacturaCAD.", ex);
+        }
+
+
+        finally
+        {
+                SessionClose ();
+        }
+}
 }
 }

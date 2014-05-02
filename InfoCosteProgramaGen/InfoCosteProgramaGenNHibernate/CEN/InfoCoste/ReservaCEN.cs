@@ -71,5 +71,10 @@ public ReservaEN LeerPorOID (int id)
         reservaEN = _IReservaCAD.LeerPorOID (id);
         return reservaEN;
 }
+
+public void Borrar (int id)
+{
+        _IReservaCAD.Borrar (id);
+}
 }
 }

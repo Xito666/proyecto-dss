@@ -15,5 +15,8 @@ System.Collections.Generic.IList<ReservaEN> LeerTodos (int first, int size);
 
 
 ReservaEN LeerPorOID (int id);
+
+
+void Borrar (int id);
 }
 }

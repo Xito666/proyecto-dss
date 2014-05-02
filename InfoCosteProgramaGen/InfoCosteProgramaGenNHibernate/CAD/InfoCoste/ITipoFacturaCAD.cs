@@ -27,5 +27,8 @@ TipoFacturaEN LeerPorOID (int id);
 
 
 System.Collections.Generic.IList<InfoCosteProgramaGenNHibernate.EN.InfoCoste.TipoFacturaEN> LeerPorFecha (Nullable<DateTime> fechaFiltro);
+
+
+void Borrar (int id);
 }
 }

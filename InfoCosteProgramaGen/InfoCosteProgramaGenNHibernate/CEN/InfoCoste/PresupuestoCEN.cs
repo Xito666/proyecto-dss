@@ -71,5 +71,10 @@ public PresupuestoEN LeerPorOID (int id)
         presupuestoEN = _IPresupuestoCAD.LeerPorOID (id);
         return presupuestoEN;
 }
+
+public void Borrar (int id)
+{
+        _IPresupuestoCAD.Borrar (id);
+}
 }
 }

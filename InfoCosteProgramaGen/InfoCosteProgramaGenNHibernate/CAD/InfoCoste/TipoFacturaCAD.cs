@@ -221,5 +221,28 @@ public System.Collections.Generic.IList<InfoCosteProgramaGenNHibernate.EN.InfoCo
 
         return result;
 }
+public void Borrar (int id)
+{
+        try
+        {
+                SessionInitializeTransaction ();
+                TipoFacturaEN tipoFacturaEN = (TipoFacturaEN)session.Load (typeof(TipoFacturaEN), id);
+                session.Delete (tipoFacturaEN);
+                SessionCommit ();
+        }
+
+        catch (Exception ex) {
+                SessionRollBack ();
+                if (ex is InfoCosteProgramaGenNHibernate.Exceptions.ModelException)
+                        throw ex;
+                throw new InfoCosteProgramaGenNHibernate.Exceptions.DataLayerException ("Error in TipoFacturaCAD.", ex);
+        }
+
+
+        finally
+        {
+                SessionClose ();
+        }
+}
 }
 }

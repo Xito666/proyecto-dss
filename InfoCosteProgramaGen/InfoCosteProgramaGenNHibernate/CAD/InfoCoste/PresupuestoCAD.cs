@@ -138,5 +138,29 @@ public PresupuestoEN LeerPorOID (int id)
 
         return presupuestoEN;
 }
+
+public void Borrar (int id)
+{
+        try
+        {
+                SessionInitializeTransaction ();
+                PresupuestoEN presupuestoEN = (PresupuestoEN)session.Load (typeof(PresupuestoEN), id);
+                session.Delete (presupuestoEN);
+                SessionCommit ();
+        }
+
+        catch (Exception ex) {
+                SessionRollBack ();
+                if (ex is InfoCosteProgramaGenNHibernate.Exceptions.ModelException)
+                        throw ex;
+                throw new InfoCosteProgramaGenNHibernate.Exceptions.DataLayerException ("Error in PresupuestoCAD.", ex);
+        }
+
+
+        finally
+        {
+                SessionClose ();
+        }
+}
 }
 }

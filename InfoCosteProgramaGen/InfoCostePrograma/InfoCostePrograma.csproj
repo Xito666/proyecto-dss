@@ -83,7 +83,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Credenciales.cs" />
+    <Compile Include="Credenciales.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Credenciales.Designer.cs">
       <DependentUpon>Credenciales.cs</DependentUpon>
     </Compile>

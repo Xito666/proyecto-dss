@@ -76,5 +76,9 @@ public System.Collections.Generic.IList<InfoCosteProgramaGenNHibernate.EN.InfoCo
 {
         return _ITipoFacturaCAD.LeerPorFecha (fechaFiltro);
 }
+public void Borrar (int id)
+{
+        _ITipoFacturaCAD.Borrar (id);
+}
 }
 }

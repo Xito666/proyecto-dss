@@ -15,5 +15,8 @@ System.Collections.Generic.IList<PresupuestoEN> LeerTodos (int first, int size);
 
 
 PresupuestoEN LeerPorOID (int id);
+
+
+void Borrar (int id);
 }
 }

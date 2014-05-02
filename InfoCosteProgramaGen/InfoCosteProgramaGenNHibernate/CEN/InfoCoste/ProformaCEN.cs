@@ -71,5 +71,10 @@ public ProformaEN LeerPorOID (int id)
         proformaEN = _IProformaCAD.LeerPorOID (id);
         return proformaEN;
 }
+
+public void Borrar (int id)
+{
+        _IProformaCAD.Borrar (id);
+}
 }
 }
