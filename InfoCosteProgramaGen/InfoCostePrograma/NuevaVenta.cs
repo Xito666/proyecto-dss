@@ -191,8 +191,6 @@ namespace InfoCostePrograma
                 }
                 pcCEN.AnyadirLinea(pcEN.Id, listaID);
 
-                MessageBox.Show(pcEN.Id.ToString());
-
                 if (radioButton1.Checked) // factura
                 {
                     new FacturaCEN().Factura(pcEN.Id, DateTime.Now, "contado", pcEN.Id, true);
