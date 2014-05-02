@@ -54,5 +54,19 @@ namespace InfoCosteProgramaGenNHibernate.CP
 
             return c;
         }
+
+        public void aumentarStockDePedido(int id) 
+        {
+            SessionInitializeTransaction();
+            // recorrer todos los productos para aumenta stock (meter en CP)
+            PedidoClienteEN pcEN = new PedidoClienteCEN().LeerPorOID(id);
+            foreach (LineaPedidoEN lp in pcEN.LineaPedido)
+            {
+                int n = lp.Producto.Stock;
+                new ProductoCEN().SetStock(lp.Producto.Id, n + 1);
+            }
+            SessionCommit();
+        }
+
     }
 }

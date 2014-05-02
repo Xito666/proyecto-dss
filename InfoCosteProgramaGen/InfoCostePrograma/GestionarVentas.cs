@@ -26,6 +26,11 @@ namespace InfoCostePrograma
             DataGridViewRow current = dataGridView_GestionarVentas.CurrentRow;
 
             InfoCosteProgramaGenNHibernate.CEN.InfoCoste.PedidoClienteCEN ccen = new InfoCosteProgramaGenNHibernate.CEN.InfoCoste.PedidoClienteCEN();
+
+            LineaPedidoCP cp = new LineaPedidoCP();
+            //cp.aumentarStockDePedido(Convert.ToInt32(current.Cells[0].Value));
+            
+            
             ccen.Borrar(Convert.ToInt32(current.Cells[0].Value));
 
             try {
