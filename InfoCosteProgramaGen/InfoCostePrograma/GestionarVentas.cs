@@ -120,5 +120,11 @@ namespace InfoCostePrograma
 
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            GraficoVentas g = new GraficoVentas();
+            g.ShowDialog();
+        }
+
     }
 }
