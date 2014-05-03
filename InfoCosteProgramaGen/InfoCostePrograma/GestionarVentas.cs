@@ -28,7 +28,7 @@ namespace InfoCostePrograma
             InfoCosteProgramaGenNHibernate.CEN.InfoCoste.PedidoClienteCEN ccen = new InfoCosteProgramaGenNHibernate.CEN.InfoCoste.PedidoClienteCEN();
 
             LineaPedidoCP cp = new LineaPedidoCP();
-            //cp.aumentarStockDePedido(Convert.ToInt32(current.Cells[0].Value));
+            cp.aumentarStockDePedido(Convert.ToInt32(current.Cells[0].Value));
             
             
             ccen.Borrar(Convert.ToInt32(current.Cells[0].Value));
@@ -124,6 +124,19 @@ namespace InfoCostePrograma
         {
             GraficoVentas g = new GraficoVentas();
             g.ShowDialog();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            PedidoClienteEN pedido = new PedidoClienteCEN().LeerPorOID(
+                Convert.ToInt32(dataGridView_GestionarVentas.Rows[
+            dataGridView_GestionarVentas.SelectedCells[0].RowIndex].Cells[0].Value.ToString())
+                );
+
+
+            Printable p = new Printable(pedido);
+
+            MessageBox.Show(p.ToString());
         }
 
     }
