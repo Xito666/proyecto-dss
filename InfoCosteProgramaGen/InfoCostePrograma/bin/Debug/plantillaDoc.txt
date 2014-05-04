@@ -1,9 +1,9 @@
 InfoCoste Alicante Centro			{clienteNombre}
 CIF: 66666666X 667888333			CIF/NIF:{clienteCif} {ClienteTelf}
-C\ Álvarez Sereix 3				{clienteDireccion}
+C\ Alvarez Sereix 3				{clienteDireccion}
 alicantecentro@info-coste.com			{clienteEmail}
 
-Documento num: {idDocumento}
+Documento num: {idDocumento} {tipoDoc}
 =============================================================
 COD	DESC			UD	DESC%	PRECIO	TOTAL
 -------------------------------------------------------------

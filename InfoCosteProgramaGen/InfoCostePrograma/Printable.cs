@@ -20,23 +20,26 @@ namespace InfoCostePrograma
         List<List<String>> lineasPedido;
         String plantilla;
         String documento;
+        String tipoDoc;
         
         public Printable(PedidoClienteEN pedido)
         {
-            LineaPedidoCP cp = new LineaPedidoCP();
-
             this.idDocumento = pedido.Id;
-            cp = new LineaPedidoCP();
+            LineaPedidoCP cp = new LineaPedidoCP();
             this.cliente = cp.getClienteDePedido(pedido.Id);
             this.fecha = DateTime.Parse(pedido.Fecha.ToString());
             cp = new LineaPedidoCP();
             lineasPedido = cp.getLineasPedidoPorId(pedido.Id);
             plantilla = new StreamReader("plantillaDoc.txt").ReadToEnd();
+            tipoDoc = NuevaVenta.obtenerFacturaTipada(pedido.Id).GetType().ToString()
+                        .Replace("InfoCosteProgramaGenNHibernate.EN.InfoCoste.", "");
+            tipoDoc = tipoDoc.Substring(0, tipoDoc.Length-2);
+             
             documento = parseDoc();
 
         }
 
-        public String parseDoc()
+        String parseDoc()
         {
             documento = plantilla;
 
@@ -46,6 +49,7 @@ namespace InfoCostePrograma
             documento = documento.Replace("{clienteDireccion}", cliente.Direccion.ToString());
             documento = documento.Replace("{clienteEmail}", cliente.Email.ToString());
             documento = documento.Replace("{idDocumento}", idDocumento.ToString());
+            documento = documento.Replace("{tipoDoc}", tipoDoc);
 
             String l = "";
 
