@@ -136,7 +136,7 @@ namespace InfoCostePrograma
 
             Printable p = new Printable(pedido);
 
-            MessageBox.Show(p.ToString());
+            p.Print();
         }
 
     }

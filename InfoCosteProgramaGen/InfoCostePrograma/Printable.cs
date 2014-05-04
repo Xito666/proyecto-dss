@@ -14,7 +14,6 @@ namespace InfoCostePrograma
 {
     public class Printable
     {
-     
         int idDocumento;
         ClienteEN cliente;
         DateTime fecha;
@@ -26,7 +25,7 @@ namespace InfoCostePrograma
         {
             LineaPedidoCP cp = new LineaPedidoCP();
 
-            this.idDocumento = cp.getPedidoId(pedido.Id);
+            this.idDocumento = pedido.Id;
             cp = new LineaPedidoCP();
             this.cliente = cp.getClienteDePedido(pedido.Id);
             this.fecha = DateTime.Parse(pedido.Fecha.ToString());
@@ -44,9 +43,18 @@ namespace InfoCostePrograma
             documento = documento.Replace("{clienteNombre}", cliente.NombreCompleto);
             documento = documento.Replace("{clienteCif}", cliente.Id);
             documento = documento.Replace("{ClienteTelf}", cliente.Telefono.ToString());
-            documento = documento.Replace("{ClienteDireccion}", cliente.Telefono.ToString());
-            documento = documento.Replace("{ClienteEmail}", cliente.Telefono.ToString());
+            documento = documento.Replace("{clienteDireccion}", cliente.Direccion.ToString());
+            documento = documento.Replace("{clienteEmail}", cliente.Email.ToString());
             documento = documento.Replace("{idDocumento}", idDocumento.ToString());
+
+            String l = "";
+
+            foreach(List<String> linea in lineasPedido)
+            {
+                l += linea[0] + "\t" + (linea[2]+"                ").Substring(0,15) + "\t\t" + linea[1] + "\t" + linea[3] + "\t" + linea[4] + "\t" + linea[5] + "\r\n";
+            }
+
+            documento = documento.Replace("{linea}", l);
 
             return documento;
         }
@@ -58,7 +66,12 @@ namespace InfoCostePrograma
 
         public void Print()
         {
+            StreamWriter file = new StreamWriter("docu.txt");
+            file.Write(ToString());
+            file.Close();
 
+            System.Diagnostics.ProcessStartInfo proceso = new System.Diagnostics.ProcessStartInfo("notepad.exe", "docu.txt");
+            System.Diagnostics.Process p = System.Diagnostics.Process.Start(proceso);
         }
     }
 }

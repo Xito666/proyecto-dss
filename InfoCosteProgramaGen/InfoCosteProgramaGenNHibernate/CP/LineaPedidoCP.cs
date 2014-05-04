@@ -69,14 +69,6 @@ namespace InfoCosteProgramaGenNHibernate.CP
             SessionCommit();
         }
 
-        public int getPedidoId(int idPedido)
-        {
-            int id = 0;
-
-
-
-            return id;
-        }
 
     }
 }

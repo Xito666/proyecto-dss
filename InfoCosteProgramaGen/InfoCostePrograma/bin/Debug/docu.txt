@@ -1,0 +1,16 @@
+InfoCoste Alicante Centro			Pepe Teruel García
+CIF: 66666666X 667888333			CIF/NIF:3 658897812
+C\ �lvarez Sereix 3				C\ de la Piruleta
+alicantecentro@info-coste.com			pepe@gmail.com
+
+Documento num: 9
+=============================================================
+COD	DESC			UD	DESC%	PRECIO	TOTAL
+-------------------------------------------------------------
+2	Asus LED21AHD  		1	0	79	79
+4	bq Aquaris 5 HD		1	0	199	199
+3	Motorola Moto G		1	0	149	149
+
+=============================================================
+
+Para cualquier reclamacion es imprescindible el presente documento.
