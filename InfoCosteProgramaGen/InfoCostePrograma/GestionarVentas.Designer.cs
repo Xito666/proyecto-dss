@@ -147,13 +147,15 @@
             // 
             // button5
             // 
-            this.button5.Image = global::InfoCostePrograma.Properties.Resources.Buscar;
+            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
+            this.button5.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.button5.Location = new System.Drawing.Point(271, 299);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(70, 70);
             this.button5.TabIndex = 18;
             this.button5.Text = "Imprimir";
             this.button5.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 

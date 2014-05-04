@@ -64,6 +64,8 @@ namespace InfoCostePrograma
                
                 }
 
+                this.DialogResult = DialogResult.OK;
+
                 this.Close();
             }
         }

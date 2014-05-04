@@ -42,7 +42,8 @@ namespace InfoCostePrograma
         private void button1_Click_1(object sender, EventArgs e)
         {
             NuevoTrabajador nt = new NuevoTrabajador();
-            nt.Show();
+            if (nt.ShowDialog() == DialogResult.OK)
+                GestionarTrabajadores_Load(null, null);
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -62,7 +63,8 @@ namespace InfoCostePrograma
             DataGridViewRow current = dataGridView_GestionarTrabajadores.CurrentRow;
 
             NuevoTrabajador nt = new NuevoTrabajador(Convert.ToInt32(current.Cells[0].Value));
-            nt.Show();
+            if (nt.ShowDialog() == DialogResult.OK)
+                GestionarTrabajadores_Load(null, null);
         }
 
         private void button4_Click(object sender, EventArgs e)
