@@ -9,22 +9,16 @@ using System.Windows.Forms;
 
 namespace InfoCostePrograma
 {
-    public partial class GestionarPartes : Form
+    public partial class NuevoParte : Form
     {
-        public GestionarPartes()
+        public NuevoParte()
         {
             InitializeComponent();
         }
 
-        private void GestionarPartes_Load(object sender, EventArgs e)
+        private void label2_Click(object sender, EventArgs e)
         {
 
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            NuevoParte parte= new NuevoParte();
-            parte.Show();
         }
     }
 }
