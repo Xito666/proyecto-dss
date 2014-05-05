@@ -11,13 +11,13 @@ public partial class ClienteEmpresaEN                   :                       
  *
  */
 
-private int numeroCuenta;
+private string numeroCuenta;
 
 
 
 
 
-public virtual int NumeroCuenta {
+public virtual string NumeroCuenta {
         get { return numeroCuenta; } set { numeroCuenta = value;  }
 }
 
@@ -31,7 +31,7 @@ public ClienteEmpresaEN() : base ()
 
 
 
-public ClienteEmpresaEN(string id, int numeroCuenta, string direccion, int telefono, string email, System.Collections.Generic.IList<InfoCosteProgramaGenNHibernate.EN.InfoCoste.ParteIntervencionEN> parteIntervencion, System.Collections.Generic.IList<InfoCosteProgramaGenNHibernate.EN.InfoCoste.PedidoClienteEN> pedidoCliente, string nombreCompleto)
+public ClienteEmpresaEN(string id, string numeroCuenta, string direccion, int telefono, string email, System.Collections.Generic.IList<InfoCosteProgramaGenNHibernate.EN.InfoCoste.ParteIntervencionEN> parteIntervencion, System.Collections.Generic.IList<InfoCosteProgramaGenNHibernate.EN.InfoCoste.PedidoClienteEN> pedidoCliente, string nombreCompleto)
 {
         this.init (id, numeroCuenta, direccion, telefono, email, parteIntervencion, pedidoCliente, nombreCompleto);
 }
@@ -42,7 +42,7 @@ public ClienteEmpresaEN(ClienteEmpresaEN clienteEmpresa)
         this.init (clienteEmpresa.Id, clienteEmpresa.NumeroCuenta, clienteEmpresa.Direccion, clienteEmpresa.Telefono, clienteEmpresa.Email, clienteEmpresa.ParteIntervencion, clienteEmpresa.PedidoCliente, clienteEmpresa.NombreCompleto);
 }
 
-private void init (string id, int numeroCuenta, string direccion, int telefono, string email, System.Collections.Generic.IList<InfoCosteProgramaGenNHibernate.EN.InfoCoste.ParteIntervencionEN> parteIntervencion, System.Collections.Generic.IList<InfoCosteProgramaGenNHibernate.EN.InfoCoste.PedidoClienteEN> pedidoCliente, string nombreCompleto)
+private void init (string id, string numeroCuenta, string direccion, int telefono, string email, System.Collections.Generic.IList<InfoCosteProgramaGenNHibernate.EN.InfoCoste.ParteIntervencionEN> parteIntervencion, System.Collections.Generic.IList<InfoCosteProgramaGenNHibernate.EN.InfoCoste.PedidoClienteEN> pedidoCliente, string nombreCompleto)
 {
         this.Id = id;
 

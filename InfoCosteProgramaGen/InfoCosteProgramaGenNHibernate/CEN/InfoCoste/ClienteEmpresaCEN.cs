@@ -32,7 +32,7 @@ public IClienteEmpresaCAD get_IClienteEmpresaCAD ()
         return this._IClienteEmpresaCAD;
 }
 
-public string ClienteEmpresa (string p_id, string p_direccion, int p_telefono, string p_email, string p_nombreCompleto, int p_numeroCuenta)
+public string ClienteEmpresa (string p_id, string p_direccion, int p_telefono, string p_email, string p_nombreCompleto, string p_numeroCuenta)
 {
         ClienteEmpresaEN clienteEmpresaEN = null;
         string oid;

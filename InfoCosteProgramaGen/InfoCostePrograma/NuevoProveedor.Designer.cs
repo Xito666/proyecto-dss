@@ -36,6 +36,8 @@
             this.textBox_Nombre = new System.Windows.Forms.TextBox();
             this.label_Direccion = new System.Windows.Forms.Label();
             this.label_Nombre = new System.Windows.Forms.Label();
+            this.textBox_ID = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button2
@@ -50,7 +52,7 @@
             // 
             // textBox_Email
             // 
-            this.textBox_Email.Location = new System.Drawing.Point(129, 99);
+            this.textBox_Email.Location = new System.Drawing.Point(129, 135);
             this.textBox_Email.Name = "textBox_Email";
             this.textBox_Email.Size = new System.Drawing.Size(138, 20);
             this.textBox_Email.TabIndex = 31;
@@ -58,7 +60,7 @@
             // label_Email
             // 
             this.label_Email.AutoSize = true;
-            this.label_Email.Location = new System.Drawing.Point(76, 102);
+            this.label_Email.Location = new System.Drawing.Point(76, 138);
             this.label_Email.Name = "label_Email";
             this.label_Email.Size = new System.Drawing.Size(35, 13);
             this.label_Email.TabIndex = 30;
@@ -75,14 +77,14 @@
             // 
             // textBox_Direccion
             // 
-            this.textBox_Direccion.Location = new System.Drawing.Point(129, 61);
+            this.textBox_Direccion.Location = new System.Drawing.Point(129, 97);
             this.textBox_Direccion.Name = "textBox_Direccion";
             this.textBox_Direccion.Size = new System.Drawing.Size(138, 20);
             this.textBox_Direccion.TabIndex = 27;
             // 
             // textBox_Nombre
             // 
-            this.textBox_Nombre.Location = new System.Drawing.Point(129, 24);
+            this.textBox_Nombre.Location = new System.Drawing.Point(129, 60);
             this.textBox_Nombre.Name = "textBox_Nombre";
             this.textBox_Nombre.Size = new System.Drawing.Size(138, 20);
             this.textBox_Nombre.TabIndex = 26;
@@ -90,7 +92,7 @@
             // label_Direccion
             // 
             this.label_Direccion.AutoSize = true;
-            this.label_Direccion.Location = new System.Drawing.Point(56, 64);
+            this.label_Direccion.Location = new System.Drawing.Point(56, 100);
             this.label_Direccion.Name = "label_Direccion";
             this.label_Direccion.Size = new System.Drawing.Size(55, 13);
             this.label_Direccion.TabIndex = 24;
@@ -99,17 +101,35 @@
             // label_Nombre
             // 
             this.label_Nombre.AutoSize = true;
-            this.label_Nombre.Location = new System.Drawing.Point(64, 27);
+            this.label_Nombre.Location = new System.Drawing.Point(64, 63);
             this.label_Nombre.Name = "label_Nombre";
             this.label_Nombre.Size = new System.Drawing.Size(47, 13);
             this.label_Nombre.TabIndex = 23;
             this.label_Nombre.Text = "Nombre:";
+            // 
+            // textBox_ID
+            // 
+            this.textBox_ID.Location = new System.Drawing.Point(129, 24);
+            this.textBox_ID.Name = "textBox_ID";
+            this.textBox_ID.Size = new System.Drawing.Size(138, 20);
+            this.textBox_ID.TabIndex = 36;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(90, 27);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(21, 13);
+            this.label2.TabIndex = 35;
+            this.label2.Text = "ID:";
             // 
             // NuevoProveedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(292, 256);
+            this.Controls.Add(this.textBox_ID);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.textBox_Email);
             this.Controls.Add(this.label_Email);
@@ -140,5 +160,7 @@
         private System.Windows.Forms.TextBox textBox_Nombre;
         private System.Windows.Forms.Label label_Direccion;
         private System.Windows.Forms.Label label_Nombre;
+        private System.Windows.Forms.TextBox textBox_ID;
+        private System.Windows.Forms.Label label2;
     }
 }

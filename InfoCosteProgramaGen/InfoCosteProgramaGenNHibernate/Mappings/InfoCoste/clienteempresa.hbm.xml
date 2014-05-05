@@ -8,7 +8,7 @@
     		<column name="[id]"/>
    	</key>
 
-					<property name="NumeroCuenta" type="integer"> 
+					<property name="NumeroCuenta" type="string"> 
 						<column name="[numeroCuenta]"  not-null="true"/>
 					</property>
 			

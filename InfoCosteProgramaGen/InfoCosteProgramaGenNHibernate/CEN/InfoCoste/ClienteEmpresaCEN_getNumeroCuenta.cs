@@ -14,7 +14,7 @@ namespace InfoCosteProgramaGenNHibernate.CEN.InfoCoste
 {
 public partial class ClienteEmpresaCEN
 {
-public int GetNumeroCuenta ()
+public string GetNumeroCuenta ()
 {
         /*PROTECTED REGION ID(InfoCosteProgramaGenNHibernate.CEN.InfoCoste_ClienteEmpresa_getNumeroCuenta) ENABLED START*/
 

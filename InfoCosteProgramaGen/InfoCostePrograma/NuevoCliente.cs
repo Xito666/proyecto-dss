@@ -105,8 +105,8 @@ namespace InfoCostePrograma
                     {
                         if (checkBox_Empresa.Checked)
                         {
-                            int nCuenta = 0;
-                            try { nCuenta = Convert.ToInt32(textBox_NumCuenta.Text); }
+                            String nCuenta = "";
+                            try { nCuenta = textBox_NumCuenta.Text; }
                             catch (Exception ex) { };
                             InfoCosteProgramaGenNHibernate.CEN.InfoCoste.ClienteEmpresaCEN ceCEN = new InfoCosteProgramaGenNHibernate.CEN.InfoCoste.ClienteEmpresaCEN();
                             ceCEN.ClienteEmpresa(textBox_ID.Text,
@@ -137,7 +137,7 @@ namespace InfoCostePrograma
                         if(checkBox_Empresa.Checked)
                         {
                             InfoCosteProgramaGenNHibernate.CEN.InfoCoste.ClienteEmpresaCEN ceCEN = new InfoCosteProgramaGenNHibernate.CEN.InfoCoste.ClienteEmpresaCEN();
-                            ceCEN.SetNumeroCuenta(id,Convert.ToInt32(textBox_NumCuenta.Text));
+                            ceCEN.SetNumeroCuenta(id,textBox_NumCuenta.Text);
                         
                         }
                     }

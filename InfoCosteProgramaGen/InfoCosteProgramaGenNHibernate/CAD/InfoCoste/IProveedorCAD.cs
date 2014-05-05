@@ -30,5 +30,8 @@ ProveedorEN LeerPorOID (string id);
 
 
 System.Collections.Generic.IList<InfoCosteProgramaGenNHibernate.EN.InfoCoste.ProveedorEN> LeerPorNombre (string nombreFiltro);
+
+
+void Borrar (string id);
 }
 }

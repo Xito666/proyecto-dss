@@ -12,7 +12,6 @@ C:\Users\Xito\Desktop\proyecto-dss\InfoCosteProgramaGen\InfoCosteProgramaGenNHib
 C:\Users\Xito\Desktop\proyecto-dss\InfoCosteProgramaGen\InfoCosteProgramaGenNHibernate\bin\Debug\log4net.dll
 C:\Users\Xito\Desktop\proyecto-dss\InfoCosteProgramaGen\InfoCosteProgramaGenNHibernate\obj\Debug\InfoCosteProgramaGenNHibernate.dll
 C:\Users\Xito\Desktop\proyecto-dss\InfoCosteProgramaGen\InfoCosteProgramaGenNHibernate\obj\Debug\InfoCosteProgramaGenNHibernate.pdb
-C:\Users\Xito\Desktop\proyecto-dss\InfoCosteProgramaGen\InfoCosteProgramaGenNHibernate\obj\Debug\InfoCosteProgramaGenNHibernate.csprojResolveAssemblyReference.cache
 C:\Documents and Settings\ooh4riaUser\My Documents\GitHub\proyecto-dss\InfoCosteProgramaGen\InfoCosteProgramaGenNHibernate\bin\Debug\hibernate.cfg.xml
 C:\Documents and Settings\ooh4riaUser\My Documents\GitHub\proyecto-dss\InfoCosteProgramaGen\InfoCosteProgramaGenNHibernate\bin\Debug\InfoCosteProgramaGenNHibernate.dll.config
 C:\Documents and Settings\ooh4riaUser\My Documents\GitHub\proyecto-dss\InfoCosteProgramaGen\InfoCosteProgramaGenNHibernate\bin\Debug\InfoCosteProgramaGenNHibernate.dll

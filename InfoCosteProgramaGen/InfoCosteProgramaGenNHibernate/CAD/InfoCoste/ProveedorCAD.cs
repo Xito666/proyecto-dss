@@ -242,5 +242,28 @@ public System.Collections.Generic.IList<InfoCosteProgramaGenNHibernate.EN.InfoCo
 
         return result;
 }
+public void Borrar (string id)
+{
+        try
+        {
+                SessionInitializeTransaction ();
+                ProveedorEN proveedorEN = (ProveedorEN)session.Load (typeof(ProveedorEN), id);
+                session.Delete (proveedorEN);
+                SessionCommit ();
+        }
+
+        catch (Exception ex) {
+                SessionRollBack ();
+                if (ex is InfoCosteProgramaGenNHibernate.Exceptions.ModelException)
+                        throw ex;
+                throw new InfoCosteProgramaGenNHibernate.Exceptions.DataLayerException ("Error in ProveedorCAD.", ex);
+        }
+
+
+        finally
+        {
+                SessionClose ();
+        }
+}
 }
 }
