@@ -45,6 +45,7 @@ namespace InfoCostePrograma
 
         private void button1_Click(object sender, EventArgs e)
         {
+            //nuevo prov
             NuevoProveedor np = new NuevoProveedor();
             np.Show();
         }
