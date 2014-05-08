@@ -18,7 +18,7 @@
 			
 		  			
 					
-							<many-to-one name="TipoFactura" class="InfoCosteProgramaGenNHibernate.EN.InfoCoste.TipoFacturaEN" >
+							<many-to-one name="TipoFactura" class="InfoCosteProgramaGenNHibernate.EN.InfoCoste.TipoFacturaEN" cascade="delete">
 								<column name="[FK_id_idTipoFactura]"/>
         					</many-to-one>
 					 

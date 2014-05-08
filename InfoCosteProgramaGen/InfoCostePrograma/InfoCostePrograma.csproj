@@ -149,6 +149,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>InfoCosteProgramaGenNHibernateDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="InvoiceUtils.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>

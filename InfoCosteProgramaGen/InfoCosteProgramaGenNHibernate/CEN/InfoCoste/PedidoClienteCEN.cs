@@ -84,5 +84,18 @@ public void Borrar (int id)
 {
         _IPedidoClienteCAD.Borrar (id);
 }
+
+public void BorrarTipoFactura (int p_PedidoCliente_OID, int p_tipoFactura_OID)
+{
+        //Call to PedidoClienteCAD
+
+        _IPedidoClienteCAD.BorrarTipoFactura (p_PedidoCliente_OID, p_tipoFactura_OID);
+}
+public void NuevoTipoFactura (int p_PedidoCliente_OID, int p_tipoFactura_OID)
+{
+        //Call to PedidoClienteCAD
+
+        _IPedidoClienteCAD.NuevoTipoFactura (p_PedidoCliente_OID, p_tipoFactura_OID);
+}
 }
 }

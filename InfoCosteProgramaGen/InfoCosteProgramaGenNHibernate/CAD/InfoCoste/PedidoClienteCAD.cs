@@ -332,5 +332,70 @@ public void Borrar (int id)
                 SessionClose ();
         }
 }
+
+public void BorrarTipoFactura (int p_PedidoCliente_OID, int p_tipoFactura_OID)
+{
+        try
+        {
+                SessionInitializeTransaction ();
+                InfoCosteProgramaGenNHibernate.EN.InfoCoste.PedidoClienteEN pedidoClienteEN = null;
+                pedidoClienteEN = (PedidoClienteEN)session.Load (typeof(PedidoClienteEN), p_PedidoCliente_OID);
+
+                if (pedidoClienteEN.TipoFactura.Id == p_tipoFactura_OID) {
+                        pedidoClienteEN.TipoFactura = null;
+                        InfoCosteProgramaGenNHibernate.EN.InfoCoste.TipoFacturaEN tipoFacturaEN = (InfoCosteProgramaGenNHibernate.EN.InfoCoste.TipoFacturaEN)session.Load (typeof(InfoCosteProgramaGenNHibernate.EN.InfoCoste.TipoFacturaEN), p_tipoFactura_OID);
+                        tipoFacturaEN.PedidoCliente = null;
+                }
+                else
+                        throw new ModelException ("The identifier " + p_tipoFactura_OID + " in p_tipoFactura_OID you are trying to unrelationer, doesn't exist in PedidoClienteEN");
+
+                session.Update (pedidoClienteEN);
+                SessionCommit ();
+        }
+
+        catch (Exception ex) {
+                SessionRollBack ();
+                if (ex is InfoCosteProgramaGenNHibernate.Exceptions.ModelException)
+                        throw ex;
+                throw new InfoCosteProgramaGenNHibernate.Exceptions.DataLayerException ("Error in PedidoClienteCAD.", ex);
+        }
+
+
+        finally
+        {
+                SessionClose ();
+        }
+}
+public void NuevoTipoFactura (int p_PedidoCliente_OID, int p_tipoFactura_OID)
+{
+        InfoCosteProgramaGenNHibernate.EN.InfoCoste.PedidoClienteEN pedidoClienteEN = null;
+        try
+        {
+                SessionInitializeTransaction ();
+                pedidoClienteEN = (PedidoClienteEN)session.Load (typeof(PedidoClienteEN), p_PedidoCliente_OID);
+                pedidoClienteEN.TipoFactura = (InfoCosteProgramaGenNHibernate.EN.InfoCoste.TipoFacturaEN)session.Load (typeof(InfoCosteProgramaGenNHibernate.EN.InfoCoste.TipoFacturaEN), p_tipoFactura_OID);
+
+                pedidoClienteEN.TipoFactura.PedidoCliente = pedidoClienteEN;
+
+
+
+
+                session.Update (pedidoClienteEN);
+                SessionCommit ();
+        }
+
+        catch (Exception ex) {
+                SessionRollBack ();
+                if (ex is InfoCosteProgramaGenNHibernate.Exceptions.ModelException)
+                        throw ex;
+                throw new InfoCosteProgramaGenNHibernate.Exceptions.DataLayerException ("Error in PedidoClienteCAD.", ex);
+        }
+
+
+        finally
+        {
+                SessionClose ();
+        }
+}
 }
 }

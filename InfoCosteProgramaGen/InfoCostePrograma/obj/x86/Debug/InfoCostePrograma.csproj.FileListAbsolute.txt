@@ -237,3 +237,4 @@ C:\Users\Xito\Desktop\proyecto-dss\InfoCosteProgramaGen\InfoCostePrograma\bin\De
 C:\Users\Dani\Desktop\proyecto-dss-master\nuevo\proyecto-dss\InfoCosteProgramaGen\InfoCostePrograma\bin\Debug\InfoCostePrograma.exe.config
 C:\Users\Dani\Desktop\proyecto-dss-master\nuevo\proyecto-dss\InfoCosteProgramaGen\InfoCostePrograma\obj\x86\Debug\InfoCostePrograma.exe
 C:\Users\Dani\Desktop\proyecto-dss-master\nuevo\proyecto-dss\InfoCosteProgramaGen\InfoCostePrograma\obj\x86\Debug\InfoCostePrograma.pdb
+C:\Users\Xito\Desktop\proyecto-dss\InfoCosteProgramaGen\InfoCostePrograma\obj\x86\Debug\InfoCostePrograma.NuevoParte.resources

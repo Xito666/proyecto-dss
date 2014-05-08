@@ -1565,3 +1565,788 @@ enc:utf-8
 ../InfoCosteProgramaGen\InfoCosteProgramaGenNHibernate\AppLib\nunit.core.dll
 ../InfoCosteProgramaGen\InfoCosteProgramaGenNHibernate\AppLib\nunit.framework.dll
 10181 [main] INFO  eclipse.emf.mwe.core.WorkflowEngine  - workflow completed in 8884ms!
+0    [main] INFO  eclipse.emf.mwe.core.WorkflowEngine  - --------------------------------------------------------------------------------------
+4    [main] INFO  eclipse.emf.mwe.core.WorkflowEngine  - EMF Modeling Workflow Engine 1.2.1, Build v201306110341
+5    [main] INFO  eclipse.emf.mwe.core.WorkflowEngine  - (c) 2005-2009 openarchitectureware.org and contributors
+5    [main] INFO  eclipse.emf.mwe.core.WorkflowEngine  - --------------------------------------------------------------------------------------
+5    [main] INFO  eclipse.emf.mwe.core.WorkflowEngine  - running workflow: C:/Users/Xito/Desktop/proyecto-dss/InfoCostePrograma/templates/workflow/generator.mwe
+5    [main] INFO  eclipse.emf.mwe.core.WorkflowEngine  - 
+772  [main] INFO  lipse.emf.mwe.utils.StandaloneSetup  - Registering platform uri 'C:\Users\Xito\Desktop\proyecto-dss'
+995  [main] INFO  lipse.emf.mwe.utils.StandaloneSetup  - Adding generated EPackage 'es.ua.dlsi.ooh.conceptualView.ConceptualViewPackage'
+1175 [main] INFO  lipse.emf.mwe.utils.StandaloneSetup  - Adding generated EPackage 'org.eclipse.gmf.runtime.notation.NotationPackage'
+1419 [main] INFO  e.core.container.CompositeComponent  - Workflow: executing workflow workflow::nhibernate::generator.mwe in C:/Users/Xito/Desktop/proyecto-dss/InfoCostePrograma/templates/workflow/generator.mwe:10
+1419 [main] INFO  e.core.container.CompositeComponent  - XmiReader: file 'models/default.domainModel' => slot 'es_ua_dlsi_ooh_conceptual_model'
+1948 [main] INFO  e.core.container.CompositeComponent  - CheckComponent: slot es_ua_dlsi_ooh_conceptual_model check file(s): metamodel::Checks 
+2953 [main] INFO  e.core.container.CompositeComponent  - Generator(nhibernate.generator): generating 'workflow::nhibernate::workflow::main FOR true' => [../InfoCosteProgramaGen, CONFIGURATION:../InfoCosteProgramaGen(overwrite=false,append=false,fileEncoding=utf-8)]
+configuroConf:C:\Users\Xito\AppData\Local\Temp\OOH4RIA4617301744811324708.cfg
+enc:utf-8
+3223 [main] INFO  and2.pr.ProtectedRegionResolverImpl  - Source scan started ...
+3854 [main] INFO  and2.pr.ProtectedRegionResolverImpl  - Source scan finished in 0.63s
+3854 [main] INFO  and2.pr.ProtectedRegionResolverImpl  - Files scanned: 343
+3854 [main] INFO  and2.pr.ProtectedRegionResolverImpl  - Regions found: 60
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+10895 [main] INFO         org.eclipse.xpand2.Generator  - Written 163 files to outlet [default](../InfoCosteProgramaGen)
+10895 [main] INFO         org.eclipse.xpand2.Generator  - Skipped writing of 25 files to outlet [default](../InfoCosteProgramaGen)
+10895 [main] INFO  e.core.container.CompositeComponent  - es.ua.dlsi.ooh.persistence.nhibernate.generator.workflowComponents.CreateSolution
+10916 [main] INFO  e.core.container.CompositeComponent  - es.ua.dlsi.ooh.persistence.nhibernate.generator.workflowComponents.UpdateSolution
+10940 [main] INFO  e.core.container.CompositeComponent  - es.ua.dlsi.ooh.persistence.nhibernate.generator.workflowComponents.CopyDLLs
+../InfoCosteProgramaGen\InfoCosteProgramaGenNHibernate\AppLib\Antlr3.Runtime.dll
+../InfoCosteProgramaGen\InfoCosteProgramaGenNHibernate\AppLib\Castle.DynamicProxy2.dll
+../InfoCosteProgramaGen\InfoCosteProgramaGenNHibernate\AppLib\Iesi.Collections.dll
+../InfoCosteProgramaGen\InfoCosteProgramaGenNHibernate\AppLib\LinFu.DynamicProxy.dll
+../InfoCosteProgramaGen\InfoCosteProgramaGenNHibernate\AppLib\log4net.dll
+../InfoCosteProgramaGen\InfoCosteProgramaGenNHibernate\AppLib\NHibernate.ByteCode.Castle.dll
+../InfoCosteProgramaGen\InfoCosteProgramaGenNHibernate\AppLib\NHibernate.ByteCode.LinFu.dll
+../InfoCosteProgramaGen\InfoCosteProgramaGenNHibernate\AppLib\NHibernate.dll
+../InfoCosteProgramaGen\InfoCosteProgramaGenNHibernate\AppLib\nunit.core.dll
+../InfoCosteProgramaGen\InfoCosteProgramaGenNHibernate\AppLib\nunit.framework.dll
+10952 [main] INFO  eclipse.emf.mwe.core.WorkflowEngine  - workflow completed in 9535ms!
+0    [main] INFO  eclipse.emf.mwe.core.WorkflowEngine  - --------------------------------------------------------------------------------------
+5    [main] INFO  eclipse.emf.mwe.core.WorkflowEngine  - EMF Modeling Workflow Engine 1.2.1, Build v201306110341
+5    [main] INFO  eclipse.emf.mwe.core.WorkflowEngine  - (c) 2005-2009 openarchitectureware.org and contributors
+5    [main] INFO  eclipse.emf.mwe.core.WorkflowEngine  - --------------------------------------------------------------------------------------
+5    [main] INFO  eclipse.emf.mwe.core.WorkflowEngine  - running workflow: C:/Users/Xito/Desktop/proyecto-dss/InfoCostePrograma/templates/workflow/generator.mwe
+5    [main] INFO  eclipse.emf.mwe.core.WorkflowEngine  - 
+857  [main] INFO  lipse.emf.mwe.utils.StandaloneSetup  - Registering platform uri 'C:\Users\Xito\Desktop\proyecto-dss'
+1139 [main] INFO  lipse.emf.mwe.utils.StandaloneSetup  - Adding generated EPackage 'es.ua.dlsi.ooh.conceptualView.ConceptualViewPackage'
+1381 [main] INFO  lipse.emf.mwe.utils.StandaloneSetup  - Adding generated EPackage 'org.eclipse.gmf.runtime.notation.NotationPackage'
+1660 [main] INFO  e.core.container.CompositeComponent  - Workflow: executing workflow workflow::nhibernate::generator.mwe in C:/Users/Xito/Desktop/proyecto-dss/InfoCostePrograma/templates/workflow/generator.mwe:10
+1661 [main] INFO  e.core.container.CompositeComponent  - XmiReader: file 'models/default.domainModel' => slot 'es_ua_dlsi_ooh_conceptual_model'
+2222 [main] INFO  e.core.container.CompositeComponent  - CheckComponent: slot es_ua_dlsi_ooh_conceptual_model check file(s): metamodel::Checks 
+3230 [main] INFO  e.core.container.CompositeComponent  - Generator(nhibernate.generator): generating 'workflow::nhibernate::workflow::main FOR true' => [../InfoCosteProgramaGen, CONFIGURATION:../InfoCosteProgramaGen(overwrite=false,append=false,fileEncoding=utf-8)]
+configuroConf:C:\Users\Xito\AppData\Local\Temp\OOH4RIA8809625336343471422.cfg
+enc:utf-8
+3527 [main] INFO  and2.pr.ProtectedRegionResolverImpl  - Source scan started ...
+4183 [main] INFO  and2.pr.ProtectedRegionResolverImpl  - Source scan finished in 0.656s
+4184 [main] INFO  and2.pr.ProtectedRegionResolverImpl  - Files scanned: 343
+4184 [main] INFO  and2.pr.ProtectedRegionResolverImpl  - Regions found: 60
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+11074 [main] INFO         org.eclipse.xpand2.Generator  - Written 6 files to outlet [default](../InfoCosteProgramaGen)
+11074 [main] INFO         org.eclipse.xpand2.Generator  - Skipped writing of 183 files to outlet [default](../InfoCosteProgramaGen)
+11074 [main] INFO  e.core.container.CompositeComponent  - es.ua.dlsi.ooh.persistence.nhibernate.generator.workflowComponents.CreateSolution
+11102 [main] INFO  e.core.container.CompositeComponent  - es.ua.dlsi.ooh.persistence.nhibernate.generator.workflowComponents.UpdateSolution
+11126 [main] INFO  e.core.container.CompositeComponent  - es.ua.dlsi.ooh.persistence.nhibernate.generator.workflowComponents.CopyDLLs
+../InfoCosteProgramaGen\InfoCosteProgramaGenNHibernate\AppLib\Antlr3.Runtime.dll
+../InfoCosteProgramaGen\InfoCosteProgramaGenNHibernate\AppLib\Castle.DynamicProxy2.dll
+../InfoCosteProgramaGen\InfoCosteProgramaGenNHibernate\AppLib\Iesi.Collections.dll
+../InfoCosteProgramaGen\InfoCosteProgramaGenNHibernate\AppLib\LinFu.DynamicProxy.dll
+../InfoCosteProgramaGen\InfoCosteProgramaGenNHibernate\AppLib\log4net.dll
+../InfoCosteProgramaGen\InfoCosteProgramaGenNHibernate\AppLib\NHibernate.ByteCode.Castle.dll
+../InfoCosteProgramaGen\InfoCosteProgramaGenNHibernate\AppLib\NHibernate.ByteCode.LinFu.dll
+../InfoCosteProgramaGen\InfoCosteProgramaGenNHibernate\AppLib\NHibernate.dll
+../InfoCosteProgramaGen\InfoCosteProgramaGenNHibernate\AppLib\nunit.core.dll
+../InfoCosteProgramaGen\InfoCosteProgramaGenNHibernate\AppLib\nunit.framework.dll
+11138 [main] INFO  eclipse.emf.mwe.core.WorkflowEngine  - workflow completed in 9480ms!
+0    [main] INFO  eclipse.emf.mwe.core.WorkflowEngine  - --------------------------------------------------------------------------------------
+4    [main] INFO  eclipse.emf.mwe.core.WorkflowEngine  - EMF Modeling Workflow Engine 1.2.1, Build v201306110341
+4    [main] INFO  eclipse.emf.mwe.core.WorkflowEngine  - (c) 2005-2009 openarchitectureware.org and contributors
+4    [main] INFO  eclipse.emf.mwe.core.WorkflowEngine  - --------------------------------------------------------------------------------------
+5    [main] INFO  eclipse.emf.mwe.core.WorkflowEngine  - running workflow: C:/Users/Xito/Desktop/proyecto-dss/InfoCostePrograma/templates/workflow/generator.mwe
+5    [main] INFO  eclipse.emf.mwe.core.WorkflowEngine  - 
+854  [main] INFO  lipse.emf.mwe.utils.StandaloneSetup  - Registering platform uri 'C:\Users\Xito\Desktop\proyecto-dss'
+1074 [main] INFO  lipse.emf.mwe.utils.StandaloneSetup  - Adding generated EPackage 'es.ua.dlsi.ooh.conceptualView.ConceptualViewPackage'
+1267 [main] INFO  lipse.emf.mwe.utils.StandaloneSetup  - Adding generated EPackage 'org.eclipse.gmf.runtime.notation.NotationPackage'
+1520 [main] INFO  e.core.container.CompositeComponent  - Workflow: executing workflow workflow::nhibernate::generator.mwe in C:/Users/Xito/Desktop/proyecto-dss/InfoCostePrograma/templates/workflow/generator.mwe:10
+1520 [main] INFO  e.core.container.CompositeComponent  - XmiReader: file 'models/default.domainModel' => slot 'es_ua_dlsi_ooh_conceptual_model'
+2036 [main] INFO  e.core.container.CompositeComponent  - CheckComponent: slot es_ua_dlsi_ooh_conceptual_model check file(s): metamodel::Checks 
+3008 [main] INFO  e.core.container.CompositeComponent  - Generator(nhibernate.generator): generating 'workflow::nhibernate::workflow::main FOR true' => [../InfoCosteProgramaGen, CONFIGURATION:../InfoCosteProgramaGen(overwrite=false,append=false,fileEncoding=utf-8)]
+configuroConf:C:\Users\Xito\AppData\Local\Temp\OOH4RIA8845968452329515814.cfg
+enc:utf-8
+3284 [main] INFO  and2.pr.ProtectedRegionResolverImpl  - Source scan started ...
+3911 [main] INFO  and2.pr.ProtectedRegionResolverImpl  - Source scan finished in 0.626s
+3911 [main] INFO  and2.pr.ProtectedRegionResolverImpl  - Files scanned: 345
+3911 [main] INFO  and2.pr.ProtectedRegionResolverImpl  - Regions found: 60
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+10904 [main] INFO         org.eclipse.xpand2.Generator  - Written 6 files to outlet [default](../InfoCosteProgramaGen)
+10904 [main] INFO         org.eclipse.xpand2.Generator  - Skipped writing of 182 files to outlet [default](../InfoCosteProgramaGen)
+10904 [main] INFO  e.core.container.CompositeComponent  - es.ua.dlsi.ooh.persistence.nhibernate.generator.workflowComponents.CreateSolution
+10924 [main] INFO  e.core.container.CompositeComponent  - es.ua.dlsi.ooh.persistence.nhibernate.generator.workflowComponents.UpdateSolution
+10950 [main] INFO  e.core.container.CompositeComponent  - es.ua.dlsi.ooh.persistence.nhibernate.generator.workflowComponents.CopyDLLs
+../InfoCosteProgramaGen\InfoCosteProgramaGenNHibernate\AppLib\Antlr3.Runtime.dll
+../InfoCosteProgramaGen\InfoCosteProgramaGenNHibernate\AppLib\Castle.DynamicProxy2.dll
+../InfoCosteProgramaGen\InfoCosteProgramaGenNHibernate\AppLib\Iesi.Collections.dll
+../InfoCosteProgramaGen\InfoCosteProgramaGenNHibernate\AppLib\LinFu.DynamicProxy.dll
+../InfoCosteProgramaGen\InfoCosteProgramaGenNHibernate\AppLib\log4net.dll
+../InfoCosteProgramaGen\InfoCosteProgramaGenNHibernate\AppLib\NHibernate.ByteCode.Castle.dll
+../InfoCosteProgramaGen\InfoCosteProgramaGenNHibernate\AppLib\NHibernate.ByteCode.LinFu.dll
+../InfoCosteProgramaGen\InfoCosteProgramaGenNHibernate\AppLib\NHibernate.dll
+../InfoCosteProgramaGen\InfoCosteProgramaGenNHibernate\AppLib\nunit.core.dll
+../InfoCosteProgramaGen\InfoCosteProgramaGenNHibernate\AppLib\nunit.framework.dll
+10962 [main] INFO  eclipse.emf.mwe.core.WorkflowEngine  - workflow completed in 9444ms!
+0    [main] INFO  eclipse.emf.mwe.core.WorkflowEngine  - --------------------------------------------------------------------------------------
+3    [main] INFO  eclipse.emf.mwe.core.WorkflowEngine  - EMF Modeling Workflow Engine 1.2.1, Build v201306110341
+3    [main] INFO  eclipse.emf.mwe.core.WorkflowEngine  - (c) 2005-2009 openarchitectureware.org and contributors
+3    [main] INFO  eclipse.emf.mwe.core.WorkflowEngine  - --------------------------------------------------------------------------------------
+4    [main] INFO  eclipse.emf.mwe.core.WorkflowEngine  - running workflow: C:/Users/Xito/Desktop/proyecto-dss/InfoCostePrograma/templates/workflow/generator.mwe
+4    [main] INFO  eclipse.emf.mwe.core.WorkflowEngine  - 
+692  [main] INFO  lipse.emf.mwe.utils.StandaloneSetup  - Registering platform uri 'C:\Users\Xito\Desktop\proyecto-dss'
+903  [main] INFO  lipse.emf.mwe.utils.StandaloneSetup  - Adding generated EPackage 'es.ua.dlsi.ooh.conceptualView.ConceptualViewPackage'
+1067 [main] INFO  lipse.emf.mwe.utils.StandaloneSetup  - Adding generated EPackage 'org.eclipse.gmf.runtime.notation.NotationPackage'
+1282 [main] INFO  e.core.container.CompositeComponent  - Workflow: executing workflow workflow::nhibernate::generator.mwe in C:/Users/Xito/Desktop/proyecto-dss/InfoCostePrograma/templates/workflow/generator.mwe:10
+1282 [main] INFO  e.core.container.CompositeComponent  - XmiReader: file 'models/default.domainModel' => slot 'es_ua_dlsi_ooh_conceptual_model'
+1700 [main] INFO  e.core.container.CompositeComponent  - CheckComponent: slot es_ua_dlsi_ooh_conceptual_model check file(s): metamodel::Checks 
+2588 [main] INFO  e.core.container.CompositeComponent  - Generator(nhibernate.generator): generating 'workflow::nhibernate::workflow::main FOR true' => [../InfoCosteProgramaGen, CONFIGURATION:../InfoCosteProgramaGen(overwrite=false,append=false,fileEncoding=utf-8)]
+configuroConf:C:\Users\Xito\AppData\Local\Temp\OOH4RIA8085977654813234851.cfg
+enc:utf-8
+2824 [main] INFO  and2.pr.ProtectedRegionResolverImpl  - Source scan started ...
+3414 [main] INFO  and2.pr.ProtectedRegionResolverImpl  - Source scan finished in 0.59s
+3414 [main] INFO  and2.pr.ProtectedRegionResolverImpl  - Files scanned: 345
+3414 [main] INFO  and2.pr.ProtectedRegionResolverImpl  - Regions found: 60
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+10140 [main] INFO         org.eclipse.xpand2.Generator  - Written 3 files to outlet [default](../InfoCosteProgramaGen)
+10140 [main] INFO         org.eclipse.xpand2.Generator  - Skipped writing of 185 files to outlet [default](../InfoCosteProgramaGen)
+10141 [main] INFO  e.core.container.CompositeComponent  - es.ua.dlsi.ooh.persistence.nhibernate.generator.workflowComponents.CreateSolution
+10160 [main] INFO  e.core.container.CompositeComponent  - es.ua.dlsi.ooh.persistence.nhibernate.generator.workflowComponents.UpdateSolution
+10183 [main] INFO  e.core.container.CompositeComponent  - es.ua.dlsi.ooh.persistence.nhibernate.generator.workflowComponents.CopyDLLs
+../InfoCosteProgramaGen\InfoCosteProgramaGenNHibernate\AppLib\Antlr3.Runtime.dll
+../InfoCosteProgramaGen\InfoCosteProgramaGenNHibernate\AppLib\Castle.DynamicProxy2.dll
+../InfoCosteProgramaGen\InfoCosteProgramaGenNHibernate\AppLib\Iesi.Collections.dll
+../InfoCosteProgramaGen\InfoCosteProgramaGenNHibernate\AppLib\LinFu.DynamicProxy.dll
+../InfoCosteProgramaGen\InfoCosteProgramaGenNHibernate\AppLib\log4net.dll
+../InfoCosteProgramaGen\InfoCosteProgramaGenNHibernate\AppLib\NHibernate.ByteCode.Castle.dll
+../InfoCosteProgramaGen\InfoCosteProgramaGenNHibernate\AppLib\NHibernate.ByteCode.LinFu.dll
+../InfoCosteProgramaGen\InfoCosteProgramaGenNHibernate\AppLib\NHibernate.dll
+../InfoCosteProgramaGen\InfoCosteProgramaGenNHibernate\AppLib\nunit.core.dll
+../InfoCosteProgramaGen\InfoCosteProgramaGenNHibernate\AppLib\nunit.framework.dll
+10195 [main] INFO  eclipse.emf.mwe.core.WorkflowEngine  - workflow completed in 8915ms!

@@ -34,5 +34,10 @@ System.Collections.Generic.IList<InfoCosteProgramaGenNHibernate.EN.InfoCoste.Ped
 
 
 void Borrar (int id);
+
+
+void BorrarTipoFactura (int p_PedidoCliente_OID, int p_tipoFactura_OID);
+
+void NuevoTipoFactura (int p_PedidoCliente_OID, int p_tipoFactura_OID);
 }
 }

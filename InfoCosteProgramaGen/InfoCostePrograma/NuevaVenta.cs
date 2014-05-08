@@ -16,6 +16,7 @@ namespace InfoCostePrograma
     {
 
         ClienteEN c;
+        TipoFacturaEN f;
 
         public NuevaVenta(int id) //id de Pedido
         {
@@ -47,17 +48,23 @@ namespace InfoCostePrograma
 
             LineaPedidoCP lpCP2 = new LineaPedidoCP();
             ClienteEN clie = lpCP2.getClienteDePedido(id);
+            c = clie;
             cliente.Text = clie.NombreCompleto;
             label_Precio.Text = total.ToString();
 
             TipoFacturaEN tf = obtenerFacturaTipada(id);
 
+            f = tf;
+
             Type g = tf.GetType();
             if (g == typeof(FacturaEN))
+            {
                 radioButton1.Checked = true;
-            else if(g == typeof(ReservaEN))
+                ConvertirEnFactura.Visible = false;
+            }
+            else if (g == typeof(ReservaEN))
                 radioButton3.Checked = true;
-            else if(g == typeof(PresupuestoEN))
+            else if (g == typeof(PresupuestoEN))
                 radioButton2.Checked = true;
             else if (g == typeof(ProformaEN))
                 radioButton4.Checked = true;
@@ -72,6 +79,7 @@ namespace InfoCostePrograma
             dataGridView1.Columns[2].ReadOnly = true;
             dataGridView1.Columns[4].ReadOnly = true;
             dataGridView1.Columns[5].ReadOnly = true;
+            ConvertirEnFactura.Visible = false;
         }
 
         private void NuevaVenta_Load(object sender, EventArgs e)
@@ -267,6 +275,23 @@ namespace InfoCostePrograma
 
             return new TipoFacturaEN();
         }
+
+       private void button4_Click(object sender, EventArgs e)
+       {
+           // Convertir Presupuesto, Reserva o Proforma en Factura
+
+           InvoiceUtils conversor = new InvoiceUtils();
+
+           bool ok = conversor.toFactura(f);
+
+           if (ok)
+               MessageBox.Show("Facturado correctamente");
+           else
+               MessageBox.Show("Problemas al facturar");
+
+           DialogResult = DialogResult.OK;
+           this.Close();
+       }
        
     }
 }
