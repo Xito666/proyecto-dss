@@ -72,7 +72,10 @@ namespace InfoCostePrograma
         {
             int fila = e.RowIndex;
             NuevaVenta nv = new NuevaVenta(Convert.ToInt32(dataGridView_GestionarVentas.Rows[fila].Cells[0].Value.ToString()));
-            nv.ShowDialog();
+
+            if (nv.ShowDialog() == DialogResult.OK)
+                GestionarVentas_Load(null, null);
+ 
         }
 
         private void GestionarVentas_Load(object sender, EventArgs e)

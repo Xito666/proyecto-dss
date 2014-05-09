@@ -142,6 +142,8 @@ namespace InfoCostePrograma
                         }
                     }
 
+                    this.DialogResult = DialogResult.OK;
+
                     this.Close();
                 }
                 catch (Exception ex)

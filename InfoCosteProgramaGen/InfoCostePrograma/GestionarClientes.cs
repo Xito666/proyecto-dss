@@ -46,7 +46,8 @@ namespace InfoCostePrograma
         private void button1_Click(object sender, EventArgs e)
         {
             NuevoCliente nc = new NuevoCliente();
-            nc.Show();
+            if (nc.ShowDialog() == DialogResult.OK)
+                GestionarClientes_Load(null, null);
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -66,7 +67,8 @@ namespace InfoCostePrograma
             DataGridViewRow current = dataGridView_GestionarClientes.CurrentRow;
 
             NuevoCliente c = new NuevoCliente(current.Cells[0].Value.ToString());
-            c.Show();
+            if (c.ShowDialog() == DialogResult.OK)
+                GestionarClientes_Load(null, null);
         }
 
         private void button3_Click(object sender, EventArgs e)

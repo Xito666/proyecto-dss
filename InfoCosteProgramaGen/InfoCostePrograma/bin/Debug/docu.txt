@@ -1,13 +1,13 @@
-InfoCoste Alicante Centro			Ruina SL
-CIF: 66666666X 667888333			CIF/NIF:2 966588324
-C\ Alvarez Sereix 3				C\ muy Larga
-alicantecentro@info-coste.com			info@ruinasl.com
+InfoCoste Alicante Centro			Felipe Antón Núñez
+CIF: 66666666X 667888333			CIF/NIF:53655488X 966755825
+C\ Alvarez Sereix 3				Av. Maissonave 4 bajo
+alicantecentro@info-coste.com			fanton@telefonica.es
 
-Documento num: 0 Factura
+Documento num: 11 Factura
 =============================================================
 COD	DESC			UD	DESC%	PRECIO	TOTAL
 -------------------------------------------------------------
-2	Asus LED21AHD  		1	0	79	79
+5	Thermaltake Bla		1	0	49	49
 
 =============================================================
 

@@ -27,14 +27,24 @@ namespace InfoCostePrograma
         {
             PedidoClienteCEN pcCEN = new PedidoClienteCEN();
             PedidoClienteEN pedido = pcCEN.LeerPorOID(reserva.Id);
-            //pcCEN.BorrarTipoFactura(pedido.Id );
 
+            // desrealciono
+            PedidoClienteCEN pcCEN2 = new PedidoClienteCEN();
+            pcCEN2.BorrarTipoFactura(pedido.Id, reserva.Id);
 
-            //ReservaCEN rCEN = new ReservaCEN();
-            //rCEN.Borrar(reserva.Id);
+            //  borro reserva y tipofactura
+            ReservaCEN rCEN = new ReservaCEN();
+            rCEN.Borrar(reserva.Id);
+            /*TipoFacturaCEN tfCEN = new TipoFacturaCEN();
+            tfCEN.Borrar(reserva.Id);*/
 
-            //TipoFacturaCEN tfCEN = new TipoFacturaCEN();
-            //tfCEN.Borrar(reserva.Id);
+            //Creo nueva factura
+            FacturaCEN fCEN = new FacturaCEN();
+            fCEN.Factura(reserva.Id, reserva.Fecha, reserva.DatosPago, pedido.Id, true);
+            FacturaEN fEN = fCEN.LeerPorOID(reserva.Id);
+
+            // relaciono
+            pcCEN.NuevoTipoFactura(pedido.Id, fEN.Id);
 
 
             
