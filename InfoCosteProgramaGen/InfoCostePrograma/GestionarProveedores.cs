@@ -64,19 +64,11 @@ namespace InfoCostePrograma
             DataGridViewRow current = dataGridView_GestionarProveedores.CurrentRow;
             InfoCosteProgramaGenNHibernate.CEN.InfoCoste.ProveedorCEN pcen = new InfoCosteProgramaGenNHibernate.CEN.InfoCoste.ProveedorCEN();
 
-            /*if (pcen == null)
-            {*/
             pcen.Borrar(current.Cells[0].Value.ToString());
-            //}
             GestionarProveedores_Load(null, null);
         }
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void button4_Click_1(object sender, EventArgs e)
+        private void button4_Click_2(object sender, EventArgs e)
         {
             string input = Microsoft.VisualBasic.Interaction.InputBox("Nombre del proveedor?");
             InfoCosteProgramaGenNHibernate.CEN.InfoCoste.ProveedorCEN pcen = new InfoCosteProgramaGenNHibernate.CEN.InfoCoste.ProveedorCEN();

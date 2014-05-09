@@ -75,3 +75,6 @@ C:\Users\JoseAntonio\Documents\GitHub\proyecto-dss\InfoCosteProgramaGen\Initiali
 C:\Users\JoseAntonio\Documents\GitHub\proyecto-dss\InfoCosteProgramaGen\InitializeDB\obj\x86\Debug\InitializeDB.csprojResolveAssemblyReference.cache
 C:\Users\JoseAntonio\Documents\GitHub\proyecto-dss\InfoCosteProgramaGen\InitializeDB\obj\x86\Debug\InitializeDB.exe
 C:\Users\JoseAntonio\Documents\GitHub\proyecto-dss\InfoCosteProgramaGen\InitializeDB\obj\x86\Debug\InitializeDB.pdb
+C:\Users\Dani\Desktop\proyecto-dss-master\nuevo\proyecto-dss\InfoCosteProgramaGen\InitializeDB\bin\Debug\InitializeDB.exe.config
+C:\Users\Dani\Desktop\proyecto-dss-master\nuevo\proyecto-dss\InfoCosteProgramaGen\InitializeDB\obj\x86\Debug\InitializeDB.exe
+C:\Users\Dani\Desktop\proyecto-dss-master\nuevo\proyecto-dss\InfoCosteProgramaGen\InitializeDB\obj\x86\Debug\InitializeDB.pdb

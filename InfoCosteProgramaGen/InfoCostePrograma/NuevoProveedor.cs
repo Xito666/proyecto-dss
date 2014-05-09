@@ -43,7 +43,19 @@ namespace InfoCostePrograma
             this.Close();
         }
 
-        private void button_CrearUsuario_Click(object sender, EventArgs e)
+       
+
+        private void textBox_ID_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button_CrearUsuario_Click_1(object sender, EventArgs e)
         {
             if (textBox_ID.Text == "" || textBox_Nombre.Text == "" || textBox_Direccion.Text == "" || textBox_Email.Text == "")
             {
@@ -76,16 +88,6 @@ namespace InfoCostePrograma
                     MessageBox.Show(this, "Revise los campos");
                 }
             }
-        }
-
-        private void textBox_ID_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
