@@ -1,14 +1,16 @@
-InfoCoste Alicante Centro			Felipe Antón Núñez
-CIF: 66666666X 667888333			CIF/NIF:53655488X 966755825
-C\ Alvarez Sereix 3				Av. Maissonave 4 bajo
-alicantecentro@info-coste.com			fanton@telefonica.es
+InfoCoste Alicante Centro			Pepe Teruel García
+CIF: 66666666X 667888333			CIF/NIF:3 658897812
+C\ Alvarez Sereix 3				C\ de la Piruleta
+alicantecentro@info-coste.com			pepe@gmail.com
 
-Documento num: 11 Factura
+Documento num: 4 Factura
 =============================================================
 COD	DESC			UD	DESC%	PRECIO	TOTAL
 -------------------------------------------------------------
-5	Thermaltake Bla		1	0	49	49
+3	Motorola Moto G		1	20	149	119,2
 
+-------------------------------------------------------------
+					TOTAL: 119,2 Euro
 =============================================================
 
 Para cualquier reclamacion es imprescindible el presente documento.

@@ -218,7 +218,7 @@ namespace InfoCostePrograma
                 else
                     throw new Exception();
 
-                MessageBox.Show(this, "Creado como pedido numero " + pcEN.Id+"\nCreada Factura", "Guardar documento");
+                MessageBox.Show(this, "Documento Generado\nID: " + pcEN.Id+"\n", "Guardar documento");
 
                 DialogResult = DialogResult.OK;
                 this.Close();

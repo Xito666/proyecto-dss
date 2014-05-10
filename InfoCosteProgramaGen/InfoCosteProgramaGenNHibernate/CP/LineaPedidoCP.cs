@@ -42,6 +42,27 @@ namespace InfoCosteProgramaGenNHibernate.CP
             return filas;
         }
 
+        public double getTotalPedido(int id)
+        {
+            double total = 0;
+
+            SessionInitializeTransaction();
+
+            PedidoClienteCAD pcCAD = new PedidoClienteCAD(session);
+            PedidoClienteEN pedido = pcCAD.LeerPorOID(id);
+            IList<LineaPedidoEN> lineas = pedido.LineaPedido;
+
+            foreach (LineaPedidoEN linea in lineas)
+            {
+                double precioL = Convert.ToInt32(linea.Cantidad) * (Convert.ToInt32(linea.Producto.Precio) - ((Convert.ToInt32(linea.Descuento) / 100f) * (Convert.ToInt32(linea.Producto.Precio))));
+                total += precioL;
+            }
+
+            SessionCommit();
+
+            return total;
+        }
+
         public ClienteEN getClienteDePedido(int id)
         {
             SessionInitializeTransaction();

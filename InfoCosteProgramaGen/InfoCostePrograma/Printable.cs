@@ -45,7 +45,7 @@ namespace InfoCostePrograma
 
             documento = documento.Replace("{clienteNombre}", cliente.NombreCompleto);
             documento = documento.Replace("{clienteCif}", cliente.Id);
-            documento = documento.Replace("{ClienteTelf}", cliente.Telefono.ToString());
+            documento = documento.Replace("{clienteTelf}", cliente.Telefono.ToString());
             documento = documento.Replace("{clienteDireccion}", cliente.Direccion.ToString());
             documento = documento.Replace("{clienteEmail}", cliente.Email.ToString());
             documento = documento.Replace("{idDocumento}", idDocumento.ToString());
@@ -59,6 +59,9 @@ namespace InfoCostePrograma
             }
 
             documento = documento.Replace("{linea}", l);
+
+            double total = new LineaPedidoCP().getTotalPedido(idDocumento);
+            documento = documento.Replace("{total}", total.ToString());
 
             return documento;
         }
