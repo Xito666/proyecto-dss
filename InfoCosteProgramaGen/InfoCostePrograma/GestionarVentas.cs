@@ -142,5 +142,27 @@ namespace InfoCostePrograma
             p.Print();
         }
 
+        private void button4_Click(object sender, EventArgs e)
+        {
+            /*string input = Microsoft.VisualBasic.Interaction.InputBox("Nombre del trabajador?");
+            InfoCosteProgramaGenNHibernate.CEN.InfoCoste.ClienteCEN ccen = new InfoCosteProgramaGenNHibernate.CEN.InfoCoste.ClienteCEN();
+            IList<InfoCosteProgramaGenNHibernate.EN.InfoCoste.ClienteEN> lc = ccen.LeerPorNombre(input);
+
+            dataGridView_GestionarClientes.Rows.Clear();
+            foreach (InfoCosteProgramaGenNHibernate.EN.InfoCoste.ClienteEN c in lc)
+            {
+                bool empresa = false;
+                InfoCosteProgramaGenNHibernate.CEN.InfoCoste.ClienteEmpresaCEN ceCEN = new InfoCosteProgramaGenNHibernate.CEN.InfoCoste.ClienteEmpresaCEN();
+                try
+                {
+                    InfoCosteProgramaGenNHibernate.EN.InfoCoste.ClienteEmpresaEN ceEN = ceCEN.LeerPorOID(c.Id);
+                    if (ceEN != null)
+                        empresa = true;
+                }
+                catch (Exception ex) { }
+                dataGridView_GestionarClientes.Rows.Add(c.Id, c.NombreCompleto, c.Direccion, c.Telefono, c.Email, empresa);
+            }*/
+        }
+
     }
 }
