@@ -25,5 +25,10 @@ namespace InfoCostePrograma
             Credenciales ca = new Credenciales(usuario);
             ca.Show();
         }
+
+        private void Herramientas_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

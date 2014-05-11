@@ -28,10 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Herramientas));
             this.label1 = new System.Windows.Forms.Label();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.label3 = new System.Windows.Forms.Label();
-            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -68,30 +69,27 @@
             this.label3.TabIndex = 3;
             this.label3.Text = "Copia de seguridad";
             // 
-            // linkLabel2
+            // button1
             // 
-            this.linkLabel2.AutoSize = true;
-            this.linkLabel2.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
-            this.linkLabel2.LinkColor = System.Drawing.Color.Black;
-            this.linkLabel2.Location = new System.Drawing.Point(53, 131);
-            this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(138, 13);
-            this.linkLabel2.TabIndex = 4;
-            this.linkLabel2.TabStop = true;
-            this.linkLabel2.Text = "Realizar copia de seguridad";
-            this.linkLabel2.VisitedLinkColor = System.Drawing.Color.Black;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.Location = new System.Drawing.Point(173, 102);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(78, 67);
+            this.button1.TabIndex = 5;
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // Herramientas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(792, 381);
-            this.Controls.Add(this.linkLabel2);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.label1);
             this.Name = "Herramientas";
             this.Text = "Herramientas";
+            this.Load += new System.EventHandler(this.Herramientas_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -102,7 +100,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.LinkLabel linkLabel2;
+        private System.Windows.Forms.Button button1;
 
     }
 }

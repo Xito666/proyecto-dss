@@ -279,3 +279,6 @@ C:\Users\Dani\Desktop\proyecto-dss-master\nuevo\proyecto-dss\InfoCosteProgramaGe
 C:\Users\Dani\Desktop\proyecto-dss-master\nuevo\proyecto-dss\InfoCosteProgramaGen\InfoCostePrograma\obj\x86\Debug\InfoCostePrograma.Ver_presupuestos.resources
 C:\Users\Dani\Desktop\proyecto-dss-master\nuevo\proyecto-dss\InfoCosteProgramaGen\InfoCostePrograma\obj\x86\Debug\InfoCostePrograma.ver_reservas.resources
 C:\Users\Dani\Desktop\proyecto-dss-master\nuevo\proyecto-dss\InfoCosteProgramaGen\InfoCostePrograma\obj\x86\Debug\InfoCostePrograma.csproj.GenerateResource.Cache
+C:\Documents and Settings\ooh4riaUser\My Documents\GitHub\proyecto-dss\InfoCosteProgramaGen\InfoCostePrograma\bin\Debug\plantillaDoc.txt
+C:\Documents and Settings\ooh4riaUser\My Documents\GitHub\proyecto-dss\InfoCosteProgramaGen\InfoCostePrograma\obj\x86\Debug\InfoCostePrograma.GraficoVentas.resources
+C:\Documents and Settings\ooh4riaUser\My Documents\GitHub\proyecto-dss\InfoCosteProgramaGen\InfoCostePrograma\obj\x86\Debug\InfoCostePrograma.NuevoParte.resources
