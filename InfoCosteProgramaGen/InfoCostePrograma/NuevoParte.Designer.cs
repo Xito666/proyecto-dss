@@ -28,44 +28,46 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textboxcliente = new System.Windows.Forms.TextBox();
+            this.textboxresponsable = new System.Windows.Forms.TextBox();
+            this.textboxequipo = new System.Windows.Forms.TextBox();
+            this.textboxdescripcion = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.textboxid = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // textBox1
+            // textboxcliente
             // 
-            this.textBox1.Location = new System.Drawing.Point(123, 34);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 0;
+            this.textboxcliente.Location = new System.Drawing.Point(123, 34);
+            this.textboxcliente.Name = "textboxcliente";
+            this.textboxcliente.Size = new System.Drawing.Size(100, 20);
+            this.textboxcliente.TabIndex = 0;
             // 
-            // textBox2
+            // textboxresponsable
             // 
-            this.textBox2.Location = new System.Drawing.Point(123, 60);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 1;
+            this.textboxresponsable.Location = new System.Drawing.Point(123, 60);
+            this.textboxresponsable.Name = "textboxresponsable";
+            this.textboxresponsable.Size = new System.Drawing.Size(100, 20);
+            this.textboxresponsable.TabIndex = 1;
             // 
-            // textBox3
+            // textboxequipo
             // 
-            this.textBox3.Location = new System.Drawing.Point(123, 86);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 2;
+            this.textboxequipo.Location = new System.Drawing.Point(123, 86);
+            this.textboxequipo.Name = "textboxequipo";
+            this.textboxequipo.Size = new System.Drawing.Size(100, 20);
+            this.textboxequipo.TabIndex = 2;
             // 
-            // textBox4
+            // textboxdescripcion
             // 
-            this.textBox4.Location = new System.Drawing.Point(123, 112);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 3;
+            this.textboxdescripcion.Location = new System.Drawing.Point(123, 112);
+            this.textboxdescripcion.Name = "textboxdescripcion";
+            this.textboxdescripcion.Size = new System.Drawing.Size(100, 20);
+            this.textboxdescripcion.TabIndex = 3;
             // 
             // label1
             // 
@@ -112,21 +114,40 @@
             this.button1.TabIndex = 8;
             this.button1.Text = "Añadir";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(79, 12);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(19, 13);
+            this.label5.TabIndex = 10;
+            this.label5.Text = "Id:";
+            // 
+            // textboxid
+            // 
+            this.textboxid.Location = new System.Drawing.Point(123, 8);
+            this.textboxid.Name = "textboxid";
+            this.textboxid.Size = new System.Drawing.Size(100, 20);
+            this.textboxid.TabIndex = 9;
             // 
             // NuevoParte
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(238, 228);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.textboxid);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textboxdescripcion);
+            this.Controls.Add(this.textboxequipo);
+            this.Controls.Add(this.textboxresponsable);
+            this.Controls.Add(this.textboxcliente);
             this.Name = "NuevoParte";
             this.Text = "Nuevo Parte";
             this.ResumeLayout(false);
@@ -136,15 +157,17 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textboxcliente;
+        private System.Windows.Forms.TextBox textboxresponsable;
+        private System.Windows.Forms.TextBox textboxequipo;
+        private System.Windows.Forms.TextBox textboxdescripcion;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox textboxid;
 
     }
 }

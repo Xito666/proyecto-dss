@@ -206,7 +206,6 @@ C:\Users\JoseAntonio\Documents\GitHub\proyecto-dss\InfoCosteProgramaGen\InfoCost
 C:\Users\JoseAntonio\Documents\GitHub\proyecto-dss\InfoCosteProgramaGen\InfoCostePrograma\bin\Debug\nunit.framework.dll
 C:\Users\JoseAntonio\Documents\GitHub\proyecto-dss\InfoCosteProgramaGen\InfoCostePrograma\bin\Debug\InfoCosteProgramaGenNHibernate.pdb
 C:\Users\JoseAntonio\Documents\GitHub\proyecto-dss\InfoCosteProgramaGen\InfoCostePrograma\obj\x86\Debug\InfoCostePrograma.csprojResolveAssemblyReference.cache
-C:\Users\JoseAntonio\Documents\GitHub\proyecto-dss\InfoCosteProgramaGen\InfoCostePrograma\obj\x86\Debug\InfoCostePrograma.CredencialesAdministrador.resources
 C:\Users\JoseAntonio\Documents\GitHub\proyecto-dss\InfoCosteProgramaGen\InfoCostePrograma\obj\x86\Debug\InfoCostePrograma.GestionarClientes.resources
 C:\Users\JoseAntonio\Documents\GitHub\proyecto-dss\InfoCosteProgramaGen\InfoCostePrograma\obj\x86\Debug\InfoCostePrograma.GestionarCompras.resources
 C:\Users\JoseAntonio\Documents\GitHub\proyecto-dss\InfoCosteProgramaGen\InfoCostePrograma\obj\x86\Debug\InfoCostePrograma.GestionarProductos.resources
@@ -282,3 +281,7 @@ C:\Users\Dani\Desktop\proyecto-dss-master\nuevo\proyecto-dss\InfoCosteProgramaGe
 C:\Documents and Settings\ooh4riaUser\My Documents\GitHub\proyecto-dss\InfoCosteProgramaGen\InfoCostePrograma\bin\Debug\plantillaDoc.txt
 C:\Documents and Settings\ooh4riaUser\My Documents\GitHub\proyecto-dss\InfoCosteProgramaGen\InfoCostePrograma\obj\x86\Debug\InfoCostePrograma.GraficoVentas.resources
 C:\Documents and Settings\ooh4riaUser\My Documents\GitHub\proyecto-dss\InfoCosteProgramaGen\InfoCostePrograma\obj\x86\Debug\InfoCostePrograma.NuevoParte.resources
+C:\Users\JoseAntonio\Documents\GitHub\proyecto-dss\InfoCosteProgramaGen\InfoCostePrograma\bin\Debug\plantillaDoc.txt
+C:\Users\JoseAntonio\Documents\GitHub\proyecto-dss\InfoCosteProgramaGen\InfoCostePrograma\obj\x86\Debug\InfoCostePrograma.Credenciales.resources
+C:\Users\JoseAntonio\Documents\GitHub\proyecto-dss\InfoCosteProgramaGen\InfoCostePrograma\obj\x86\Debug\InfoCostePrograma.GraficoVentas.resources
+C:\Users\JoseAntonio\Documents\GitHub\proyecto-dss\InfoCosteProgramaGen\InfoCostePrograma\obj\x86\Debug\InfoCostePrograma.NuevoParte.resources
