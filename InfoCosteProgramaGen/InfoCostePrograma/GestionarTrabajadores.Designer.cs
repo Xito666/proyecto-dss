@@ -43,15 +43,18 @@
             // 
             this.dataGridView_GestionarTrabajadores.AllowUserToAddRows = false;
             this.dataGridView_GestionarTrabajadores.AllowUserToDeleteRows = false;
-            this.dataGridView_GestionarTrabajadores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_GestionarTrabajadores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dataGridView_GestionarTrabajadores.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
             this.Nombre,
             this.Password});
             this.dataGridView_GestionarTrabajadores.Location = new System.Drawing.Point(12, 12);
+            this.dataGridView_GestionarTrabajadores.MultiSelect = false;
             this.dataGridView_GestionarTrabajadores.Name = "dataGridView_GestionarTrabajadores";
             this.dataGridView_GestionarTrabajadores.ReadOnly = true;
             this.dataGridView_GestionarTrabajadores.RowHeadersWidth = 20;
+            this.dataGridView_GestionarTrabajadores.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dataGridView_GestionarTrabajadores.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView_GestionarTrabajadores.Size = new System.Drawing.Size(768, 275);
             this.dataGridView_GestionarTrabajadores.TabIndex = 1;
             this.dataGridView_GestionarTrabajadores.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_GestionarTrabajadores_CellContentClick);

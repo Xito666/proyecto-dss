@@ -43,6 +43,7 @@ namespace InfoCostePrograma
             
         }
 
+        // NUEVO
         private void button1_Click(object sender, EventArgs e)
         {
             NuevoCliente nc = new NuevoCliente();
@@ -50,18 +51,21 @@ namespace InfoCostePrograma
                 GestionarClientes_Load(null, null);
         }
 
+        // PRESUPUESTOS
         private void button6_Click(object sender, EventArgs e)
         {
             Ver_presupuestos vp = new Ver_presupuestos();
             vp.Show();
         }
 
+        // RESERVAS
         private void button5_Click(object sender, EventArgs e)
         {
             ver_reservas vr = new ver_reservas();
             vr.Show();
         }
 
+        // EDITAR
         private void button2_Click(object sender, EventArgs e)
         {
             DataGridViewRow current = dataGridView_GestionarClientes.CurrentRow;
@@ -71,38 +75,49 @@ namespace InfoCostePrograma
                 GestionarClientes_Load(null, null);
         }
 
+        // BORRAR
         private void button3_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Seguro desea eliminar este cliente?", "Clientes", MessageBoxButtons.OKCancel);
+            if (MessageBox.Show("Seguro desea eliminar este cliente?", "Clientes", MessageBoxButtons.OKCancel) == DialogResult.OK)
+            {
+                DataGridViewRow current = dataGridView_GestionarClientes.CurrentRow;
 
-            DataGridViewRow current = dataGridView_GestionarClientes.CurrentRow;
+                InfoCosteProgramaGenNHibernate.CEN.InfoCoste.ClienteCEN ccen = new InfoCosteProgramaGenNHibernate.CEN.InfoCoste.ClienteCEN();
+                ccen.Borrar(current.Cells[0].Value.ToString());
 
-            InfoCosteProgramaGenNHibernate.CEN.InfoCoste.ClienteCEN ccen = new InfoCosteProgramaGenNHibernate.CEN.InfoCoste.ClienteCEN();
-            ccen.Borrar(current.Cells[0].Value.ToString());
-
-
-            GestionarClientes_Load(null, null);
+                GestionarClientes_Load(null, null);
+            }
         }
 
+        // BUSCAR
         private void button4_Click(object sender, EventArgs e)
         {
-            string input = Microsoft.VisualBasic.Interaction.InputBox("Nombre del trabajador?");
-            InfoCosteProgramaGenNHibernate.CEN.InfoCoste.ClienteCEN ccen = new InfoCosteProgramaGenNHibernate.CEN.InfoCoste.ClienteCEN();
-            IList<InfoCosteProgramaGenNHibernate.EN.InfoCoste.ClienteEN> lc =  ccen.LeerPorNombre(input);
+            string input = Microsoft.VisualBasic.Interaction.InputBox("Nombre del cliente?");
 
-            dataGridView_GestionarClientes.Rows.Clear();
-            foreach (InfoCosteProgramaGenNHibernate.EN.InfoCoste.ClienteEN c in lc)
+            if (input != "")
             {
-                bool empresa = false;
-                InfoCosteProgramaGenNHibernate.CEN.InfoCoste.ClienteEmpresaCEN ceCEN = new InfoCosteProgramaGenNHibernate.CEN.InfoCoste.ClienteEmpresaCEN();
-                try
+                InfoCosteProgramaGenNHibernate.CEN.InfoCoste.ClienteCEN ccen = new InfoCosteProgramaGenNHibernate.CEN.InfoCoste.ClienteCEN();
+                IList<InfoCosteProgramaGenNHibernate.EN.InfoCoste.ClienteEN> lc = ccen.LeerPorNombre(input);
+
+                if (lc.Count == 0)
+                    MessageBox.Show(this, "No existe ningún cliente con estos parametros");
+                else
                 {
-                    InfoCosteProgramaGenNHibernate.EN.InfoCoste.ClienteEmpresaEN ceEN = ceCEN.LeerPorOID(c.Id);
-                    if (ceEN != null)
-                        empresa = true;
+                    dataGridView_GestionarClientes.Rows.Clear();
+                    foreach (InfoCosteProgramaGenNHibernate.EN.InfoCoste.ClienteEN c in lc)
+                    {
+                        bool empresa = false;
+                        InfoCosteProgramaGenNHibernate.CEN.InfoCoste.ClienteEmpresaCEN ceCEN = new InfoCosteProgramaGenNHibernate.CEN.InfoCoste.ClienteEmpresaCEN();
+                        try
+                        {
+                            InfoCosteProgramaGenNHibernate.EN.InfoCoste.ClienteEmpresaEN ceEN = ceCEN.LeerPorOID(c.Id);
+                            if (ceEN != null)
+                                empresa = true;
+                        }
+                        catch (Exception ex) { }
+                        dataGridView_GestionarClientes.Rows.Add(c.Id, c.NombreCompleto, c.Direccion, c.Telefono, c.Email, empresa);
+                    }
                 }
-                catch (Exception ex) { }
-                dataGridView_GestionarClientes.Rows.Add(c.Id, c.NombreCompleto, c.Direccion, c.Telefono, c.Email, empresa);
             }
         }
     }

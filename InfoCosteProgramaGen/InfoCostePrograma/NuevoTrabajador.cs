@@ -22,7 +22,15 @@ namespace InfoCostePrograma
 
             InfoCosteProgramaGenNHibernate.CEN.InfoCoste.TrabajadorCEN tcen = new InfoCosteProgramaGenNHibernate.CEN.InfoCoste.TrabajadorCEN();
             IList<InfoCosteProgramaGenNHibernate.EN.InfoCoste.TrabajadorEN> listaTrabajadores = tcen.LeerTodos(0, 100);
-            textBox_ID.Text = (Convert.ToInt32(listaTrabajadores.ElementAt(listaTrabajadores.Count-1).Id.ToString())+1).ToString();
+
+            try
+            {
+                textBox_ID.Text = (Convert.ToInt32(listaTrabajadores.ElementAt(listaTrabajadores.Count - 1).Id.ToString()) + 1).ToString();
+            }
+            catch (ArgumentOutOfRangeException ex)
+            {
+                textBox_ID.Text = "1";
+            }
         }
 
         public NuevoTrabajador(int ID)
@@ -70,7 +78,6 @@ namespace InfoCostePrograma
                 {
                     if (!editando)
                     {
-                        MessageBox.Show(this, "Se creará el usuario");
                         tcen.Trabajador(Convert.ToInt32(textBox_ID.Text), textBox_Nombre.Text, textBox_Password.Text);
 
                         this.DialogResult = DialogResult.OK;
@@ -78,9 +85,10 @@ namespace InfoCostePrograma
                     }
                     else
                     {
-                        MessageBox.Show(this, "Se modificará el usuario");
                         tcen.SetNombre(id, textBox_Nombre.Text);
                         tcen.SetPassword(id, textBox_Password.Text);
+
+                        MessageBox.Show(this, "Modificado correctamente");
 
                         this.DialogResult = DialogResult.OK;
                         this.Close();
