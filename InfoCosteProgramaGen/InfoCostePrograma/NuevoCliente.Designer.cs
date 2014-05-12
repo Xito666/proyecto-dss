@@ -39,7 +39,6 @@
             this.label_Email = new System.Windows.Forms.Label();
             this.checkBox_Empresa = new System.Windows.Forms.CheckBox();
             this.textBox_NumCuenta = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox_ID = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -47,7 +46,7 @@
             // 
             // button_CrearUsuario
             // 
-            this.button_CrearUsuario.Location = new System.Drawing.Point(32, 223);
+            this.button_CrearUsuario.Location = new System.Drawing.Point(95, 226);
             this.button_CrearUsuario.Name = "button_CrearUsuario";
             this.button_CrearUsuario.Size = new System.Drawing.Size(100, 23);
             this.button_CrearUsuario.TabIndex = 15;
@@ -61,7 +60,6 @@
             this.textBox_Telefono.Name = "textBox_Telefono";
             this.textBox_Telefono.Size = new System.Drawing.Size(138, 20);
             this.textBox_Telefono.TabIndex = 14;
-            this.textBox_Telefono.TextChanged += new System.EventHandler(this.textBox_Nombre_TextChanged);
             // 
             // textBox_Direccion
             // 
@@ -69,7 +67,6 @@
             this.textBox_Direccion.Name = "textBox_Direccion";
             this.textBox_Direccion.Size = new System.Drawing.Size(138, 20);
             this.textBox_Direccion.TabIndex = 13;
-            this.textBox_Direccion.TextChanged += new System.EventHandler(this.textBox_Password_TextChanged);
             // 
             // textBox_Nombre
             // 
@@ -77,7 +74,6 @@
             this.textBox_Nombre.Name = "textBox_Nombre";
             this.textBox_Nombre.Size = new System.Drawing.Size(138, 20);
             this.textBox_Nombre.TabIndex = 12;
-            this.textBox_Nombre.TextChanged += new System.EventHandler(this.textBox_ID_TextChanged);
             // 
             // label_Telefono
             // 
@@ -87,7 +83,6 @@
             this.label_Telefono.Size = new System.Drawing.Size(52, 13);
             this.label_Telefono.TabIndex = 11;
             this.label_Telefono.Text = "Teléfono:";
-            this.label_Telefono.Click += new System.EventHandler(this.label4_Click);
             // 
             // label_Direccion
             // 
@@ -97,7 +92,6 @@
             this.label_Direccion.Size = new System.Drawing.Size(55, 13);
             this.label_Direccion.TabIndex = 10;
             this.label_Direccion.Text = "Dirección:";
-            this.label_Direccion.Click += new System.EventHandler(this.label3_Click);
             // 
             // label_Nombre
             // 
@@ -107,7 +101,6 @@
             this.label_Nombre.Size = new System.Drawing.Size(47, 13);
             this.label_Nombre.TabIndex = 9;
             this.label_Nombre.Text = "Nombre:";
-            this.label_Nombre.Click += new System.EventHandler(this.label2_Click);
             // 
             // textBox_Email
             // 
@@ -143,16 +136,6 @@
             this.textBox_NumCuenta.Size = new System.Drawing.Size(138, 20);
             this.textBox_NumCuenta.TabIndex = 20;
             // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(157, 223);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(100, 23);
-            this.button2.TabIndex = 21;
-            this.button2.Text = "Cancelar";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -186,7 +169,6 @@
             this.Controls.Add(this.textBox_ID);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.textBox_NumCuenta);
             this.Controls.Add(this.checkBox_Empresa);
             this.Controls.Add(this.textBox_Email);
@@ -224,7 +206,6 @@
         private System.Windows.Forms.Label label_Email;
         private System.Windows.Forms.CheckBox checkBox_Empresa;
         private System.Windows.Forms.TextBox textBox_NumCuenta;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox_ID;
         private System.Windows.Forms.Label label2;

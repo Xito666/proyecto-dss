@@ -52,41 +52,12 @@ namespace InfoCostePrograma
             
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void NuevoCliente_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void textBox_Nombre_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox_Password_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox_ID_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        // NUEVO
         private void button_CrearUsuario_Click(object sender, EventArgs e)
         {
             if (textBox_ID.Text == "" || textBox_Nombre.Text == "" || textBox_Telefono.Text == "" || textBox_Email.Text == "")
@@ -134,41 +105,30 @@ namespace InfoCostePrograma
                         cCEN.SetEmail(id, textBox_Email.Text);
                         cCEN.SetTelefono(id, Convert.ToInt32(textBox_Telefono.Text));
 
-                        if(checkBox_Empresa.Checked)
+                        if (checkBox_Empresa.Checked)
                         {
                             InfoCosteProgramaGenNHibernate.CEN.InfoCoste.ClienteEmpresaCEN ceCEN = new InfoCosteProgramaGenNHibernate.CEN.InfoCoste.ClienteEmpresaCEN();
-                            ceCEN.SetNumeroCuenta(id,textBox_NumCuenta.Text);
-                        
+                            ceCEN.SetNumeroCuenta(id, textBox_NumCuenta.Text);
+
                         }
                     }
-
-                    this.DialogResult = DialogResult.OK;
 
                     this.Close();
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(this, "Revise los campos" );
+                    MessageBox.Show(this, "Revise los campos");
                 }
             }
         }
 
+        // CAMBIO TIPO CLIENTE
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
             if (!checkBox_Empresa.Checked)
                 textBox_NumCuenta.Enabled = false;
             else
                 textBox_NumCuenta.Enabled = true;
-        }
-
-        private void NuevoCliente_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }

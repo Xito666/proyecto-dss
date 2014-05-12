@@ -41,43 +41,54 @@ namespace InfoCostePrograma
             textBox_Nombre.Text = ten.Nombre;
         }
 
-        private void button_CrearUsuario_Click(object sender, EventArgs e)
-        {
-            if(textBox_Nombre.Text == "" || textBox_Password.Text == "")
-            {
-                MessageBox.Show(this, "Todos los campos son obligatorios");
-            }
-            else
-            {
-                MessageBoxButtons mbb = new MessageBoxButtons();
-                MessageBox.Show(this, "Se creará/modificará el usuario", "Continuar?", mbb);
-                InfoCosteProgramaGenNHibernate.CEN.InfoCoste.TrabajadorCEN tcen = new InfoCosteProgramaGenNHibernate.CEN.InfoCoste.TrabajadorCEN();
-             
-                if (!editando)
-                {
-                    tcen.Trabajador(Convert.ToInt32(textBox_ID.Text), textBox_Password.Text, textBox_Nombre.Text);
-                }
-                else
-                {
-                    tcen.SetNombre(id, textBox_Nombre.Text);
-                    tcen.SetPassword(id, textBox_Password.Text);
-               
-                }
-
-                this.DialogResult = DialogResult.OK;
-
-                this.Close();
-            }
-        }
-
         private void NuevoTrabajador_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void textBox_Nombre_TextChanged(object sender, EventArgs e)
+        private void button_CrearUsuario_Click(object sender, EventArgs e)
         {
+            if (textBox_Nombre.Text == "" || textBox_Password.Text == "")
+            {
+                MessageBox.Show(this, "Todos los campos son obligatorios");
+            }
+            else
+            {
+                bool repetido = false;
+                InfoCosteProgramaGenNHibernate.CEN.InfoCoste.TrabajadorCEN tcen = new InfoCosteProgramaGenNHibernate.CEN.InfoCoste.TrabajadorCEN();
+                IList<InfoCosteProgramaGenNHibernate.EN.InfoCoste.TrabajadorEN> lista = tcen.LeerTodos(0, 100);
 
+                foreach (InfoCosteProgramaGenNHibernate.EN.InfoCoste.TrabajadorEN t in lista)
+                {
+                    if (t.Nombre == textBox_Nombre.Text)
+                    {
+                        repetido = true;
+                    }
+                }
+
+                if (!repetido)
+                {
+                    if (!editando)
+                    {
+                        MessageBox.Show(this, "Se creará el usuario");
+                        tcen.Trabajador(Convert.ToInt32(textBox_ID.Text), textBox_Nombre.Text, textBox_Password.Text);
+
+                        this.DialogResult = DialogResult.OK;
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show(this, "Se modificará el usuario");
+                        tcen.SetNombre(id, textBox_Nombre.Text);
+                        tcen.SetPassword(id, textBox_Password.Text);
+
+                        this.DialogResult = DialogResult.OK;
+                        this.Close();
+                    }
+                }
+                else
+                    MessageBox.Show(this, "Ya existe un trabajador con ese nombre");
+            }
         }
     }
 }
