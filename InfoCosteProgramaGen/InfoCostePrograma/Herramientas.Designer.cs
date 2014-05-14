@@ -50,7 +50,7 @@
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel1.LinkColor = System.Drawing.Color.Black;
-            this.linkLabel1.Location = new System.Drawing.Point(50, 62);
+            this.linkLabel1.Location = new System.Drawing.Point(29, 62);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(129, 13);
             this.linkLabel1.TabIndex = 2;
@@ -63,7 +63,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(29, 102);
+            this.label3.Location = new System.Drawing.Point(26, 92);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(116, 13);
             this.label3.TabIndex = 3;
@@ -72,11 +72,12 @@
             // button1
             // 
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(173, 102);
+            this.button1.Location = new System.Drawing.Point(32, 124);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(78, 67);
             this.button1.TabIndex = 5;
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Herramientas
             // 
