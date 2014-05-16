@@ -52,6 +52,12 @@ namespace InfoCostePrograma
             cnn.Open();
             command.ExecuteNonQuery();
             cnn.Close();
+            label2.Visible = true;
+        }
+
+        private void label2_Click(object sender, System.EventArgs e)
+        {
+
         }
     }
 }
