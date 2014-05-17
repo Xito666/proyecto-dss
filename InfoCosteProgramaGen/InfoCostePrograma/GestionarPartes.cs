@@ -22,7 +22,19 @@ namespace InfoCostePrograma
         //Necesitare una lista de partes -> List<ParteInvervencionEN> partes;
         private void GestionarPartes_Load(object sender, EventArgs e)
         {
-            dataGridView1.Rows.Add(new object[] { "17/05/2014", "Daniel Heredia", "Pepito", "Packard Bell", "Sustituir tarjeta" });
+            dataGridViewPartes.Rows.Add(new object[] { "17/05/2014", "Daniel Heredia", "Pepito", "Packard Bell", "Sustituir tarjeta" });
+
+            InfoCosteProgramaGenNHibernate.CEN.InfoCoste.ParteIntervencionCEN parte = new InfoCosteProgramaGenNHibernate.CEN.InfoCoste.ParteIntervencionCEN();
+            IList<InfoCosteProgramaGenNHibernate.EN.InfoCoste.ParteIntervencionEN> listaPartes = parte.LeerTodos(0, 20);
+
+            dataGridViewPartes.Rows.Clear();
+            foreach (InfoCosteProgramaGenNHibernate.EN.InfoCoste.ParteIntervencionEN p in listaPartes)
+            {
+
+                dataGridViewPartes.Rows.Add(p.Fecha, p.Cliente.NombreCompleto, p.Trabajador.Nombre, p.DatosPc, p.AccionesRealizadas);
+            }
+        
+        
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -33,7 +45,7 @@ namespace InfoCostePrograma
 
         private void button5_Click(object sender, EventArgs e)
         {
-            DataGridViewRow current = dataGridView1.CurrentRow;
+            DataGridViewRow current = dataGridViewPartes.CurrentRow;
             //ParteIntervencionEN parte = partes[dataGridView1.CurrentRow];
             if (current == null) return;
             //Obtener datos de cliente
