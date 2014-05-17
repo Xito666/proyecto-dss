@@ -156,6 +156,7 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="MailReparation.cs" />
     <Compile Include="NuevaVenta.cs">
       <SubType>Form</SubType>
     </Compile>
