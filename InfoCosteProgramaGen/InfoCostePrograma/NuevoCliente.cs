@@ -62,8 +62,8 @@ namespace InfoCostePrograma
         {
             if (es_dni(textBox_ID) == true)
             {
-                if (!seRepite(textBox_ID))
-                {
+                //if (!seRepite(textBox_ID))
+                //{
                     if (es_telefono(textBox_Telefono) == true && es_email(textBox_Email) == true)
                     {
                         if (!editando)
@@ -136,11 +136,11 @@ namespace InfoCostePrograma
                             }
                         }
                     }
-                }
+              /*  }
                 else
                 {
                     MessageBox.Show("Ya existe un usuario con este DNI");
-                }
+                }*/
             }
         }
 
