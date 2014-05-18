@@ -59,7 +59,7 @@ namespace InfoCostePrograma
                     {
                         parteID = listaPartes.Last().Id + 1;
                     }
-                    catch (Exception ex) { }
+                    catch (Exception ex) { MessageBox.Show(this, "Error al calcular ultimo id"); }
                     try
                     {
                         InfoCosteProgramaGenNHibernate.CEN.InfoCoste.ParteIntervencionCEN partecen = new InfoCosteProgramaGenNHibernate.CEN.InfoCoste.ParteIntervencionCEN();
