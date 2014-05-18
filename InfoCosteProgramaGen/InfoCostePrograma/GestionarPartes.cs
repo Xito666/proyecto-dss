@@ -30,22 +30,24 @@ namespace InfoCostePrograma
             dataGridViewPartes.Rows.Clear();
             foreach (InfoCosteProgramaGenNHibernate.EN.InfoCoste.ParteIntervencionEN p in listaPartes)
             {
-                dataGridViewPartes.Rows.Add(p.Id,p.Fecha, p.Cliente.Id, p.Trabajador.Id, p.DatosPc, p.AccionesRealizadas);
+                TrabajadorCEN tCEN = new TrabajadorCEN();
+                TrabajadorEN tEN = tCEN.LeerPorOID(p.Trabajador.Id);
+                ClienteCEN cCEN = new ClienteCEN();
+                ClienteEN cEN = cCEN.LeerPorOID(p.Cliente.Id);
+
+                dataGridViewPartes.Rows.Add(p.Id,p.Fecha,cEN.NombreCompleto ,tEN.Nombre, p.DatosPc, p.AccionesRealizadas);
             }
         }
 
         // NUEVO
         private void button1_Click(object sender, EventArgs e)
         {
-<<<<<<< HEAD
-            NuevoParte parte= new NuevoParte();
-            if (parte.ShowDialog() == DialogResult.OK)
-=======
+
             /*NuevoParte parte= new NuevoParte();
             parte.Show();*/
             NuevoParte nc = new NuevoParte();
             if (nc.ShowDialog() == DialogResult.OK)
->>>>>>> 21f0429ea807bf1170ceaa328cbfcd1fdab8dffb
+
                 GestionarPartes_Load(null, null);
         }
 
