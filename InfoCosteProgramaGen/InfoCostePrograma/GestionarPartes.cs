@@ -70,12 +70,12 @@ namespace InfoCostePrograma
             //ParteIntervencionEN parte = partes[dataGridView1.CurrentRow];
             if (current == null) return;
             //Obtener datos de cliente
-            current.Cells[1].Value.ToString();
+            current.Cells[2].Value.ToString();
 
             ClienteCEN clientes = new ClienteCEN();
             //obtengo una lista pero realmente sera solo el usu con ese nombre
             //IList<ClienteEN> clienteNombre = clientes.LeerPorNombre(current.Cells[1].Value.ToString());
-            ClienteEN cliente = clientes.LeerPorOID(current.Cells[1].Value.ToString());
+            ClienteEN cliente = clientes.LeerPorOID(current.Cells[2].Value.ToString());
             //ClienteEN cliente = parte.Cliente;
 
             MailReparation avisa = new MailReparation();

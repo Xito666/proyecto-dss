@@ -325,3 +325,6 @@ C:\Users\Dani\Desktop\proyecto-dss-master\Proyecto\InfoCosteProgramaGen\InfoCost
 C:\Users\Dani\Desktop\proyecto-dss-master\Proyecto\InfoCosteProgramaGen\InfoCostePrograma\obj\x86\Debug\InfoCostePrograma.Ver_presupuestos.resources
 C:\Users\Dani\Desktop\proyecto-dss-master\Proyecto\InfoCosteProgramaGen\InfoCostePrograma\obj\x86\Debug\InfoCostePrograma.ver_reservas.resources
 C:\Users\Dani\Desktop\proyecto-dss-master\Proyecto\InfoCosteProgramaGen\InfoCostePrograma\obj\x86\Debug\InfoCostePrograma.csproj.GenerateResource.Cache
+C:\Users\Dani\Desktop\proyecto-dss-master\ProyectoUltimo\InfoCosteProgramaGen\InfoCostePrograma\bin\Debug\InfoCostePrograma.exe.config
+C:\Users\Dani\Desktop\proyecto-dss-master\ProyectoUltimo\InfoCosteProgramaGen\InfoCostePrograma\obj\x86\Debug\InfoCostePrograma.exe
+C:\Users\Dani\Desktop\proyecto-dss-master\ProyectoUltimo\InfoCosteProgramaGen\InfoCostePrograma\obj\x86\Debug\InfoCostePrograma.pdb
