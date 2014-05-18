@@ -17,7 +17,7 @@ namespace InfoCostePrograma
             _Correo.From = new MailAddress("satInfoApp@gmail.com");
             _Correo.To.Add(mail.ToString());
             _Correo.Subject = "Reparacion Realizada";
-            _Correo.Body = "Buenos días Sr./Sra. " + nombre + ", desde InfoCoste Alicante, le informamos de que ya puede recoger su articulo reparado." + Environment.NewLine + " Gracias por su confianza.";
+            _Correo.Body = "Buenos días Sr./Sra. " + nombre + "." + "<br />" + "Desde InfoCoste Alicante, le informamos de que ya puede recoger su articulo reparado." + "<br />" + " Gracias por su confianza.";
             _Correo.IsBodyHtml = false;
             _Correo.Priority = MailPriority.Normal;
 
