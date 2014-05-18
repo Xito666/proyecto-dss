@@ -158,11 +158,11 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(92, 22);
+            this.label2.Location = new System.Drawing.Point(84, 22);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(21, 13);
+            this.label2.Size = new System.Drawing.Size(29, 13);
             this.label2.TabIndex = 9;
-            this.label2.Text = "ID:";
+            this.label2.Text = "DNI:";
             // 
             // errorProvider
             // 
@@ -172,7 +172,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(305, 283);
+            this.ClientSize = new System.Drawing.Size(297, 278);
             this.Controls.Add(this.textBox_ID);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
