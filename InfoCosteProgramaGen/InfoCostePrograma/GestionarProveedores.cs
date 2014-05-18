@@ -43,39 +43,32 @@ namespace InfoCostePrograma
         //Nuevo Proveedor
         private void button1_Click(object sender, EventArgs e)
         {
-            //nuevo prov
-            NuevoProveedor np = new NuevoProveedor();
-            np.Show();
-
-            /*NuevoProveedor nc = new NuevoProveedor();
+            NuevoProveedor nc = new NuevoProveedor();
             if (nc.ShowDialog() == DialogResult.OK)
-                GestionarProveedores_Load(null, null);*/
+                GestionarProveedores_Load(null, null);
         }
 
         //editando
         private void button2_Click(object sender, EventArgs e)
         {
             DataGridViewRow current = dataGridView_GestionarProveedores.CurrentRow;
-
             NuevoProveedor p = new NuevoProveedor(current.Cells[0].Value.ToString());
-            p.Show();
-            /*
-            DataGridViewRow current = dataGridView_GestionarProveedores.CurrentRow;
 
-            NuevoProveedor p = new NuevoProveedor(current.Cells[0].Value.ToString());
             if (p.ShowDialog() == DialogResult.OK)
-                GestionarProveedores_Load(null, null);*/
+                GestionarProveedores_Load(null, null);
         }
 
         //borra proveedor
         private void button3_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Seguro desea eliminar este proveedor?", "Proveedor", MessageBoxButtons.OKCancel);
-            DataGridViewRow current = dataGridView_GestionarProveedores.CurrentRow;
-            InfoCosteProgramaGenNHibernate.CEN.InfoCoste.ProveedorCEN pcen = new InfoCosteProgramaGenNHibernate.CEN.InfoCoste.ProveedorCEN();
+            if (MessageBox.Show("Seguro desea eliminar este proveedor?", "Proveedores", MessageBoxButtons.OKCancel) == DialogResult.OK)
+            {
+                DataGridViewRow current = dataGridView_GestionarProveedores.CurrentRow;
+                InfoCosteProgramaGenNHibernate.CEN.InfoCoste.ProveedorCEN pcen = new InfoCosteProgramaGenNHibernate.CEN.InfoCoste.ProveedorCEN();
 
-            pcen.Borrar(current.Cells[0].Value.ToString());
-            GestionarProveedores_Load(null, null);
+                pcen.Borrar(current.Cells[0].Value.ToString());
+                GestionarProveedores_Load(null, null);
+            }
         }
 
         private void button4_Click_2(object sender, EventArgs e)

@@ -129,6 +129,7 @@
             this.Controls.Add(this.textboxresponsable);
             this.Controls.Add(this.textboxcliente);
             this.Name = "NuevoParte";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Nuevo Parte";
             this.ResumeLayout(false);
             this.PerformLayout();

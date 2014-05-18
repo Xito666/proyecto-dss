@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button2 = new System.Windows.Forms.Button();
+            this.components = new System.ComponentModel.Container();
             this.textBox_Email = new System.Windows.Forms.TextBox();
             this.label_Email = new System.Windows.Forms.Label();
             this.button_CrearUsuario = new System.Windows.Forms.Button();
@@ -38,24 +38,16 @@
             this.label_Nombre = new System.Windows.Forms.Label();
             this.textBox_ID = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(155, 202);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(100, 23);
-            this.button2.TabIndex = 34;
-            this.button2.Text = "Cancelar";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // textBox_Email
             // 
             this.textBox_Email.Location = new System.Drawing.Point(129, 135);
             this.textBox_Email.Name = "textBox_Email";
             this.textBox_Email.Size = new System.Drawing.Size(138, 20);
-            this.textBox_Email.TabIndex = 31;
+            this.textBox_Email.TabIndex = 4;
             // 
             // label_Email
             // 
@@ -68,10 +60,10 @@
             // 
             // button_CrearUsuario
             // 
-            this.button_CrearUsuario.Location = new System.Drawing.Point(30, 202);
+            this.button_CrearUsuario.Location = new System.Drawing.Point(99, 202);
             this.button_CrearUsuario.Name = "button_CrearUsuario";
             this.button_CrearUsuario.Size = new System.Drawing.Size(100, 23);
-            this.button_CrearUsuario.TabIndex = 29;
+            this.button_CrearUsuario.TabIndex = 5;
             this.button_CrearUsuario.Text = "Crear";
             this.button_CrearUsuario.UseVisualStyleBackColor = true;
             this.button_CrearUsuario.Click += new System.EventHandler(this.button_CrearUsuario_Click_1);
@@ -81,14 +73,14 @@
             this.textBox_Direccion.Location = new System.Drawing.Point(129, 97);
             this.textBox_Direccion.Name = "textBox_Direccion";
             this.textBox_Direccion.Size = new System.Drawing.Size(138, 20);
-            this.textBox_Direccion.TabIndex = 27;
+            this.textBox_Direccion.TabIndex = 3;
             // 
             // textBox_Nombre
             // 
             this.textBox_Nombre.Location = new System.Drawing.Point(129, 60);
             this.textBox_Nombre.Name = "textBox_Nombre";
             this.textBox_Nombre.Size = new System.Drawing.Size(138, 20);
-            this.textBox_Nombre.TabIndex = 26;
+            this.textBox_Nombre.TabIndex = 2;
             // 
             // label_Direccion
             // 
@@ -113,16 +105,20 @@
             this.textBox_ID.Location = new System.Drawing.Point(129, 24);
             this.textBox_ID.Name = "textBox_ID";
             this.textBox_ID.Size = new System.Drawing.Size(138, 20);
-            this.textBox_ID.TabIndex = 36;
+            this.textBox_ID.TabIndex = 1;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(90, 27);
+            this.label2.Location = new System.Drawing.Point(82, 27);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(21, 13);
+            this.label2.Size = new System.Drawing.Size(29, 13);
             this.label2.TabIndex = 35;
-            this.label2.Text = "ID:";
+            this.label2.Text = "DNI:";
+            // 
+            // errorProvider
+            // 
+            this.errorProvider.ContainerControl = this;
             // 
             // NuevoProveedor
             // 
@@ -131,7 +127,6 @@
             this.ClientSize = new System.Drawing.Size(292, 256);
             this.Controls.Add(this.textBox_ID);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.textBox_Email);
             this.Controls.Add(this.label_Email);
             this.Controls.Add(this.button_CrearUsuario);
@@ -146,6 +141,7 @@
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Nuevo proveedor";
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -153,7 +149,6 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TextBox textBox_Email;
         private System.Windows.Forms.Label label_Email;
         private System.Windows.Forms.Button button_CrearUsuario;
@@ -163,5 +158,6 @@
         private System.Windows.Forms.Label label_Nombre;
         private System.Windows.Forms.TextBox textBox_ID;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ErrorProvider errorProvider;
     }
 }
