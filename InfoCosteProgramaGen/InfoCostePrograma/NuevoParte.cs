@@ -83,12 +83,17 @@ namespace InfoCostePrograma
             }
             else {
 
-                InfoCosteProgramaGenNHibernate.CEN.InfoCoste.ParteIntervencionCEN parte = new InfoCosteProgramaGenNHibernate.CEN.InfoCoste.ParteIntervencionCEN();
-               
-                InfoCosteProgramaGenNHibernate.CEN.InfoCoste.TrabajadorCEN responsable = new InfoCosteProgramaGenNHibernate.CEN.InfoCoste.TrabajadorCEN();
-                InfoCosteProgramaGenNHibernate.EN.InfoCoste.TrabajadorEN trab = responsable.LeerPorOID(id);
 
-                parte.SetTrabajador(id, trab);
+
+                InfoCosteProgramaGenNHibernate.CEN.InfoCoste.ParteIntervencionCEN parte = new InfoCosteProgramaGenNHibernate.CEN.InfoCoste.ParteIntervencionCEN();
+                InfoCosteProgramaGenNHibernate.EN.InfoCoste.ParteIntervencionEN ppen = parte.LeerPorOID(Convert.ToInt32(textboxresponsable.Text));
+
+                InfoCosteProgramaGenNHibernate.CEN.InfoCoste.TrabajadorCEN responsable = new InfoCosteProgramaGenNHibernate.CEN.InfoCoste.TrabajadorCEN();
+                InfoCosteProgramaGenNHibernate.EN.InfoCoste.TrabajadorEN trab = responsable.LeerPorOID(Convert.ToInt32(textboxresponsable.Text));
+
+                ppen.Trabajador = trab;
+
+                //parte.SetTrabajador(id, trab);
                 parte.SetDatosPc(id, textboxequipo.Text);
                 parte.SetAccionesRealizadas(id, textboxdescripcion.Text);
 
