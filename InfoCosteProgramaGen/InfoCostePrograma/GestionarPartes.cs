@@ -22,7 +22,7 @@ namespace InfoCostePrograma
         //Necesitare una lista de partes -> List<ParteInvervencionEN> partes;
         private void GestionarPartes_Load(object sender, EventArgs e)
         {
-            dataGridViewPartes.Rows.Add(new object[] { "17/05/2014", "Daniel Heredia", "Pepito", "Packard Bell", "Sustituir tarjeta" });
+            //dataGridViewPartes.Rows.Add(new object[] { "17/05/2014", "Daniel Heredia", "Pepito", "Packard Bell", "Sustituir tarjeta" });
 
             InfoCosteProgramaGenNHibernate.CEN.InfoCoste.ParteIntervencionCEN parte = new InfoCosteProgramaGenNHibernate.CEN.InfoCoste.ParteIntervencionCEN();
             IList<InfoCosteProgramaGenNHibernate.EN.InfoCoste.ParteIntervencionEN> listaPartes = parte.LeerTodos(0, 20);
@@ -30,8 +30,7 @@ namespace InfoCostePrograma
             dataGridViewPartes.Rows.Clear();
             foreach (InfoCosteProgramaGenNHibernate.EN.InfoCoste.ParteIntervencionEN p in listaPartes)
             {
-
-                dataGridViewPartes.Rows.Add(p.Fecha, p.Cliente.NombreCompleto, p.Trabajador.Nombre, p.DatosPc, p.AccionesRealizadas);
+                dataGridViewPartes.Rows.Add(p.Fecha, p.Cliente.Id, p.Trabajador.Id, p.DatosPc, p.AccionesRealizadas);
             }
         
         
@@ -54,7 +53,7 @@ namespace InfoCostePrograma
             ClienteCEN clientes = new ClienteCEN();
             //obtengo una lista pero realmente sera solo el usu con ese nombre
             //IList<ClienteEN> clienteNombre = clientes.LeerPorNombre(current.Cells[1].Value.ToString());
-            ClienteEN cliente = clientes.LeerPorOID("48573712N");
+            ClienteEN cliente = clientes.LeerPorOID(current.Cells[1].Value.ToString());
             //ClienteEN cliente = parte.Cliente;
 
             MailReparation avisa = new MailReparation();

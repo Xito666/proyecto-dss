@@ -33,9 +33,6 @@ namespace InfoCostePrograma
                 dataGridView_GestionarProveedores.Rows.Add(p.Id, p.Nombre, p.Direccion, p.Email);
             }
 
-            /*dataGridView_GestionarProveedores.Rows.Add(1, "Azul-Tierra", "C\\ de Ejemplo 123", "");
-            dataGridView_GestionarProveedores.Rows.Add(2, "El Gato Fotografía", "Av. Larga 7", "info@elgatofotos.com");
-            dataGridView_GestionarProveedores.Rows.Add(3, "Pepito Perez Garcia", "C\\ Jon", "pperez@hotmail.com");*/
         }
 
         private void dataGridView_GestionarProveedores_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -43,21 +40,34 @@ namespace InfoCostePrograma
 
         }
 
+        //Nuevo Proveedor
         private void button1_Click(object sender, EventArgs e)
         {
             //nuevo prov
             NuevoProveedor np = new NuevoProveedor();
             np.Show();
+
+            /*NuevoProveedor nc = new NuevoProveedor();
+            if (nc.ShowDialog() == DialogResult.OK)
+                GestionarProveedores_Load(null, null);*/
         }
 
+        //editando
         private void button2_Click(object sender, EventArgs e)
         {
             DataGridViewRow current = dataGridView_GestionarProveedores.CurrentRow;
 
             NuevoProveedor p = new NuevoProveedor(current.Cells[0].Value.ToString());
             p.Show();
+            /*
+            DataGridViewRow current = dataGridView_GestionarProveedores.CurrentRow;
+
+            NuevoProveedor p = new NuevoProveedor(current.Cells[0].Value.ToString());
+            if (p.ShowDialog() == DialogResult.OK)
+                GestionarProveedores_Load(null, null);*/
         }
 
+        //borra proveedor
         private void button3_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Seguro desea eliminar este proveedor?", "Proveedor", MessageBoxButtons.OKCancel);

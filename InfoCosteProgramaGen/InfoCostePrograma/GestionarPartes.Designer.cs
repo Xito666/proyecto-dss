@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GestionarPartes));
             this.dataGridViewPartes = new System.Windows.Forms.DataGridView();
             this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -130,7 +131,8 @@
             // 
             // button5
             // 
-            this.button5.Image = global::InfoCostePrograma.Properties.Resources.nuevo;
+            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
+            this.button5.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.button5.Location = new System.Drawing.Point(689, 158);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(70, 70);
