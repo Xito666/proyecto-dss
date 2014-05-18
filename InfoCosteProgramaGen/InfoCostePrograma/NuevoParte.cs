@@ -53,13 +53,14 @@ namespace InfoCostePrograma
                 {
                     InfoCosteProgramaGenNHibernate.CEN.InfoCoste.ParteIntervencionCEN parte = new InfoCosteProgramaGenNHibernate.CEN.InfoCoste.ParteIntervencionCEN();
                     IList<InfoCosteProgramaGenNHibernate.EN.InfoCoste.ParteIntervencionEN> listaPartes = parte.LeerTodos(0, 40);
-
+                    
                     int parteID = 0;
-                    try
+                    if (listaPartes != null) parteID = listaPartes.Last().Id + 1;
+                   /** try
                     {
                         parteID = listaPartes.Last().Id + 1;
                     }
-                    catch (Exception ex) { MessageBox.Show(this, "Error al calcular ultimo id"); }
+                    catch (Exception ex) { MessageBox.Show(this, "Error al calcular ultimo id"); }**/
                     try
                     {
                         InfoCosteProgramaGenNHibernate.CEN.InfoCoste.ParteIntervencionCEN partecen = new InfoCosteProgramaGenNHibernate.CEN.InfoCoste.ParteIntervencionCEN();
