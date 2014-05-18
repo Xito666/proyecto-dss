@@ -30,8 +30,8 @@ namespace InfoCostePrograma
 
         textboxequipo.Text = pen.DatosPc;
         textboxdescripcion.Text = pen.AccionesRealizadas;
-        textboxresponsable.Text = pen.Trabajador.ToString();
-        textboxcliente.Text = pen.Cliente.ToString();
+        textboxresponsable.Text = pen.Trabajador.Id.ToString();
+        textboxcliente.Text = pen.Cliente.Id.ToString();
         
         
         }
