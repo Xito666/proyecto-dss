@@ -38,7 +38,8 @@ namespace InfoCostePrograma
         private void button1_Click(object sender, EventArgs e)
         {
             NuevoParte parte= new NuevoParte();
-            parte.Show();
+            if (parte.ShowDialog() == DialogResult.OK)
+                GestionarPartes_Load(null, null);
         }
 
         // EDITAR

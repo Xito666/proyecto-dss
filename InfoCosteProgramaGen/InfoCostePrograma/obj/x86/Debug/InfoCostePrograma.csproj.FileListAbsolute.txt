@@ -153,8 +153,6 @@ C:\Users\Xito\Desktop\proyecto-dss\InfoCosteProgramaGen\InfoCostePrograma\obj\x8
 C:\Users\Xito\Desktop\proyecto-dss\InfoCosteProgramaGen\InfoCostePrograma\obj\x86\Debug\InfoCostePrograma.Principal.resources
 C:\Users\Xito\Desktop\proyecto-dss\InfoCosteProgramaGen\InfoCostePrograma\obj\x86\Debug\InfoCostePrograma.Properties.Resources.resources
 C:\Users\Xito\Desktop\proyecto-dss\InfoCosteProgramaGen\InfoCostePrograma\obj\x86\Debug\InfoCostePrograma.Proveedor.resources
-C:\Users\Xito\Desktop\proyecto-dss\InfoCosteProgramaGen\InfoCostePrograma\obj\x86\Debug\InfoCostePrograma.Ver_presupuestos.resources
-C:\Users\Xito\Desktop\proyecto-dss\InfoCosteProgramaGen\InfoCostePrograma\obj\x86\Debug\InfoCostePrograma.ver_reservas.resources
 C:\Users\Xito\Desktop\proyecto-dss\InfoCosteProgramaGen\InfoCostePrograma\obj\x86\Debug\InfoCostePrograma.csproj.GenerateResource.Cache
 C:\Users\Xito\Desktop\proyecto-dss\InfoCosteProgramaGen\InfoCostePrograma\bin\Debug\InfoCostePrograma.exe.config
 C:\Users\Xito\Desktop\proyecto-dss\InfoCosteProgramaGen\InfoCostePrograma\obj\x86\Debug\InfoCostePrograma.csprojResolveAssemblyReference.cache
