@@ -30,7 +30,7 @@ namespace InfoCostePrograma
             dataGridViewPartes.Rows.Clear();
             foreach (InfoCosteProgramaGenNHibernate.EN.InfoCoste.ParteIntervencionEN p in listaPartes)
             {
-                dataGridViewPartes.Rows.Add(p.Fecha, p.Cliente.Id, p.Trabajador.Id, p.DatosPc, p.AccionesRealizadas);
+                dataGridViewPartes.Rows.Add(p.Id,p.Fecha, p.Cliente.Id, p.Trabajador.Id, p.DatosPc, p.AccionesRealizadas);
             }
         
         
@@ -59,6 +59,15 @@ namespace InfoCostePrograma
             MailReparation avisa = new MailReparation();
             //avisa.EnviarAviso(clienteNombre[0].NombreCompleto, clienteNombre[0].Email);
             avisa.EnviarAviso(cliente.NombreCompleto, cliente.Email);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            DataGridViewRow current = dataGridViewPartes.CurrentRow;
+
+            NuevoParte p = new NuevoParte(Convert.ToInt32(current.Cells[0].Value));
+            if (p.ShowDialog() == DialogResult.OK)
+                GestionarPartes_Load(null, null);
         }
     }
 }

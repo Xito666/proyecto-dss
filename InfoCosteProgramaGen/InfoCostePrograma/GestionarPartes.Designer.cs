@@ -30,16 +30,17 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GestionarPartes));
             this.dataGridViewPartes = new System.Windows.Forms.DataGridView();
-            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Responsable = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Equipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Responsable = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Equipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPartes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -47,6 +48,7 @@
             // 
             this.dataGridViewPartes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewPartes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Id,
             this.Fecha,
             this.Cliente,
             this.Responsable,
@@ -56,32 +58,6 @@
             this.dataGridViewPartes.Name = "dataGridViewPartes";
             this.dataGridViewPartes.Size = new System.Drawing.Size(582, 328);
             this.dataGridViewPartes.TabIndex = 0;
-            // 
-            // Fecha
-            // 
-            this.Fecha.HeaderText = "Fecha";
-            this.Fecha.Name = "Fecha";
-            // 
-            // Cliente
-            // 
-            this.Cliente.HeaderText = "Cliente";
-            this.Cliente.Name = "Cliente";
-            // 
-            // Responsable
-            // 
-            this.Responsable.HeaderText = "Responsable";
-            this.Responsable.Name = "Responsable";
-            // 
-            // Equipo
-            // 
-            this.Equipo.HeaderText = "Equipo";
-            this.Equipo.Name = "Equipo";
-            // 
-            // Descripcion
-            // 
-            this.Descripcion.FillWeight = 150F;
-            this.Descripcion.HeaderText = "Descripción";
-            this.Descripcion.Name = "Descripcion";
             // 
             // button4
             // 
@@ -116,6 +92,7 @@
             this.button2.Text = "Editar";
             this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -141,6 +118,37 @@
             this.button5.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // Id
+            // 
+            this.Id.HeaderText = "Id";
+            this.Id.Name = "Id";
+            // 
+            // Fecha
+            // 
+            this.Fecha.HeaderText = "Fecha";
+            this.Fecha.Name = "Fecha";
+            // 
+            // Cliente
+            // 
+            this.Cliente.HeaderText = "Cliente";
+            this.Cliente.Name = "Cliente";
+            // 
+            // Responsable
+            // 
+            this.Responsable.HeaderText = "Responsable";
+            this.Responsable.Name = "Responsable";
+            // 
+            // Equipo
+            // 
+            this.Equipo.HeaderText = "Equipo";
+            this.Equipo.Name = "Equipo";
+            // 
+            // Descripcion
+            // 
+            this.Descripcion.FillWeight = 150F;
+            this.Descripcion.HeaderText = "Descripción";
+            this.Descripcion.Name = "Descripcion";
             // 
             // GestionarPartes
             // 
@@ -168,11 +176,12 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cliente;
         private System.Windows.Forms.DataGridViewTextBoxColumn Responsable;
         private System.Windows.Forms.DataGridViewTextBoxColumn Equipo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Descripcion;
-        private System.Windows.Forms.Button button5;
     }
 }

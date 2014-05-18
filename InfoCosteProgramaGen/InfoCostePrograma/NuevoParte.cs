@@ -45,16 +45,25 @@ namespace InfoCostePrograma
         {
             if (edit == false)
             {
-                if (textboxid.Text == "" || textboxcliente.Text == "" || textboxresponsable.Text == "" || textboxequipo.Text == "" || textboxdescripcion.Text == "")
+                if (textboxcliente.Text == "" || textboxresponsable.Text == "" || textboxequipo.Text == "" || textboxdescripcion.Text == "")
                 {
                     MessageBox.Show(this, "Todos los campos son obligatorios");
                 }
                 else
                 {
+                    InfoCosteProgramaGenNHibernate.CEN.InfoCoste.ParteIntervencionCEN parte = new InfoCosteProgramaGenNHibernate.CEN.InfoCoste.ParteIntervencionCEN();
+                    IList<InfoCosteProgramaGenNHibernate.EN.InfoCoste.ParteIntervencionEN> listaPartes = parte.LeerTodos(0, 40);
+
+                    int parteID = 0;
                     try
                     {
-                        InfoCosteProgramaGenNHibernate.CEN.InfoCoste.ParteIntervencionCEN parte = new InfoCosteProgramaGenNHibernate.CEN.InfoCoste.ParteIntervencionCEN();
-                        parte.ParteIntervencion(Convert.ToInt32(textboxid.Text),
+                        parteID = listaPartes.Last().Id + 1;
+                    }
+                    catch (Exception ex) { }
+                    try
+                    {
+                        InfoCosteProgramaGenNHibernate.CEN.InfoCoste.ParteIntervencionCEN partecen = new InfoCosteProgramaGenNHibernate.CEN.InfoCoste.ParteIntervencionCEN();
+                        partecen.ParteIntervencion(parteID,
                                                 DateTime.Now,
                                                 textboxequipo.Text,
                                                 textboxdescripcion.Text,

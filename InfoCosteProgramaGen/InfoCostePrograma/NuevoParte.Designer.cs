@@ -37,8 +37,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textboxid = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // textboxcliente
@@ -116,29 +114,11 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(79, 12);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(19, 13);
-            this.label5.TabIndex = 10;
-            this.label5.Text = "Id:";
-            // 
-            // textboxid
-            // 
-            this.textboxid.Location = new System.Drawing.Point(123, 8);
-            this.textboxid.Name = "textboxid";
-            this.textboxid.Size = new System.Drawing.Size(100, 20);
-            this.textboxid.TabIndex = 9;
-            // 
             // NuevoParte
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(238, 228);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.textboxid);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -166,8 +146,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textboxid;
 
     }
 }
