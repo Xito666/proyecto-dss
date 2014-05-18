@@ -66,7 +66,6 @@
             this.dataGridView_GestionarClientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView_GestionarClientes.Size = new System.Drawing.Size(768, 275);
             this.dataGridView_GestionarClientes.TabIndex = 3;
-            this.dataGridView_GestionarClientes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_GestionarClientes_CellContentClick);
             // 
             // label1
             // 

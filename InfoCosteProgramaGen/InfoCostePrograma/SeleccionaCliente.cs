@@ -13,7 +13,6 @@ namespace InfoCostePrograma
 {
     public partial class SeleccionaCliente : Form
     {
-
         public ClienteEN clienteSeleccionado;
 
         public SeleccionaCliente()
@@ -21,6 +20,7 @@ namespace InfoCostePrograma
             InitializeComponent();
         }
 
+        // CARGAR
         private void SeleccionaCliente_Load(object sender, EventArgs e)
         {
             ClienteCEN ccen = new ClienteCEN();
@@ -42,6 +42,7 @@ namespace InfoCostePrograma
             }
         }
 
+        // SELECCIONAR CLIENTE
         private void dataGridView_GestionarClientes_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             DataGridViewRow current = dataGridView1.CurrentRow;

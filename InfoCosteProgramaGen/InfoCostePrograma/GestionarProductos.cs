@@ -19,11 +19,7 @@ namespace InfoCostePrograma
             InitializeComponent();
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Seguro desea eliminar este producto?", "Producto", MessageBoxButtons.OKCancel);
-        }
-
+        // CARGAR
         private void GestionarProductos_Load(object sender, EventArgs e)
         {
             ProductoCEN pCEN = new ProductoCEN();
@@ -41,12 +37,10 @@ namespace InfoCostePrograma
             }
         }
 
+        // GUARDAR
         private void button1_Click(object sender, EventArgs e)
         {
             ProductoCEN pCEN = new ProductoCEN();
-
-            
-
             int ins = 0;
 
             for (int i = 0; i < dataGridView_GestionarProductos.Rows.Count-1; i++)
@@ -55,6 +49,7 @@ namespace InfoCostePrograma
                 {
                     DataGridViewRow fila = dataGridView_GestionarProductos.Rows[i];
                     ProductoEN pEN = pCEN.LeerPorOID(Convert.ToInt32(fila.Cells[0].Value));
+                    
                     if (pEN != null)
                     {
                         pCEN.SetNombre(Convert.ToInt32(fila.Cells[0].Value.ToString()), fila.Cells[1].Value.ToString());
@@ -76,32 +71,37 @@ namespace InfoCostePrograma
                 catch (Exception ex)
                 {
                     MessageBox.Show("Error en la fila " + i + "\nNo pueden haber campos vacíos", "Error", MessageBoxButtons.OKCancel);
-           
                 }
             }
+
             MessageBox.Show("Se han confirmado las modificaciones.\nSe han insertado " + ins + " registros.", "Save Log", MessageBoxButtons.OKCancel);
-            
         }
 
+
+        // BORRAR
         private void button2_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Se va a eliminar el producto", "Productos", MessageBoxButtons.OK);
-            DataGridViewRow current = dataGridView_GestionarProductos.CurrentRow;
+            if(MessageBox.Show("Se va a eliminar el producto", "Productos", MessageBoxButtons.OK) == DialogResult.OK)
+            {
+                DataGridViewRow current = dataGridView_GestionarProductos.CurrentRow;
 
-            ProductoCEN pCEN = new ProductoCEN();
-            pCEN.Borrar(Convert.ToInt32(current.Cells[0].Value));
+                ProductoCEN pCEN = new ProductoCEN();
+                pCEN.Borrar(Convert.ToInt32(current.Cells[0].Value));
 
-            GestionarProductos_Load(null, null);
+                GestionarProductos_Load(null, null);
+            }
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        // BUSCAR POR FAMILIA
+        private void button3_Click_1(object sender, EventArgs e)
         {
             string input = Microsoft.VisualBasic.Interaction.InputBox("Nombre del Producto?");
             ProductoCEN pcen = new ProductoCEN();
-            IList<ProductoEN> lp = pcen.LeerPorNombre(input);
+            IList<ProductoEN> lp = pcen.LeerPorFamilia(input);
 
             dataGridView_GestionarProductos.Rows.Clear();
             int i = 0;
+            
             foreach (ProductoEN p in lp)
             {
                 dataGridView_GestionarProductos.Rows.Add(p.Id, p.Nombre, p.Familia, p.Precio, p.Stock, p.Descripcion);
@@ -112,11 +112,12 @@ namespace InfoCostePrograma
             }
         }
 
-        private void button3_Click_1(object sender, EventArgs e)
+        // BUSCAR POR NOMBRE
+        private void button4_Click(object sender, EventArgs e)
         {
             string input = Microsoft.VisualBasic.Interaction.InputBox("Nombre del Producto?");
             ProductoCEN pcen = new ProductoCEN();
-            IList<ProductoEN> lp = pcen.LeerPorFamilia(input);
+            IList<ProductoEN> lp = pcen.LeerPorNombre(input);
 
             dataGridView_GestionarProductos.Rows.Clear();
             int i = 0;

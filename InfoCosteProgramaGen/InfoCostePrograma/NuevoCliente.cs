@@ -52,50 +52,29 @@ namespace InfoCostePrograma
                 checkBox_Empresa.Checked = true;
         }
 
-        private void NuevoCliente_Load(object sender, EventArgs e)
-        {
-
-        }
-
         // NUEVO
         private void button_CrearUsuario_Click(object sender, EventArgs e)
         {
-            if (es_dni(textBox_ID) == true)
+            if (es_dni(textBox_ID) == true && textBox_Nombre.Text != "" && textBox_Direccion.Text != "" && es_telefono(textBox_Telefono) == true && es_email(textBox_Email) == true)
             {
-                //if (!seRepite(textBox_ID))
-                //{
-                    if (es_telefono(textBox_Telefono) == true && es_email(textBox_Email) == true)
+                if (!editando)
+                {
+                    if (!seRepite(textBox_ID))
                     {
-                        if (!editando)
+                        if (checkBox_Empresa.Checked)
                         {
-                            if (checkBox_Empresa.Checked)
+                            if (es_numCuenta(textBox_NumCuenta) == true)
                             {
-                                if (es_numCuenta(textBox_NumCuenta) == true)
-                                {
-                                    String nCuenta = "";
-                                    nCuenta = textBox_NumCuenta.Text;
+                                String nCuenta = "";
+                                nCuenta = textBox_NumCuenta.Text;
 
-                                    InfoCosteProgramaGenNHibernate.CEN.InfoCoste.ClienteEmpresaCEN ceCEN = new InfoCosteProgramaGenNHibernate.CEN.InfoCoste.ClienteEmpresaCEN();
-                                    ceCEN.ClienteEmpresa(textBox_ID.Text,
-                                                            textBox_Direccion.Text,
-                                                            Convert.ToInt32(textBox_Telefono.Text),
-                                                            textBox_Email.Text,
-                                                            textBox_Nombre.Text,
-                                                            nCuenta);
-
-                                    MessageBox.Show(this, "Cliente creado");
-                                    this.DialogResult = DialogResult.OK;
-                                    this.Close();
-                                }
-                            }
-                            else
-                            {
-                                InfoCosteProgramaGenNHibernate.CEN.InfoCoste.ClienteParticularCEN cpCEN = new InfoCosteProgramaGenNHibernate.CEN.InfoCoste.ClienteParticularCEN();
-                                cpCEN.ClienteParticular(textBox_ID.Text,
+                                InfoCosteProgramaGenNHibernate.CEN.InfoCoste.ClienteEmpresaCEN ceCEN = new InfoCosteProgramaGenNHibernate.CEN.InfoCoste.ClienteEmpresaCEN();
+                                ceCEN.ClienteEmpresa(textBox_ID.Text,
                                                         textBox_Direccion.Text,
                                                         Convert.ToInt32(textBox_Telefono.Text),
                                                         textBox_Email.Text,
-                                                        textBox_Nombre.Text);
+                                                        textBox_Nombre.Text,
+                                                        nCuenta);
 
                                 MessageBox.Show(this, "Cliente creado");
                                 this.DialogResult = DialogResult.OK;
@@ -104,43 +83,56 @@ namespace InfoCostePrograma
                         }
                         else
                         {
-                            if (checkBox_Empresa.Checked)
-                            {
-                                if (es_numCuenta(textBox_NumCuenta) == true)
-                                {
-                                    InfoCosteProgramaGenNHibernate.CEN.InfoCoste.ClienteCEN cCEN = new InfoCosteProgramaGenNHibernate.CEN.InfoCoste.ClienteCEN();
-                                    cCEN.SetNombre(id, textBox_Nombre.Text);
-                                    cCEN.SetDireccion(id, textBox_Direccion.Text);
-                                    cCEN.SetEmail(id, textBox_Email.Text);
-                                    cCEN.SetTelefono(id, Convert.ToInt32(textBox_Telefono.Text));
+                            InfoCosteProgramaGenNHibernate.CEN.InfoCoste.ClienteParticularCEN cpCEN = new InfoCosteProgramaGenNHibernate.CEN.InfoCoste.ClienteParticularCEN();
+                            cpCEN.ClienteParticular(textBox_ID.Text,
+                                                    textBox_Direccion.Text,
+                                                    Convert.ToInt32(textBox_Telefono.Text),
+                                                    textBox_Email.Text,
+                                                    textBox_Nombre.Text);
 
-                                    InfoCosteProgramaGenNHibernate.CEN.InfoCoste.ClienteEmpresaCEN ceCEN = new InfoCosteProgramaGenNHibernate.CEN.InfoCoste.ClienteEmpresaCEN();
-                                    ceCEN.SetNumeroCuenta(id, textBox_NumCuenta.Text);
-
-                                    MessageBox.Show(this, "Cliente modificado");
-                                    this.DialogResult = DialogResult.OK;
-                                    this.Close();
-                                }
-                            }
-                            else
-                            {
-                                InfoCosteProgramaGenNHibernate.CEN.InfoCoste.ClienteCEN cCEN = new InfoCosteProgramaGenNHibernate.CEN.InfoCoste.ClienteCEN();
-                                cCEN.SetNombre(id, textBox_Nombre.Text);
-                                cCEN.SetDireccion(id, textBox_Direccion.Text);
-                                cCEN.SetEmail(id, textBox_Email.Text);
-                                cCEN.SetTelefono(id, Convert.ToInt32(textBox_Telefono.Text));
-
-                                MessageBox.Show(this, "Cliente modificado");
-                                this.DialogResult = DialogResult.OK;
-                                this.Close();
-                            }
+                            MessageBox.Show(this, "Cliente creado");
+                            this.DialogResult = DialogResult.OK;
+                            this.Close();
                         }
                     }
-              /*  }
+                    else
+                    {
+                        MessageBox.Show("Ya existe un usuario con este DNI");
+                    }
+                }
                 else
                 {
-                    MessageBox.Show("Ya existe un usuario con este DNI");
-                }*/
+                    if (checkBox_Empresa.Checked)
+                    {
+                        if (es_numCuenta(textBox_NumCuenta) == true)
+                        {
+                            InfoCosteProgramaGenNHibernate.CEN.InfoCoste.ClienteCEN cCEN = new InfoCosteProgramaGenNHibernate.CEN.InfoCoste.ClienteCEN();
+                            cCEN.SetNombre(id, textBox_Nombre.Text);
+                            cCEN.SetDireccion(id, textBox_Direccion.Text);
+                            cCEN.SetEmail(id, textBox_Email.Text);
+                            cCEN.SetTelefono(id, Convert.ToInt32(textBox_Telefono.Text));
+
+                            InfoCosteProgramaGenNHibernate.CEN.InfoCoste.ClienteEmpresaCEN ceCEN = new InfoCosteProgramaGenNHibernate.CEN.InfoCoste.ClienteEmpresaCEN();
+                            ceCEN.SetNumeroCuenta(id, textBox_NumCuenta.Text);
+
+                            MessageBox.Show(this, "Cliente modificado");
+                            this.DialogResult = DialogResult.OK;
+                            this.Close();
+                        }
+                    }
+                    else
+                    {
+                        InfoCosteProgramaGenNHibernate.CEN.InfoCoste.ClienteCEN cCEN = new InfoCosteProgramaGenNHibernate.CEN.InfoCoste.ClienteCEN();
+                        cCEN.SetNombre(id, textBox_Nombre.Text);
+                        cCEN.SetDireccion(id, textBox_Direccion.Text);
+                        cCEN.SetEmail(id, textBox_Email.Text);
+                        cCEN.SetTelefono(id, Convert.ToInt32(textBox_Telefono.Text));
+
+                        MessageBox.Show(this, "Cliente modificado");
+                        this.DialogResult = DialogResult.OK;
+                        this.Close();
+                    }
+                }
             }
         }
 

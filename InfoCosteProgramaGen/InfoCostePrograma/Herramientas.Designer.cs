@@ -90,7 +90,6 @@
             this.label2.Text = "Copía de seguridad realizada en C:\\Program Files\\Microsoft SQL Server\\MSSQL10.SQL" +
                 "EXPRESS\\MSSQL\\DATA\\copia.bak";
             this.label2.Visible = false;
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // Herramientas
             // 
@@ -104,7 +103,6 @@
             this.Controls.Add(this.label1);
             this.Name = "Herramientas";
             this.Text = "Herramientas";
-            this.Load += new System.EventHandler(this.Herramientas_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

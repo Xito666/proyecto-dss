@@ -16,11 +16,7 @@ namespace InfoCostePrograma
             InitializeComponent();
         }
 
-        private void dataGridView_GestionarTrabajadores_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
+        // CARGAR
         private void GestionarTrabajadores_Load(object sender, EventArgs e)
         {
             InfoCosteProgramaGenNHibernate.CEN.InfoCoste.TrabajadorCEN tcen = new InfoCosteProgramaGenNHibernate.CEN.InfoCoste.TrabajadorCEN();
@@ -31,7 +27,6 @@ namespace InfoCostePrograma
             {
                 dataGridView_GestionarTrabajadores.Rows.Add(t.Id, t.Nombre, t.Password);
             }
-
         }
 
         // NUEVO
@@ -54,7 +49,6 @@ namespace InfoCostePrograma
 
                 GestionarTrabajadores_Load(null, null);
             }
-
         }
 
         // EDITAR
@@ -89,6 +83,5 @@ namespace InfoCostePrograma
                 }
             }
         }
-
     }
 }

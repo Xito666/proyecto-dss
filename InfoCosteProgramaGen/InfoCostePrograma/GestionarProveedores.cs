@@ -16,6 +16,7 @@ namespace InfoCostePrograma
             InitializeComponent();
         }
 
+        // CARGAR
         private void GestionarProveedores_Load(object sender, EventArgs e)
         {
             InfoCosteProgramaGenNHibernate.CEN.InfoCoste.ProveedorCEN pcen = new InfoCosteProgramaGenNHibernate.CEN.InfoCoste.ProveedorCEN();
@@ -25,22 +26,18 @@ namespace InfoCostePrograma
             foreach (InfoCosteProgramaGenNHibernate.EN.InfoCoste.ProveedorEN p in listaClientes)
             {
                 InfoCosteProgramaGenNHibernate.CEN.InfoCoste.ProveedorCEN proCEN = new InfoCosteProgramaGenNHibernate.CEN.InfoCoste.ProveedorCEN();
+                
                 try
                 {
                     InfoCosteProgramaGenNHibernate.EN.InfoCoste.ProveedorEN proEN = proCEN.LeerPorOID(p.Id);
                 }
                 catch (Exception ex) {  }
+
                 dataGridView_GestionarProveedores.Rows.Add(p.Id, p.Nombre, p.Direccion, p.Email);
             }
-
         }
 
-        private void dataGridView_GestionarProveedores_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        //Nuevo Proveedor
+        // NUEVO
         private void button1_Click(object sender, EventArgs e)
         {
             NuevoProveedor nc = new NuevoProveedor();
@@ -48,7 +45,7 @@ namespace InfoCostePrograma
                 GestionarProveedores_Load(null, null);
         }
 
-        //editando
+        // EDITAR
         private void button2_Click(object sender, EventArgs e)
         {
             DataGridViewRow current = dataGridView_GestionarProveedores.CurrentRow;
@@ -58,7 +55,7 @@ namespace InfoCostePrograma
                 GestionarProveedores_Load(null, null);
         }
 
-        //borra proveedor
+        // BORRAR
         private void button3_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Seguro desea eliminar este proveedor?", "Proveedores", MessageBoxButtons.OKCancel) == DialogResult.OK)
@@ -71,6 +68,7 @@ namespace InfoCostePrograma
             }
         }
 
+        // BUSCAR
         private void button4_Click_2(object sender, EventArgs e)
         {
             string input = Microsoft.VisualBasic.Interaction.InputBox("Nombre del proveedor?");
@@ -81,14 +79,13 @@ namespace InfoCostePrograma
             foreach (InfoCosteProgramaGenNHibernate.EN.InfoCoste.ProveedorEN i in lp)
             {
                 InfoCosteProgramaGenNHibernate.CEN.InfoCoste.ProveedorCEN provCEN = new InfoCosteProgramaGenNHibernate.CEN.InfoCoste.ProveedorCEN();
+                
                 try
                 {
                     InfoCosteProgramaGenNHibernate.EN.InfoCoste.ProveedorEN pEN = provCEN.LeerPorOID(i.Id);
                 }
-                catch (Exception ex)
-                {
+                catch (Exception ex) { }
 
-                }
                 dataGridView_GestionarProveedores.Rows.Add(i.Id, i.Nombre, i.Direccion, i.Email);
             }
         }

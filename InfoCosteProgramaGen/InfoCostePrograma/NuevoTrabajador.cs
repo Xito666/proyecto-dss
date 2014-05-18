@@ -49,11 +49,7 @@ namespace InfoCostePrograma
             textBox_Nombre.Text = ten.Nombre;
         }
 
-        private void NuevoTrabajador_Load(object sender, EventArgs e)
-        {
-
-        }
-
+        // VALIDAR
         private void button_CrearUsuario_Click(object sender, EventArgs e)
         {
             if (textBox_Nombre.Text == "" || textBox_Password.Text == "")

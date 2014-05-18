@@ -13,7 +13,6 @@ namespace InfoCostePrograma
 {
     public partial class SeleccionaProducto : Form
     {
-
         public ProductoEN productoSeleccionado;
 
         public SeleccionaProducto()
@@ -21,6 +20,7 @@ namespace InfoCostePrograma
             InitializeComponent();
         }
 
+        // CARGAR
         private void SeleccionaProducto_Load(object sender, EventArgs e)
         {
             ProductoCEN pCEN = new ProductoCEN();
@@ -32,6 +32,7 @@ namespace InfoCostePrograma
             }
         }
 
+        // SELECCIONAR PRODUCTO
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             DataGridViewRow current = dataGridView1.CurrentRow;
@@ -42,6 +43,7 @@ namespace InfoCostePrograma
             this.Close();
         }
 
+        // BUSCAR POR FAMILIA
         private void button4_Click(object sender, EventArgs e)
         {
             string input = Microsoft.VisualBasic.Interaction.InputBox("Nombre del Producto?");

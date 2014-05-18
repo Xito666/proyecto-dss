@@ -57,7 +57,6 @@
             this.dataGridView_GestionarTrabajadores.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView_GestionarTrabajadores.Size = new System.Drawing.Size(768, 275);
             this.dataGridView_GestionarTrabajadores.TabIndex = 1;
-            this.dataGridView_GestionarTrabajadores.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_GestionarTrabajadores_CellContentClick);
             // 
             // ID
             // 

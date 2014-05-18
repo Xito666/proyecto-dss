@@ -61,7 +61,6 @@
             this.dataGridView_GestionarProveedores.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView_GestionarProveedores.Size = new System.Drawing.Size(768, 275);
             this.dataGridView_GestionarProveedores.TabIndex = 2;
-            this.dataGridView_GestionarProveedores.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_GestionarProveedores_CellContentClick);
             // 
             // Identificador
             // 

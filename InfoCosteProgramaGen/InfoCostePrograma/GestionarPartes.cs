@@ -32,16 +32,38 @@ namespace InfoCostePrograma
             {
                 dataGridViewPartes.Rows.Add(p.Id,p.Fecha, p.Cliente.Id, p.Trabajador.Id, p.DatosPc, p.AccionesRealizadas);
             }
-        
-        
         }
 
+        // NUEVO
         private void button1_Click(object sender, EventArgs e)
         {
             NuevoParte parte= new NuevoParte();
             parte.Show();
         }
 
+        // EDITAR
+        private void button2_Click(object sender, EventArgs e)
+        {
+            DataGridViewRow current = dataGridViewPartes.CurrentRow;
+
+            NuevoParte p = new NuevoParte(Convert.ToInt32(current.Cells[0].Value));
+            if (p.ShowDialog() == DialogResult.OK)
+                GestionarPartes_Load(null, null);
+        }
+
+        // BORRAR
+        private void button3_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Funcionalidad no implementada");
+        }
+
+        // BUSCAR
+        private void button4_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Funcionalidad no implementada");
+        }
+
+        // AVISAR
         private void button5_Click(object sender, EventArgs e)
         {
             DataGridViewRow current = dataGridViewPartes.CurrentRow;
@@ -59,15 +81,6 @@ namespace InfoCostePrograma
             MailReparation avisa = new MailReparation();
             //avisa.EnviarAviso(clienteNombre[0].NombreCompleto, clienteNombre[0].Email);
             avisa.EnviarAviso(cliente.NombreCompleto, cliente.Email);
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            DataGridViewRow current = dataGridViewPartes.CurrentRow;
-
-            NuevoParte p = new NuevoParte(Convert.ToInt32(current.Cells[0].Value));
-            if (p.ShowDialog() == DialogResult.OK)
-                GestionarPartes_Load(null, null);
         }
     }
 }

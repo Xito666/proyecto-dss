@@ -21,13 +21,7 @@ namespace InfoCostePrograma
             textBox_Pass.PasswordChar = '·';
         }
 
-        // Carga del form
-        private void Login_Load(object sender, EventArgs e)
-        {
-            
-        }
-
-        // Boton para comprobar credenciales
+        // LOGIN
         private void boton_Login_Click(object sender, EventArgs e)
         {
             bool registrado = false, acceder = false;

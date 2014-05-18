@@ -54,9 +54,9 @@
             this.Responsable,
             this.Equipo,
             this.Descripcion});
-            this.dataGridViewPartes.Location = new System.Drawing.Point(12, 23);
+            this.dataGridViewPartes.Location = new System.Drawing.Point(12, 12);
             this.dataGridViewPartes.Name = "dataGridViewPartes";
-            this.dataGridViewPartes.Size = new System.Drawing.Size(582, 328);
+            this.dataGridViewPartes.Size = new System.Drawing.Size(768, 275);
             this.dataGridViewPartes.TabIndex = 0;
             // 
             // Id
@@ -93,30 +93,32 @@
             // button4
             // 
             this.button4.Image = global::InfoCostePrograma.Properties.Resources.Buscar;
-            this.button4.Location = new System.Drawing.Point(689, 23);
+            this.button4.Location = new System.Drawing.Point(267, 299);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(70, 70);
             this.button4.TabIndex = 12;
             this.button4.Text = "Buscar";
             this.button4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 
             this.button3.Image = global::InfoCostePrograma.Properties.Resources.Eliminar;
-            this.button3.Location = new System.Drawing.Point(689, 281);
+            this.button3.Location = new System.Drawing.Point(182, 299);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(70, 70);
             this.button3.TabIndex = 11;
             this.button3.Text = "Archivar";
             this.button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
             this.button2.Image = global::InfoCostePrograma.Properties.Resources.ModificarLapiz;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button2.Location = new System.Drawing.Point(613, 281);
+            this.button2.Location = new System.Drawing.Point(97, 299);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(70, 70);
             this.button2.TabIndex = 10;
@@ -128,7 +130,7 @@
             // button1
             // 
             this.button1.Image = global::InfoCostePrograma.Properties.Resources.nuevo;
-            this.button1.Location = new System.Drawing.Point(613, 23);
+            this.button1.Location = new System.Drawing.Point(12, 299);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(70, 70);
             this.button1.TabIndex = 9;
@@ -141,7 +143,7 @@
             // 
             this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
             this.button5.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button5.Location = new System.Drawing.Point(689, 158);
+            this.button5.Location = new System.Drawing.Point(710, 299);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(70, 70);
             this.button5.TabIndex = 14;

@@ -14,7 +14,6 @@ namespace InfoCostePrograma
 {
     public partial class NuevaVenta : Form
     {
-
         ClienteEN c;
         TipoFacturaEN f;
 
@@ -82,13 +81,13 @@ namespace InfoCostePrograma
             ConvertirEnFactura.Visible = false;
         }
 
+        // CARGAR
         private void NuevaVenta_Load(object sender, EventArgs e)
         {
             dataGridView1.CellValueChanged += new DataGridViewCellEventHandler(DataGridView1_CellValueChanged);
-
-
         }
 
+        // BUSCAR CLIENTE
         private void buscarcliente_Click(object sender, EventArgs e)
         {
             SeleccionaCliente sc = new SeleccionaCliente();
@@ -100,13 +99,7 @@ namespace InfoCostePrograma
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            DataGridViewRow current = dataGridView1.CurrentRow;
-            dataGridView1.Rows.RemoveAt(current.Index);
-            recalcularTotal();
-        }
-
+        // AÑADIR PRODUCTO
         private void button3_Click(object sender, EventArgs e)
         {
             SeleccionaProducto sp = new SeleccionaProducto();
@@ -119,6 +112,14 @@ namespace InfoCostePrograma
                 dataGridView1.Rows.Add(p.Id,cantidad, p.Nombre, 0, p.Precio - (descuento*p.Precio), cantidad * p.Precio);
                 recalcularTotal();
             }
+        }
+
+        // ELIMINAR PRODUCTO
+        private void button2_Click(object sender, EventArgs e)
+        {
+            DataGridViewRow current = dataGridView1.CurrentRow;
+            dataGridView1.Rows.RemoveAt(current.Index);
+            recalcularTotal();
         }
 
         private void DataGridView1_CellValueChanged(object sender, DataGridViewCellEventArgs e)
@@ -147,6 +148,7 @@ namespace InfoCostePrograma
             label_Precio.Text = acum.ToString();
         }
 
+        // VALIDAR VENTA
         private void button1_Click(object sender, EventArgs e)
         {
             if(cliente.Text == "")
@@ -161,7 +163,6 @@ namespace InfoCostePrograma
             {
                 PedidoClienteCEN pcCEN = new PedidoClienteCEN();
                 IList<PedidoClienteEN> listaPed = pcCEN.LeerTodos(0,100);
-
 
                 int nID = 0;
                 try
@@ -225,32 +226,21 @@ namespace InfoCostePrograma
             }
         }
 
-        private void crearFactura(PedidoClienteEN pedidoEN)
-        {
-        }
-
-        private void crearPresupuesto(PedidoClienteEN pedidoEN)
-        {
-        }
-
-        private void crearReserva(PedidoClienteEN pedidoEN)
-        {
-        }
-
-        private void crearProforma(PedidoClienteEN pedidoEN)
-        {
-        }
-
-       public static TipoFacturaEN obtenerFacturaTipada(int id)
+        public static TipoFacturaEN obtenerFacturaTipada(int id)
         {
             TipoFacturaEN tf;
+            
             try
             {
                 tf = new FacturaCEN().LeerPorOID(id);
                 if(tf != null)
                 return tf;
             }
-            catch (Exception ex) { MessageBox.Show(ex.Message); }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
             try
             {
                 tf = new PresupuestoCEN().LeerPorOID(id);
@@ -258,6 +248,7 @@ namespace InfoCostePrograma
                 return tf;
             }
             catch (Exception ex) { }
+            
             try
             {
                 tf = new ReservaCEN().LeerPorOID(id);
@@ -265,6 +256,7 @@ namespace InfoCostePrograma
                 return tf;
             }
             catch (Exception ex) { }
+            
             try
             {
                 tf = new ProformaCEN().LeerPorOID(id);
@@ -276,22 +268,20 @@ namespace InfoCostePrograma
             return new TipoFacturaEN();
         }
 
-       private void button4_Click(object sender, EventArgs e)
-       {
-           // Convertir Presupuesto, Reserva o Proforma en Factura
+        // Convertir Presupuesto, Reserva o Proforma en Factura
+        private void button4_Click(object sender, EventArgs e)
+        {
+            InvoiceUtils conversor = new InvoiceUtils();
 
-           InvoiceUtils conversor = new InvoiceUtils();
+            bool ok = conversor.toFactura(f);
 
-           bool ok = conversor.toFactura(f);
+            if (ok)
+                MessageBox.Show("Facturado correctamente");
+            else
+                MessageBox.Show("Problemas al facturar");
 
-           if (ok)
-               MessageBox.Show("Facturado correctamente");
-           else
-               MessageBox.Show("Problemas al facturar");
-
-           DialogResult = DialogResult.OK;
-           this.Close();
-       }
-       
+            DialogResult = DialogResult.OK;
+            this.Close();
+        }
     }
 }

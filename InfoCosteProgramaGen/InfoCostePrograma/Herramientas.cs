@@ -29,17 +29,15 @@ namespace InfoCostePrograma
             usuario = user;
         }
 
+
+        // CREDENCIALES
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Credenciales ca = new Credenciales(usuario);
             ca.Show();
         }
 
-        private void Herramientas_Load(object sender, EventArgs e)
-        {
-
-        }
-
+        // COPIA SEGURIDAD
         private void button1_Click(object sender, EventArgs e)
         {
             SqlConnection cnn = new SqlConnection(@"Server=(local)\SQLEXPRESS; database=master; integrated security=yes");
@@ -53,11 +51,6 @@ namespace InfoCostePrograma
             command.ExecuteNonQuery();
             cnn.Close();
             label2.Visible = true;
-        }
-
-        private void label2_Click(object sender, System.EventArgs e)
-        {
-
         }
     }
 }

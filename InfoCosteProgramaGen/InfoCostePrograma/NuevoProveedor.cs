@@ -40,67 +40,44 @@ namespace InfoCostePrograma
             InfoCosteProgramaGenNHibernate.EN.InfoCoste.ProveedorEN proEN = proCEN.LeerPorOID(ID.ToString());
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-       
-
-        private void textBox_ID_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        // VALIDAR
         private void button_CrearUsuario_Click_1(object sender, EventArgs e)
         {
-            if (textBox_ID.Text == "" || textBox_Nombre.Text == "" || textBox_Direccion.Text == "" || textBox_Email.Text == "")
+            if (es_dni(textBox_ID) == true && textBox_Nombre.Text != "" && es_email(textBox_Email) == true && textBox_Direccion.Text != "")
             {
-                MessageBox.Show(this, "Todos los campos son obligatorios");
-            }
-            else
-            {
-                if (es_dni(textBox_ID) == true)
+                try
                 {
-                    if (es_email(textBox_Email) == true)
+                    if (!editando)
                     {
-                        try
-                        {
-                            if (!editando)
-                            {
-                                InfoCosteProgramaGenNHibernate.CEN.InfoCoste.ProveedorCEN provCEN = new InfoCosteProgramaGenNHibernate.CEN.InfoCoste.ProveedorCEN();
-                                provCEN.Proveedor(textBox_ID.Text, textBox_Nombre.Text, textBox_Direccion.Text, textBox_Email.Text);
+                        InfoCosteProgramaGenNHibernate.CEN.InfoCoste.ProveedorCEN provCEN = new InfoCosteProgramaGenNHibernate.CEN.InfoCoste.ProveedorCEN();
+                        provCEN.Proveedor(textBox_ID.Text, textBox_Nombre.Text, textBox_Direccion.Text, textBox_Email.Text);
 
-                                MessageBox.Show(this, "Proveedor creado");
-                                this.DialogResult = DialogResult.OK;
-                                this.Close();
-                            }
-                            else
-                            {
-                                InfoCosteProgramaGenNHibernate.CEN.InfoCoste.ProveedorCEN pCEN = new InfoCosteProgramaGenNHibernate.CEN.InfoCoste.ProveedorCEN();
-                                pCEN.SetNombre(id, textBox_Nombre.Text);
-                                pCEN.SetDireccion(id, textBox_Direccion.Text);
-                                pCEN.SetEmail(id, textBox_Email.Text);
-
-                                MessageBox.Show(this, "Proveedor modificado");
-                                this.DialogResult = DialogResult.OK;
-                                this.Close();
-                            }
-                            this.Close();
-                        }
-                        catch (Exception ex)
-                        {
-                            MessageBox.Show(this, "Revise los campos");
-                        }
+                        MessageBox.Show(this, "Proveedor creado");
+                        this.DialogResult = DialogResult.OK;
+                        this.Close();
                     }
+                    else
+                    {
+                        InfoCosteProgramaGenNHibernate.CEN.InfoCoste.ProveedorCEN pCEN = new InfoCosteProgramaGenNHibernate.CEN.InfoCoste.ProveedorCEN();
+                        pCEN.SetNombre(id, textBox_Nombre.Text);
+                        pCEN.SetDireccion(id, textBox_Direccion.Text);
+                        pCEN.SetEmail(id, textBox_Email.Text);
+
+                        MessageBox.Show(this, "Proveedor modificado");
+                        this.DialogResult = DialogResult.OK;
+                        this.Close();
+                    }
+
+                    this.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(this, "Revise los campos");
                 }
             }
         }
+
+        /********** COMPROBACIONES *************/
 
         private bool es_dni(Control mitextbox)
         {
@@ -124,7 +101,6 @@ namespace InfoCostePrograma
 
         private bool es_email(Control mitextbox)
         {
-
             Regex regex = new Regex(@"^(?("")(""[^""]+?""@)|(([0-9a-z]((\.(?!\.))|[-!#\$%&'\*\+/=\?\^`\{\}\|~\w])*)(?<=[0-9a-z])@))" +
                 @"(?(\[)(\[(\d{1,3}\.){3}\d{1,3}\])|(([0-9a-z][-\w]*[0-9a-z]*\.)+[a-z0-9]{2,17}))$");
 
